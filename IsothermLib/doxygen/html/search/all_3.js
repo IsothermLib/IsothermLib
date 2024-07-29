@@ -7,7 +7,7 @@ var searchData=
   ['classes_4',['Informações sobre as classes',['../group___source_info.html',1,'']]],
   ['classes_20base_20das_20isotermas_5',['Classes base das isotermas',['../group___isotherm_base.html',1,'']]],
   ['classes_20e_20programas_20acessórios_6',['Miscelânea: Classes e Programas Acessórios',['../group___isotherm_misc.html',1,'']]],
-  ['cloneimplementation_7',['CloneImplementation',['../group___dubinin_radushkevich.html#ga0baaae2362c841d33e6d99c11cb5f531',1,'ist::DubininRadushkevich']]],
+  ['cloneimplementation_7',['CloneImplementation',['../classist_1_1_dubinin_radushkevich.html#ae46a7375ad657b611d9e5d468fe798bb',1,'ist::DubininRadushkevich']]],
   ['coeffvalue_8',['coeffValue',['../group___isotherm_template.html#ga9f9cd71c8e24d951ea5acc91137316c1',1,'ist::Isotherm']]],
   ['com_20cinco_20parametros_9',['Isotermas com cinco parametros',['../group___isotherm_five___parameters.html',1,'']]],
   ['com_20dois_20parametros_10',['Isotermas com dois parametros',['../group___isotherm_two___parameters.html',1,'']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_7edubininradushkevich_0',['~DubininRadushkevich',['../group___dubinin_radushkevich.html#gacb1ca07d1765b95a10d8580cead9f34a',1,'ist::DubininRadushkevich']]],
+  ['_7edubininradushkevich_0',['~DubininRadushkevich',['../classist_1_1_dubinin_radushkevich.html#acb1ca07d1765b95a10d8580cead9f34a',1,'ist::DubininRadushkevich']]],
   ['_7eelovich_1',['~Elovich',['../classist_1_1_elovich.html#ad9148d717ca4dfcc54f8ffdc43594090',1,'ist::Elovich']]],
   ['_7efreundlich_2',['~Freundlich',['../classist_1_1_freundlich.html#a6efc0faaa3600f814cee20c9ce340da6',1,'ist::Freundlich']]],
   ['_7ehalsey_3',['~Halsey',['../classist_1_1_halsey.html#aa1db0013ad078db90e2d48af739beae5',1,'ist::Halsey']]],
