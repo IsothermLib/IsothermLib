@@ -1,0 +1,439 @@
+\hypertarget{class_vieth_sladek}{}\doxysection{Referência da Classe Vieth\+Sladek}
+\label{class_vieth_sladek}\index{ViethSladek@{ViethSladek}}
+
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}}  
+
+
+
+
+{\ttfamily \#include $<$Vieth\+Sladek.\+h$>$}
+
+Diagrama de hierarquia para Vieth\+Sladek\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_vieth_sladek}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vieth_sladek_ad80fee76b672d64f912d501e6f57450e}{Define\+Identity}} (\char`\"{}Vieth-\/Sladek\char`\"{}, ID\+::\+Vieth\+Sladek)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vieth_sladek_a6f841e24388fd76585a4d2a34df1f625}{Vieth\+Sladek}} ()=default
+\item 
+\mbox{\hyperlink{class_vieth_sladek_a5a598af1f0d826dfdb2aac0f04303949}{Vieth\+Sladek}} (const \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}} \&\+\_\+vieth\+\_\+sladek)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vieth_sladek_ad8520454e2277f458043af14743f8f9e}\label{class_vieth_sladek_ad8520454e2277f458043af14743f8f9e}} 
+virtual {\bfseries $\sim$\+Vieth\+Sladek} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vieth_sladek_ac51d07ed65ecd607b456f438495c2258}{Vieth\+Sladek}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}} \& \mbox{\hyperlink{class_vieth_sladek_a80e7ae502f98d19e944fb7d28dffb910}{operator=}} (const \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_vieth_sladek_a858857b85bc8b19c105df1e516f2f5a9}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de Vieth-\/\+Sladek. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o parâmetro da equação de Vieth–\+Sladek. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vieth_sladek_a7e984c4ccb55663e072696a7dda6556c}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vieth_sladek_a71cf17f7c19df787c6bb262080fbf1ea}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante de equilíbrio de \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vieth_sladek_a5e3a3cd02ec17d23843c969d061dfea5}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor associado ao parâmetro da equação de Vieth–\+Sladek. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_vieth_sladek_add5e0827ca749c89b70d8ad46ae8b8b6}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_vieth_sladek_a95632b490561124b668f3263c4bcf18d}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}} $\ast$ \mbox{\hyperlink{class_vieth_sladek_ab4f3f35368f8eee2716bf2fc8fb73687}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}} 
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \begin{Q_e(C_e) = K_2 C_e + \frac{q_{max} K_1C_e} {1+K_1C_e} \end{Q_e(C_e) = K_2 C_e + \frac{q_{max} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/0095-8522(65)90071-1}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000059}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_vieth_sladek_a6f841e24388fd76585a4d2a34df1f625}\label{class_vieth_sladek_a6f841e24388fd76585a4d2a34df1f625}} 
+\index{ViethSladek@{ViethSladek}!ViethSladek@{ViethSladek}}
+\index{ViethSladek@{ViethSladek}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{ViethSladek()}{ViethSladek()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Vieth\+Sladek\+::\+Vieth\+Sladek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vieth_sladek_a5a598af1f0d826dfdb2aac0f04303949}\label{class_vieth_sladek_a5a598af1f0d826dfdb2aac0f04303949}} 
+\index{ViethSladek@{ViethSladek}!ViethSladek@{ViethSladek}}
+\index{ViethSladek@{ViethSladek}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{ViethSladek()}{ViethSladek()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Vieth\+Sladek\+::\+Vieth\+Sladek (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}} \&}]{\+\_\+vieth\+\_\+sladek }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo Vieth-\/\+Sladek original. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vieth_sladek_ac51d07ed65ecd607b456f438495c2258}\label{class_vieth_sladek_ac51d07ed65ecd607b456f438495c2258}} 
+\index{ViethSladek@{ViethSladek}!ViethSladek@{ViethSladek}}
+\index{ViethSladek@{ViethSladek}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{ViethSladek()}{ViethSladek()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Vieth\+Sladek\+::\+Vieth\+Sladek (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}{K1}}(1.0);    }
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}{K2}}(1.0);        }
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(Q1, \mbox{\hyperlink{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}{K1}}, \mbox{\hyperlink{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. ~\newline
+ \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de Vieth-\/\+Sladek. ~\newline
+ \\
+\hline
+{\em \+\_\+k2} & Constante do expoente da isoterma de Vieth-\/\+Sladek. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_vieth_sladek_ab4f3f35368f8eee2716bf2fc8fb73687}\label{class_vieth_sladek_ab4f3f35368f8eee2716bf2fc8fb73687}} 
+\index{ViethSladek@{ViethSladek}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}} $\ast$ Vieth\+Sladek\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_vieth_sladek_ad80fee76b672d64f912d501e6f57450e}\label{class_vieth_sladek_ad80fee76b672d64f912d501e6f57450e}} 
+\index{ViethSladek@{ViethSladek}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Vieth\+Sladek\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Vieth-\/Sladek\char`\"{}}]{,  }\item[{ID\+::\+Vieth\+Sladek}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}\label{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}} 
+\index{ViethSladek@{ViethSladek}!K1@{K1}}
+\index{K1@{K1}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Vieth\+Sladek\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de Vieth-\/\+Sladek. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}  var1(QMAX, \mbox{\hyperlink{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}{K1}}, \mbox{\hyperlink{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de Vieth-\/\+Sladek. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vieth_sladek_a71cf17f7c19df787c6bb262080fbf1ea}\label{class_vieth_sladek_a71cf17f7c19df787c6bb262080fbf1ea}} 
+\index{ViethSladek@{ViethSladek}!K1@{K1}}
+\index{K1@{K1}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Vieth\+Sladek\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante de equilíbrio de \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}  var1(QMAX, \mbox{\hyperlink{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}{K1}}, \mbox{\hyperlink{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de equilíbrio de \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}\label{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}} 
+\index{ViethSladek@{ViethSladek}!K2@{K2}}
+\index{K2@{K2}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Vieth\+Sladek\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o parâmetro da equação de Vieth–\+Sladek. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}  var1(QMAX, \mbox{\hyperlink{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}{K1}}, \mbox{\hyperlink{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do parâmetro da equação de Vieth–\+Sladek. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vieth_sladek_a5e3a3cd02ec17d23843c969d061dfea5}\label{class_vieth_sladek_a5e3a3cd02ec17d23843c969d061dfea5}} 
+\index{ViethSladek@{ViethSladek}!K2@{K2}}
+\index{K2@{K2}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Vieth\+Sladek\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor associado ao parâmetro da equação de Vieth–\+Sladek. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}  var1(QMAX, \mbox{\hyperlink{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}{K1}}, \mbox{\hyperlink{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor associado ao parâmetro da equação de Vieth–\+Sladek. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_vieth_sladek_a80e7ae502f98d19e944fb7d28dffb910}\label{class_vieth_sladek_a80e7ae502f98d19e944fb7d28dffb910}} 
+\index{ViethSladek@{ViethSladek}!operator=@{operator=}}
+\index{operator=@{operator=}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}} \& Vieth\+Sladek\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}  var1(QMAX, \mbox{\hyperlink{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}{K1}}, \mbox{\hyperlink{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}{K2}});              }
+\DoxyCodeLine{\mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_vieth_sladek}{Vieth\+Sladek}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vieth_sladek_add5e0827ca749c89b70d8ad46ae8b8b6}\label{class_vieth_sladek_add5e0827ca749c89b70d8ad46ae8b8b6}} 
+\index{ViethSladek@{ViethSladek}!Qe@{Qe}}
+\index{Qe@{Qe}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Vieth\+Sladek\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}  var1(QMAX, \mbox{\hyperlink{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}{K1}}, \mbox{\hyperlink{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. ~\newline
+ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_vieth_sladek_a95632b490561124b668f3263c4bcf18d}\label{class_vieth_sladek_a95632b490561124b668f3263c4bcf18d}} 
+\index{ViethSladek@{ViethSladek}!Qe@{Qe}}
+\index{Qe@{Qe}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Vieth\+Sladek\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_vieth_sladek_a858857b85bc8b19c105df1e516f2f5a9}\label{class_vieth_sladek_a858857b85bc8b19c105df1e516f2f5a9}} 
+\index{ViethSladek@{ViethSladek}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Vieth\+Sladek\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}  var1(QMAX, \mbox{\hyperlink{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}{K1}}, \mbox{\hyperlink{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vieth_sladek_a7e984c4ccb55663e072696a7dda6556c}\label{class_vieth_sladek_a7e984c4ccb55663e072696a7dda6556c}} 
+\index{ViethSladek@{ViethSladek}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!ViethSladek@{ViethSladek}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Vieth\+Sladek\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Kilselev  var1(QMAX, \mbox{\hyperlink{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}{K1}}, \mbox{\hyperlink{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/Vieth\+Sladek.\+h\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Vieth\+Sladek.\+cpp\end{DoxyCompactItemize}

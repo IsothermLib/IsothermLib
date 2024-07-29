@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Isotherm++: Código-Fonte de IsothermLib/include/Isotherm/FiveParameters/FritzSchlunderV.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Isotherm++<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_3393ec37890ad9b3a7885029fce22598.html">IsothermLib</a></li><li class="navelem"><a class="el" href="dir_dbbde0c145412e2fe2852ce43eb851e2.html">include</a></li><li class="navelem"><a class="el" href="dir_f6e7fadfa303d2c82893c0cc076b5910.html">Isotherm</a></li><li class="navelem"><a class="el" href="dir_a168cce0d1b79f8bf0c7e141da19f025.html">FiveParameters</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">FritzSchlunderV.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_fritz_schlunder_v_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Name        : FritzSchlunderV.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Author      : Luan Rodrigues Soares de Souza</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Version     : 1.0</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Description : Classe com as equações da isoterma de Fritz - Schlunder - V.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// Copyright   : Copyright (C) &lt;2021&gt;  Joao Flavio Vasconcellos</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//                                      (jflavio at iprj.uerj.br)</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// the Free Software Foundation, either version 3 of the License.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// GNU General Public License for more details.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#ifndef __FRITZ_SCHLUNDER_V_H__</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define __FRITZ_SCHLUNDER_V_H__</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// opção de debug</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">//#define __FRITZ_SCHLUNDER_V_DEBUG_H__</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">// include da biblioteca c++</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">// include da isotherm++</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#include &lt;Isotherm/FiveParameters/FiveParameters.h&gt;</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><a class="code hl_define" href="group___configure.html#ga1e3e0e0eca304ffc8364100b22724d21">IST_NAMESPACE_OPEN</a></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html">   72</a></span><span class="keyword">class </span><a class="code hl_class" href="class_fritz_schlunder_v.html">FritzSchlunderV</a> :     <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="class_five_parameters.html">FiveParameters</a>,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                            <span class="keyword">public</span> <a class="code hl_class" href="class_isotherm_template.html">IsothermTemplate</a> &lt; FritzSchlunderV &gt; {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">// ID da classe</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#ad8dda09283f248d3f2bdf342fa1f6f26">   86</a></span>    <a class="code hl_function" href="class_fritz_schlunder_v.html#ad8dda09283f248d3f2bdf342fa1f6f26">DefineIdentity</a>(<span class="stringliteral">&quot;Fritz - Schlunder - V&quot;</span>, ID::FritzSchlunderV);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">// Funções Construtoras/Destrutora</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#a9fd09e338982dd6c0a0b941a5b9e4964">  105</a></span>    <a class="code hl_function" href="class_fritz_schlunder_v.html#a9fd09e338982dd6c0a0b941a5b9e4964">FritzSchlunderV</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#a46bf50a4e1f917a3e499af8076aa501f">  118</a></span>    <a class="code hl_function" href="class_fritz_schlunder_v.html#a46bf50a4e1f917a3e499af8076aa501f">FritzSchlunderV</a> (<span class="keyword">const</span> <a class="code hl_class" href="class_fritz_schlunder_v.html">FritzSchlunderV</a>&amp; _fritz_schlunder_v) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#a6b36a17217b04d8a82b516452018707c">  123</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_fritz_schlunder_v.html#a6b36a17217b04d8a82b516452018707c">~FritzSchlunderV</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <a class="code hl_function" href="class_fritz_schlunder_v.html#a9fd09e338982dd6c0a0b941a5b9e4964">FritzSchlunderV</a> (   <span class="keyword">const</span> Real&amp;,</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                        <span class="keyword">const</span> Real&amp;,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                        <span class="keyword">const</span> Real&amp;,</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                        <span class="keyword">const</span> Real&amp;,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                        <span class="keyword">const</span> Real&amp;);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">// Sobrecarga de operadores</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#a0d073c0e4f7187919e9b8c919c1b47dd">  172</a></span>    <a class="code hl_class" href="class_fritz_schlunder_v.html">FritzSchlunderV</a>&amp; <a class="code hl_function" href="class_fritz_schlunder_v.html#a0d073c0e4f7187919e9b8c919c1b47dd">operator = </a>(<span class="keyword">const</span> <a class="code hl_class" href="class_fritz_schlunder_v.html">FritzSchlunderV</a>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment">// Acesso as constantes da classe</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#ab724c37765b76a01681937c291cfb45c">  190</a></span><span class="keyword">inline</span> Real <a class="code hl_function" href="class_fritz_schlunder_v.html#ab724c37765b76a01681937c291cfb45c">Qmax</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(0);};</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#a2674c4eabf3170da744e4757bd5fab91">  205</a></span><span class="keyword">inline</span> Real <a class="code hl_function" href="class_fritz_schlunder_v.html#a2674c4eabf3170da744e4757bd5fab91">K1</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(1);};</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#a3e6373cebaedbfee4c91f03a400eae05">  219</a></span><span class="keyword">inline</span> Real <a class="code hl_function" href="class_fritz_schlunder_v.html#a3e6373cebaedbfee4c91f03a400eae05">K2</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(2);};</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#aab14e3df8f117a7c417a98aada8b96b1">  233</a></span><span class="keyword">inline</span> Real <a class="code hl_function" href="class_fritz_schlunder_v.html#aab14e3df8f117a7c417a98aada8b96b1">K3</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(3);};</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#adccfe855afbc66d4717395afaf8113bf">  247</a></span><span class="keyword">inline</span> Real <a class="code hl_function" href="class_fritz_schlunder_v.html#adccfe855afbc66d4717395afaf8113bf">K4</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(4);};</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="comment">// Alterando as constantes da classe</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#a3da9ed3d713771ab87e36e4703cc4a79">  266</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_fritz_schlunder_v.html#a3da9ed3d713771ab87e36e4703cc4a79">Qmax</a> (<span class="keyword">const</span> Real&amp; _qmax)  {*<span class="keyword">this</span> = <a class="code hl_function" href="class_fritz_schlunder_v.html#a9fd09e338982dd6c0a0b941a5b9e4964">FritzSchlunderV</a> (   _qmax,</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                                                                <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(1),</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                                                                <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(2),</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                                                                <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(3),</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                                                                <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(4));};</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#a181e18ab6b9e69ff1f32907bfdea1339">  285</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_fritz_schlunder_v.html#a181e18ab6b9e69ff1f32907bfdea1339">K1</a> (<span class="keyword">const</span> Real&amp; _k1)  {*<span class="keyword">this</span> = <a class="code hl_function" href="class_fritz_schlunder_v.html#a9fd09e338982dd6c0a0b941a5b9e4964">FritzSchlunderV</a> (   <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(0),</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                                                            _k1,</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                                                            <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(2),</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                                                            <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(3),</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                                                            <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(4));};</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#aff7f911bb7e8545833ea78a129f1844e">  304</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_fritz_schlunder_v.html#aff7f911bb7e8545833ea78a129f1844e">K2</a> (<span class="keyword">const</span> Real&amp; _k2)  {*<span class="keyword">this</span> = <a class="code hl_function" href="class_fritz_schlunder_v.html#a9fd09e338982dd6c0a0b941a5b9e4964">FritzSchlunderV</a>(    <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(0),</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                                                            <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(1),</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                                                            _k2     ,</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                                                            <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(3),</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                                                            <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(4));};</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#a8a438043fbe0b1db3eb936b5f89f940c">  323</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_fritz_schlunder_v.html#a8a438043fbe0b1db3eb936b5f89f940c">K3</a> (<span class="keyword">const</span> Real&amp; _k3)  {*<span class="keyword">this</span> = <a class="code hl_function" href="class_fritz_schlunder_v.html#a9fd09e338982dd6c0a0b941a5b9e4964">FritzSchlunderV</a>(    <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(0),</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                                                            <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(1),</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                                                            <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(2),</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                                                            _k3,</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                                                            <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(4));};</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="class_fritz_schlunder_v.html#a3342aacb315d6835e09dc2147f4f6162">  342</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_fritz_schlunder_v.html#a3342aacb315d6835e09dc2147f4f6162">K4</a> (<span class="keyword">const</span> Real&amp; _k4)  {*<span class="keyword">this</span> = <a class="code hl_function" href="class_fritz_schlunder_v.html#a9fd09e338982dd6c0a0b941a5b9e4964">FritzSchlunderV</a>(    <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(0),</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                                                            <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(1),</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                                                            <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(2),</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                                                            <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(3),</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                                                            _k4     );};</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="comment">// Funções virtuais</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    [[nodiscard]]  Real <a class="code hl_function" href="class_fritz_schlunder_v.html#a8c636d306c8fd3b64aac1eb2fe59e636">Qe</a> (<span class="keyword">const</span> Real&amp;, <span class="keyword">const</span> Real&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    [[nodiscard]] </div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keyword">inline</span> Real <a class="code hl_function" href="class_fritz_schlunder_v.html#a8c636d306c8fd3b64aac1eb2fe59e636">Qe</a>   (   <span class="keyword">const</span> Real&amp; _c</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    )<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class_fritz_schlunder_v.html#a8c636d306c8fd3b64aac1eb2fe59e636">Qe</a>(_c, 0);</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    }</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    [[nodiscard]] </div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_fritz_schlunder_v.html">FritzSchlunderV</a>* CloneImplementation()<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="class_fritz_schlunder_v.html#a9fd09e338982dd6c0a0b941a5b9e4964">FritzSchlunderV</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    }</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span> </div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>};</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><a class="code hl_define" href="group___configure.html#ga9804ef63a551808d389310b891356c2a">IST_NAMESPACE_CLOSE</a></div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span><span class="preprocessor">#endif </span><span class="comment">/* __FRITZ_SCHLUNDER_V_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclass_five_parameters_html"><div class="ttname"><a href="class_five_parameters.html">FiveParameters</a></div><div class="ttdoc">Classe base para todas as classes com cinco parâmetros.</div><div class="ttdef"><b>Definition:</b> FiveParameters.h:56</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html"><div class="ttname"><a href="class_fritz_schlunder_v.html">FritzSchlunderV</a></div><div class="ttdoc">Classe com as equações da isoterma de Fritz - Schlunder - V.</div><div class="ttdef"><b>Definition:</b> FritzSchlunderV.h:73</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_a0d073c0e4f7187919e9b8c919c1b47dd"><div class="ttname"><a href="class_fritz_schlunder_v.html#a0d073c0e4f7187919e9b8c919c1b47dd">FritzSchlunderV::operator=</a></div><div class="ttdeci">FritzSchlunderV &amp; operator=(const FritzSchlunderV &amp;)=default</div><div class="ttdoc">Sobrecarga do operador =.</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_a181e18ab6b9e69ff1f32907bfdea1339"><div class="ttname"><a href="class_fritz_schlunder_v.html#a181e18ab6b9e69ff1f32907bfdea1339">FritzSchlunderV::K1</a></div><div class="ttdeci">void K1(const Real &amp;_k1)</div><div class="ttdoc">Função que altera o coeficiente associado a constante da isoterma de Fritz – Schlunder - V.</div><div class="ttdef"><b>Definition:</b> FritzSchlunderV.h:285</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_a2674c4eabf3170da744e4757bd5fab91"><div class="ttname"><a href="class_fritz_schlunder_v.html#a2674c4eabf3170da744e4757bd5fab91">FritzSchlunderV::K1</a></div><div class="ttdeci">Real K1() const</div><div class="ttdoc">Função que retorna o coeficiente associado a constante de Fritz - Schlunder - V.</div><div class="ttdef"><b>Definition:</b> FritzSchlunderV.h:205</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_a3342aacb315d6835e09dc2147f4f6162"><div class="ttname"><a href="class_fritz_schlunder_v.html#a3342aacb315d6835e09dc2147f4f6162">FritzSchlunderV::K4</a></div><div class="ttdeci">void K4(const Real &amp;_k4)</div><div class="ttdoc">Função para alterar o valor associado ao expoente da isoterma de Fritz – Schlunder - V.</div><div class="ttdef"><b>Definition:</b> FritzSchlunderV.h:342</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_a3da9ed3d713771ab87e36e4703cc4a79"><div class="ttname"><a href="class_fritz_schlunder_v.html#a3da9ed3d713771ab87e36e4703cc4a79">FritzSchlunderV::Qmax</a></div><div class="ttdeci">void Qmax(const Real &amp;_qmax)</div><div class="ttdoc">Função para alterar a capacidade maxima de adsorção.</div><div class="ttdef"><b>Definition:</b> FritzSchlunderV.h:266</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_a3e6373cebaedbfee4c91f03a400eae05"><div class="ttname"><a href="class_fritz_schlunder_v.html#a3e6373cebaedbfee4c91f03a400eae05">FritzSchlunderV::K2</a></div><div class="ttdeci">Real K2() const</div><div class="ttdoc">Função que retorna o parâmetro da equação de Fritz - Schlunder - V.</div><div class="ttdef"><b>Definition:</b> FritzSchlunderV.h:219</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_a46bf50a4e1f917a3e499af8076aa501f"><div class="ttname"><a href="class_fritz_schlunder_v.html#a46bf50a4e1f917a3e499af8076aa501f">FritzSchlunderV::FritzSchlunderV</a></div><div class="ttdeci">FritzSchlunderV(const FritzSchlunderV &amp;_fritz_schlunder_v)=default</div><div class="ttdoc">Construtora de cópia.</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_a6b36a17217b04d8a82b516452018707c"><div class="ttname"><a href="class_fritz_schlunder_v.html#a6b36a17217b04d8a82b516452018707c">FritzSchlunderV::~FritzSchlunderV</a></div><div class="ttdeci">virtual ~FritzSchlunderV()=default</div><div class="ttdoc">Destrutora.</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_a8a438043fbe0b1db3eb936b5f89f940c"><div class="ttname"><a href="class_fritz_schlunder_v.html#a8a438043fbe0b1db3eb936b5f89f940c">FritzSchlunderV::K3</a></div><div class="ttdeci">void K3(const Real &amp;_k3)</div><div class="ttdoc">Função para alterar o valor associado ao expoente da isoterma de Fritz – Schlunder - V.</div><div class="ttdef"><b>Definition:</b> FritzSchlunderV.h:323</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_a8c636d306c8fd3b64aac1eb2fe59e636"><div class="ttname"><a href="class_fritz_schlunder_v.html#a8c636d306c8fd3b64aac1eb2fe59e636">FritzSchlunderV::Qe</a></div><div class="ttdeci">Real Qe(const Real &amp;, const Real &amp;) const</div><div class="ttdoc">Função que calcula a quantidade de sorção no equilíbrio.</div><div class="ttdef"><b>Definition:</b> FritzSchlunderV.cpp:120</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_a9fd09e338982dd6c0a0b941a5b9e4964"><div class="ttname"><a href="class_fritz_schlunder_v.html#a9fd09e338982dd6c0a0b941a5b9e4964">FritzSchlunderV::FritzSchlunderV</a></div><div class="ttdeci">FritzSchlunderV()=default</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_aab14e3df8f117a7c417a98aada8b96b1"><div class="ttname"><a href="class_fritz_schlunder_v.html#aab14e3df8f117a7c417a98aada8b96b1">FritzSchlunderV::K3</a></div><div class="ttdeci">Real K3() const</div><div class="ttdoc">Função que retorna o parâmetro da equação de Fritz - Schlunder - V.</div><div class="ttdef"><b>Definition:</b> FritzSchlunderV.h:233</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_ab724c37765b76a01681937c291cfb45c"><div class="ttname"><a href="class_fritz_schlunder_v.html#ab724c37765b76a01681937c291cfb45c">FritzSchlunderV::Qmax</a></div><div class="ttdeci">Real Qmax() const</div><div class="ttdoc">Função que informa o valor da capacidade maxima de adsorção.</div><div class="ttdef"><b>Definition:</b> FritzSchlunderV.h:190</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_ad8dda09283f248d3f2bdf342fa1f6f26"><div class="ttname"><a href="class_fritz_schlunder_v.html#ad8dda09283f248d3f2bdf342fa1f6f26">FritzSchlunderV::DefineIdentity</a></div><div class="ttdeci">DefineIdentity(&quot;Fritz - Schlunder - V&quot;, ID::FritzSchlunderV)</div><div class="ttdoc">Definição de ID para esta classe para fins de identificação de erros.</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_adccfe855afbc66d4717395afaf8113bf"><div class="ttname"><a href="class_fritz_schlunder_v.html#adccfe855afbc66d4717395afaf8113bf">FritzSchlunderV::K4</a></div><div class="ttdeci">Real K4() const</div><div class="ttdoc">Função que retorna o parâmetro da equação de Fritz - Schlunder - V.</div><div class="ttdef"><b>Definition:</b> FritzSchlunderV.h:247</div></div>
+<div class="ttc" id="aclass_fritz_schlunder_v_html_aff7f911bb7e8545833ea78a129f1844e"><div class="ttname"><a href="class_fritz_schlunder_v.html#aff7f911bb7e8545833ea78a129f1844e">FritzSchlunderV::K2</a></div><div class="ttdeci">void K2(const Real &amp;_k2)</div><div class="ttdoc">Função para alterar o valor associado a constante da isoterma de Fritz – Schlunder - V.</div><div class="ttdef"><b>Definition:</b> FritzSchlunderV.h:304</div></div>
+<div class="ttc" id="aclass_isotherm_template_html"><div class="ttname"><a href="class_isotherm_template.html">IsothermTemplate</a></div><div class="ttdoc">Classe que gerencia o nome e detalhes sobre cada constante dos modelos das isotermas.</div><div class="ttdef"><b>Definition:</b> Isotherm.h:317</div></div>
+<div class="ttc" id="agroup___configure_html_ga1e3e0e0eca304ffc8364100b22724d21"><div class="ttname"><a href="group___configure.html#ga1e3e0e0eca304ffc8364100b22724d21">IST_NAMESPACE_OPEN</a></div><div class="ttdeci">#define IST_NAMESPACE_OPEN</div><div class="ttdoc">Definoção do início namespace da biblioteca Isotherm++</div><div class="ttdef"><b>Definition:</b> Configure.h:63</div></div>
+<div class="ttc" id="agroup___configure_html_ga9804ef63a551808d389310b891356c2a"><div class="ttname"><a href="group___configure.html#ga9804ef63a551808d389310b891356c2a">IST_NAMESPACE_CLOSE</a></div><div class="ttdeci">#define IST_NAMESPACE_CLOSE</div><div class="ttdoc">Definoção do fim namespace da biblioteca Isotherm++</div><div class="ttdef"><b>Definition:</b> Configure.h:66</div></div>
+<div class="ttc" id="agroup___isotherm_template_html_ga66905e5e5db160c8a6d803aed0d6d85c"><div class="ttname"><a href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Isotherm::Value</a></div><div class="ttdeci">const VecReal Value() const</div><div class="ttdoc">Vetor com os coeficientes de qualquer isoterma.</div><div class="ttdef"><b>Definition:</b> Isotherm.h:259</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

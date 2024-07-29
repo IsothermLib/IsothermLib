@@ -1,0 +1,431 @@
+\hypertarget{class_sips}{}\doxysection{Referência da Classe Sips}
+\label{class_sips}\index{Sips@{Sips}}
+
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_sips}{Sips}}  
+
+
+
+
+{\ttfamily \#include $<$Sips.\+h$>$}
+
+Diagrama de hierarquia para Sips\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sips}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sips_a93018c7fcb8ed3d805853ee132c5d183}{Define\+Identity}} (\char`\"{}Sips\char`\"{}, ID\+::\+Sips)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sips_a9d9987e1eb545987d5443fd98f6466c2}{Sips}} ()=default
+\item 
+\mbox{\hyperlink{class_sips_ab2528b30cf0bf1b0d668dd6eaa2febb5}{Sips}} (const \mbox{\hyperlink{class_sips}{Sips}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sips_af52c3c119264456a58b510a068605c30}\label{class_sips_af52c3c119264456a58b510a068605c30}} 
+virtual {\bfseries $\sim$\+Sips} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sips_ad319895cdde9f02bcc9992a66919cdea}{Sips}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_sips}{Sips}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sips}{Sips}} \& \mbox{\hyperlink{class_sips_aa7497e2700ad699335e00dffeab44dbf}{operator=}} (const \mbox{\hyperlink{class_sips}{Sips}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_sips_a6c602ce771a7ec5ab64eca7988942aea}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_sips}{Sips}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_sips_a012a70794e5bb7026250c4045a8f4528}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_sips}{Sips}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sips_a411b949499e7a012d5627f6cfa6cd643}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sips_a14d3d387c912d60924343a447e602144}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_sips}{Sips}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sips_a0fa954eea30940ad87e58719cd261dc2}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_sips}{Sips}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_sips_ab8b3f498d89a02c0428cc1547224da76}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_sips_a864096255e912926dc58da0ea059b737}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_sips}{Sips}} $\ast$ \mbox{\hyperlink{class_sips_ae4fbaa44dcff664868df0bf7a4a389aa}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de \mbox{\hyperlink{class_sips}{Sips}} 
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_sips}{Sips}}.
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e, T) = q\+\_\+\{max\}\textbackslash{}frac\{K\+\_\+1\+C$^\wedge$\{\textbackslash{}frac\{1\}\{K\+\_\+2\}\}\}\{1 + K\+\_\+1\+C$^\wedge$\{\textbackslash{}frac\{1\}\{K\+\_\+2\}\}\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Luan Rodrigues Soares de Souza 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000051}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_sips_a9d9987e1eb545987d5443fd98f6466c2}\label{class_sips_a9d9987e1eb545987d5443fd98f6466c2}} 
+\index{Sips@{Sips}!Sips@{Sips}}
+\index{Sips@{Sips}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{Sips()}{Sips()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Sips\+::\+Sips (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sips_ab2528b30cf0bf1b0d668dd6eaa2febb5}\label{class_sips_ab2528b30cf0bf1b0d668dd6eaa2febb5}} 
+\index{Sips@{Sips}!Sips@{Sips}}
+\index{Sips@{Sips}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{Sips()}{Sips()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Sips\+::\+Sips (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sips}{Sips}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_sips}{Sips}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sips_ad319895cdde9f02bcc9992a66919cdea}\label{class_sips_ad319895cdde9f02bcc9992a66919cdea}} 
+\index{Sips@{Sips}!Sips@{Sips}}
+\index{Sips@{Sips}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{Sips()}{Sips()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Sips\+::\+Sips (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_sips}{Sips}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}{K1}}(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_sips_a012a70794e5bb7026250c4045a8f4528}{K2}}(1.0);}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(Q1, \mbox{\hyperlink{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}{K1}}, \mbox{\hyperlink{class_sips_a012a70794e5bb7026250c4045a8f4528}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de \mbox{\hyperlink{class_sips}{Sips}}. \\
+\hline
+{\em \+\_\+k2} & Constante do expoente da isoterma de \mbox{\hyperlink{class_sips}{Sips}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_sips_ae4fbaa44dcff664868df0bf7a4a389aa}\label{class_sips_ae4fbaa44dcff664868df0bf7a4a389aa}} 
+\index{Sips@{Sips}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_sips}{Sips}} $\ast$ Sips\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_sips_a93018c7fcb8ed3d805853ee132c5d183}\label{class_sips_a93018c7fcb8ed3d805853ee132c5d183}} 
+\index{Sips@{Sips}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Sips\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Sips\char`\"{}}]{,  }\item[{ID\+::\+Sips}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}\label{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}} 
+\index{Sips@{Sips}!K1@{K1}}
+\index{K1@{K1}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Sips\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_sips}{Sips}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(QMAX, \mbox{\hyperlink{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}{K1}}, \mbox{\hyperlink{class_sips_a012a70794e5bb7026250c4045a8f4528}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_sips}{Sips}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sips_a14d3d387c912d60924343a447e602144}\label{class_sips_a14d3d387c912d60924343a447e602144}} 
+\index{Sips@{Sips}!K1@{K1}}
+\index{K1@{K1}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Sips\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_sips}{Sips}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(QMAX, \mbox{\hyperlink{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}{K1}}, \mbox{\hyperlink{class_sips_a012a70794e5bb7026250c4045a8f4528}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de \mbox{\hyperlink{class_sips}{Sips}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_sips_a012a70794e5bb7026250c4045a8f4528}\label{class_sips_a012a70794e5bb7026250c4045a8f4528}} 
+\index{Sips@{Sips}!K2@{K2}}
+\index{K2@{K2}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Sips\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_sips}{Sips}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(QMAX, \mbox{\hyperlink{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}{K1}}, \mbox{\hyperlink{class_sips_a012a70794e5bb7026250c4045a8f4528}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do expoente da isoterma de \mbox{\hyperlink{class_sips}{Sips}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sips_a0fa954eea30940ad87e58719cd261dc2}\label{class_sips_a0fa954eea30940ad87e58719cd261dc2}} 
+\index{Sips@{Sips}!K2@{K2}}
+\index{K2@{K2}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Sips\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_sips}{Sips}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(QMAX, \mbox{\hyperlink{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}{K1}}, \mbox{\hyperlink{class_sips_a012a70794e5bb7026250c4045a8f4528}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor do expoente da isoterma de \mbox{\hyperlink{class_sips}{Sips}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_sips_aa7497e2700ad699335e00dffeab44dbf}\label{class_sips_aa7497e2700ad699335e00dffeab44dbf}} 
+\index{Sips@{Sips}!operator=@{operator=}}
+\index{operator=@{operator=}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sips}{Sips}} \& Sips\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sips}{Sips}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(QMAX, \mbox{\hyperlink{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}{K1}}, \mbox{\hyperlink{class_sips_a012a70794e5bb7026250c4045a8f4528}{K2}});}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_sips}{Sips}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sips_ab8b3f498d89a02c0428cc1547224da76}\label{class_sips_ab8b3f498d89a02c0428cc1547224da76}} 
+\index{Sips@{Sips}!Qe@{Qe}}
+\index{Qe@{Qe}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Sips\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{\+\_\+temp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(QMAX, \mbox{\hyperlink{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}{K1}}, \mbox{\hyperlink{class_sips_a012a70794e5bb7026250c4045a8f4528}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_sips_a864096255e912926dc58da0ea059b737}\label{class_sips_a864096255e912926dc58da0ea059b737}} 
+\index{Sips@{Sips}!Qe@{Qe}}
+\index{Qe@{Qe}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Sips\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_sips_a6c602ce771a7ec5ab64eca7988942aea}\label{class_sips_a6c602ce771a7ec5ab64eca7988942aea}} 
+\index{Sips@{Sips}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Sips\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(QMAX, \mbox{\hyperlink{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}{K1}}, \mbox{\hyperlink{class_sips_a012a70794e5bb7026250c4045a8f4528}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sips_a411b949499e7a012d5627f6cfa6cd643}\label{class_sips_a411b949499e7a012d5627f6cfa6cd643}} 
+\index{Sips@{Sips}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Sips@{Sips}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Sips\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(QMAX, \mbox{\hyperlink{class_sips_aaef9ec0a438f3ff9c755ddfa5392395c}{K1}}, \mbox{\hyperlink{class_sips_a012a70794e5bb7026250c4045a8f4528}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_sips_8h}{Sips.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Sips.\+cpp\end{DoxyCompactItemize}

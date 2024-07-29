@@ -1,0 +1,167 @@
+\hypertarget{_vieth_sladek_8h_source}{}\doxysection{Vieth\+Sladek.\+h}
+\label{_vieth_sladek_8h_source}\index{IsothermLib/include/Isotherm/ThreeParameters/ViethSladek.h@{IsothermLib/include/Isotherm/ThreeParameters/ViethSladek.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// Name        : ViethSladek.h}}
+\DoxyCodeLine{3 \textcolor{comment}{// Authors     : Lara Botelho Brum}}
+\DoxyCodeLine{4 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
+\DoxyCodeLine{5 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{6 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{7 \textcolor{comment}{// Description : Classe com as equações da isoterma de Vieth-\/Sladek}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Copyright   : Copyright (C) <2021>  Joao Flavio Vasconcellos }}
+\DoxyCodeLine{10 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{11 \textcolor{comment}{//}}
+\DoxyCodeLine{12 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{13 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{14 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{//}}
+\DoxyCodeLine{16 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{17 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{18 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{19 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{22 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{23 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#ifndef \_\_VIETH\_SLADEK\_H\_\_}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define \_\_VIETH\_SLADEK\_H\_\_}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{51 \textcolor{comment}{// opção de debug}}
+\DoxyCodeLine{52 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{comment}{//\#define \_\_VIETH\_SLADEK\_DEBUG\_H\_\_}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{57 \textcolor{comment}{// include da biblioteca c++}}
+\DoxyCodeLine{58 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{63 \textcolor{comment}{// include da isotherm++}}
+\DoxyCodeLine{64 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#include <Isotherm/ThreeParameters/ThreeParameters.h>}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{keyword}{class }\mbox{\hyperlink{class_vieth_sladek}{ViethSladek}} :  \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_three_parameters}{ThreeParameters}}, }
+\DoxyCodeLine{72               \textcolor{keyword}{public} \mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} < ViethSladek > \{}
+\DoxyCodeLine{73     }
+\DoxyCodeLine{74 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{75 \textcolor{comment}{// ID da classe}}
+\DoxyCodeLine{76 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{keyword}{public}:    }
+\DoxyCodeLine{79     }
+\DoxyCodeLine{84         }
+\DoxyCodeLine{85     \mbox{\hyperlink{class_vieth_sladek_ad80fee76b672d64f912d501e6f57450e}{DefineIdentity}}  (   \textcolor{stringliteral}{"{}Vieth-\/Sladek"{}}}
+\DoxyCodeLine{86                     ,   ID::ViethSladek}
+\DoxyCodeLine{87                     );  }
+\DoxyCodeLine{88     }
+\DoxyCodeLine{89     }
+\DoxyCodeLine{90 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{91 \textcolor{comment}{// Funções Construtoras/Destrutora}}
+\DoxyCodeLine{92 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{93     }
+\DoxyCodeLine{94 \textcolor{keyword}{public}:}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{106     \mbox{\hyperlink{class_vieth_sladek_a6f841e24388fd76585a4d2a34df1f625}{ViethSladek}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{107     }
+\DoxyCodeLine{119     \mbox{\hyperlink{class_vieth_sladek_a5a598af1f0d826dfdb2aac0f04303949}{ViethSladek}} (\textcolor{keyword}{const} \mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}\& \_vieth\_sladek) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{120   }
+\DoxyCodeLine{124     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vieth_sladek_ad8520454e2277f458043af14743f8f9e}{\string~ViethSladek}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{144     \mbox{\hyperlink{class_vieth_sladek_a6f841e24388fd76585a4d2a34df1f625}{ViethSladek}} (   \textcolor{keyword}{const} Real\&}
+\DoxyCodeLine{145                 ,   \textcolor{keyword}{const} Real\&}
+\DoxyCodeLine{146                 ,   \textcolor{keyword}{const} Real\&}
+\DoxyCodeLine{147                 );}
+\DoxyCodeLine{148         }
+\DoxyCodeLine{149 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{150 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{151 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 \textcolor{keyword}{public}:}
+\DoxyCodeLine{154     }
+\DoxyCodeLine{155 }
+\DoxyCodeLine{168     \mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}\& \mbox{\hyperlink{class_vieth_sladek_a80e7ae502f98d19e944fb7d28dffb910}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{169     }
+\DoxyCodeLine{170 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{171 \textcolor{comment}{// Acesso as constantes da classe}}
+\DoxyCodeLine{172 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{186 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_vieth_sladek_a858857b85bc8b19c105df1e516f2f5a9}{Qmax}} ()\textcolor{keyword}{ const }}
+\DoxyCodeLine{187 \textcolor{keyword}{}\{}
+\DoxyCodeLine{188     \textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0);}
+\DoxyCodeLine{189 \};}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191 }
+\DoxyCodeLine{204 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_vieth_sladek_a0d18712acaf9ccea8945b466f014fb8f}{K1}} ()\textcolor{keyword}{ const }}
+\DoxyCodeLine{205 \textcolor{keyword}{}\{}
+\DoxyCodeLine{206     \textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1);}
+\DoxyCodeLine{207 \};}
+\DoxyCodeLine{208     }
+\DoxyCodeLine{221 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_vieth_sladek_a3beb11c38ceba14c544134f8304643ea}{K2}} ()\textcolor{keyword}{ const }}
+\DoxyCodeLine{222 \textcolor{keyword}{}\{}
+\DoxyCodeLine{223     \textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2);}
+\DoxyCodeLine{224 \};}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{227 \textcolor{comment}{// Alterando as constantes da classe}}
+\DoxyCodeLine{228 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{243 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vieth_sladek_a7e984c4ccb55663e072696a7dda6556c}{Qmax}} (\textcolor{keyword}{const} Real\& \_qmax)  }
+\DoxyCodeLine{244 \{}
+\DoxyCodeLine{245     *\textcolor{keyword}{this} = \mbox{\hyperlink{class_vieth_sladek_a6f841e24388fd76585a4d2a34df1f625}{ViethSladek}} (\_qmax, \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1), \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2));}
+\DoxyCodeLine{246 \};}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{261 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vieth_sladek_a71cf17f7c19df787c6bb262080fbf1ea}{K1}} (\textcolor{keyword}{const} Real\& \_k1)  }
+\DoxyCodeLine{262 \{}
+\DoxyCodeLine{263     *\textcolor{keyword}{this} = \mbox{\hyperlink{class_vieth_sladek_a6f841e24388fd76585a4d2a34df1f625}{ViethSladek}} (\mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), \_k1, \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2));}
+\DoxyCodeLine{264 \};}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{279 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vieth_sladek_a5e3a3cd02ec17d23843c969d061dfea5}{K2}} (\textcolor{keyword}{const} Real\& \_k2)  }
+\DoxyCodeLine{280 \{}
+\DoxyCodeLine{281     *\textcolor{keyword}{this} = \mbox{\hyperlink{class_vieth_sladek_a6f841e24388fd76585a4d2a34df1f625}{ViethSladek}}(\mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1), \_k2);}
+\DoxyCodeLine{282 \};}
+\DoxyCodeLine{283     }
+\DoxyCodeLine{284     }
+\DoxyCodeLine{285 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{286 \textcolor{comment}{// Funções virtuais}}
+\DoxyCodeLine{287 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{288     }
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304     [[nodiscard]]  Real \mbox{\hyperlink{class_vieth_sladek_add5e0827ca749c89b70d8ad46ae8b8b6}{Qe}} (\textcolor{keyword}{const} Real\&, \textcolor{keyword}{const} Real\&) \textcolor{keyword}{const};}
+\DoxyCodeLine{305 }
+\DoxyCodeLine{306     [[nodiscard]] }
+\DoxyCodeLine{307     \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_vieth_sladek_add5e0827ca749c89b70d8ad46ae8b8b6}{Qe}}   (   \textcolor{keyword}{const} Real\& \_c}
+\DoxyCodeLine{308     )\textcolor{keyword}{ const override}}
+\DoxyCodeLine{309 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{310         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_vieth_sladek_add5e0827ca749c89b70d8ad46ae8b8b6}{Qe}}(\_c, 0);}
+\DoxyCodeLine{311     \}}
+\DoxyCodeLine{312 }
+\DoxyCodeLine{313 }
+\DoxyCodeLine{314 }
+\DoxyCodeLine{315     [[nodiscard]] }
+\DoxyCodeLine{316     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}* CloneImplementation()\textcolor{keyword}{ const override}}
+\DoxyCodeLine{317 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{318         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_vieth_sladek_a6f841e24388fd76585a4d2a34df1f625}{ViethSladek}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{319     \}}
+\DoxyCodeLine{320     }
+\DoxyCodeLine{321     }
+\DoxyCodeLine{322 \};}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{325 }
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_VIETH\_SLADEK\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{327         }
+\DoxyCodeLine{330         }
+
+\end{DoxyCode}

@@ -1,0 +1,89 @@
+\hypertarget{_four_parameters_8h_source}{}\doxysection{Four\+Parameters.\+h}
+\label{_four_parameters_8h_source}\index{IsothermLib/include/Isotherm/FourParameters/FourParameters.h@{IsothermLib/include/Isotherm/FourParameters/FourParameters.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// Name        : FourParameters.h}}
+\DoxyCodeLine{3 \textcolor{comment}{// Author      : Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{4 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{5 \textcolor{comment}{// Description : Classe base para as isotermas com quatro parâmetros}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 \textcolor{comment}{// Copyright   : Copyright (C) <2021>  Joao Flavio Vasconcellos }}
+\DoxyCodeLine{8 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{9 \textcolor{comment}{//}}
+\DoxyCodeLine{10 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{11 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{12 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{13 \textcolor{comment}{//}}
+\DoxyCodeLine{14 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{15 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{16 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{17 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{18 \textcolor{comment}{//}}
+\DoxyCodeLine{19 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{20 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{21 \textcolor{comment}{//}}
+\DoxyCodeLine{22 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{41         }
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifndef \_\_FOURPARAMETERS\_H\_\_}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define \_\_FOURPARAMETERS\_H\_\_}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{48 \textcolor{comment}{// include da isotherm++}}
+\DoxyCodeLine{49 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#include <Isotherm.h>}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{keyword}{class }\mbox{\hyperlink{class_four_parameters}{FourParameters}} : \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_isotherm}{Isotherm}} \{}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{58 \textcolor{comment}{// ID da classe}}
+\DoxyCodeLine{59 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{public}:}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     DefineIdentity  (   \textcolor{stringliteral}{"{}FourParameters"{}}}
+\DoxyCodeLine{64                     ,   ID::FourParameters}
+\DoxyCodeLine{65                     );}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{69 \textcolor{comment}{// Construtores / Destrutora}}
+\DoxyCodeLine{70 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \mbox{\hyperlink{class_four_parameters}{FourParameters}}() : \mbox{\hyperlink{class_four_parameters}{FourParameters}} (0, 0, 0, 0) \{\};}
+\DoxyCodeLine{75     \mbox{\hyperlink{class_four_parameters}{FourParameters}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_four_parameters}{FourParameters}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{76     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_four_parameters}{\string~FourParameters}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     \mbox{\hyperlink{class_four_parameters}{FourParameters}}  (   \textcolor{keyword}{const} Real\&}
+\DoxyCodeLine{80                     ,   \textcolor{keyword}{const} Real\&}
+\DoxyCodeLine{81                     ,   \textcolor{keyword}{const} Real\&}
+\DoxyCodeLine{82                     ,   \textcolor{keyword}{const} Real\&}
+\DoxyCodeLine{83                     );}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{87 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{88 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \mbox{\hyperlink{class_four_parameters}{FourParameters}}\& operator = ( \textcolor{keyword}{const} \mbox{\hyperlink{class_four_parameters}{FourParameters}}\& ) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \};}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_FOURPARAMETERS\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{102         }
+
+\end{DoxyCode}

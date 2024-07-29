@@ -1,0 +1,169 @@
+\hypertarget{_frenkel_halsey_hill_8h_source}{}\doxysection{Frenkel\+Halsey\+Hill.\+h}
+\label{_frenkel_halsey_hill_8h_source}\index{IsothermLib/include/Isotherm/FiveParameters/FrenkelHalseyHill.h@{IsothermLib/include/Isotherm/FiveParameters/FrenkelHalseyHill.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// Name        : FrenkelHalseyHill.h}}
+\DoxyCodeLine{3 \textcolor{comment}{// Authors     : Lara Botelho Brum}}
+\DoxyCodeLine{4 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
+\DoxyCodeLine{5 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{6 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{7 \textcolor{comment}{// Description : Classe com as equações da isoterma de Frenkel-\/Halsey-\/Hill.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Copyright   : Copyright (C) <2021>  Joao Flavio Vasconcellos}}
+\DoxyCodeLine{10 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{11 \textcolor{comment}{//}}
+\DoxyCodeLine{12 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{13 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{14 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{//}}
+\DoxyCodeLine{16 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{17 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{18 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{19 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{22 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{23 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#ifndef \_\_FRENKELHALSEYHILL\_H\_\_}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define \_\_FRENKELHALSEYHILL\_H\_\_}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{52 \textcolor{comment}{// include da biblioteca c++}}
+\DoxyCodeLine{53 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{comment}{//\#include <cmath>}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{58 \textcolor{comment}{// include da isotherm++}}
+\DoxyCodeLine{59 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#include <Isotherm/FiveParameters/FiveParameters.h>}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{keyword}{class }\mbox{\hyperlink{class_frenkel_halsey_hill}{FrenkelHalseyHill}} :     \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_five_parameters}{FiveParameters}},}
+\DoxyCodeLine{81                             \textcolor{keyword}{public} \mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} < FrenkelHalseyHill > \{}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{84 \textcolor{comment}{// ID da classe}}
+\DoxyCodeLine{85 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{keyword}{public}:}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \mbox{\hyperlink{class_frenkel_halsey_hill_ae975be1df34857762415d177aea6b1fa}{DefineIdentity}}(\textcolor{stringliteral}{"{}Frenkel-\/Halsey-\/Hill"{}}, ID::FrenkelHalseyHill);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{98 \textcolor{comment}{// Funções Construtoras/Destrutora}}
+\DoxyCodeLine{99 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{keyword}{public}:}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{113     \mbox{\hyperlink{class_frenkel_halsey_hill_af9ed89eb5b3ec6334cf8cd822e1c2a4a}{FrenkelHalseyHill}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{126     \mbox{\hyperlink{class_frenkel_halsey_hill_af0b92cc559812cb94cdb9f4cb710b57d}{FrenkelHalseyHill}} (\textcolor{keyword}{const} \mbox{\hyperlink{class_frenkel_halsey_hill}{FrenkelHalseyHill}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{131     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_frenkel_halsey_hill_adc463e03f5119c32e969570c678eb5f2}{\string~FrenkelHalseyHill}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{155     \mbox{\hyperlink{class_frenkel_halsey_hill_af9ed89eb5b3ec6334cf8cd822e1c2a4a}{FrenkelHalseyHill}}   (   \textcolor{keyword}{const} Real\&,}
+\DoxyCodeLine{156                             \textcolor{keyword}{const} Real\&,}
+\DoxyCodeLine{157                             \textcolor{keyword}{const} Real\&,}
+\DoxyCodeLine{158                             \textcolor{keyword}{const} Real\&,}
+\DoxyCodeLine{159                             \textcolor{keyword}{const} Real\&);}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{162 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{163 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165 \textcolor{keyword}{public}:}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 }
+\DoxyCodeLine{180     \mbox{\hyperlink{class_frenkel_halsey_hill}{FrenkelHalseyHill}}\& \mbox{\hyperlink{class_frenkel_halsey_hill_aeaa7d72205c0739ccdb6f16f9e738c3b}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_frenkel_halsey_hill}{FrenkelHalseyHill}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{183 \textcolor{comment}{// Acesso as constantes da classe}}
+\DoxyCodeLine{184 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{198 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_frenkel_halsey_hill_af09bcdb917261141d9763f6fef8de48e}{Qmax}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0);\};}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 }
+\DoxyCodeLine{213 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_frenkel_halsey_hill_a03b205ca5664e9ea707f85356acf1b85}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1);\};}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{227 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_frenkel_halsey_hill_ad33e90d6d8f085d8034e35bc22b75078}{K2}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2);\};}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{241 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_frenkel_halsey_hill_a49d2657cb8ac5d61feb6114a7e098112}{K3}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(3);\};}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{255 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_frenkel_halsey_hill_a5715fa0648c4ba4babbabda0861956f3}{K4}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(4);\};}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{257 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{258 \textcolor{comment}{// Alterando as constantes da classe}}
+\DoxyCodeLine{259 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{274     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_frenkel_halsey_hill_a9ce6da038bcd2c4d7a5784ec6db56815}{Qmax}} (\textcolor{keyword}{const} Real\& \_qmax)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_frenkel_halsey_hill_af9ed89eb5b3ec6334cf8cd822e1c2a4a}{FrenkelHalseyHill}} (   \_qmax,}
+\DoxyCodeLine{275                                                                 \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1),}
+\DoxyCodeLine{276                                                                 \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2),}
+\DoxyCodeLine{277                                                                 \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(3),}
+\DoxyCodeLine{278                                                                 \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(4));\};}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{293     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_frenkel_halsey_hill_a15dc2e2ba4dc33c4be2237ddb99651c9}{K1}} (\textcolor{keyword}{const} Real\& \_k1)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_frenkel_halsey_hill_af9ed89eb5b3ec6334cf8cd822e1c2a4a}{FrenkelHalseyHill}} (   \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0),}
+\DoxyCodeLine{294                                                             \_k1,}
+\DoxyCodeLine{295                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2),}
+\DoxyCodeLine{296                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(3),}
+\DoxyCodeLine{297                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(4));\};}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{312     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_frenkel_halsey_hill_a892782d96544553050d2c241d45d4d4e}{K2}} (\textcolor{keyword}{const} Real\& \_k2)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_frenkel_halsey_hill_af9ed89eb5b3ec6334cf8cd822e1c2a4a}{FrenkelHalseyHill}}(    \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0),}
+\DoxyCodeLine{313                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1),}
+\DoxyCodeLine{314                                                             \_k2     ,}
+\DoxyCodeLine{315                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(3),}
+\DoxyCodeLine{316                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(4));\};}
+\DoxyCodeLine{317 }
+\DoxyCodeLine{331     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_frenkel_halsey_hill_a2cc6259a111e0ecccb12a889bd1e6f9d}{K3}} (\textcolor{keyword}{const} Real\& \_k3)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_frenkel_halsey_hill_af9ed89eb5b3ec6334cf8cd822e1c2a4a}{FrenkelHalseyHill}}(    \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0),}
+\DoxyCodeLine{332                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1),}
+\DoxyCodeLine{333                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2),}
+\DoxyCodeLine{334                                                             \_k3,}
+\DoxyCodeLine{335                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(4));\};}
+\DoxyCodeLine{336 }
+\DoxyCodeLine{350     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_frenkel_halsey_hill_afd1314c4f66fa8501ac7981c11d383d6}{K4}} (\textcolor{keyword}{const} Real\& \_k4)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_frenkel_halsey_hill_af9ed89eb5b3ec6334cf8cd822e1c2a4a}{FrenkelHalseyHill}}(    \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0),}
+\DoxyCodeLine{351                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1),}
+\DoxyCodeLine{352                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2),}
+\DoxyCodeLine{353                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(3),}
+\DoxyCodeLine{354                                                             \_k4     );\};}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{356 }
+\DoxyCodeLine{357 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{358 \textcolor{comment}{// Funções virtuais}}
+\DoxyCodeLine{359 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{360 }
+\DoxyCodeLine{375     \textcolor{keyword}{virtual} Real \mbox{\hyperlink{class_frenkel_halsey_hill_a98254076848db9b497a695b29aea37c7}{Qe}} (\textcolor{keyword}{const} Real\&, \textcolor{keyword}{const} Real\& = 0) \textcolor{keyword}{const};}
+\DoxyCodeLine{376 }
+\DoxyCodeLine{377     }
+\DoxyCodeLine{378     }
+\DoxyCodeLine{379     [[nodiscard]] }
+\DoxyCodeLine{380     \mbox{\hyperlink{class_frenkel_halsey_hill}{FrenkelHalseyHill}}* CloneImplementation()\textcolor{keyword}{ const override}}
+\DoxyCodeLine{381 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{382         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_frenkel_halsey_hill_af9ed89eb5b3ec6334cf8cd822e1c2a4a}{FrenkelHalseyHill}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{383     \}}
+\DoxyCodeLine{384     }
+\DoxyCodeLine{385 \textcolor{comment}{//    virtual FrenkelHalseyHill* clone() const override}}
+\DoxyCodeLine{386 \textcolor{comment}{//    \{}}
+\DoxyCodeLine{387 \textcolor{comment}{//        return new FrenkelHalseyHill(*this);}}
+\DoxyCodeLine{388 \textcolor{comment}{//    \}}}
+\DoxyCodeLine{389 }
+\DoxyCodeLine{390 \};}
+\DoxyCodeLine{391 }
+\DoxyCodeLine{392 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{393 }
+\DoxyCodeLine{394 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_FRENKELHALSEYHILL\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{395 }
+\DoxyCodeLine{396 }
+
+\end{DoxyCode}

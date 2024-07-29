@@ -1,0 +1,431 @@
+\hypertarget{class_toth}{}\doxysection{Referência da Classe Toth}
+\label{class_toth}\index{Toth@{Toth}}
+
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_toth}{Toth}}  
+
+
+
+
+{\ttfamily \#include $<$Toth.\+h$>$}
+
+Diagrama de hierarquia para Toth\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_toth}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_toth_add5c40731092e03092d00f2eecff9c45}{Define\+Identity}} (\char`\"{}Toth\char`\"{}, ID\+::\+Toth)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_toth_a20ce06d62b1e34218f1e2b08c15345d5}{Toth}} ()=default
+\item 
+\mbox{\hyperlink{class_toth_a495d6967a71745788f6eba4f347b7d36}{Toth}} (const \mbox{\hyperlink{class_toth}{Toth}} \&\+\_\+toth)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_toth_a9e571b46b78b5018764a6c1cb1781212}\label{class_toth_a9e571b46b78b5018764a6c1cb1781212}} 
+virtual {\bfseries $\sim$\+Toth} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_toth_ada2580c0c4680093ab9a7d37acb5ef0b}{Toth}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_toth}{Toth}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_toth}{Toth}} \& \mbox{\hyperlink{class_toth_a08ab70fa30b708d16a7e5aa30322fe25}{operator=}} (const \mbox{\hyperlink{class_toth}{Toth}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_toth_a3255e03d3217c8108b309b38f6967b69}{K3}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR CASO HAJA NECESSIDADE} \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_toth_a6b681984b1ca07869fdaa8c1ce031278}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR CASO HAJA NECESSIDADE} \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_toth_ae81806d4be020e0feaa382c0bd99ff46}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR CASO HAJA NECESSIDADE} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_toth_a991b666ccfce221e53aa3c1c274d51f1}{K3}} (const Real \&\+\_\+k3)
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR CASO HAJA NECESSIDADE} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_toth_a18a84cb54a569ba6c06684b3361344db}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_toth}{Toth}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_toth_ae2f4d031f725d63c53b8d04406c2b4f1}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_toth}{Toth}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_toth_afa4e59470a5557308af9023e4fcbd70d}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_toth_a0aa5aff13ed3f13189f4b76e614d103e}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_toth}{Toth}} $\ast$ \mbox{\hyperlink{class_toth_af8bdc0b7d0c69812451d8362b594f446}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de \mbox{\hyperlink{class_toth}{Toth}} 
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_toth}{Toth}}.
+
+Isoterma com três parâmetros, $ K_1 $, $ K_2 $ e $ K_3 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}q = q\+\_\+max\textbackslash{}frac\{K\+\_\+1C\}\{((1+(K\+\_\+1C)\+\_\+e$^\wedge$\{K\+\_\+2\})\+\_\+e$^\wedge$\{\textbackslash{}frac\{1\}\{K\+\_\+2\}\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000054}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_toth_a20ce06d62b1e34218f1e2b08c15345d5}\label{class_toth_a20ce06d62b1e34218f1e2b08c15345d5}} 
+\index{Toth@{Toth}!Toth@{Toth}}
+\index{Toth@{Toth}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{Toth()}{Toth()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Toth\+::\+Toth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_toth_a495d6967a71745788f6eba4f347b7d36}\label{class_toth_a495d6967a71745788f6eba4f347b7d36}} 
+\index{Toth@{Toth}!Toth@{Toth}}
+\index{Toth@{Toth}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{Toth()}{Toth()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Toth\+::\+Toth (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_toth}{Toth}} \&}]{\+\_\+toth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_toth}{Toth}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_toth_ada2580c0c4680093ab9a7d37acb5ef0b}\label{class_toth_ada2580c0c4680093ab9a7d37acb5ef0b}} 
+\index{Toth@{Toth}!Toth@{Toth}}
+\index{Toth@{Toth}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{Toth()}{Toth()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Toth\+::\+Toth (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k3,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_toth}{Toth}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_toth_a3255e03d3217c8108b309b38f6967b69}{K3}}(1.0);                                                             *EDITAR, CASO HAJA NECESSIDADE*}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_toth_a6b681984b1ca07869fdaa8c1ce031278}{K1}}(1.0);                                                             *EDITAR, CASO HAJA NECESSIDADE*}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_toth_ae81806d4be020e0feaa382c0bd99ff46}{K2}}(1.0);                                                             *EDITAR, CASO HAJA NECESSIDADE*}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var1(\mbox{\hyperlink{class_toth_a3255e03d3217c8108b309b38f6967b69}{K3}}, \mbox{\hyperlink{class_toth_a6b681984b1ca07869fdaa8c1ce031278}{K1}}, \mbox{\hyperlink{class_toth_ae81806d4be020e0feaa382c0bd99ff46}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k3} & Constante da isoterm de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR, CASO HAJA NECESSIDADE} \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR, CASO HAJA NECESSIDADE} \\
+\hline
+{\em \+\_\+k2} & Constante do expoente da isoterma de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR, CASO HAJA NECESSIDADE} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k3} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_toth_af8bdc0b7d0c69812451d8362b594f446}\label{class_toth_af8bdc0b7d0c69812451d8362b594f446}} 
+\index{Toth@{Toth}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_toth}{Toth}} $\ast$ Toth\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_toth_add5c40731092e03092d00f2eecff9c45}\label{class_toth_add5c40731092e03092d00f2eecff9c45}} 
+\index{Toth@{Toth}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Toth\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Toth\char`\"{}}]{,  }\item[{ID\+::\+Toth}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_toth_a6b681984b1ca07869fdaa8c1ce031278}\label{class_toth_a6b681984b1ca07869fdaa8c1ce031278}} 
+\index{Toth@{Toth}!K1@{K1}}
+\index{K1@{K1}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Toth\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR CASO HAJA NECESSIDADE} 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var1(\mbox{\hyperlink{class_toth_a3255e03d3217c8108b309b38f6967b69}{K3}}, \mbox{\hyperlink{class_toth_a6b681984b1ca07869fdaa8c1ce031278}{K1}}, \mbox{\hyperlink{class_toth_ae81806d4be020e0feaa382c0bd99ff46}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR CASO HAJA NECESSIDADE} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_toth_a18a84cb54a569ba6c06684b3361344db}\label{class_toth_a18a84cb54a569ba6c06684b3361344db}} 
+\index{Toth@{Toth}!K1@{K1}}
+\index{K1@{K1}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Toth\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_toth}{Toth}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var1(\mbox{\hyperlink{class_toth_a3255e03d3217c8108b309b38f6967b69}{K3}}, \mbox{\hyperlink{class_toth_a6b681984b1ca07869fdaa8c1ce031278}{K1}}, \mbox{\hyperlink{class_toth_ae81806d4be020e0feaa382c0bd99ff46}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de \mbox{\hyperlink{class_toth}{Toth}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_toth_ae81806d4be020e0feaa382c0bd99ff46}\label{class_toth_ae81806d4be020e0feaa382c0bd99ff46}} 
+\index{Toth@{Toth}!K2@{K2}}
+\index{K2@{K2}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Toth\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR CASO HAJA NECESSIDADE} 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var1(\mbox{\hyperlink{class_toth_a3255e03d3217c8108b309b38f6967b69}{K3}}, \mbox{\hyperlink{class_toth_a6b681984b1ca07869fdaa8c1ce031278}{K1}}, \mbox{\hyperlink{class_toth_ae81806d4be020e0feaa382c0bd99ff46}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do expoente da isoterma de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR CASO HAJA NECESSIDADE} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_toth_ae2f4d031f725d63c53b8d04406c2b4f1}\label{class_toth_ae2f4d031f725d63c53b8d04406c2b4f1}} 
+\index{Toth@{Toth}!K2@{K2}}
+\index{K2@{K2}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Toth\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_toth}{Toth}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var1(\mbox{\hyperlink{class_toth_a3255e03d3217c8108b309b38f6967b69}{K3}}, \mbox{\hyperlink{class_toth_a6b681984b1ca07869fdaa8c1ce031278}{K1}}, \mbox{\hyperlink{class_toth_ae81806d4be020e0feaa382c0bd99ff46}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor do expoente da isoterma de \mbox{\hyperlink{class_toth}{Toth}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_toth_a3255e03d3217c8108b309b38f6967b69}\label{class_toth_a3255e03d3217c8108b309b38f6967b69}} 
+\index{Toth@{Toth}!K3@{K3}}
+\index{K3@{K3}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{K3()}{K3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Toth\+::\+K3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR CASO HAJA NECESSIDADE} 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var1(\mbox{\hyperlink{class_toth_a3255e03d3217c8108b309b38f6967b69}{K3}}, \mbox{\hyperlink{class_toth_a6b681984b1ca07869fdaa8c1ce031278}{K1}}, \mbox{\hyperlink{class_toth_ae81806d4be020e0feaa382c0bd99ff46}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k3 = var1.K3();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR CASO HAJA NECESSIDADE} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_toth_a991b666ccfce221e53aa3c1c274d51f1}\label{class_toth_a991b666ccfce221e53aa3c1c274d51f1}} 
+\index{Toth@{Toth}!K3@{K3}}
+\index{K3@{K3}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{K3()}{K3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Toth\+::\+K3 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_toth}{Toth}}. {\itshape EDITAR CASO HAJA NECESSIDADE} 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var1(\mbox{\hyperlink{class_toth_a3255e03d3217c8108b309b38f6967b69}{K3}}, \mbox{\hyperlink{class_toth_a6b681984b1ca07869fdaa8c1ce031278}{K1}}, \mbox{\hyperlink{class_toth_ae81806d4be020e0feaa382c0bd99ff46}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k3(3.0);}
+\DoxyCodeLine{var1.K3(k3);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k3} & Novo valor do coeficiente associado a constante de \mbox{\hyperlink{class_toth}{Toth}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k3} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_toth_a08ab70fa30b708d16a7e5aa30322fe25}\label{class_toth_a08ab70fa30b708d16a7e5aa30322fe25}} 
+\index{Toth@{Toth}!operator=@{operator=}}
+\index{operator=@{operator=}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_toth}{Toth}} \& Toth\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_toth}{Toth}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var1(\mbox{\hyperlink{class_toth_a3255e03d3217c8108b309b38f6967b69}{K3}}, \mbox{\hyperlink{class_toth_a6b681984b1ca07869fdaa8c1ce031278}{K1}}, \mbox{\hyperlink{class_toth_ae81806d4be020e0feaa382c0bd99ff46}{K2}});}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_toth}{Toth}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_toth_afa4e59470a5557308af9023e4fcbd70d}\label{class_toth_afa4e59470a5557308af9023e4fcbd70d}} 
+\index{Toth@{Toth}!Qe@{Qe}}
+\index{Qe@{Qe}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Toth\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_toth}{Toth}}  var1(\mbox{\hyperlink{class_toth_a3255e03d3217c8108b309b38f6967b69}{K3}}, \mbox{\hyperlink{class_toth_a6b681984b1ca07869fdaa8c1ce031278}{K1}}, \mbox{\hyperlink{class_toth_ae81806d4be020e0feaa382c0bd99ff46}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_toth_a0aa5aff13ed3f13189f4b76e614d103e}\label{class_toth_a0aa5aff13ed3f13189f4b76e614d103e}} 
+\index{Toth@{Toth}!Qe@{Qe}}
+\index{Qe@{Qe}!Toth@{Toth}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Toth\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_toth_8h}{Toth.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Toth.\+cpp\end{DoxyCompactItemize}

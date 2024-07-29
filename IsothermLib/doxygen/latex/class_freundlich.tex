@@ -1,0 +1,359 @@
+\hypertarget{class_freundlich}{}\doxysection{Referência da Classe Freundlich}
+\label{class_freundlich}\index{Freundlich@{Freundlich}}
+
+
+Classe com a equacao da isoterma de \mbox{\hyperlink{class_freundlich}{Freundlich}}  
+
+
+
+
+{\ttfamily \#include $<$Freundlich.\+h$>$}
+
+Diagrama de hierarquia para Freundlich\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_freundlich}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_freundlich_aea3a673e5289e282140b02e0a1aff184}{Define\+Identity}} (\char`\"{}Freundlich\char`\"{}, ID\+::\+Freundlich)
+\begin{DoxyCompactList}\small\item\em Definicao de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificacao de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_freundlich_af59856b095a0e5c28c4a28bc56e70bf0}{Freundlich}} ()=default
+\begin{DoxyCompactList}\small\item\em Construtora default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_freundlich_a8da0a90559c815c68ffff721ab798231}{Freundlich}} (const \mbox{\hyperlink{class_freundlich}{Freundlich}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Construtora de copia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_freundlich_a8c465ffe357b3b1b3fd74167c44954f8}\label{class_freundlich_a8c465ffe357b3b1b3fd74167c44954f8}} 
+{\bfseries $\sim$\+Freundlich} () override=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_freundlich_a216d321a86e70ad8173019802af20ff8}{Freundlich}} (const Real \&\+\_\+k1, const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Construtora com os parametros que definem a isoterma de \mbox{\hyperlink{class_freundlich}{Freundlich}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_freundlich}{Freundlich}} \& \mbox{\hyperlink{class_freundlich_af0112fe9ece823d7bf77e1db90519e51}{operator=}} (const \mbox{\hyperlink{class_freundlich}{Freundlich}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_freundlich_a0bb0385ebf6bb9452590e05e066afc02}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Funcao que informa o valor do coeficiente de distribuicao em \mbox{[}M /M \mbox{]}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_freundlich_a57ecc1300276a568b72e56b4d13edabe}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Funcao que retorna o coeficiente associado ao fator de correcao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_freundlich_a26a6b4394f4bce6ea8fe3ea60e60b543}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Funcao para alterar o valor do coeficiente de distribuicao em \mbox{[}M /M \mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_freundlich_a48f70b78e2d23d68c7592f7ca017bb0a}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Funcao que altera o coeficiente associado ao fator de correcao. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_freundlich_a48aaed73e4493d0f0f12fc2ddcc46035}{Qe}} (const Real \&\+\_\+c, const Real \&\+\_\+temp=0) const override
+\begin{DoxyCompactList}\small\item\em Funcao que calcula a quantidade de sorcao no equilibrio. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_freundlich}{Freundlich}} $\ast$ \mbox{\hyperlink{class_freundlich_af330b9c8db500e41ab053bbe7b9806b0}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com a equacao da isoterma de \mbox{\hyperlink{class_freundlich}{Freundlich}} 
+
+Isoterma com dois parametros, $ K_1 $ e $ K_2 $, cujas formulas sao as seguintes\+: \textbackslash{}begin\{align\} Q\+\_\+e(\+C\+\_\+e) = K\+\_\+1\+C\+\_\+e$^\wedge$\{\textbackslash{}frac\{1\}\{K\+\_\+2\}\} \textbackslash{}end\{align\} Um artigo de referencia pode ser encontrado \href{https://tinyurl.com/yxruu6c7}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Iasmim Barboza Storck 
+
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000062}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_freundlich_af59856b095a0e5c28c4a28bc56e70bf0}\label{class_freundlich_af59856b095a0e5c28c4a28bc56e70bf0}} 
+\index{Freundlich@{Freundlich}!Freundlich@{Freundlich}}
+\index{Freundlich@{Freundlich}!Freundlich@{Freundlich}}
+\doxysubsubsection{\texorpdfstring{Freundlich()}{Freundlich()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Freundlich\+::\+Freundlich (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_freundlich}{Freundlich}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros para esta funcao \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_freundlich_a8da0a90559c815c68ffff721ab798231}\label{class_freundlich_a8da0a90559c815c68ffff721ab798231}} 
+\index{Freundlich@{Freundlich}!Freundlich@{Freundlich}}
+\index{Freundlich@{Freundlich}!Freundlich@{Freundlich}}
+\doxysubsubsection{\texorpdfstring{Freundlich()}{Freundlich()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Freundlich\+::\+Freundlich (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_freundlich}{Freundlich}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de copia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_freundlich}{Freundlich}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_freundlich}{Freundlich}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variavel do tipo \mbox{\hyperlink{class_freundlich}{Freundlich}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_freundlich_a216d321a86e70ad8173019802af20ff8}\label{class_freundlich_a216d321a86e70ad8173019802af20ff8}} 
+\index{Freundlich@{Freundlich}!Freundlich@{Freundlich}}
+\index{Freundlich@{Freundlich}!Freundlich@{Freundlich}}
+\doxysubsubsection{\texorpdfstring{Freundlich()}{Freundlich()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Freundlich\+::\+Freundlich (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parametros que definem a isoterma de \mbox{\hyperlink{class_freundlich}{Freundlich}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Real k1(1.0);}
+\DoxyCodeLine{Real k2(1.0);            }
+\DoxyCodeLine{\mbox{\hyperlink{class_freundlich}{Freundlich}}  var1(k1, k2);              }
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Coeficiente de distribuicao em \mbox{[}M /M \mbox{]}. ~\newline
+ \\
+\hline
+{\em \+\_\+k2} & Fator de correcao. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_freundlich_af330b9c8db500e41ab053bbe7b9806b0}\label{class_freundlich_af330b9c8db500e41ab053bbe7b9806b0}} 
+\index{Freundlich@{Freundlich}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!Freundlich@{Freundlich}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_freundlich}{Freundlich}} $\ast$ Freundlich\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_freundlich_aea3a673e5289e282140b02e0a1aff184}\label{class_freundlich_aea3a673e5289e282140b02e0a1aff184}} 
+\index{Freundlich@{Freundlich}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!Freundlich@{Freundlich}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Freundlich\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Freundlich\char`\"{}}]{,  }\item[{ID\+::\+Freundlich}]{ }\end{DoxyParamCaption})}
+
+
+
+Definicao de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificacao de erros. 
+
+\mbox{\Hypertarget{class_freundlich_a0bb0385ebf6bb9452590e05e066afc02}\label{class_freundlich_a0bb0385ebf6bb9452590e05e066afc02}} 
+\index{Freundlich@{Freundlich}!K1@{K1}}
+\index{K1@{K1}!Freundlich@{Freundlich}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Freundlich\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que informa o valor do coeficiente de distribuicao em \mbox{[}M /M \mbox{]}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_freundlich}{Freundlich}}  var1(k1, k2);              }
+\DoxyCodeLine{Real \_k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente de distribuicao em \mbox{[}M /M \mbox{]}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_freundlich_a26a6b4394f4bce6ea8fe3ea60e60b543}\label{class_freundlich_a26a6b4394f4bce6ea8fe3ea60e60b543}} 
+\index{Freundlich@{Freundlich}!K1@{K1}}
+\index{K1@{K1}!Freundlich@{Freundlich}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Freundlich\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao para alterar o valor do coeficiente de distribuicao em \mbox{[}M /M \mbox{]}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_freundlich}{Freundlich}}  var1(k1, k2);              }
+\DoxyCodeLine{Real k11(3.0);}
+\DoxyCodeLine{var1.K1(k11);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente de distribuicao em \mbox{[}M /M \mbox{]}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_freundlich_a57ecc1300276a568b72e56b4d13edabe}\label{class_freundlich_a57ecc1300276a568b72e56b4d13edabe}} 
+\index{Freundlich@{Freundlich}!K2@{K2}}
+\index{K2@{K2}!Freundlich@{Freundlich}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Freundlich\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que retorna o coeficiente associado ao fator de correcao. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_freundlich}{Freundlich}}  var1(k1, k2);              }
+\DoxyCodeLine{Real \_k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado ao fator de correcao. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_freundlich_a48f70b78e2d23d68c7592f7ca017bb0a}\label{class_freundlich_a48f70b78e2d23d68c7592f7ca017bb0a}} 
+\index{Freundlich@{Freundlich}!K2@{K2}}
+\index{K2@{K2}!Freundlich@{Freundlich}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Freundlich\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que altera o coeficiente associado ao fator de correcao. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_freundlich}{Freundlich}}  var1(k1, k2);              }
+\DoxyCodeLine{Real \_k22(2.0);}
+\DoxyCodeLine{var1.K2(\_k22);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor do coeficiente associado a energia de adsorcao. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_freundlich_af0112fe9ece823d7bf77e1db90519e51}\label{class_freundlich_af0112fe9ece823d7bf77e1db90519e51}} 
+\index{Freundlich@{Freundlich}!operator=@{operator=}}
+\index{operator=@{operator=}!Freundlich@{Freundlich}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_freundlich}{Freundlich}} \& Freundlich\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_freundlich}{Freundlich}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_freundlich}{Freundlich}}  var1(k1, k2);              }
+\DoxyCodeLine{\mbox{\hyperlink{class_freundlich}{Freundlich}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variavel do tipo \mbox{\hyperlink{class_freundlich}{Freundlich}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Copia de \+\_\+orig. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_freundlich_a48aaed73e4493d0f0f12fc2ddcc46035}\label{class_freundlich_a48aaed73e4493d0f0f12fc2ddcc46035}} 
+\index{Freundlich@{Freundlich}!Qe@{Qe}}
+\index{Qe@{Qe}!Freundlich@{Freundlich}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}}
+{\footnotesize\ttfamily Real Freundlich\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c,  }\item[{const Real \&}]{\+\_\+temp = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Funcao que calcula a quantidade de sorcao no equilibrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_freundlich}{Freundlich}}  var1(k1, k2);              }
+\DoxyCodeLine{Real ce(1.0);}
+\DoxyCodeLine{Real qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentracao do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorcao no equilibrio. ~\newline
+ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Two\+Parameters/Freundlich.\+h\item 
+Isotherm\+Lib/src/\+Isotherm/\+Two\+Parameters/Freundlich.\+cpp\end{DoxyCompactItemize}

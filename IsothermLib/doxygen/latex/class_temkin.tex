@@ -1,0 +1,422 @@
+\hypertarget{class_temkin}{}\doxysection{Referência da Classe Temkin}
+\label{class_temkin}\index{Temkin@{Temkin}}
+
+
+Classe com as equacoes da isoterma de \mbox{\hyperlink{class_temkin}{Temkin}}.  
+
+
+
+
+{\ttfamily \#include $<$Temkin.\+h$>$}
+
+Diagrama de hierarquia para Temkin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_temkin}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_temkin_a754ef73169eae95c54919827ecf06fb8}{Define\+Identity}} (\char`\"{}Temkin\char`\"{}, ID\+::\+Temkin)
+\begin{DoxyCompactList}\small\item\em Definicao de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificacao de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_temkin_a7537cfac56ea9dffe38e791928be85fd}{Temkin}} ()=default
+\begin{DoxyCompactList}\small\item\em Construtora default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_temkin_a2a63b7baf7601365597d4d2a065b8528}{Temkin}} (const \mbox{\hyperlink{class_temkin}{Temkin}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Construtora de copia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_temkin_a95401c3c837bf6dc33ea8de28a601254}\label{class_temkin_a95401c3c837bf6dc33ea8de28a601254}} 
+virtual {\bfseries $\sim$\+Temkin} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_temkin_ace3f65862f4a1f8ee8e11bfdbb86c316}{Temkin}} (const Real \&\+\_\+k1, const Real \&\+\_\+k2, const Real \&\+\_\+rgas=Isotherm\+::\+RGASCONST)
+\begin{DoxyCompactList}\small\item\em Construtora com os parametros que definem a isoterma de \mbox{\hyperlink{class_temkin}{Temkin}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_temkin}{Temkin}} \& \mbox{\hyperlink{class_temkin_ad00500ea820c1bdfe42fef1423d80d9d}{operator=}} (const \mbox{\hyperlink{class_temkin}{Temkin}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_temkin_a9adc2038db86e50a1ef24993da6b3b04}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Funcao que informa o valor da constante da isoterma de \mbox{\hyperlink{class_temkin}{Temkin}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_temkin_ac14a981317be0fdc8975018ab4bfb3fe}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Funcao que retorna o coeficiente associado a constante de ligacao de equilibrio isotermica. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_temkin_a64ba774ff2fab88430de674c8ecfc9f2}{Rgas}} () const
+\begin{DoxyCompactList}\small\item\em Funcao que retorna o valor da constante universal dos gases. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_temkin_a12e04f6a412ba7f7290bc3230f3c1056}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Funcao para alterar a constante da isoterma de \mbox{\hyperlink{class_temkin}{Temkin}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_temkin_a810fdc1446258592ba4f308535e8b423}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Funcao que alterao o coeficiente associado a constante de ligacao de equilibrio isotermica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_temkin_ace95c6383f86e2a35a9e7b8bec5c4a1c}{Rgas}} (const Real \&\+\_\+rgas)
+\begin{DoxyCompactList}\small\item\em Funcao para alterar o valor da constante universal dos gases. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_temkin_ad0e5a407af8219eb67ebbcb546bfb904}{Qe}} (const Real \&\+\_\+c, const Real \&\+\_\+temp) const
+\begin{DoxyCompactList}\small\item\em Funcao que calcula a quantidade de sorcao no equilibrio. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_temkin}{Temkin}} $\ast$ \mbox{\hyperlink{class_temkin_a7b8c0352c1f49d9d803afc3f1ebc4899}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equacoes da isoterma de \mbox{\hyperlink{class_temkin}{Temkin}}. 
+
+Isoterma com dois parametros, $ K_1 $ e $ K_2 $, cujas formulas sao as seguintes\+: \textbackslash{}begin\{align\} Q\+\_\+e(\+C\+\_\+e, T) = \textbackslash{}frac\{R T\}\{K\+\_\+2\}ln(\+K\+\_\+1 C\+\_\+e ) \textbackslash{}end\{align\} Um artigo de referencia pode ser encontrado \href{https://doi.org/10.1016/0167-4838(95)00006-G}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Iasmim Barboza Storck 
+
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000067}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_temkin_a7537cfac56ea9dffe38e791928be85fd}\label{class_temkin_a7537cfac56ea9dffe38e791928be85fd}} 
+\index{Temkin@{Temkin}!Temkin@{Temkin}}
+\index{Temkin@{Temkin}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{Temkin()}{Temkin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Temkin\+::\+Temkin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros para esta funcao \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_temkin_a2a63b7baf7601365597d4d2a065b8528}\label{class_temkin_a2a63b7baf7601365597d4d2a065b8528}} 
+\index{Temkin@{Temkin}!Temkin@{Temkin}}
+\index{Temkin@{Temkin}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{Temkin()}{Temkin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Temkin\+::\+Temkin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_temkin}{Temkin}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de copia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variavel do tipo \mbox{\hyperlink{class_temkin}{Temkin}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_temkin_ace3f65862f4a1f8ee8e11bfdbb86c316}\label{class_temkin_ace3f65862f4a1f8ee8e11bfdbb86c316}} 
+\index{Temkin@{Temkin}!Temkin@{Temkin}}
+\index{Temkin@{Temkin}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{Temkin()}{Temkin()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Temkin\+::\+Temkin (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2,  }\item[{const Real \&}]{\+\_\+rgas = {\ttfamily Isotherm\+:\+:RGASCONST} }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parametros que definem a isoterma de \mbox{\hyperlink{class_temkin}{Temkin}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Real q1(1.0);}
+\DoxyCodeLine{Real k2(1.0);}
+\DoxyCodeLine{Real RGAS(62.363598221529);}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var1(k1, k2);              \textcolor{comment}{// Constante dos gases default}}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var2(k1, k2, RGAS);        \textcolor{comment}{// Constante dos gases modificada}}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Constante da isoterma de \mbox{\hyperlink{class_temkin}{Temkin}}. \\
+\hline
+{\em \+\_\+k2} & Constante de ligacao de equilibrio isotermica. \\
+\hline
+{\em \+\_\+rgas} & Valor da constante universal dos gases diferente do padrao. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+rgas} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_temkin_a7b8c0352c1f49d9d803afc3f1ebc4899}\label{class_temkin_a7b8c0352c1f49d9d803afc3f1ebc4899}} 
+\index{Temkin@{Temkin}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_temkin}{Temkin}} $\ast$ Temkin\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_temkin_a754ef73169eae95c54919827ecf06fb8}\label{class_temkin_a754ef73169eae95c54919827ecf06fb8}} 
+\index{Temkin@{Temkin}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Temkin\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Temkin\char`\"{}}]{,  }\item[{ID\+::\+Temkin}]{ }\end{DoxyParamCaption})}
+
+
+
+Definicao de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificacao de erros. 
+
+\mbox{\Hypertarget{class_temkin_a9adc2038db86e50a1ef24993da6b3b04}\label{class_temkin_a9adc2038db86e50a1ef24993da6b3b04}} 
+\index{Temkin@{Temkin}!K1@{K1}}
+\index{K1@{K1}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Temkin\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que informa o valor da constante da isoterma de \mbox{\hyperlink{class_temkin}{Temkin}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var1(k1, k2);}
+\DoxyCodeLine{Real \_k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da constante da isoterma de \mbox{\hyperlink{class_temkin}{Temkin}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_temkin_a12e04f6a412ba7f7290bc3230f3c1056}\label{class_temkin_a12e04f6a412ba7f7290bc3230f3c1056}} 
+\index{Temkin@{Temkin}!K1@{K1}}
+\index{K1@{K1}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Temkin\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao para alterar a constante da isoterma de \mbox{\hyperlink{class_temkin}{Temkin}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var1(k1, k2);}
+\DoxyCodeLine{Real \_k1(3.0);}
+\DoxyCodeLine{var1.K1(\_k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor da constante da isoterma de \mbox{\hyperlink{class_temkin}{Temkin}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_temkin_ac14a981317be0fdc8975018ab4bfb3fe}\label{class_temkin_ac14a981317be0fdc8975018ab4bfb3fe}} 
+\index{Temkin@{Temkin}!K2@{K2}}
+\index{K2@{K2}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Temkin\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que retorna o coeficiente associado a constante de ligacao de equilibrio isotermica. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var1(k1, k2);}
+\DoxyCodeLine{Real \_k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de ligacao de equilibrio isotermica. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_temkin_a810fdc1446258592ba4f308535e8b423}\label{class_temkin_a810fdc1446258592ba4f308535e8b423}} 
+\index{Temkin@{Temkin}!K2@{K2}}
+\index{K2@{K2}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Temkin\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que alterao o coeficiente associado a constante de ligacao de equilibrio isotermica. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var1(k1, k2);}
+\DoxyCodeLine{Real \_k2(2.0);}
+\DoxyCodeLine{var1.K2(\_k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor do coeficiente associado a constante de ligacao de equilibrio isotermica. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_temkin_ad00500ea820c1bdfe42fef1423d80d9d}\label{class_temkin_ad00500ea820c1bdfe42fef1423d80d9d}} 
+\index{Temkin@{Temkin}!operator=@{operator=}}
+\index{operator=@{operator=}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_temkin}{Temkin}} \& Temkin\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_temkin}{Temkin}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var1(k1, k2);}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variavel do tipo \mbox{\hyperlink{class_temkin}{Temkin}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Copia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_temkin_ad0e5a407af8219eb67ebbcb546bfb904}\label{class_temkin_ad0e5a407af8219eb67ebbcb546bfb904}} 
+\index{Temkin@{Temkin}!Qe@{Qe}}
+\index{Qe@{Qe}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}}
+{\footnotesize\ttfamily Real Temkin\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c,  }\item[{const Real \&}]{\+\_\+temp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Funcao que calcula a quantidade de sorcao no equilibrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var1(q1, k2);}
+\DoxyCodeLine{Real ce(1);}
+\DoxyCodeLine{Real qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentracao do soluto. \\
+\hline
+{\em \+\_\+temp} & Temperatura em K. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorcao no equilibrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & k1 \texorpdfstring{$<$}{<} 1. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_temkin_a64ba774ff2fab88430de674c8ecfc9f2}\label{class_temkin_a64ba774ff2fab88430de674c8ecfc9f2}} 
+\index{Temkin@{Temkin}!Rgas@{Rgas}}
+\index{Rgas@{Rgas}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{Rgas()}{Rgas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Temkin\+::\+Rgas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que retorna o valor da constante universal dos gases. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var1(k1, k2);}
+\DoxyCodeLine{Real rg = var1.Rgas();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da constante universal dos gases. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_temkin_ace95c6383f86e2a35a9e7b8bec5c4a1c}\label{class_temkin_ace95c6383f86e2a35a9e7b8bec5c4a1c}} 
+\index{Temkin@{Temkin}!Rgas@{Rgas}}
+\index{Rgas@{Rgas}!Temkin@{Temkin}}
+\doxysubsubsection{\texorpdfstring{Rgas()}{Rgas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Temkin\+::\+Rgas (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+rgas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao para alterar o valor da constante universal dos gases. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_temkin}{Temkin}}  var1(k1, k2);}
+\DoxyCodeLine{Real rgas(62.363598221529);}
+\DoxyCodeLine{var1.Rgas(rgas);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+rgas} & Novo valor da constante universal dos gases. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+rgas} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Two\+Parameters/Temkin.\+h\item 
+Isotherm\+Lib/src/\+Isotherm/\+Two\+Parameters/Temkin.\+cpp\end{DoxyCompactItemize}

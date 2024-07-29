@@ -1,0 +1,437 @@
+\hypertarget{class_redlich_peterson}{}\doxysection{Referência da Classe Redlich\+Peterson}
+\label{class_redlich_peterson}\index{RedlichPeterson@{RedlichPeterson}}
+
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_redlich}{Redlich}} -\/ Peterson  
+
+
+
+
+{\ttfamily \#include $<$Redlich\+Peterson.\+h$>$}
+
+Diagrama de hierarquia para Redlich\+Peterson\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_redlich_peterson}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_redlich_peterson_abbcc29513e3702784114f76dfd1d8e4a}{Define\+Identity}} (\char`\"{}Redlich\+Peterson\char`\"{}, ID\+::\+Redlich\+Peterson)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_redlich_peterson_a8b4c1f235935180a0a0eea5d5c9bcbe4}{Redlich\+Peterson}} ()=default
+\item 
+\mbox{\hyperlink{class_redlich_peterson_a6be835375c9ec227ec52c88149908d48}{Redlich\+Peterson}} (const \mbox{\hyperlink{class_redlich_peterson}{Redlich\+Peterson}} \&\+\_\+redlich\+\_\+peterson)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_redlich_peterson_af4ff6fa14be33e7cbf405b4ec1da2df0}\label{class_redlich_peterson_af4ff6fa14be33e7cbf405b4ec1da2df0}} 
+virtual {\bfseries $\sim$\+Redlich\+Peterson} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_redlich_peterson_a6504fc0fef710d224cfb8252dd5639c5}{Redlich\+Peterson}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_redlich}{Redlich}} -\/ Peterson. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_redlich_peterson}{Redlich\+Peterson}} \& \mbox{\hyperlink{class_redlich_peterson_aeb10eaabadcfb3ee50b61369a4659dc9}{operator=}} (const \mbox{\hyperlink{class_redlich_peterson}{Redlich\+Peterson}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da constante de Redlich-\/\+Peterson. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_redlich}{Redlich}} -\/ Peterson. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}{K3}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor do coeficiente que reflete a heterogeneidade do adsorvente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_redlich_peterson_a9f7069740e198c3ab125d3cef3d13025}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função para alterar a constante de Redlich-\/\+Peterson. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_redlich_peterson_a4548a5e0e4b5e15d8fa7f1612b2a4ca8}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_redlich}{Redlich}} -\/ Peterson. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_redlich_peterson_aba4aef4e5a3bb68f6b9d216e372b55e5}{K3}} (const Real \&\+\_\+k3)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor do coeficiente que reflete a heterogeneidade do adsorvente. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_redlich_peterson_a71eedb2eaca13b2c8a47fb89e96064d4}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_redlich_peterson_ab5431e2cf43f538e705520497de70b4e}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_redlich_peterson}{Redlich\+Peterson}} $\ast$ \mbox{\hyperlink{class_redlich_peterson_ac3d81cf7381a968af3d1a6a41c7b8605}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de \mbox{\hyperlink{class_redlich}{Redlich}} -\/ Peterson 
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e, T) = \textbackslash{}frac\{K\+\_\+1C\}\{1+K\+\_\+2\+C\+\_\+e$^\wedge$\{K\+\_\+3\}\} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Luan Rodrigues Soares de Souza 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000049}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_redlich_peterson_a8b4c1f235935180a0a0eea5d5c9bcbe4}\label{class_redlich_peterson_a8b4c1f235935180a0a0eea5d5c9bcbe4}} 
+\index{RedlichPeterson@{RedlichPeterson}!RedlichPeterson@{RedlichPeterson}}
+\index{RedlichPeterson@{RedlichPeterson}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{RedlichPeterson()}{RedlichPeterson()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Redlich\+Peterson\+::\+Redlich\+Peterson (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_redlich_peterson_a6be835375c9ec227ec52c88149908d48}\label{class_redlich_peterson_a6be835375c9ec227ec52c88149908d48}} 
+\index{RedlichPeterson@{RedlichPeterson}!RedlichPeterson@{RedlichPeterson}}
+\index{RedlichPeterson@{RedlichPeterson}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{RedlichPeterson()}{RedlichPeterson()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Redlich\+Peterson\+::\+Redlich\+Peterson (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_redlich_peterson}{Redlich\+Peterson}} \&}]{\+\_\+redlich\+\_\+peterson }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_redlich_peterson}{Redlich\+Peterson}} original. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_redlich_peterson_a6504fc0fef710d224cfb8252dd5639c5}\label{class_redlich_peterson_a6504fc0fef710d224cfb8252dd5639c5}} 
+\index{RedlichPeterson@{RedlichPeterson}!RedlichPeterson@{RedlichPeterson}}
+\index{RedlichPeterson@{RedlichPeterson}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{RedlichPeterson()}{RedlichPeterson()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Redlich\+Peterson\+::\+Redlich\+Peterson (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2,  }\item[{const Real \&}]{\+\_\+k3 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_redlich}{Redlich}} -\/ Peterson. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}{K1}}(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}{K2}}(1.0);    }
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}{K3}}(1.0);        }
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var1(\mbox{\hyperlink{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}{K1}}, \mbox{\hyperlink{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}{K2}}, \mbox{\hyperlink{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}{K3}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Constante de Redlich-\/\+Peterson. ~\newline
+ \\
+\hline
+{\em \+\_\+k2} & Constante de Redlich-\/\+Peterson. ~\newline
+ \\
+\hline
+{\em \+\_\+k3} & Coeficiente que reflete a heterogeneidade do adsorvente. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k3} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_redlich_peterson_ac3d81cf7381a968af3d1a6a41c7b8605}\label{class_redlich_peterson_ac3d81cf7381a968af3d1a6a41c7b8605}} 
+\index{RedlichPeterson@{RedlichPeterson}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_redlich_peterson}{Redlich\+Peterson}} $\ast$ Redlich\+Peterson\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_redlich_peterson_abbcc29513e3702784114f76dfd1d8e4a}\label{class_redlich_peterson_abbcc29513e3702784114f76dfd1d8e4a}} 
+\index{RedlichPeterson@{RedlichPeterson}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Redlich\+Peterson\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Redlich\+Peterson\char`\"{}}]{,  }\item[{ID\+::\+Redlich\+Peterson}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}\label{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}} 
+\index{RedlichPeterson@{RedlichPeterson}!K1@{K1}}
+\index{K1@{K1}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Redlich\+Peterson\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da constante de Redlich-\/\+Peterson. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var1(\mbox{\hyperlink{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}{K1}}, \mbox{\hyperlink{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}{K2}}, \mbox{\hyperlink{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da constante de Redlich-\/\+Peterson. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_redlich_peterson_a9f7069740e198c3ab125d3cef3d13025}\label{class_redlich_peterson_a9f7069740e198c3ab125d3cef3d13025}} 
+\index{RedlichPeterson@{RedlichPeterson}!K1@{K1}}
+\index{K1@{K1}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Redlich\+Peterson\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a constante de Redlich-\/\+Peterson. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var1(\mbox{\hyperlink{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}{K1}}, \mbox{\hyperlink{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}{K2}}, \mbox{\hyperlink{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(3.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da constante de Redlich-\/\+Peterson. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}\label{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}} 
+\index{RedlichPeterson@{RedlichPeterson}!K2@{K2}}
+\index{K2@{K2}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Redlich\+Peterson\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_redlich}{Redlich}} -\/ Peterson. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var1(\mbox{\hyperlink{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}{K1}}, \mbox{\hyperlink{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}{K2}}, \mbox{\hyperlink{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_redlich}{Redlich}} -\/ Peterson. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_redlich_peterson_a4548a5e0e4b5e15d8fa7f1612b2a4ca8}\label{class_redlich_peterson_a4548a5e0e4b5e15d8fa7f1612b2a4ca8}} 
+\index{RedlichPeterson@{RedlichPeterson}!K2@{K2}}
+\index{K2@{K2}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Redlich\+Peterson\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_redlich}{Redlich}} -\/ Peterson. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var1(\mbox{\hyperlink{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}{K1}}, \mbox{\hyperlink{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}{K2}}, \mbox{\hyperlink{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(2.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor do coeficiente associado a constante de \mbox{\hyperlink{class_redlich_peterson}{Redlich\+Peterson}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}\label{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}} 
+\index{RedlichPeterson@{RedlichPeterson}!K3@{K3}}
+\index{K3@{K3}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{K3()}{K3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Redlich\+Peterson\+::\+K3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor do coeficiente que reflete a heterogeneidade do adsorvente. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var1(\mbox{\hyperlink{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}{K1}}, \mbox{\hyperlink{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}{K2}}, \mbox{\hyperlink{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k3 = var1.K3();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente que reflete a heterogeneidade do adsorvente. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_redlich_peterson_aba4aef4e5a3bb68f6b9d216e372b55e5}\label{class_redlich_peterson_aba4aef4e5a3bb68f6b9d216e372b55e5}} 
+\index{RedlichPeterson@{RedlichPeterson}!K3@{K3}}
+\index{K3@{K3}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{K3()}{K3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Redlich\+Peterson\+::\+K3 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor do coeficiente que reflete a heterogeneidade do adsorvente. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var1(\mbox{\hyperlink{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}{K1}}, \mbox{\hyperlink{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}{K2}}, \mbox{\hyperlink{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k3(3.0);}
+\DoxyCodeLine{var1.K3(k3);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k3} & Novo valor do coeficiente que reflete a heterogeneidade do adsorvente. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k3} & \texorpdfstring{$<$}{<}= 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_redlich_peterson_aeb10eaabadcfb3ee50b61369a4659dc9}\label{class_redlich_peterson_aeb10eaabadcfb3ee50b61369a4659dc9}} 
+\index{RedlichPeterson@{RedlichPeterson}!operator=@{operator=}}
+\index{operator=@{operator=}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_redlich_peterson}{Redlich\+Peterson}} \& Redlich\+Peterson\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_redlich_peterson}{Redlich\+Peterson}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var1(\mbox{\hyperlink{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}{K1}}, \mbox{\hyperlink{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}{K2}}, \mbox{\hyperlink{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}{K3}});              }
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_redlich_peterson}{Redlich\+Peterson}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_redlich_peterson_a71eedb2eaca13b2c8a47fb89e96064d4}\label{class_redlich_peterson_a71eedb2eaca13b2c8a47fb89e96064d4}} 
+\index{RedlichPeterson@{RedlichPeterson}!Qe@{Qe}}
+\index{Qe@{Qe}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Redlich\+Peterson\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}  var1(\mbox{\hyperlink{class_redlich_peterson_a2ffc4bd26b0a85b8b2e290020b0dc83d}{K1}}, \mbox{\hyperlink{class_redlich_peterson_a90ed8f95d4cb4abdfe4cd1b555df19fa}{K2}}, \mbox{\hyperlink{class_redlich_peterson_ab72d09a04131df7dc79bfe917cad9547}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. ~\newline
+ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_redlich_peterson_ab5431e2cf43f538e705520497de70b4e}\label{class_redlich_peterson_ab5431e2cf43f538e705520497de70b4e}} 
+\index{RedlichPeterson@{RedlichPeterson}!Qe@{Qe}}
+\index{Qe@{Qe}!RedlichPeterson@{RedlichPeterson}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Redlich\+Peterson\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_redlich_peterson_8h}{Redlich\+Peterson.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Redlich\+Peterson.\+cpp\end{DoxyCompactItemize}

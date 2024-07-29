@@ -1,0 +1,93 @@
+\hypertarget{class_isotherm}{}\doxysection{Referência da Classe Isotherm}
+\label{class_isotherm}\index{Isotherm@{Isotherm}}
+Diagrama de hierarquia para Isotherm\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_isotherm}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Define\+Identity\+Base} (\char`\"{}Isotherm\char`\"{}, ID\+::\+Isotherm)
+\item 
+{\bfseries Isotherm} (const \mbox{\hyperlink{class_isotherm}{Isotherm}} \&)=default
+\item 
+Real {\bfseries DQDC} (const Real \&\+\_\+ce, const Real \&\+\_\+temperature=0) const
+\item 
+void {\bfseries Plot\+Graph} (const std\+::string \&, Function\+Escala \&, Function\+Escala \&, const UInt \&, const Real \&, const Real \&, const Real \&=0) const
+\item 
+virtual Real \mbox{\hyperlink{group___isotherm_template_ga390a5e87d14ffba72a02e48539c7fa4c}{Qe}} (const Real \&, const Real \&) const =0
+\item 
+virtual std\+::string {\bfseries Code\+String} (const UInt \&) const
+\item 
+virtual std\+::string {\bfseries Name\+String} (const UInt \&) const
+\item 
+virtual Real \mbox{\hyperlink{group___isotherm_template_ga301f6f551396927a3a14b5b00b98ddbd}{Qe}} (const Real \&\+\_\+x) const
+\item 
+virtual \mbox{\hyperlink{class_isotherm}{Isotherm}} $\ast$ {\bfseries Clone} ()
+\item 
+auto {\bfseries begin} () const
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador begin(). \end{DoxyCompactList}\item 
+auto {\bfseries end} () const
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador \mbox{\hyperlink{group___isotherm_template_gad9005d45ab4fb8fe7d806b2b83f07553}{end()}}. \end{DoxyCompactList}\item 
+auto {\bfseries cbegin} () const
+\item 
+auto {\bfseries cend} () const
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador \mbox{\hyperlink{group___isotherm_template_gae95cd8e34bfe46ebc45c1027f3687f2a}{cend()}}. \end{DoxyCompactList}\item 
+auto {\bfseries rbegin} () const
+\item 
+auto {\bfseries rend} () const
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador \mbox{\hyperlink{group___isotherm_template_ga83cae0d00cee4ce99b7b2f52bc0666c9}{rend()}}. \end{DoxyCompactList}\item 
+auto {\bfseries crbegin} () const
+\item 
+auto {\bfseries crend} () const
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador \mbox{\hyperlink{group___isotherm_template_gaed3213908540d77887f1f90c6b95ce8c}{crend()}}. \end{DoxyCompactList}\item 
+size\+\_\+t {\bfseries Number\+Const} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o número de constantes de uma isoterma. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_isotherm}{Isotherm}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_isotherm}{Isotherm}} \&)=default
+\item 
+virtual const Vec\+Pair\+String \& {\bfseries Info\+Isotherm} () const =0
+\item 
+auto {\bfseries begin} ()
+\item 
+auto {\bfseries end} ()
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador \mbox{\hyperlink{group___isotherm_template_gad9005d45ab4fb8fe7d806b2b83f07553}{end()}}. \end{DoxyCompactList}\item 
+auto {\bfseries rbegin} ()
+\item 
+auto {\bfseries rend} ()
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador \mbox{\hyperlink{group___isotherm_template_ga83cae0d00cee4ce99b7b2f52bc0666c9}{rend()}}. \end{DoxyCompactList}\item 
+const Vec\+Real {\bfseries Value} () const
+\begin{DoxyCompactList}\small\item\em Vetor com os coeficientes de qualquer isoterma. \end{DoxyCompactList}\item 
+Real {\bfseries Value} (const UInt \&\+\_\+i) const
+\item 
+Real {\bfseries Value} (const UInt \&\+\_\+i)
+\item 
+void {\bfseries Value} (const UInt \&\+\_\+i, const Real \&\+\_\+val)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+Vec\+Real \mbox{\hyperlink{group___isotherm_template_ga40d851bca8f35e398268cbe18347804a}{coeff\+Value}}
+\item 
+bool {\bfseries setup} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Estáticos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+static const Real {\bfseries RGASCONST} = 8.\+31446261815324L
+\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{class_isotherm}{Isotherm}} \&)
+\end{DoxyCompactItemize}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/Isotherm.\+h\item 
+Isotherm\+Lib/src/\+Isotherm/Isotherm.\+cpp\end{DoxyCompactItemize}

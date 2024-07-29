@@ -1,0 +1,97 @@
+\hypertarget{_five_parameters_8h_source}{}\doxysection{Five\+Parameters.\+h}
+\label{_five_parameters_8h_source}\index{IsothermLib/include/Isotherm/FiveParameters/FiveParameters.h@{IsothermLib/include/Isotherm/FiveParameters/FiveParameters.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// Name        : FiveParameters.h}}
+\DoxyCodeLine{3 \textcolor{comment}{// Authors     : Lara Botelho Brum}}
+\DoxyCodeLine{4 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
+\DoxyCodeLine{5 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{6 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{7 \textcolor{comment}{// Description : Classe base para as isotermas com cinco parâmetros}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Copyright   : Copyright (C) <2021>  Joao Flavio Vasconcellos }}
+\DoxyCodeLine{10 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{11 \textcolor{comment}{//}}
+\DoxyCodeLine{12 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{13 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{14 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{//}}
+\DoxyCodeLine{16 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{17 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{18 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{19 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{22 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{23 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#ifndef FIVEPARAMETERS\_H}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define FIVEPARAMETERS\_H}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{49 \textcolor{comment}{// include da isotherm++}}
+\DoxyCodeLine{50 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#include <Isotherm.h>}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keyword}{class }\mbox{\hyperlink{class_five_parameters}{FiveParameters}} : \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_isotherm}{Isotherm}} \{}
+\DoxyCodeLine{57     }
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{60 \textcolor{comment}{// ID da classe}}
+\DoxyCodeLine{61 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{keyword}{public}:}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     DefineIdentity  (   \textcolor{stringliteral}{"{}FiveParameters"{}}}
+\DoxyCodeLine{66                     ,   ID::FiveParameters}
+\DoxyCodeLine{67                     );}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{70 \textcolor{comment}{// Construtores / Destrutora}}
+\DoxyCodeLine{71 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     \mbox{\hyperlink{class_five_parameters}{FiveParameters}}() : \mbox{\hyperlink{class_five_parameters}{FiveParameters}} ( 0, 0, 0, 0, 0) \{\};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     \mbox{\hyperlink{class_five_parameters}{FiveParameters}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_five_parameters}{FiveParameters}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{78     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_five_parameters}{\string~FiveParameters}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \mbox{\hyperlink{class_five_parameters}{FiveParameters}}  (   \textcolor{keyword}{const} Real\&}
+\DoxyCodeLine{81                     ,   \textcolor{keyword}{const} Real\&}
+\DoxyCodeLine{82                     ,   \textcolor{keyword}{const} Real\&}
+\DoxyCodeLine{83                     ,   \textcolor{keyword}{const} Real\&}
+\DoxyCodeLine{84                     ,   \textcolor{keyword}{const} Real\&}
+\DoxyCodeLine{85                     );}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{89 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{90 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \mbox{\hyperlink{class_five_parameters}{FiveParameters}}\& operator = (\textcolor{keyword}{const} \mbox{\hyperlink{class_five_parameters}{FiveParameters}}\& ) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{keyword}{public}:}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \}; }
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FIVEPARAMETERS\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{108  }
+
+\end{DoxyCode}

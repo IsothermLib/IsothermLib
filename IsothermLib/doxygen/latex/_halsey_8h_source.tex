@@ -1,0 +1,144 @@
+\hypertarget{_halsey_8h_source}{}\doxysection{Halsey.\+h}
+\label{_halsey_8h_source}\index{IsothermLib/include/Isotherm/TwoParameters/Halsey.h@{IsothermLib/include/Isotherm/TwoParameters/Halsey.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// Name        : Halsey.h}}
+\DoxyCodeLine{3 \textcolor{comment}{// Authors     : Iasmim Barboza Storck}}
+\DoxyCodeLine{4 \textcolor{comment}{//               Lara Botelho Brum}}
+\DoxyCodeLine{5 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
+\DoxyCodeLine{6 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{7 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{8 \textcolor{comment}{// Description : Classe com as equacoes da isoterma de Halsey}}
+\DoxyCodeLine{9 \textcolor{comment}{//}}
+\DoxyCodeLine{10 \textcolor{comment}{// Copyright   : Copyright (C) <2022>  Joao Flavio Vasconcellos}}
+\DoxyCodeLine{11 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{14 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{15 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{16 \textcolor{comment}{//}}
+\DoxyCodeLine{17 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{18 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{19 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{20 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{21 \textcolor{comment}{//}}
+\DoxyCodeLine{22 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{23 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{24 \textcolor{comment}{//}}
+\DoxyCodeLine{25 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#ifndef \_\_HALSEY\_H\_\_}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define \_\_HALSEY\_H\_\_}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{55 \textcolor{comment}{// include da isothermlib}}
+\DoxyCodeLine{56 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_iso_exception_8h}{Error/IsoException.h}}>}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#include <Isotherm/TwoParameters/TwoParameters.h>}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{keyword}{class }\mbox{\hyperlink{class_halsey}{Halsey}} :  \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_two_parameters}{TwoParameters}},}
+\DoxyCodeLine{66                 \textcolor{keyword}{public} \mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} < Halsey >}
+\DoxyCodeLine{67 \{}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{70 \textcolor{comment}{// ID da classe}}
+\DoxyCodeLine{71 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{keyword}{public}:}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 }
+\DoxyCodeLine{80     \mbox{\hyperlink{class_halsey_a48ca9054449cf11e9b4cb9e17fa8be14}{DefineIdentity}}  (   \textcolor{stringliteral}{"{}Halsey"{}}}
+\DoxyCodeLine{81                     , ID::Halsey}
+\DoxyCodeLine{82                     );}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{86 \textcolor{comment}{// Funcoes Construtoras/Destrutora}}
+\DoxyCodeLine{87 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{keyword}{public}:}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{101     \mbox{\hyperlink{class_halsey_a5e0ce16f9c39abdd4dbd41f2a4845eb7}{Halsey}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{114     \mbox{\hyperlink{class_halsey_a8701763eb93d19d1d08e19869936e8e3}{Halsey}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_halsey}{Halsey}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{119     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_halsey_a246a1704277871d6837c6c53be69cd13}{\string~Halsey}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{136     \mbox{\hyperlink{class_halsey_a5e0ce16f9c39abdd4dbd41f2a4845eb7}{Halsey}}  (   \textcolor{keyword}{const} Real\& \_k1}
+\DoxyCodeLine{137             ,   \textcolor{keyword}{const} Real\& \_k2}
+\DoxyCodeLine{138             );}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{141 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{142 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{keyword}{public}:}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 }
+\DoxyCodeLine{159     \mbox{\hyperlink{class_halsey}{Halsey}}\& \mbox{\hyperlink{class_halsey_ae99d99ab30f97e2cca90089cbd810785}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_halsey}{Halsey}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{162 \textcolor{comment}{// Acesso as constantes da classe inline}}
+\DoxyCodeLine{163 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{177 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_halsey_a6561592cb217c134a869e1bb0624bedf}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0);\};}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{191 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_halsey_a16cda58c12207b4dfdef8155fc14c8f4}{K2}} ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{192 \textcolor{keyword}{}\{}
+\DoxyCodeLine{193     \textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1);}
+\DoxyCodeLine{194 \};}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{197 \textcolor{comment}{// Alterando as constantes da classe}}
+\DoxyCodeLine{198 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{213 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_halsey_a7e99b08c4b84e1a71f4260737a22f84c}{K1}} (\textcolor{keyword}{const} Real\& \_k1)}
+\DoxyCodeLine{214 \{}
+\DoxyCodeLine{215     *\textcolor{keyword}{this} = \mbox{\hyperlink{class_halsey_a5e0ce16f9c39abdd4dbd41f2a4845eb7}{Halsey}}(\_k1, \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1));}
+\DoxyCodeLine{216 \};}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218 }
+\DoxyCodeLine{232 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_halsey_a608dd3de5dd652fc78bd4244aad3e375}{K2}} (\textcolor{keyword}{const} Real\& \_k2)}
+\DoxyCodeLine{233 \{}
+\DoxyCodeLine{234     *\textcolor{keyword}{this} = \mbox{\hyperlink{class_halsey_a5e0ce16f9c39abdd4dbd41f2a4845eb7}{Halsey}}(\mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), \_k2);}
+\DoxyCodeLine{235 \};}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{238 \textcolor{comment}{// Funcoes virtuais}}
+\DoxyCodeLine{239 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241     \textcolor{keyword}{virtual} Real Qe         (   \textcolor{keyword}{const} Real\& \_c}
+\DoxyCodeLine{242                             ,   \textcolor{keyword}{const} Real\& \_temp}
+\DoxyCodeLine{243                             ) \textcolor{keyword}{const};}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245     }
+\DoxyCodeLine{260     [[nodiscard]] }
+\DoxyCodeLine{261     \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_halsey_a55b1a1991d76cc4ee2a6991142b12a00}{Qe}}  (   \textcolor{keyword}{const} Real\& \_c}
+\DoxyCodeLine{262                     )\textcolor{keyword}{ const override}}
+\DoxyCodeLine{263 \textcolor{keyword}{                    }\{}
+\DoxyCodeLine{264                         \textcolor{keywordflow}{return} Qe(\_c, 0);}
+\DoxyCodeLine{265                     \};}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268     [[nodiscard]] }
+\DoxyCodeLine{269     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_halsey}{Halsey}}* CloneImplementation()\textcolor{keyword}{ const override}}
+\DoxyCodeLine{270 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{271         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_halsey_a5e0ce16f9c39abdd4dbd41f2a4845eb7}{Halsey}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{272     \}}
+\DoxyCodeLine{273     }
+\DoxyCodeLine{274 \};}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{277 }
+\DoxyCodeLine{278 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_HALSEY\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{281 }
+
+\end{DoxyCode}

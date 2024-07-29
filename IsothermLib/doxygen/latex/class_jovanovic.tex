@@ -1,0 +1,352 @@
+\hypertarget{class_jovanovic}{}\doxysection{Referência da Classe Jovanovic}
+\label{class_jovanovic}\index{Jovanovic@{Jovanovic}}
+
+
+Classe com a equacoes da isoterma de \mbox{\hyperlink{class_jovanovic}{Jovanovic}}.  
+
+
+
+
+{\ttfamily \#include $<$Jovanovic.\+h$>$}
+
+Diagrama de hierarquia para Jovanovic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_jovanovic}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jovanovic_ae6f4ff53e550e8fa0cdb1f57eedc537b}{Define\+Identity}} (\char`\"{}Jovanovic\char`\"{}, ID\+::\+Jovanovic)
+\begin{DoxyCompactList}\small\item\em Definicao de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificacao de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jovanovic_a9613cae91ef53fb33694a20e131f66fb}{Jovanovic}} ()=default
+\begin{DoxyCompactList}\small\item\em Construtora default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jovanovic_a83dbfff7837e92a966bef86d1f5bd92f}{Jovanovic}} (const \mbox{\hyperlink{class_jovanovic}{Jovanovic}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Construtora de copia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_jovanovic_ad728b685f8caba5c6fdb39f54582939f}\label{class_jovanovic_ad728b685f8caba5c6fdb39f54582939f}} 
+virtual {\bfseries $\sim$\+Jovanovic} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jovanovic_a336c8d8239cb51170a0ffb7016f1d620}{Jovanovic}} (const Real \&\+\_\+k1, const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Construtora com os parametros que definem a isoterma de \mbox{\hyperlink{class_jovanovic}{Jovanovic}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jovanovic}{Jovanovic}} \& \mbox{\hyperlink{class_jovanovic_adfc173c656e947c0ae2f5395d9b55c87}{operator=}} (const \mbox{\hyperlink{class_jovanovic}{Jovanovic}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_jovanovic_a7dc2f46729408642379956f5955d3479}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Funcao que retorna a constante da isoterma de \mbox{\hyperlink{class_jovanovic}{Jovanovic}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_jovanovic_aabed4d9481846dbfb41481299157c60c}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Funcao que informa o valor da capacidade maxima de adsorcao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jovanovic_a75b3d78c4ba9180e7030c88a9a2e00ef}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Funcao para alterar a capacidade maxima de adsorcao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jovanovic_a26b9bc0ac4402fdf466c86f9418a1e52}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Funcao que altera a constante da isoterma de \mbox{\hyperlink{class_jovanovic}{Jovanovic}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_jovanovic_a3cdb82a3e8da4b3e382e45530e88b04c}{Qe}} (const Real \&\+\_\+c, const Real \&\+\_\+temp=0) const
+\begin{DoxyCompactList}\small\item\em Funcao que calcula a quantidade de sorcao no equilibrio. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_jovanovic}{Jovanovic}} $\ast$ \mbox{\hyperlink{class_jovanovic_ae35b75b0033100fa0d2d299041a2eb47}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com a equacoes da isoterma de \mbox{\hyperlink{class_jovanovic}{Jovanovic}}. 
+
+Isoterma com dois parametros, $ q_{max} $ e $ K_1 $, cujas formulas sao as seguintes\+: \textbackslash{}begin\{equation\} \textbackslash{}ln( Q\+\_\+e (C\+\_\+e)) = \textbackslash{}ln(q\+\_\+\{max\}) -\/ K\+\_\+1 C\+\_\+e \textbackslash{}end\{equation\} Um artigo de referencia pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Iasmim Barboza Storck 
+
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000065}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_jovanovic_a9613cae91ef53fb33694a20e131f66fb}\label{class_jovanovic_a9613cae91ef53fb33694a20e131f66fb}} 
+\index{Jovanovic@{Jovanovic}!Jovanovic@{Jovanovic}}
+\index{Jovanovic@{Jovanovic}!Jovanovic@{Jovanovic}}
+\doxysubsubsection{\texorpdfstring{Jovanovic()}{Jovanovic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Jovanovic\+::\+Jovanovic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jovanovic}{Jovanovic}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros para esta funcao \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jovanovic_a83dbfff7837e92a966bef86d1f5bd92f}\label{class_jovanovic_a83dbfff7837e92a966bef86d1f5bd92f}} 
+\index{Jovanovic@{Jovanovic}!Jovanovic@{Jovanovic}}
+\index{Jovanovic@{Jovanovic}!Jovanovic@{Jovanovic}}
+\doxysubsubsection{\texorpdfstring{Jovanovic()}{Jovanovic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Jovanovic\+::\+Jovanovic (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_jovanovic}{Jovanovic}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de copia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jovanovic}{Jovanovic}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_jovanovic}{Jovanovic}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variavel do tipo \mbox{\hyperlink{class_jovanovic}{Jovanovic}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jovanovic_a336c8d8239cb51170a0ffb7016f1d620}\label{class_jovanovic_a336c8d8239cb51170a0ffb7016f1d620}} 
+\index{Jovanovic@{Jovanovic}!Jovanovic@{Jovanovic}}
+\index{Jovanovic@{Jovanovic}!Jovanovic@{Jovanovic}}
+\doxysubsubsection{\texorpdfstring{Jovanovic()}{Jovanovic()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Jovanovic\+::\+Jovanovic (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parametros que definem a isoterma de \mbox{\hyperlink{class_jovanovic}{Jovanovic}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Real q1(1.0);}
+\DoxyCodeLine{Real k1(1.0);}
+\DoxyCodeLine{\mbox{\hyperlink{class_jovanovic}{Jovanovic}}  var1(q1, k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorcao. \\
+\hline
+{\em \+\_\+k1} & Constante da isoterma de \mbox{\hyperlink{class_jovanovic}{Jovanovic}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_jovanovic_ae35b75b0033100fa0d2d299041a2eb47}\label{class_jovanovic_ae35b75b0033100fa0d2d299041a2eb47}} 
+\index{Jovanovic@{Jovanovic}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!Jovanovic@{Jovanovic}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_jovanovic}{Jovanovic}} $\ast$ Jovanovic\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_jovanovic_ae6f4ff53e550e8fa0cdb1f57eedc537b}\label{class_jovanovic_ae6f4ff53e550e8fa0cdb1f57eedc537b}} 
+\index{Jovanovic@{Jovanovic}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!Jovanovic@{Jovanovic}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Jovanovic\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Jovanovic\char`\"{}}]{,  }\item[{ID\+::\+Jovanovic}]{ }\end{DoxyParamCaption})}
+
+
+
+Definicao de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificacao de erros. 
+
+\mbox{\Hypertarget{class_jovanovic_a7dc2f46729408642379956f5955d3479}\label{class_jovanovic_a7dc2f46729408642379956f5955d3479}} 
+\index{Jovanovic@{Jovanovic}!K1@{K1}}
+\index{K1@{K1}!Jovanovic@{Jovanovic}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Jovanovic\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que retorna a constante da isoterma de \mbox{\hyperlink{class_jovanovic}{Jovanovic}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jovanovic}{Jovanovic}}  var1(q1, k1);}
+\DoxyCodeLine{Real k2 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da constante da isoterma de \mbox{\hyperlink{class_jovanovic}{Jovanovic}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jovanovic_a26b9bc0ac4402fdf466c86f9418a1e52}\label{class_jovanovic_a26b9bc0ac4402fdf466c86f9418a1e52}} 
+\index{Jovanovic@{Jovanovic}!K1@{K1}}
+\index{K1@{K1}!Jovanovic@{Jovanovic}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Jovanovic\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que altera a constante da isoterma de \mbox{\hyperlink{class_jovanovic}{Jovanovic}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jovanovic}{Jovanovic}}  var1(q1, k1);}
+\DoxyCodeLine{Real k2(2.0);}
+\DoxyCodeLine{var1.K1(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor da constante da isoterma de \mbox{\hyperlink{class_jovanovic}{Jovanovic}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_jovanovic_adfc173c656e947c0ae2f5395d9b55c87}\label{class_jovanovic_adfc173c656e947c0ae2f5395d9b55c87}} 
+\index{Jovanovic@{Jovanovic}!operator=@{operator=}}
+\index{operator=@{operator=}!Jovanovic@{Jovanovic}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_jovanovic}{Jovanovic}} \& Jovanovic\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_jovanovic}{Jovanovic}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jovanovic}{Jovanovic}}  var1(q1, k1);}
+\DoxyCodeLine{\mbox{\hyperlink{class_jovanovic}{Jovanovic}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variavel do tipo \mbox{\hyperlink{class_jovanovic}{Jovanovic}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Copia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jovanovic_a3cdb82a3e8da4b3e382e45530e88b04c}\label{class_jovanovic_a3cdb82a3e8da4b3e382e45530e88b04c}} 
+\index{Jovanovic@{Jovanovic}!Qe@{Qe}}
+\index{Qe@{Qe}!Jovanovic@{Jovanovic}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}}
+{\footnotesize\ttfamily Real Jovanovic\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c,  }\item[{const Real \&}]{\+\_\+temp = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Funcao que calcula a quantidade de sorcao no equilibrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jovanovic}{Jovanovic}}  var1(q1, k1);}
+\DoxyCodeLine{Real ce(1);}
+\DoxyCodeLine{Real qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentracao do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorcao no equilibrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_jovanovic_aabed4d9481846dbfb41481299157c60c}\label{class_jovanovic_aabed4d9481846dbfb41481299157c60c}} 
+\index{Jovanovic@{Jovanovic}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Jovanovic@{Jovanovic}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Jovanovic\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que informa o valor da capacidade maxima de adsorcao. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jovanovic}{Jovanovic}}  var1(q1, k1);}
+\DoxyCodeLine{Real q2 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorcao. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jovanovic_a75b3d78c4ba9180e7030c88a9a2e00ef}\label{class_jovanovic_a75b3d78c4ba9180e7030c88a9a2e00ef}} 
+\index{Jovanovic@{Jovanovic}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Jovanovic@{Jovanovic}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Jovanovic\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao para alterar a capacidade maxima de adsorcao. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jovanovic}{Jovanovic}}  var1(q1, k1);}
+\DoxyCodeLine{Real q2(3.0);}
+\DoxyCodeLine{var1.Qmax(q2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorcao. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Two\+Parameters/Jovanovic.\+h\item 
+Isotherm\+Lib/src/\+Isotherm/\+Two\+Parameters/Jovanovic.\+cpp\end{DoxyCompactItemize}

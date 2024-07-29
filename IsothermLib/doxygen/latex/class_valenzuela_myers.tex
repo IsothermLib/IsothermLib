@@ -1,0 +1,435 @@
+\hypertarget{class_valenzuela_myers}{}\doxysection{Referência da Classe Valenzuela\+Myers}
+\label{class_valenzuela_myers}\index{ValenzuelaMyers@{ValenzuelaMyers}}
+
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_valenzuela_myers}{Valenzuela\+Myers}}.  
+
+
+
+
+{\ttfamily \#include $<$Valenzuela\+Myers.\+h$>$}
+
+Diagrama de hierarquia para Valenzuela\+Myers\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_valenzuela_myers}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_valenzuela_myers_a995a37a962e3d7503ee198bdf589dc63}{Define\+Identity}} (\char`\"{}Valenzuela -\/ Myers\char`\"{}, ID\+::\+Valenzuela\+Myers)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_valenzuela_myers_a7375442de2de395274a8cc16afcb7648}{Valenzuela\+Myers}} ()=default
+\item 
+\mbox{\hyperlink{class_valenzuela_myers_ad0a7bcaace0c68708ffabc93edbecf44}{Valenzuela\+Myers}} (const \mbox{\hyperlink{class_valenzuela_myers}{Valenzuela\+Myers}} \&\+\_\+valenzuela\+\_\+myers)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_valenzuela_myers_a55cdfd091e4d1898e81af73148941541}\label{class_valenzuela_myers_a55cdfd091e4d1898e81af73148941541}} 
+virtual {\bfseries $\sim$\+Valenzuela\+Myers} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_valenzuela_myers_ab7200c128720767de5352cbc33314c72}{Valenzuela\+Myers}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_valenzuela_myers}{Valenzuela\+Myers}} \& \mbox{\hyperlink{class_valenzuela_myers_ac1f9a6cd4ba8534173e575a733e508ef}{operator=}} (const \mbox{\hyperlink{class_valenzuela_myers}{Valenzuela\+Myers}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_valenzuela_myers_a09fd4dc1395762649933fe970564b68a}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o parâmetro da equação de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_valenzuela_myers_a6b8fac08299ec50ef890efabd16c7aba}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_valenzuela_myers_ace085d842949715bc7840f01f937be67}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante da isoterma de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_valenzuela_myers_a7bdfab68fcfd4d601b979e2ce8eb1682}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor associado a constante da isoterma de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_valenzuela_myers_ac10cf459be1be095cece5b61bcab2138}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_valenzuela_myers_a833e16594335f88830427062ff767e9f}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_valenzuela_myers}{Valenzuela\+Myers}} $\ast$ \mbox{\hyperlink{class_valenzuela_myers_a0b84716e48de84e75b3c8bec5ee832f5}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de \mbox{\hyperlink{class_valenzuela_myers}{Valenzuela\+Myers}}. 
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e, T)= \textbackslash{}frac\{q\+\_\+\{max\}\}\{2K\+\_\+2\}ln(\textbackslash{}frac\{K\+\_\+1+\+C\+\_\+ee$^\wedge$\{K\+\_\+2\}\}\{K\+\_\+1+\+C\+\_\+ee$^\wedge$\{-\/K\+\_\+2\}\})\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000058}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_valenzuela_myers_a7375442de2de395274a8cc16afcb7648}\label{class_valenzuela_myers_a7375442de2de395274a8cc16afcb7648}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!ValenzuelaMyers@{ValenzuelaMyers}}
+\index{ValenzuelaMyers@{ValenzuelaMyers}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{ValenzuelaMyers()}{ValenzuelaMyers()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Valenzuela\+Myers\+::\+Valenzuela\+Myers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_valenzuela_myers_ad0a7bcaace0c68708ffabc93edbecf44}\label{class_valenzuela_myers_ad0a7bcaace0c68708ffabc93edbecf44}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!ValenzuelaMyers@{ValenzuelaMyers}}
+\index{ValenzuelaMyers@{ValenzuelaMyers}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{ValenzuelaMyers()}{ValenzuelaMyers()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Valenzuela\+Myers\+::\+Valenzuela\+Myers (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_valenzuela_myers}{Valenzuela\+Myers}} \&}]{\+\_\+valenzuela\+\_\+myers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_valenzuela_myers}{Valenzuela\+Myers}} original. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_valenzuela_myers_ab7200c128720767de5352cbc33314c72}\label{class_valenzuela_myers_ab7200c128720767de5352cbc33314c72}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!ValenzuelaMyers@{ValenzuelaMyers}}
+\index{ValenzuelaMyers@{ValenzuelaMyers}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{ValenzuelaMyers()}{ValenzuelaMyers()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Valenzuela\+Myers\+::\+Valenzuela\+Myers (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}{K1}}(1.0);    }
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}{K2}}(1.0);        }
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(Q1, \mbox{\hyperlink{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}{K1}}, \mbox{\hyperlink{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. ~\newline
+ \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. ~\newline
+ \\
+\hline
+{\em \+\_\+k2} & Constante da isoterma de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_valenzuela_myers_a0b84716e48de84e75b3c8bec5ee832f5}\label{class_valenzuela_myers_a0b84716e48de84e75b3c8bec5ee832f5}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_valenzuela_myers}{Valenzuela\+Myers}} $\ast$ Valenzuela\+Myers\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_valenzuela_myers_a995a37a962e3d7503ee198bdf589dc63}\label{class_valenzuela_myers_a995a37a962e3d7503ee198bdf589dc63}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Valenzuela\+Myers\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Valenzuela -\/ Myers\char`\"{}}]{,  }\item[{ID\+::\+Valenzuela\+Myers}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}\label{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!K1@{K1}}
+\index{K1@{K1}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Valenzuela\+Myers\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var1(QMAX, \mbox{\hyperlink{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}{K1}}, \mbox{\hyperlink{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_valenzuela_myers_ace085d842949715bc7840f01f937be67}\label{class_valenzuela_myers_ace085d842949715bc7840f01f937be67}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!K1@{K1}}
+\index{K1@{K1}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Valenzuela\+Myers\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante da isoterma de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var1(QMAX, \mbox{\hyperlink{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}{K1}}, \mbox{\hyperlink{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante da isoterma de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}\label{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!K2@{K2}}
+\index{K2@{K2}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Valenzuela\+Myers\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o parâmetro da equação de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var1(QMAX, \mbox{\hyperlink{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}{K1}}, \mbox{\hyperlink{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do parâmetro da equação de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_valenzuela_myers_a7bdfab68fcfd4d601b979e2ce8eb1682}\label{class_valenzuela_myers_a7bdfab68fcfd4d601b979e2ce8eb1682}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!K2@{K2}}
+\index{K2@{K2}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Valenzuela\+Myers\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor associado a constante da isoterma de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var1(QMAX, \mbox{\hyperlink{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}{K1}}, \mbox{\hyperlink{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor associado a constante da isoterma de \mbox{\hyperlink{class_valenzuela}{Valenzuela}} -\/ Myers. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_valenzuela_myers_ac1f9a6cd4ba8534173e575a733e508ef}\label{class_valenzuela_myers_ac1f9a6cd4ba8534173e575a733e508ef}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!operator=@{operator=}}
+\index{operator=@{operator=}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_valenzuela_myers}{Valenzuela\+Myers}} \& Valenzuela\+Myers\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_valenzuela_myers}{Valenzuela\+Myers}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var1(QMAX, \mbox{\hyperlink{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}{K1}}, \mbox{\hyperlink{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}{K2}});              }
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_valenzuela_myers}{Valenzuela\+Myers}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_valenzuela_myers_ac10cf459be1be095cece5b61bcab2138}\label{class_valenzuela_myers_ac10cf459be1be095cece5b61bcab2138}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!Qe@{Qe}}
+\index{Qe@{Qe}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Valenzuela\+Myers\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var1(QMAX, \mbox{\hyperlink{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}{K1}}, \mbox{\hyperlink{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. ~\newline
+ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_valenzuela_myers_a833e16594335f88830427062ff767e9f}\label{class_valenzuela_myers_a833e16594335f88830427062ff767e9f}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!Qe@{Qe}}
+\index{Qe@{Qe}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Valenzuela\+Myers\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_valenzuela_myers_a09fd4dc1395762649933fe970564b68a}\label{class_valenzuela_myers_a09fd4dc1395762649933fe970564b68a}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Valenzuela\+Myers\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var1(QMAX, \mbox{\hyperlink{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}{K1}}, \mbox{\hyperlink{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_valenzuela_myers_a6b8fac08299ec50ef890efabd16c7aba}\label{class_valenzuela_myers_a6b8fac08299ec50ef890efabd16c7aba}} 
+\index{ValenzuelaMyers@{ValenzuelaMyers}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!ValenzuelaMyers@{ValenzuelaMyers}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Valenzuela\+Myers\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var1(QMAX, \mbox{\hyperlink{class_valenzuela_myers_af3538b751897e8e0d6a871454fc0ac54}{K1}}, \mbox{\hyperlink{class_valenzuela_myers_aaf8dbe6601410bacbafb90d6ae9dc933}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_valenzuela_myers_8h}{Valenzuela\+Myers.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Valenzuela\+Myers.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,171 @@
+\hypertarget{_dubinin_radushkevich_8h_source}{}\doxysection{Dubinin\+Radushkevich.\+h}
+\label{_dubinin_radushkevich_8h_source}\index{IsothermLib/include/Isotherm/TwoParameters/DubininRadushkevich.h@{IsothermLib/include/Isotherm/TwoParameters/DubininRadushkevich.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// Name        : DubininRadushkevich.h}}
+\DoxyCodeLine{3 \textcolor{comment}{// Authors     : Iasmim Barboza Storck}}
+\DoxyCodeLine{4 \textcolor{comment}{//               Lara Botelho Brum}}
+\DoxyCodeLine{5 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
+\DoxyCodeLine{6 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{7 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{8 \textcolor{comment}{// Description : Classe com as equacoes da isoterma de Dubinin-\/Radushkevich}}
+\DoxyCodeLine{9 \textcolor{comment}{//}}
+\DoxyCodeLine{10 \textcolor{comment}{// Copyright   : Copyright (C) <2022>  Joao Flavio Vasconcellos}}
+\DoxyCodeLine{11 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{14 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{15 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{16 \textcolor{comment}{//}}
+\DoxyCodeLine{17 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{18 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{19 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{20 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{21 \textcolor{comment}{//}}
+\DoxyCodeLine{22 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{23 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{24 \textcolor{comment}{//}}
+\DoxyCodeLine{25 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#ifndef \_\_DUBININ\_RADUSHKEVICH\_H\_\_}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define \_\_DUBININ\_RADUSHKEVICH\_H\_\_}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{56 \textcolor{comment}{// include da isothermlib}}
+\DoxyCodeLine{57 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#include <Isotherm/TwoParameters/TwoParameters.h>}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{keyword}{class }\mbox{\hyperlink{class_dubinin_radushkevich}{DubininRadushkevich}} : \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_two_parameters}{TwoParameters}},}
+\DoxyCodeLine{65                             \textcolor{keyword}{public} \mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} < DubininRadushkevich > \{}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{69 \textcolor{comment}{// ID da classe}}
+\DoxyCodeLine{70 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{keyword}{public}:}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 }
+\DoxyCodeLine{78     \mbox{\hyperlink{group___dubinin_radushkevich_ga567bfeb6ab6974e223369edc3f19520c}{DefineIdentity}}  (   \textcolor{stringliteral}{"{}DubininRadushkevich"{}}}
+\DoxyCodeLine{79                     ,   ID::DubininRadushkevich}
+\DoxyCodeLine{80                     );}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{83 \textcolor{comment}{// Funcoes Construtoras/Destrutora}}
+\DoxyCodeLine{84 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{keyword}{public}:}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{98     \mbox{\hyperlink{group___dubinin_radushkevich_ga9e24f85d5701e6cd9d8d825e79525e8b}{DubininRadushkevich}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{111     \mbox{\hyperlink{group___dubinin_radushkevich_gaa57887225f4bbef4047afa484b177b52}{DubininRadushkevich}} ( \textcolor{keyword}{const} \mbox{\hyperlink{class_dubinin_radushkevich}{DubininRadushkevich}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{116     \textcolor{keyword}{virtual} \mbox{\hyperlink{group___dubinin_radushkevich_gabf5c45212d48a70550c1ad41acf83981}{\string~DubininRadushkevich}}()  = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{137     \mbox{\hyperlink{group___dubinin_radushkevich_ga9e24f85d5701e6cd9d8d825e79525e8b}{DubininRadushkevich}} (   \textcolor{keyword}{const} Real\&     \_qmax}
+\DoxyCodeLine{138                         ,   \textcolor{keyword}{const} Real\&     \_k1}
+\DoxyCodeLine{139                         ,   \textcolor{keyword}{const} Real\&     \_rgas = Isotherm::RGASCONST}
+\DoxyCodeLine{140                         );}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{143 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{144 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{keyword}{public}:}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148 }
+\DoxyCodeLine{161     \mbox{\hyperlink{class_dubinin_radushkevich}{DubininRadushkevich}}\& \mbox{\hyperlink{group___dubinin_radushkevich_ga87b72e9225719c3a54c6c635b75d4fd5}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_dubinin_radushkevich}{DubininRadushkevich}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{164 \textcolor{comment}{// Acesso as constantes da classe inline}}
+\DoxyCodeLine{165 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{179 [[nodiscard]] \textcolor{keyword}{inline} Real \mbox{\hyperlink{group___dubinin_radushkevich_ga3dfb30ea9ed9c8e13273a27621ddde75}{Qmax}} ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{180 \textcolor{keyword}{}\{}
+\DoxyCodeLine{181     \textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0);}
+\DoxyCodeLine{182 \};}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{196 [[nodiscard]] \textcolor{keyword}{inline} Real \mbox{\hyperlink{group___dubinin_radushkevich_ga9727932aa24cc0fb7c1e9eb51207d427}{K1}} ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{197 \textcolor{keyword}{}\{}
+\DoxyCodeLine{198     \textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1);}
+\DoxyCodeLine{199 \};}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201 }
+\DoxyCodeLine{214 [[maybe\_unused]] [[nodiscard]] \textcolor{keyword}{inline} Real \mbox{\hyperlink{group___dubinin_radushkevich_gabb92a954acfd259b4c05b65c81714977}{Rgas}} ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{215 \textcolor{keyword}{}\{}
+\DoxyCodeLine{216     \textcolor{keywordflow}{return}  RGAS;}
+\DoxyCodeLine{217 \};}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{221 \textcolor{comment}{// Alterando as constantes da classe}}
+\DoxyCodeLine{222 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{237 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{group___dubinin_radushkevich_ga545bc935bb4a4e241a8ed2c650b747f3}{Qmax}} (\textcolor{keyword}{const} Real\& \_qmax)}
+\DoxyCodeLine{238 \{}
+\DoxyCodeLine{239     *\textcolor{keyword}{this} = \mbox{\hyperlink{group___dubinin_radushkevich_ga9e24f85d5701e6cd9d8d825e79525e8b}{DubininRadushkevich}}     (   \_qmax}
+\DoxyCodeLine{240                                     ,   \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1)}
+\DoxyCodeLine{241                                     );}
+\DoxyCodeLine{242 \};}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244 }
+\DoxyCodeLine{258 \textcolor{keyword}{inline}  \textcolor{keywordtype}{void} \mbox{\hyperlink{group___dubinin_radushkevich_gaf993aee1734fc57f1b8ced748e4d7987}{K1}} (\textcolor{keyword}{const} Real\& \_k1)}
+\DoxyCodeLine{259 \{}
+\DoxyCodeLine{260     *\textcolor{keyword}{this} = \mbox{\hyperlink{group___dubinin_radushkevich_ga9e24f85d5701e6cd9d8d825e79525e8b}{DubininRadushkevich}} (   \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0)}
+\DoxyCodeLine{261                                 ,   \_k1}
+\DoxyCodeLine{262                                 );}
+\DoxyCodeLine{263 \};}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{278 [[maybe\_unused]] \textcolor{keyword}{inline}  \textcolor{keywordtype}{void} \mbox{\hyperlink{group___dubinin_radushkevich_gaba119bf942f5352e1324accc0956bd21}{Rgas}} (\textcolor{keyword}{const} Real\& \_rgas)}
+\DoxyCodeLine{279 \{}
+\DoxyCodeLine{280     *\textcolor{keyword}{this} = \mbox{\hyperlink{group___dubinin_radushkevich_ga9e24f85d5701e6cd9d8d825e79525e8b}{DubininRadushkevich}}     (   \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0)}
+\DoxyCodeLine{281                                     ,   \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1)}
+\DoxyCodeLine{282                                     ,   \_rgas}
+\DoxyCodeLine{283                                     );}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{285 \};}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{288 \textcolor{comment}{// Funcoes virtuais}}
+\DoxyCodeLine{289 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{290 \textcolor{comment}{//}}
+\DoxyCodeLine{308 \textcolor{comment}{}    [[nodiscard]]  }
+\DoxyCodeLine{309     Real \mbox{\hyperlink{group___dubinin_radushkevich_ga7f4a35deeddc4abfa005d7d22398ff6f}{Qe}}     (   \textcolor{keyword}{const} Real\& \_c}
+\DoxyCodeLine{310                 ,   \textcolor{keyword}{const} Real\& \_temp}
+\DoxyCodeLine{311                 ) \textcolor{keyword}{const};}
+\DoxyCodeLine{312 }
+\DoxyCodeLine{327     [[nodiscard]] }
+\DoxyCodeLine{328     \textcolor{keyword}{inline} Real \mbox{\hyperlink{group___dubinin_radushkevich_ga8924a290f50dce2ddf603e99eedbfcd9}{Qe}}   (   \textcolor{keyword}{const} Real\& \_c}
+\DoxyCodeLine{329     )\textcolor{keyword}{ const override}}
+\DoxyCodeLine{330 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{331         \textcolor{keywordflow}{return} \mbox{\hyperlink{group___dubinin_radushkevich_ga7f4a35deeddc4abfa005d7d22398ff6f}{Qe}}(\_c, 0);}
+\DoxyCodeLine{332     \}}
+\DoxyCodeLine{333 }
+\DoxyCodeLine{334 }
+\DoxyCodeLine{338     [[nodiscard]] }
+\DoxyCodeLine{339     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_dubinin_radushkevich}{DubininRadushkevich}}* \mbox{\hyperlink{group___dubinin_radushkevich_ga5a3b631338b4cdb5fa3f3440e9784217}{CloneImplementation}}()\textcolor{keyword}{ const override}}
+\DoxyCodeLine{340 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{341         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{group___dubinin_radushkevich_ga9e24f85d5701e6cd9d8d825e79525e8b}{DubininRadushkevich}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{342     \}}
+\DoxyCodeLine{343 }
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345 \textcolor{keyword}{private}:}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{347 Real                    RGAS = Isotherm::RGASCONST;      }
+\DoxyCodeLine{348 }
+\DoxyCodeLine{349 \};}
+\DoxyCodeLine{350 }
+\DoxyCodeLine{351 }
+\DoxyCodeLine{353 }
+\DoxyCodeLine{354 }
+\DoxyCodeLine{355 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{356 }
+\DoxyCodeLine{357 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

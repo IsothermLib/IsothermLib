@@ -1,0 +1,429 @@
+\hypertarget{class_brunauer_emmett_teller}{}\doxysection{Referência da Classe Brunauer\+Emmett\+Teller}
+\label{class_brunauer_emmett_teller}\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+
+
+Classe com as equações da isoterma de Brunauer -\/ Emmett -\/ Teller.  
+
+
+
+
+{\ttfamily \#include $<$Brunauer\+Emmett\+Teller.\+h$>$}
+
+Diagrama de hierarquia para Brunauer\+Emmett\+Teller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_brunauer_emmett_teller}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_brunauer_emmett_teller_a62cafce1fb61965221ad194bf6399a74}{Define\+Identity}} (\char`\"{}Brunauer -\/ Emmett -\/ Teller\char`\"{}, ID\+::\+Brunauer\+Emmett\+Teller)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_brunauer_emmett_teller_a3a854a74c415302d121b53dd59896fd8}{Brunauer\+Emmett\+Teller}} ()=default
+\item 
+\mbox{\hyperlink{class_brunauer_emmett_teller_ac7e0d30a616ea7b55312a50054bddc7c}{Brunauer\+Emmett\+Teller}} (const \mbox{\hyperlink{class_brunauer_emmett_teller}{Brunauer\+Emmett\+Teller}} \&\+\_\+brunauer\+\_\+emmett\+\_\+teller)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_brunauer_emmett_teller_a79b1a3050a67591f16eb0645cba05266}\label{class_brunauer_emmett_teller_a79b1a3050a67591f16eb0645cba05266}} 
+virtual {\bfseries $\sim$\+Brunauer\+Emmett\+Teller} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_brunauer_emmett_teller_aa3bf93f396b480bc7a08b483ead2e846}{Brunauer\+Emmett\+Teller}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_brunauer_emmett_teller}{Brunauer\+Emmett\+Teller}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_brunauer_emmett_teller}{Brunauer\+Emmett\+Teller}} \& \mbox{\hyperlink{class_brunauer_emmett_teller_a57dd8bd16b955d98d495afaeb87cbff3}{operator=}} (const \mbox{\hyperlink{class_brunauer_emmett_teller}{Brunauer\+Emmett\+Teller}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_brunauer_emmett_teller_a5bbeb11882bf5026f7ae7be6db59a8b7}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de Brunauer -\/ Emmett -\/ Teller. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o parâmetro da equação de Brunauer -\/ Emmett -\/ Teller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_brunauer_emmett_teller_ae86f0ecdfa495529789bf13febf8c675}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_brunauer_emmett_teller_ae752dd289fd4eece338fdae92fab2b4e}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante da isoterma de Brunauer -\/ Emmett -\/ Teller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_brunauer_emmett_teller_a4c28b57d1c0317831af0e586c87ea7f1}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor associado a constante da isoterma de Brunauer -\/ Emmett -\/ Teller. \end{DoxyCompactList}\item 
+virtual Real \mbox{\hyperlink{class_brunauer_emmett_teller_a9ae0d4005bfa195207e0ff2569194504}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_brunauer_emmett_teller_a9e532275536955005d8e9c6c2b793042}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_brunauer_emmett_teller}{Brunauer\+Emmett\+Teller}} $\ast$ \mbox{\hyperlink{class_brunauer_emmett_teller_a1a39f478defcb7520c134d3efbafe089}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de Brunauer -\/ Emmett -\/ Teller. 
+
+Classe com as equações da isoterma de Brunauer -\/ Emmett -\/ Teller.
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e,\+T)= \textbackslash{}frac\{q\+\_\+\{max\}K\+\_\+1C\}\{(K\+\_\+1-\/C)\mbox{[}1+(K\+\_\+1-\/1)(\textbackslash{}frac\{C\}\{K\+\_\+2\})\mbox{]}\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2020 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000015}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_brunauer_emmett_teller_a3a854a74c415302d121b53dd59896fd8}\label{class_brunauer_emmett_teller_a3a854a74c415302d121b53dd59896fd8}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{BrunauerEmmettTeller()}{BrunauerEmmettTeller()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Brunauer\+Emmett\+Teller\+::\+Brunauer\+Emmett\+Teller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brunauer_emmett_teller}{BrunauerEmmettTeller}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_brunauer_emmett_teller_ac7e0d30a616ea7b55312a50054bddc7c}\label{class_brunauer_emmett_teller_ac7e0d30a616ea7b55312a50054bddc7c}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{BrunauerEmmettTeller()}{BrunauerEmmettTeller()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Brunauer\+Emmett\+Teller\+::\+Brunauer\+Emmett\+Teller (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_brunauer_emmett_teller}{Brunauer\+Emmett\+Teller}} \&}]{\+\_\+brunauer\+\_\+emmett\+\_\+teller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brunauer_emmett_teller}{BrunauerEmmettTeller}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_brunauer_emmett_teller}{BrunauerEmmettTeller}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo Brunauer -\/ Emmett -\/ Teller original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_brunauer_emmett_teller_aa3bf93f396b480bc7a08b483ead2e846}\label{class_brunauer_emmett_teller_aa3bf93f396b480bc7a08b483ead2e846}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{BrunauerEmmettTeller()}{BrunauerEmmettTeller()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Brunauer\+Emmett\+Teller\+::\+Brunauer\+Emmett\+Teller (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_brunauer_emmett_teller}{Brunauer\+Emmett\+Teller}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}{K1}}(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}{K2}}(1.0);}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(Q1, \mbox{\hyperlink{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}{K1}}, \mbox{\hyperlink{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de Brunauer -\/ Emmett -\/ Teller. \\
+\hline
+{\em \+\_\+k2} & Constante da isoterma de Brunauer -\/ Emmett -\/ Teller. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_brunauer_emmett_teller_a1a39f478defcb7520c134d3efbafe089}\label{class_brunauer_emmett_teller_a1a39f478defcb7520c134d3efbafe089}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_brunauer_emmett_teller}{Brunauer\+Emmett\+Teller}} $\ast$ Brunauer\+Emmett\+Teller\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_brunauer_emmett_teller_a62cafce1fb61965221ad194bf6399a74}\label{class_brunauer_emmett_teller_a62cafce1fb61965221ad194bf6399a74}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Brunauer\+Emmett\+Teller\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Brunauer -\/ Emmett -\/ Teller\char`\"{}}]{,  }\item[{ID\+::\+Brunauer\+Emmett\+Teller}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}\label{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!K1@{K1}}
+\index{K1@{K1}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Brunauer\+Emmett\+Teller\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de Brunauer -\/ Emmett -\/ Teller. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brunauer_emmett_teller}{BrunauerEmmettTeller}}  var1(QMAX, \mbox{\hyperlink{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}{K1}}, \mbox{\hyperlink{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de Brunauer -\/ Emmett -\/ Teller. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_brunauer_emmett_teller_ae752dd289fd4eece338fdae92fab2b4e}\label{class_brunauer_emmett_teller_ae752dd289fd4eece338fdae92fab2b4e}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!K1@{K1}}
+\index{K1@{K1}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Brunauer\+Emmett\+Teller\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante da isoterma de Brunauer -\/ Emmett -\/ Teller. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brunauer_emmett_teller}{BrunauerEmmettTeller}}  var1(QMAX, \mbox{\hyperlink{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}{K1}}, \mbox{\hyperlink{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante da isoterma de Brunauer -\/ Emmett -\/ Teller. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}\label{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!K2@{K2}}
+\index{K2@{K2}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Brunauer\+Emmett\+Teller\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o parâmetro da equação de Brunauer -\/ Emmett -\/ Teller. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brunauer_emmett_teller}{BrunauerEmmettTeller}}  var1(QMAX, \mbox{\hyperlink{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}{K1}}, \mbox{\hyperlink{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do parâmetro da equação de Brunauer -\/ Emmett -\/ Teller. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_brunauer_emmett_teller_a4c28b57d1c0317831af0e586c87ea7f1}\label{class_brunauer_emmett_teller_a4c28b57d1c0317831af0e586c87ea7f1}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!K2@{K2}}
+\index{K2@{K2}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Brunauer\+Emmett\+Teller\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor associado a constante da isoterma de Brunauer -\/ Emmett -\/ Teller. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brunauer_emmett_teller}{BrunauerEmmettTeller}}  var1(QMAX, \mbox{\hyperlink{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}{K1}}, \mbox{\hyperlink{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor associado a constante da isoterma de Brunauer -\/ Emmett -\/ Teller. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_brunauer_emmett_teller_a57dd8bd16b955d98d495afaeb87cbff3}\label{class_brunauer_emmett_teller_a57dd8bd16b955d98d495afaeb87cbff3}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!operator=@{operator=}}
+\index{operator=@{operator=}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_brunauer_emmett_teller}{Brunauer\+Emmett\+Teller}} \& Brunauer\+Emmett\+Teller\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_brunauer_emmett_teller}{Brunauer\+Emmett\+Teller}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brunauer_emmett_teller}{BrunauerEmmettTeller}}  var1(QMAX, \mbox{\hyperlink{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}{K1}}, \mbox{\hyperlink{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}{K2}});}
+\DoxyCodeLine{\mbox{\hyperlink{class_brunauer_emmett_teller}{BrunauerEmmettTeller}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_brunauer_emmett_teller}{Brunauer\+Emmett\+Teller}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_brunauer_emmett_teller_a9ae0d4005bfa195207e0ff2569194504}\label{class_brunauer_emmett_teller_a9ae0d4005bfa195207e0ff2569194504}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!Qe@{Qe}}
+\index{Qe@{Qe}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Brunauer\+Emmett\+Teller\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brunauer_emmett_teller}{BrunauerEmmettTeller}}  var1(QMAX, \mbox{\hyperlink{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}{K1}}, \mbox{\hyperlink{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_brunauer_emmett_teller_a9e532275536955005d8e9c6c2b793042}\label{class_brunauer_emmett_teller_a9e532275536955005d8e9c6c2b793042}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!Qe@{Qe}}
+\index{Qe@{Qe}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Brunauer\+Emmett\+Teller\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_brunauer_emmett_teller_a5bbeb11882bf5026f7ae7be6db59a8b7}\label{class_brunauer_emmett_teller_a5bbeb11882bf5026f7ae7be6db59a8b7}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Brunauer\+Emmett\+Teller\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brunauer_emmett_teller}{BrunauerEmmettTeller}}  var1(QMAX, \mbox{\hyperlink{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}{K1}}, \mbox{\hyperlink{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_brunauer_emmett_teller_ae86f0ecdfa495529789bf13febf8c675}\label{class_brunauer_emmett_teller_ae86f0ecdfa495529789bf13febf8c675}} 
+\index{BrunauerEmmettTeller@{BrunauerEmmettTeller}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!BrunauerEmmettTeller@{BrunauerEmmettTeller}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Brunauer\+Emmett\+Teller\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Kilselev  var1(QMAX, \mbox{\hyperlink{class_brunauer_emmett_teller_abea8b0407ae6c668c381fe0130ea2cc3}{K1}}, \mbox{\hyperlink{class_brunauer_emmett_teller_a9efc274f7f2ab453546849c4f2a8afb3}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_brunauer_emmett_teller_8h}{Brunauer\+Emmett\+Teller.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Brunauer\+Emmett\+Teller.\+cpp\end{DoxyCompactItemize}

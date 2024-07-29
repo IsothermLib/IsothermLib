@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>IsothermLib: Código-Fonte de D:/Desenvolvimento/IsothermLib - Github/IsothermLib/include/Isotherm/TwoParameters/Temkin.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">IsothermLib<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_dbbde0c145412e2fe2852ce43eb851e2.html">include</a></li><li class="navelem"><a class="el" href="dir_f6e7fadfa303d2c82893c0cc076b5910.html">Isotherm</a></li><li class="navelem"><a class="el" href="dir_6d75ab827888866b4031963e479e7265.html">TwoParameters</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Temkin.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Name        : Temkin.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Authors     : Iasmim Barboza Storck</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//               Lara Botelho Brum</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//               Luan Rodrigues Soares de Souza</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//               Joao Flavio Vieira de Vasconcellos</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// Version     : 1.0</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Description : Classe com as equacoes da isoterma de Dubinin-Radushkevich</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// Copyright   : Copyright (C) &lt;2022&gt;  Joao Flavio Vasconcellos</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//                                      (jflavio at iprj.uerj.br)</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// the Free Software Foundation, either version 3 of the License.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// GNU General Public License for more details.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#ifndef __TEMKIN_H__</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define __TEMKIN_H__</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// include da isotherm++</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#include &lt;Isotherm/TwoParameters/TwoParameters.h&gt;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceist.html">ist</a> {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="};">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classist_1_1_temkin.html">   64</a></span><span class="keyword">class </span><a class="code hl_class" href="classist_1_1_temkin.html">Temkin</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classist_1_1_two_parameters.html">TwoParameters</a>,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                            <span class="keyword">public</span> <a class="code hl_class" href="classist_1_1_isotherm_template.html">IsothermTemplate</a> &lt; Temkin &gt; {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">// ID da classe</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classist_1_1_temkin.html#a6cbfdf25234d4fb3e1e572e681152c33">   78</a></span>    <a class="code hl_function" href="classist_1_1_temkin.html#a6cbfdf25234d4fb3e1e572e681152c33">DefineIdentity</a> (<span class="stringliteral">&quot;Temkin&quot;</span>, ID::Temkin);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">// Funcoes Construtoras/Destrutora</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classist_1_1_temkin.html#a06b4b82c0657cb8966c7d950b71bbb30">   96</a></span>    <a class="code hl_function" href="classist_1_1_temkin.html#a06b4b82c0657cb8966c7d950b71bbb30">Temkin</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classist_1_1_temkin.html#abbf3fe739513bc095ead4e17e76d9987">  109</a></span>    <a class="code hl_function" href="classist_1_1_temkin.html#abbf3fe739513bc095ead4e17e76d9987">Temkin</a>(<span class="keyword">const</span> <a class="code hl_class" href="classist_1_1_temkin.html">Temkin</a>&amp; _orig) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classist_1_1_temkin.html#a801deba19ebe98c7cef0271972f4626b">  114</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classist_1_1_temkin.html#a801deba19ebe98c7cef0271972f4626b">~Temkin</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <a class="code hl_function" href="classist_1_1_temkin.html#a06b4b82c0657cb8966c7d950b71bbb30">Temkin</a> (<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _k1, <span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _k2,  <span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _rgas = Isotherm::RGASCONST);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">// Sobrecarga de operadores</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classist_1_1_temkin.html#a1e9ae5dcad41864f486398f4619cbe22">  156</a></span>    <a class="code hl_class" href="classist_1_1_temkin.html">Temkin</a>&amp; <a class="code hl_function" href="classist_1_1_temkin.html#a1e9ae5dcad41864f486398f4619cbe22">operator = </a>(<span class="keyword">const</span> <a class="code hl_class" href="classist_1_1_temkin.html">Temkin</a>&amp; _orig) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment">// Acesso as constantes da classe inline</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="classist_1_1_temkin.html#a5154e451acdd6f82d233d3270e5292c0">  174</a></span>    <span class="keyword">inline</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> <a class="code hl_function" href="classist_1_1_temkin.html#a5154e451acdd6f82d233d3270e5292c0">K1</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(0);};</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classist_1_1_temkin.html#a671bb506f5ca131519895bba7dcbc5ee">  188</a></span>    <span class="keyword">inline</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> <a class="code hl_function" href="classist_1_1_temkin.html#a671bb506f5ca131519895bba7dcbc5ee">K2</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(1);};</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="classist_1_1_temkin.html#a29c30a6d9d200083513ddf6224953094">  203</a></span>    <span class="keyword">inline</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> <a class="code hl_function" href="classist_1_1_temkin.html#a29c30a6d9d200083513ddf6224953094">Rgas</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  RGAS;};</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment">// Alterando as constantes da classe</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="classist_1_1_temkin.html#ad2d7a22a498682dd39d097168e997086">  223</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classist_1_1_temkin.html#ad2d7a22a498682dd39d097168e997086">K1</a> (<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _k1)  {*<span class="keyword">this</span> = <a class="code hl_function" href="classist_1_1_temkin.html#a06b4b82c0657cb8966c7d950b71bbb30">Temkin</a>(_k1, <a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(1), this-&gt;<a class="code hl_function" href="classist_1_1_temkin.html#a29c30a6d9d200083513ddf6224953094">Rgas</a>());};</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="classist_1_1_temkin.html#a0cba035ed2d9cdc610d4349a533c935a">  239</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classist_1_1_temkin.html#a0cba035ed2d9cdc610d4349a533c935a">K2</a> (<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _k2)  {*<span class="keyword">this</span> = <a class="code hl_function" href="classist_1_1_temkin.html#a06b4b82c0657cb8966c7d950b71bbb30">Temkin</a>(<a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(0), _k2, this-&gt;<a class="code hl_function" href="classist_1_1_temkin.html#a29c30a6d9d200083513ddf6224953094">Rgas</a>());};</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="classist_1_1_temkin.html#a637786ab827f1161c20c7403c7ef14a3">  254</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classist_1_1_temkin.html#a637786ab827f1161c20c7403c7ef14a3">Rgas</a> (<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _rgas) {*<span class="keyword">this</span> = <a class="code hl_function" href="classist_1_1_temkin.html#a06b4b82c0657cb8966c7d950b71bbb30">Temkin</a>(<a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(0), <a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(1), _rgas);};</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="comment">// Funcoes virtuais</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    [[nodiscard]] </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> <a class="code hl_function" href="classist_1_1_temkin.html#abe4580e6eb95e39e488055274f1b2b72">Qe</a> (<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _c, <span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _temp) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="keyword">virtual</span> std::unique_ptr&lt;Isotherm&gt; CloneImplementation()<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordflow">return</span> std::make_unique&lt;Temkin&gt;(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    }    </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>                    RGAS = Isotherm::RGASCONST;      </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>};</div>
+</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>}</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="preprocessor">#endif  </span><span class="comment">/* TEMKIN_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="ttc" id="aclassist_1_1_isotherm_template_html"><div class="ttname"><a href="classist_1_1_isotherm_template.html">ist::IsothermTemplate</a></div><div class="ttdoc">Classe que gerencia o nome e detalhes sobre cada constante dos modelos das isotermas.</div><div class="ttdef"><b>Definição</b> Isotherm.h:322</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html"><div class="ttname"><a href="classist_1_1_temkin.html">ist::Temkin</a></div><div class="ttdef"><b>Definição</b> Temkin.h:65</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html_a06b4b82c0657cb8966c7d950b71bbb30"><div class="ttname"><a href="classist_1_1_temkin.html#a06b4b82c0657cb8966c7d950b71bbb30">ist::Temkin::Temkin</a></div><div class="ttdeci">Temkin()=default</div><div class="ttdoc">Construtora default.</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html_a0cba035ed2d9cdc610d4349a533c935a"><div class="ttname"><a href="classist_1_1_temkin.html#a0cba035ed2d9cdc610d4349a533c935a">ist::Temkin::K2</a></div><div class="ttdeci">void K2(const Real &amp;_k2)</div><div class="ttdoc">Funcao que alterao o coeficiente associado a constante de ligacao de equilibrio isotermica.</div><div class="ttdef"><b>Definição</b> Temkin.h:239</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html_a1e9ae5dcad41864f486398f4619cbe22"><div class="ttname"><a href="classist_1_1_temkin.html#a1e9ae5dcad41864f486398f4619cbe22">ist::Temkin::operator=</a></div><div class="ttdeci">Temkin &amp; operator=(const Temkin &amp;_orig)=default</div><div class="ttdoc">Sobrecarga do operador =.</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html_a29c30a6d9d200083513ddf6224953094"><div class="ttname"><a href="classist_1_1_temkin.html#a29c30a6d9d200083513ddf6224953094">ist::Temkin::Rgas</a></div><div class="ttdeci">Real Rgas() const</div><div class="ttdoc">Funcao que retorna o valor da constante universal dos gases.</div><div class="ttdef"><b>Definição</b> Temkin.h:203</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html_a5154e451acdd6f82d233d3270e5292c0"><div class="ttname"><a href="classist_1_1_temkin.html#a5154e451acdd6f82d233d3270e5292c0">ist::Temkin::K1</a></div><div class="ttdeci">Real K1() const</div><div class="ttdoc">Funcao que informa o valor da constante da isoterma de Temkin.</div><div class="ttdef"><b>Definição</b> Temkin.h:174</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html_a637786ab827f1161c20c7403c7ef14a3"><div class="ttname"><a href="classist_1_1_temkin.html#a637786ab827f1161c20c7403c7ef14a3">ist::Temkin::Rgas</a></div><div class="ttdeci">void Rgas(const Real &amp;_rgas)</div><div class="ttdoc">Funcao para alterar o valor da constante universal dos gases.</div><div class="ttdef"><b>Definição</b> Temkin.h:254</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html_a671bb506f5ca131519895bba7dcbc5ee"><div class="ttname"><a href="classist_1_1_temkin.html#a671bb506f5ca131519895bba7dcbc5ee">ist::Temkin::K2</a></div><div class="ttdeci">Real K2() const</div><div class="ttdoc">Funcao que retorna o coeficiente associado a constante de ligacao de equilibrio isotermica.</div><div class="ttdef"><b>Definição</b> Temkin.h:188</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html_a6cbfdf25234d4fb3e1e572e681152c33"><div class="ttname"><a href="classist_1_1_temkin.html#a6cbfdf25234d4fb3e1e572e681152c33">ist::Temkin::DefineIdentity</a></div><div class="ttdeci">DefineIdentity(&quot;Temkin&quot;, ID::Temkin)</div><div class="ttdoc">Definicao de ID para esta classe para fins de identificacao de erros.</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html_a801deba19ebe98c7cef0271972f4626b"><div class="ttname"><a href="classist_1_1_temkin.html#a801deba19ebe98c7cef0271972f4626b">ist::Temkin::~Temkin</a></div><div class="ttdeci">virtual ~Temkin()=default</div><div class="ttdoc">Destrutora.</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html_abbf3fe739513bc095ead4e17e76d9987"><div class="ttname"><a href="classist_1_1_temkin.html#abbf3fe739513bc095ead4e17e76d9987">ist::Temkin::Temkin</a></div><div class="ttdeci">Temkin(const Temkin &amp;_orig)=default</div><div class="ttdoc">Construtora de copia.</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html_abe4580e6eb95e39e488055274f1b2b72"><div class="ttname"><a href="classist_1_1_temkin.html#abe4580e6eb95e39e488055274f1b2b72">ist::Temkin::Qe</a></div><div class="ttdeci">Real Qe(const Real &amp;_c, const Real &amp;_temp) const</div><div class="ttdoc">Funcao que calcula a quantidade de sorcao no equilibrio.</div><div class="ttdef"><b>Definição</b> Temkin.cpp:110</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html_ad2d7a22a498682dd39d097168e997086"><div class="ttname"><a href="classist_1_1_temkin.html#ad2d7a22a498682dd39d097168e997086">ist::Temkin::K1</a></div><div class="ttdeci">void K1(const Real &amp;_k1)</div><div class="ttdoc">Funcao para alterar a constante da isoterma de Temkin.</div><div class="ttdef"><b>Definição</b> Temkin.h:223</div></div>
+<div class="ttc" id="aclassist_1_1_two_parameters_html"><div class="ttname"><a href="classist_1_1_two_parameters.html">ist::TwoParameters</a></div><div class="ttdef"><b>Definição</b> TwoParameters.h:59</div></div>
+<div class="ttc" id="agroup___isotherm_template_html_ga6655cbd631d8109709473c7243eeadba"><div class="ttname"><a href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">ist::Isotherm::Value</a></div><div class="ttdeci">const VecReal Value() const</div><div class="ttdoc">Vetor com os coeficientes de qualquer isoterma.</div><div class="ttdef"><b>Definição</b> Isotherm.h:261</div></div>
+<div class="ttc" id="agroup___type_html_ga445a5f0e2a34c9d97d69a3c2d1957907"><div class="ttname"><a href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a></div><div class="ttdeci">double Real</div><div class="ttdef"><b>Definição</b> Type.h:15</div></div>
+<div class="ttc" id="anamespaceist_html"><div class="ttname"><a href="namespaceist.html">ist</a></div><div class="ttdoc">Classe base de todas as outras classes de isotermas.</div><div class="ttdef"><b>Definição</b> IsoException.h:53</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

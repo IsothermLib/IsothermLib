@@ -1,0 +1,497 @@
+\hypertarget{class_fritz_schlunder_i_v}{}\doxysection{Referência da Classe Fritz\+Schlunder\+IV}
+\label{class_fritz_schlunder_i_v}\index{FritzSchlunderIV@{FritzSchlunderIV}}
+
+
+Classe com as equações da isoterma de Fritz-\/\+Schlunder IV.  
+
+
+
+
+{\ttfamily \#include $<$Fritz\+Schlunder\+IV.\+h$>$}
+
+Diagrama de hierarquia para Fritz\+Schlunder\+IV\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_fritz_schlunder_i_v}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_a375e3c1a5921d9cb46838a98560adcba}\label{class_fritz_schlunder_i_v_a375e3c1a5921d9cb46838a98560adcba}} 
+{\bfseries Define\+Identity} (\char`\"{}Fritz\+Schlunder\+IV\char`\"{}, ID\+::\+Fritz\+Schlunder\+IV)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fritz_schlunder_i_v_acad7710e57ccbfdefd81c104ae531e47}{Fritz\+Schlunder\+IV}} ()=default
+\item 
+\mbox{\hyperlink{class_fritz_schlunder_i_v_a34b1de7778b45f6a896bd05e92687fbb}{Fritz\+Schlunder\+IV}} (const \mbox{\hyperlink{class_fritz_schlunder_i_v}{Fritz\+Schlunder\+IV}} \&\+\_\+fritz\+\_\+schlunder\+\_\+iv)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_a59eedea872779b6ecece17d7abbc9e7d}\label{class_fritz_schlunder_i_v_a59eedea872779b6ecece17d7abbc9e7d}} 
+virtual {\bfseries $\sim$\+Fritz\+Schlunder\+IV} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fritz_schlunder_i_v_a5ffdffa9b784d0fc7c3eb112a6945a05}{Fritz\+Schlunder\+IV}} (const Real \&, const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_fritz_schlunder_v}{Fritz\+SchlunderV}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fritz_schlunder_i_v}{Fritz\+Schlunder\+IV}} \& \mbox{\hyperlink{class_fritz_schlunder_i_v_a68868f11054f3b7f19d2ffbba69138ee}{operator=}} (const \mbox{\hyperlink{class_fritz_schlunder_i_v}{Fritz\+Schlunder\+IV}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_fritz_schlunder_i_v_a4dfb9e876805e330836975307537424b}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_fritz}{Fritz}} -\/ Schlunder IV. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o parâmetro da equação de \mbox{\hyperlink{class_fritz}{Fritz}} -\/ Schlunder IV. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o parâmetro da equação de \mbox{\hyperlink{class_fritz}{Fritz}} -\/ Schlunder IV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fritz_schlunder_i_v_a3c085c84544c42abd566d5d77e5c0f14}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fritz_schlunder_i_v_aaa1b7942b38cbeae31d9e7c0769fcfa4}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante da isoterma de \mbox{\hyperlink{class_fritz}{Fritz}} – Schlunder IV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fritz_schlunder_i_v_ad0d4de448aaa3a374797696ed63e5a86}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor associado a constante da isoterma de \mbox{\hyperlink{class_fritz}{Fritz}} – Schlunder IV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fritz_schlunder_i_v_a6e58c40da07663df42ed938e294da28a}{K3}} (const Real \&\+\_\+k3)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor associado ao expoente da isoterma de \mbox{\hyperlink{class_fritz}{Fritz}} – Schlunder IV. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_fritz_schlunder_i_v_a9f3c3c85a868121c74791cc27cd3a872}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_fritz_schlunder_i_v_aa6040c67bdb245d9acf318f4369d0309}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_fritz_schlunder_i_v}{Fritz\+Schlunder\+IV}} $\ast$ \mbox{\hyperlink{class_fritz_schlunder_i_v_a756454c11f6a2de6d84a71d21206918b}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de Fritz-\/\+Schlunder IV. 
+
+Isoterma com quatro parâmetros, $ q_{max} $, $ K_1 $, $ K_2 $ e $ K_3 $ cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} Q\+\_\+e(\+C\+\_\+e, T) = \textbackslash{}frac\{q\+\_\+\{max\}C\+\_\+e$^\wedge$\{K\+\_\+3\}\}\{1 + K\+\_\+1\+C\+\_\+e$^\wedge$\{K\+\_\+3\}\} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000010}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_acad7710e57ccbfdefd81c104ae531e47}\label{class_fritz_schlunder_i_v_acad7710e57ccbfdefd81c104ae531e47}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!FritzSchlunderIV@{FritzSchlunderIV}}
+\index{FritzSchlunderIV@{FritzSchlunderIV}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{FritzSchlunderIV()}{FritzSchlunderIV()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Fritz\+Schlunder\+IV\+::\+Fritz\+Schlunder\+IV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_a34b1de7778b45f6a896bd05e92687fbb}\label{class_fritz_schlunder_i_v_a34b1de7778b45f6a896bd05e92687fbb}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!FritzSchlunderIV@{FritzSchlunderIV}}
+\index{FritzSchlunderIV@{FritzSchlunderIV}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{FritzSchlunderIV()}{FritzSchlunderIV()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Fritz\+Schlunder\+IV\+::\+Fritz\+Schlunder\+IV (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_fritz_schlunder_i_v}{Fritz\+Schlunder\+IV}} \&}]{\+\_\+fritz\+\_\+schlunder\+\_\+iv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo Fritz-\/\+Schlunder IV original. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_a5ffdffa9b784d0fc7c3eb112a6945a05}\label{class_fritz_schlunder_i_v_a5ffdffa9b784d0fc7c3eb112a6945a05}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!FritzSchlunderIV@{FritzSchlunderIV}}
+\index{FritzSchlunderIV@{FritzSchlunderIV}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{FritzSchlunderIV()}{FritzSchlunderIV()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Fritz\+Schlunder\+IV\+::\+Fritz\+Schlunder\+IV (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2,  }\item[{const Real \&}]{\+\_\+k3 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_fritz_schlunder_v}{Fritz\+SchlunderV}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}}(1.0);    }
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}}(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}}(1.0);}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(Q1, \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. ~\newline
+ \\
+\hline
+{\em \+\_\+k1} & Coeficiente da isortema de \mbox{\hyperlink{class_fritz}{Fritz}} -\/ Schlunder IV. ~\newline
+ \\
+\hline
+{\em \+\_\+k2} & Coeficiente da isoterma de \mbox{\hyperlink{class_fritz}{Fritz}} -\/ Schlunder IV. \\
+\hline
+{\em \+\_\+k3} & Expoente da isoterma de \mbox{\hyperlink{class_fritz}{Fritz}} -\/ Schlunder IV. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em 0} & \texorpdfstring{$<$}{<} \+\_\+k3 \texorpdfstring{$<$}{<} 1. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_a756454c11f6a2de6d84a71d21206918b}\label{class_fritz_schlunder_i_v_a756454c11f6a2de6d84a71d21206918b}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_fritz_schlunder_i_v}{Fritz\+Schlunder\+IV}} $\ast$ Fritz\+Schlunder\+IV\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}\label{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!K1@{K1}}
+\index{K1@{K1}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Fritz\+Schlunder\+IV\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_fritz}{Fritz}} -\/ Schlunder IV. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_v}{FritzSchlunderV}}  var1(QMAX, \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_fritz}{Fritz}} -\/ Schlunder IV. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_aaa1b7942b38cbeae31d9e7c0769fcfa4}\label{class_fritz_schlunder_i_v_aaa1b7942b38cbeae31d9e7c0769fcfa4}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!K1@{K1}}
+\index{K1@{K1}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fritz\+Schlunder\+IV\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante da isoterma de \mbox{\hyperlink{class_fritz}{Fritz}} – Schlunder IV. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}  var1(QMAX, \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante da isoterma de \mbox{\hyperlink{class_fritz}{Fritz}} – Schlunder IV. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}\label{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!K2@{K2}}
+\index{K2@{K2}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Fritz\+Schlunder\+IV\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o parâmetro da equação de \mbox{\hyperlink{class_fritz}{Fritz}} -\/ Schlunder IV. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}  var1(QMAX, \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do parâmetro da equação de \mbox{\hyperlink{class_fritz}{Fritz}} -\/ Schlunder IV. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_ad0d4de448aaa3a374797696ed63e5a86}\label{class_fritz_schlunder_i_v_ad0d4de448aaa3a374797696ed63e5a86}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!K2@{K2}}
+\index{K2@{K2}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fritz\+Schlunder\+IV\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor associado a constante da isoterma de \mbox{\hyperlink{class_fritz}{Fritz}} – Schlunder IV. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}  var1(QMAX, \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor associado a constante da isoterma de \mbox{\hyperlink{class_fritz}{Fritz}} – Schlunder IV. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}\label{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!K3@{K3}}
+\index{K3@{K3}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{K3()}{K3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Fritz\+Schlunder\+IV\+::\+K3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o parâmetro da equação de \mbox{\hyperlink{class_fritz}{Fritz}} -\/ Schlunder IV. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}  var1(QMAX, \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k3 = var1.K3();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do parâmetro da equação de \mbox{\hyperlink{class_fritz}{Fritz}} -\/ Schlunder IV. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_a6e58c40da07663df42ed938e294da28a}\label{class_fritz_schlunder_i_v_a6e58c40da07663df42ed938e294da28a}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!K3@{K3}}
+\index{K3@{K3}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{K3()}{K3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fritz\+Schlunder\+IV\+::\+K3 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor associado ao expoente da isoterma de \mbox{\hyperlink{class_fritz}{Fritz}} – Schlunder IV. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}  var1(QMAX, \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k3(3.0);}
+\DoxyCodeLine{var1.K3(k3);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k3} & Novo valor associado ao expoente da isoterma de \mbox{\hyperlink{class_fritz}{Fritz}} – Schlunder IV. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em 0} & \texorpdfstring{$<$}{<} \+\_\+k3 \texorpdfstring{$<$}{<} 1. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_a68868f11054f3b7f19d2ffbba69138ee}\label{class_fritz_schlunder_i_v_a68868f11054f3b7f19d2ffbba69138ee}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!operator=@{operator=}}
+\index{operator=@{operator=}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fritz_schlunder_i_v}{Fritz\+Schlunder\+IV}} \& Fritz\+Schlunder\+IV\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_fritz_schlunder_i_v}{Fritz\+Schlunder\+IV}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}  var1(QMAX, \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}});              }
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_fritz_schlunder_v}{Fritz\+SchlunderV}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_a9f3c3c85a868121c74791cc27cd3a872}\label{class_fritz_schlunder_i_v_a9f3c3c85a868121c74791cc27cd3a872}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!Qe@{Qe}}
+\index{Qe@{Qe}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Fritz\+Schlunder\+IV\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_v}{FritzSchlunderV}}  var1(QMAX, \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. ~\newline
+ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_aa6040c67bdb245d9acf318f4369d0309}\label{class_fritz_schlunder_i_v_aa6040c67bdb245d9acf318f4369d0309}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!Qe@{Qe}}
+\index{Qe@{Qe}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Fritz\+Schlunder\+IV\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_a4dfb9e876805e330836975307537424b}\label{class_fritz_schlunder_i_v_a4dfb9e876805e330836975307537424b}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Fritz\+Schlunder\+IV\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}  var1(QMAX, \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fritz_schlunder_i_v_a3c085c84544c42abd566d5d77e5c0f14}\label{class_fritz_schlunder_i_v_a3c085c84544c42abd566d5d77e5c0f14}} 
+\index{FritzSchlunderIV@{FritzSchlunderIV}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!FritzSchlunderIV@{FritzSchlunderIV}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fritz\+Schlunder\+IV\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}  var1(QMAX, \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}}, \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Four\+Parameters/Fritz\+Schlunder\+IV.\+h\item 
+Isotherm\+Lib/src/\+Isotherm/\+Four\+Parameters/Fritz\+Schlunder\+IV.\+cpp\end{DoxyCompactItemize}

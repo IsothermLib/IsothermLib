@@ -1,0 +1,141 @@
+\hypertarget{_toth_8h_source}{}\doxysection{Toth.\+h}
+\label{_toth_8h_source}\index{IsothermLib/include/Isotherm/ThreeParameters/Toth.h@{IsothermLib/include/Isotherm/ThreeParameters/Toth.h}}
+\mbox{\hyperlink{_toth_8h}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// Name        : Toth.h}}
+\DoxyCodeLine{3 \textcolor{comment}{// Authors     : Lara Botelho Brum}}
+\DoxyCodeLine{4 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{5 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{6 \textcolor{comment}{// Description : Classe com as equações da isoterma de Toth}}
+\DoxyCodeLine{7 \textcolor{comment}{//}}
+\DoxyCodeLine{8 \textcolor{comment}{// Copyright   : Copyright (C) <2021>  Joao Flavio Vasconcellos}}
+\DoxyCodeLine{9 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{10 \textcolor{comment}{//}}
+\DoxyCodeLine{11 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{12 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{13 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{14 \textcolor{comment}{//}}
+\DoxyCodeLine{15 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{16 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{17 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{18 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{19 \textcolor{comment}{//}}
+\DoxyCodeLine{20 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{21 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{23 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#ifndef \_\_TOTH\_H\_\_}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define \_\_TOTH\_H\_\_}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{40 \textcolor{comment}{// opção de debug}}
+\DoxyCodeLine{41 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{comment}{//\#define \_\_TOTH\_DEBUG\_H\_\_}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{46 \textcolor{comment}{// include da biblioteca c++}}
+\DoxyCodeLine{47 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{52 \textcolor{comment}{// include da isotherm++}}
+\DoxyCodeLine{53 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#include <Isotherm/ThreeParameters/ThreeParameters.h>}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{keyword}{class }\mbox{\hyperlink{class_toth}{Toth}} :  \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_three_parameters}{ThreeParameters}},}
+\DoxyCodeLine{76                    \textcolor{keyword}{public} \mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} < Toth > \{}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{79 \textcolor{comment}{// ID da classe}}
+\DoxyCodeLine{80 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{keyword}{public}:}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \mbox{\hyperlink{class_toth_add5c40731092e03092d00f2eecff9c45}{DefineIdentity}}(\textcolor{stringliteral}{"{}Toth"{}}, ID::Toth);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{93 \textcolor{comment}{// Funções Construtoras/Destrutora}}
+\DoxyCodeLine{94 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{keyword}{public}:}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{108     \mbox{\hyperlink{class_toth_a20ce06d62b1e34218f1e2b08c15345d5}{Toth}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{121     \mbox{\hyperlink{class_toth_a495d6967a71745788f6eba4f347b7d36}{Toth}} (\textcolor{keyword}{const} \mbox{\hyperlink{class_toth}{Toth}}\& \_toth) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{126     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_toth_a9e571b46b78b5018764a6c1cb1781212}{\string~Toth}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{146     \mbox{\hyperlink{class_toth_a20ce06d62b1e34218f1e2b08c15345d5}{Toth}} (\textcolor{keyword}{const} Real\&, \textcolor{keyword}{const} Real\&, \textcolor{keyword}{const} Real\&);}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{149 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{150 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 \textcolor{keyword}{public}:}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 }
+\DoxyCodeLine{167    \mbox{\hyperlink{class_toth}{Toth}}\& \mbox{\hyperlink{class_toth_a08ab70fa30b708d16a7e5aa30322fe25}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_toth}{Toth}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{170 \textcolor{comment}{// Acesso as constantes da classe}}
+\DoxyCodeLine{171 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{185 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_toth_a3255e03d3217c8108b309b38f6967b69}{K3}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0);\};}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 }
+\DoxyCodeLine{200 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_toth_a6b681984b1ca07869fdaa8c1ce031278}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1);\};}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{214 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_toth_ae81806d4be020e0feaa382c0bd99ff46}{K2}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2);\};}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{217 \textcolor{comment}{// Alterando as constantes da classe}}
+\DoxyCodeLine{218 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{233     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_toth_a991b666ccfce221e53aa3c1c274d51f1}{K3}} (\textcolor{keyword}{const} Real\& \_k3)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_toth_a20ce06d62b1e34218f1e2b08c15345d5}{Toth}}(\_k3, \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1), \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2));\};}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{248     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_toth_a18a84cb54a569ba6c06684b3361344db}{K1}} (\textcolor{keyword}{const} Real\& \_k1)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_toth_a20ce06d62b1e34218f1e2b08c15345d5}{Toth}}(\mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), \_k1,  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2));\};}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{263      \textcolor{keywordtype}{void} \mbox{\hyperlink{class_toth_ae2f4d031f725d63c53b8d04406c2b4f1}{K2}} (\textcolor{keyword}{const} Real\& \_k2)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_toth_a20ce06d62b1e34218f1e2b08c15345d5}{Toth}}(\mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1),  \_k2);\};}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{267 \textcolor{comment}{// Funções virtuais}}
+\DoxyCodeLine{268 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{284     [[nodiscard]]  Real \mbox{\hyperlink{class_toth_afa4e59470a5557308af9023e4fcbd70d}{Qe}} (\textcolor{keyword}{const} Real\&, \textcolor{keyword}{const} Real\&) \textcolor{keyword}{const};}
+\DoxyCodeLine{285 }
+\DoxyCodeLine{286     [[nodiscard]] }
+\DoxyCodeLine{287     \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_toth_afa4e59470a5557308af9023e4fcbd70d}{Qe}}   (   \textcolor{keyword}{const} Real\& \_c}
+\DoxyCodeLine{288     )\textcolor{keyword}{ const override}}
+\DoxyCodeLine{289 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{290         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_toth_afa4e59470a5557308af9023e4fcbd70d}{Qe}}(\_c, 0);}
+\DoxyCodeLine{291     \}}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294 }
+\DoxyCodeLine{295     [[nodiscard]] }
+\DoxyCodeLine{296     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_toth}{Toth}}* CloneImplementation()\textcolor{keyword}{ const override}}
+\DoxyCodeLine{297 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{298         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_toth_a20ce06d62b1e34218f1e2b08c15345d5}{Toth}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{299     \}}
+\DoxyCodeLine{300     }
+\DoxyCodeLine{301 \};}
+\DoxyCodeLine{302 }
+\DoxyCodeLine{303 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{305 }
+\DoxyCodeLine{306 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_TOTH\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{307 }
+
+\end{DoxyCode}

@@ -1,0 +1,437 @@
+\hypertarget{class_unilan}{}\doxysection{Referência da Classe Unilan}
+\label{class_unilan}\index{Unilan@{Unilan}}
+
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_unilan}{Unilan}}.  
+
+
+
+
+{\ttfamily \#include $<$Unilan.\+h$>$}
+
+Diagrama de hierarquia para Unilan\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unilan}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unilan_ae1540b4c99af3ef368448af74a40309e}{Define\+Identity}} (\char`\"{}Unilan\char`\"{}, ID\+::\+Unilan)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unilan_a6380bc52232fbf30c290aabfdac4a902}{Unilan}} ()=default
+\item 
+\mbox{\hyperlink{class_unilan_a4feeb49e4e2ab9acccdf32b5d6eb12de}{Unilan}} (const \mbox{\hyperlink{class_unilan}{Unilan}} \&\+\_\+unilan)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_unilan_a5d0586378e47c14698fd8d7ab19ae08a}\label{class_unilan_a5d0586378e47c14698fd8d7ab19ae08a}} 
+virtual {\bfseries $\sim$\+Unilan} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unilan_afeeb104046d03011879efbf615bfc06b}{Unilan}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_unilan}{Unilan}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unilan}{Unilan}} \& \mbox{\hyperlink{class_unilan_a49395cd2b4d5c4d5323fe724147f8e7c}{operator=}} (const \mbox{\hyperlink{class_unilan}{Unilan}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_unilan_a9d0c48c6fd4168dc12d7af4485ea14b0}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_unilan_acffa5b102af015b5501506616501c936}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_unilan}{Unilan}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o parâmetro da equação de \mbox{\hyperlink{class_unilan}{Unilan}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unilan_a62d93aba513752f7bd7daf7123e685ee}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unilan_a4bd00450a39e5c532222545cbb9b92c1}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante da isoterma de \mbox{\hyperlink{class_unilan}{Unilan}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unilan_a0cb8b602aa7d27a0c24a954bfc53d09f}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor associado a constante da isoterma de \mbox{\hyperlink{class_unilan}{Unilan}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_unilan_a3907fcf034051d92f7eb0faef74c597e}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_unilan_a3d3045c4ae6626c1dc7aa75472fc1b7f}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_unilan}{Unilan}} $\ast$ \mbox{\hyperlink{class_unilan_afdcb5861aaec67263fe826280807be37}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de \mbox{\hyperlink{class_unilan}{Unilan}}. 
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_unilan}{Unilan}}.
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e, T)= \textbackslash{}frac\{q\+\_\+\{max\}\}\{2K\+\_\+2\}ln(\textbackslash{}frac\{1+K\+\_\+1\+C\+\_\+ee$^\wedge$\{K\+\_\+2\}\}\{1+K\+\_\+1\+C\+\_\+ee$^\wedge$\{-\/K\+\_\+2\}\})\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2020 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000056}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_unilan_a6380bc52232fbf30c290aabfdac4a902}\label{class_unilan_a6380bc52232fbf30c290aabfdac4a902}} 
+\index{Unilan@{Unilan}!Unilan@{Unilan}}
+\index{Unilan@{Unilan}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{Unilan()}{Unilan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Unilan\+::\+Unilan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_unilan}{Unilan}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unilan_a4feeb49e4e2ab9acccdf32b5d6eb12de}\label{class_unilan_a4feeb49e4e2ab9acccdf32b5d6eb12de}} 
+\index{Unilan@{Unilan}!Unilan@{Unilan}}
+\index{Unilan@{Unilan}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{Unilan()}{Unilan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Unilan\+::\+Unilan (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_unilan}{Unilan}} \&}]{\+\_\+unilan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_unilan}{Unilan}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_unilan}{Unilan}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_unilan}{Unilan}} original. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_unilan_afeeb104046d03011879efbf615bfc06b}\label{class_unilan_afeeb104046d03011879efbf615bfc06b}} 
+\index{Unilan@{Unilan}!Unilan@{Unilan}}
+\index{Unilan@{Unilan}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{Unilan()}{Unilan()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Unilan\+::\+Unilan (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_unilan}{Unilan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_unilan_acffa5b102af015b5501506616501c936}{K1}}(1.0);    }
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}{K2}}(1.0);        }
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(Q1, \mbox{\hyperlink{class_unilan_acffa5b102af015b5501506616501c936}{K1}}, \mbox{\hyperlink{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. ~\newline
+ \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de \mbox{\hyperlink{class_unilan}{Unilan}}. ~\newline
+ \\
+\hline
+{\em \+\_\+k2} & Constante da isoterma de \mbox{\hyperlink{class_unilan}{Unilan}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_unilan_afdcb5861aaec67263fe826280807be37}\label{class_unilan_afdcb5861aaec67263fe826280807be37}} 
+\index{Unilan@{Unilan}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_unilan}{Unilan}} $\ast$ Unilan\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_unilan_ae1540b4c99af3ef368448af74a40309e}\label{class_unilan_ae1540b4c99af3ef368448af74a40309e}} 
+\index{Unilan@{Unilan}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Unilan\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Unilan\char`\"{}}]{,  }\item[{ID\+::\+Unilan}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_unilan_acffa5b102af015b5501506616501c936}\label{class_unilan_acffa5b102af015b5501506616501c936}} 
+\index{Unilan@{Unilan}!K1@{K1}}
+\index{K1@{K1}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Unilan\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_unilan}{Unilan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_unilan}{Unilan}}  var1(QMAX, \mbox{\hyperlink{class_unilan_acffa5b102af015b5501506616501c936}{K1}}, \mbox{\hyperlink{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_unilan}{Unilan}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unilan_a4bd00450a39e5c532222545cbb9b92c1}\label{class_unilan_a4bd00450a39e5c532222545cbb9b92c1}} 
+\index{Unilan@{Unilan}!K1@{K1}}
+\index{K1@{K1}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Unilan\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante da isoterma de \mbox{\hyperlink{class_unilan}{Unilan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_unilan}{Unilan}}  var1(QMAX, \mbox{\hyperlink{class_unilan_acffa5b102af015b5501506616501c936}{K1}}, \mbox{\hyperlink{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante da isoterma de \mbox{\hyperlink{class_unilan}{Unilan}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}\label{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}} 
+\index{Unilan@{Unilan}!K2@{K2}}
+\index{K2@{K2}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Unilan\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o parâmetro da equação de \mbox{\hyperlink{class_unilan}{Unilan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_unilan}{Unilan}}  var1(QMAX, \mbox{\hyperlink{class_unilan_acffa5b102af015b5501506616501c936}{K1}}, \mbox{\hyperlink{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do parâmetro da equação de \mbox{\hyperlink{class_unilan}{Unilan}}. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unilan_a0cb8b602aa7d27a0c24a954bfc53d09f}\label{class_unilan_a0cb8b602aa7d27a0c24a954bfc53d09f}} 
+\index{Unilan@{Unilan}!K2@{K2}}
+\index{K2@{K2}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Unilan\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor associado a constante da isoterma de \mbox{\hyperlink{class_unilan}{Unilan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_unilan}{Unilan}}  var1(QMAX, \mbox{\hyperlink{class_unilan_acffa5b102af015b5501506616501c936}{K1}}, \mbox{\hyperlink{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor associado a constante da isoterma de \mbox{\hyperlink{class_unilan}{Unilan}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_unilan_a49395cd2b4d5c4d5323fe724147f8e7c}\label{class_unilan_a49395cd2b4d5c4d5323fe724147f8e7c}} 
+\index{Unilan@{Unilan}!operator=@{operator=}}
+\index{operator=@{operator=}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unilan}{Unilan}} \& Unilan\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_unilan}{Unilan}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_unilan}{Unilan}}  var1(QMAX, \mbox{\hyperlink{class_unilan_acffa5b102af015b5501506616501c936}{K1}}, \mbox{\hyperlink{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}{K2}});              }
+\DoxyCodeLine{\mbox{\hyperlink{class_unilan}{Unilan}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_unilan}{Unilan}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unilan_a3907fcf034051d92f7eb0faef74c597e}\label{class_unilan_a3907fcf034051d92f7eb0faef74c597e}} 
+\index{Unilan@{Unilan}!Qe@{Qe}}
+\index{Qe@{Qe}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Unilan\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_unilan}{Unilan}}  var1(QMAX, \mbox{\hyperlink{class_unilan_acffa5b102af015b5501506616501c936}{K1}}, \mbox{\hyperlink{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. ~\newline
+ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_unilan_a3d3045c4ae6626c1dc7aa75472fc1b7f}\label{class_unilan_a3d3045c4ae6626c1dc7aa75472fc1b7f}} 
+\index{Unilan@{Unilan}!Qe@{Qe}}
+\index{Qe@{Qe}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Unilan\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_unilan_a9d0c48c6fd4168dc12d7af4485ea14b0}\label{class_unilan_a9d0c48c6fd4168dc12d7af4485ea14b0}} 
+\index{Unilan@{Unilan}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Unilan\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_unilan}{Unilan}}  var1(QMAX, \mbox{\hyperlink{class_unilan_acffa5b102af015b5501506616501c936}{K1}}, \mbox{\hyperlink{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_unilan_a62d93aba513752f7bd7daf7123e685ee}\label{class_unilan_a62d93aba513752f7bd7daf7123e685ee}} 
+\index{Unilan@{Unilan}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Unilan@{Unilan}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Unilan\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Kilselev  var1(QMAX, \mbox{\hyperlink{class_unilan_acffa5b102af015b5501506616501c936}{K1}}, \mbox{\hyperlink{class_unilan_a6192b5cdebcb586e365a2dea146c9ef9}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_unilan_8h}{Unilan.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Unilan.\+cpp\end{DoxyCompactItemize}

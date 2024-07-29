@@ -1,0 +1,127 @@
+\hypertarget{_henry_8h_source}{}\doxysection{Henry.\+h}
+\label{_henry_8h_source}\index{IsothermLib/include/Isotherm/OneParameter/Henry.h@{IsothermLib/include/Isotherm/OneParameter/Henry.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// Name        : Henry.h}}
+\DoxyCodeLine{3 \textcolor{comment}{// Authors     : Iasmim Barboza Storck}}
+\DoxyCodeLine{4 \textcolor{comment}{//               Lara Botelho Brum}}
+\DoxyCodeLine{5 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
+\DoxyCodeLine{6 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{7 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{8 \textcolor{comment}{// Description : Classe com as equacoes da isoterma de Henry}}
+\DoxyCodeLine{9 \textcolor{comment}{//}}
+\DoxyCodeLine{10 \textcolor{comment}{// Copyright   : Copyright (C) <2022>  Joao Flavio Vasconcellos}}
+\DoxyCodeLine{11 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{14 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{15 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{16 \textcolor{comment}{//}}
+\DoxyCodeLine{17 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{18 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{19 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{20 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{21 \textcolor{comment}{//}}
+\DoxyCodeLine{22 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{23 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{24 \textcolor{comment}{//}}
+\DoxyCodeLine{25 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#ifndef \_\_HENRY\_H\_\_}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define \_\_HENRY\_H\_\_}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{56 \textcolor{comment}{// include da isotherm++}}
+\DoxyCodeLine{57 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#include <Isotherm/OneParameter/OneParameter.h>}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{keyword}{class }\mbox{\hyperlink{class_henry}{Henry}} :   \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_one_parameter}{OneParameter}},}
+\DoxyCodeLine{67                 \textcolor{keyword}{public} \mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} < Henry >}
+\DoxyCodeLine{68 \{}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{71 \textcolor{comment}{// ID da classe}}
+\DoxyCodeLine{72 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{public}:}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{79     \mbox{\hyperlink{class_henry_ad3b41069bebfd4c2752cf6f70f41d468}{DefineIdentity}}  (   \textcolor{stringliteral}{"{}Henry"{}}}
+\DoxyCodeLine{80                     ,   ID::Henry}
+\DoxyCodeLine{81                     );}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{85 \textcolor{comment}{// Funções Construtoras/Destrutora}}
+\DoxyCodeLine{86 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{keyword}{public}:}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{100     \mbox{\hyperlink{class_henry_aa92ced203a956240ee852b55731ef8e3}{Henry}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{113     \mbox{\hyperlink{class_henry_a96a31f0c34cbcf968fe090d9f5a07686}{Henry}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_henry}{Henry}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{118     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_henry_ae0538538f074e5706bfcf1998817a193}{\string~Henry}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{132     \mbox{\hyperlink{class_henry_aa92ced203a956240ee852b55731ef8e3}{Henry}} (\textcolor{keyword}{const} Real\& \_k1);}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{135 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{136 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 \textcolor{keyword}{public}:}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{151     \mbox{\hyperlink{class_henry}{Henry}}\& \mbox{\hyperlink{class_henry_a1884766cc0fbfa3d6bc7d77eef81a851}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_henry}{Henry}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{154 \textcolor{comment}{// Acesso as constantes da classe}}
+\DoxyCodeLine{155 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{169 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_henry_a2250f9d0aab3716c5b60e35e9eb8448a}{K1}} ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{170 \textcolor{keyword}{}\{}
+\DoxyCodeLine{171     \textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0);}
+\DoxyCodeLine{172 \};}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{175 \textcolor{comment}{// Alterando as constantes da classe}}
+\DoxyCodeLine{176 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{191 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_henry_a5debc5a246ddbffebf7782915cc05e5b}{K1}} (\textcolor{keyword}{const} Real\& \_k1)}
+\DoxyCodeLine{192 \{}
+\DoxyCodeLine{193     *\textcolor{keyword}{this} = \mbox{\hyperlink{class_henry_aa92ced203a956240ee852b55731ef8e3}{Henry}}(\_k1);}
+\DoxyCodeLine{194 \};}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{197 \textcolor{comment}{// Funcoes virtuais}}
+\DoxyCodeLine{198 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 \textcolor{keyword}{public}:}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{216  \textcolor{keyword}{virtual} Real \mbox{\hyperlink{class_henry_af9bdf57767a9fee1579804f0bfdd1cab}{Qe}}    (   \textcolor{keyword}{const} Real\&  \_c}
+\DoxyCodeLine{217                     ,   \textcolor{keyword}{const} Real\&  = 0) \textcolor{keyword}{const} ;}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219     [[nodiscard]] }
+\DoxyCodeLine{220     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_henry}{Henry}}* CloneImplementation()\textcolor{keyword}{ const override}}
+\DoxyCodeLine{221 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{222         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_henry_aa92ced203a956240ee852b55731ef8e3}{Henry}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{223     \}}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226 \};}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{236 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* \_\_HENRY\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241 }
+
+\end{DoxyCode}

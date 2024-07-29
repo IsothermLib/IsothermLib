@@ -1,0 +1,368 @@
+\hypertarget{class_langmuir}{}\doxysection{Referência da Classe Langmuir}
+\label{class_langmuir}\index{Langmuir@{Langmuir}}
+
+
+Classe com a equacao da isoterma de \mbox{\hyperlink{class_langmuir}{Langmuir}}  
+
+
+
+
+{\ttfamily \#include $<$Langmuir.\+h$>$}
+
+Diagrama de hierarquia para Langmuir\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_langmuir}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_langmuir_aba9242ee86cefeb9419471c776798e0a}{Define\+Identity}} (\char`\"{}Langmuir\char`\"{}, ID\+::\+Langmuir)
+\begin{DoxyCompactList}\small\item\em Definicao de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificacao de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_langmuir_a5570f3ef03154b051e86f4fcc59d37bf}{Langmuir}} ()=default
+\begin{DoxyCompactList}\small\item\em Construtora default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_langmuir_ae6850e7916610a71da2a34f2b00d36f2}{Langmuir}} (const \mbox{\hyperlink{class_langmuir}{Langmuir}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Construtora de copia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_langmuir_ace8ceb3b1dbadb52309599129efb22d4}\label{class_langmuir_ace8ceb3b1dbadb52309599129efb22d4}} 
+virtual {\bfseries $\sim$\+Langmuir} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_langmuir_aea8a81126ee0f09a80e412026028efb2}{Langmuir}} (const Real \&\+\_\+qmax, const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Construtora com os parametros que definem a isoterma de \mbox{\hyperlink{class_langmuir}{Langmuir}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_langmuir}{Langmuir}} \& \mbox{\hyperlink{class_langmuir_a7e9fa08ab12217910b0db17278a4401a}{operator=}} (const \mbox{\hyperlink{class_langmuir}{Langmuir}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_langmuir_acf9e0a133519df65968e5f543ee61107}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Funcao que informa o valor da capacidade maxima de adsorcao em \mbox{[}M /M \mbox{]}. . \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_langmuir_a779f957a34fe92c8740b70f59c5ee35f}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Funcao que retorna o coeficiente associado a constante de equilibrio de \mbox{\hyperlink{class_langmuir}{Langmuir}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_langmuir_a7d5371bb358d985a54809e1d51d62dc3}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Funcao para alterar a capacidade maxima de adsorcao em \mbox{[}M /M \mbox{]}. . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_langmuir_aab997cb1c26eca89af04cd20c1b484a4}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Funcao que altera o coeficiente associado a constante de equilibrio de \mbox{\hyperlink{class_langmuir}{Langmuir}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_langmuir_a04d4f1f3a29d62419b5dc56427e645b1}{Qe}} (const Real \&\+\_\+c, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Funcao que calcula a quantidade de sorcao no equilibrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_langmuir_a71f9e7d8ef4d7e1ec7b61dc7198c11c7}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_langmuir}{Langmuir}} $\ast$ \mbox{\hyperlink{class_langmuir_a4089ecffada8161866072cc872cde5f6}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com a equacao da isoterma de \mbox{\hyperlink{class_langmuir}{Langmuir}} 
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_langmuir}{Langmuir}} -\/ \mbox{\hyperlink{class_freundlich}{Freundlich}}.
+
+Isoterma com dois parametros, $ q_{max} $ e $ K_1 $, cujas formulas sao as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e, T) = q\+\_\+\{max\}\textbackslash{}frac\{K\+\_\+1\+C\+\_\+e\}\{1+K\+\_\+1\+C\+\_\+e\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referencia pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Iasmim Barboza Storck 
+
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000066}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_langmuir_a5570f3ef03154b051e86f4fcc59d37bf}\label{class_langmuir_a5570f3ef03154b051e86f4fcc59d37bf}} 
+\index{Langmuir@{Langmuir}!Langmuir@{Langmuir}}
+\index{Langmuir@{Langmuir}!Langmuir@{Langmuir}}
+\doxysubsubsection{\texorpdfstring{Langmuir()}{Langmuir()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Langmuir\+::\+Langmuir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir}{Langmuir}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros para esta funcao \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_langmuir_ae6850e7916610a71da2a34f2b00d36f2}\label{class_langmuir_ae6850e7916610a71da2a34f2b00d36f2}} 
+\index{Langmuir@{Langmuir}!Langmuir@{Langmuir}}
+\index{Langmuir@{Langmuir}!Langmuir@{Langmuir}}
+\doxysubsubsection{\texorpdfstring{Langmuir()}{Langmuir()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Langmuir\+::\+Langmuir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_langmuir}{Langmuir}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de copia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir}{Langmuir}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir}{Langmuir}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variavel do tipo \mbox{\hyperlink{class_langmuir}{Langmuir}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_langmuir_aea8a81126ee0f09a80e412026028efb2}\label{class_langmuir_aea8a81126ee0f09a80e412026028efb2}} 
+\index{Langmuir@{Langmuir}!Langmuir@{Langmuir}}
+\index{Langmuir@{Langmuir}!Langmuir@{Langmuir}}
+\doxysubsubsection{\texorpdfstring{Langmuir()}{Langmuir()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Langmuir\+::\+Langmuir (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parametros que definem a isoterma de \mbox{\hyperlink{class_langmuir}{Langmuir}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Real q1(1.0);}
+\DoxyCodeLine{Real k1(1.0);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorcao em \mbox{[}M /M \mbox{]}. \\
+\hline
+{\em \+\_\+k1} & Constante de equilibrio de \mbox{\hyperlink{class_langmuir}{Langmuir}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_langmuir_a4089ecffada8161866072cc872cde5f6}\label{class_langmuir_a4089ecffada8161866072cc872cde5f6}} 
+\index{Langmuir@{Langmuir}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!Langmuir@{Langmuir}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_langmuir}{Langmuir}} $\ast$ Langmuir\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_langmuir_aba9242ee86cefeb9419471c776798e0a}\label{class_langmuir_aba9242ee86cefeb9419471c776798e0a}} 
+\index{Langmuir@{Langmuir}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!Langmuir@{Langmuir}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Langmuir\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Langmuir\char`\"{}}]{,  }\item[{ID\+::\+Langmuir}]{ }\end{DoxyParamCaption})}
+
+
+
+Definicao de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificacao de erros. 
+
+\mbox{\Hypertarget{class_langmuir_a779f957a34fe92c8740b70f59c5ee35f}\label{class_langmuir_a779f957a34fe92c8740b70f59c5ee35f}} 
+\index{Langmuir@{Langmuir}!K1@{K1}}
+\index{K1@{K1}!Langmuir@{Langmuir}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Langmuir\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que retorna o coeficiente associado a constante de equilibrio de \mbox{\hyperlink{class_langmuir}{Langmuir}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir}{Langmuir}}  var1(q1, k1);}
+\DoxyCodeLine{Real k2 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de equilibrio de \mbox{\hyperlink{class_langmuir}{Langmuir}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_langmuir_aab997cb1c26eca89af04cd20c1b484a4}\label{class_langmuir_aab997cb1c26eca89af04cd20c1b484a4}} 
+\index{Langmuir@{Langmuir}!K1@{K1}}
+\index{K1@{K1}!Langmuir@{Langmuir}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Langmuir\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que altera o coeficiente associado a constante de equilibrio de \mbox{\hyperlink{class_langmuir}{Langmuir}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir}{Langmuir}}  var1(q1, k1);}
+\DoxyCodeLine{Real k2(2.0);}
+\DoxyCodeLine{var1.K1(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de equilibrio de \mbox{\hyperlink{class_langmuir}{Langmuir}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_langmuir_a7e9fa08ab12217910b0db17278a4401a}\label{class_langmuir_a7e9fa08ab12217910b0db17278a4401a}} 
+\index{Langmuir@{Langmuir}!operator=@{operator=}}
+\index{operator=@{operator=}!Langmuir@{Langmuir}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_langmuir}{Langmuir}} \& Langmuir\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_langmuir}{Langmuir}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir}{Langmuir}}  var1(q1, k1);}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir}{Langmuir}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variavel do tipo \mbox{\hyperlink{class_langmuir}{Langmuir}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Copia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_langmuir_a71f9e7d8ef4d7e1ec7b61dc7198c11c7}\label{class_langmuir_a71f9e7d8ef4d7e1ec7b61dc7198c11c7}} 
+\index{Langmuir@{Langmuir}!Qe@{Qe}}
+\index{Qe@{Qe}!Langmuir@{Langmuir}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Langmuir\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_langmuir_a04d4f1f3a29d62419b5dc56427e645b1}\label{class_langmuir_a04d4f1f3a29d62419b5dc56427e645b1}} 
+\index{Langmuir@{Langmuir}!Qe@{Qe}}
+\index{Qe@{Qe}!Langmuir@{Langmuir}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Langmuir\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Funcao que calcula a quantidade de sorcao no equilibrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir}{Langmuir}}  var1(q1, k1);}
+\DoxyCodeLine{Real ce(1);}
+\DoxyCodeLine{Real qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentracao do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorcao no equilibrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_langmuir_acf9e0a133519df65968e5f543ee61107}\label{class_langmuir_acf9e0a133519df65968e5f543ee61107}} 
+\index{Langmuir@{Langmuir}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Langmuir@{Langmuir}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Langmuir\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que informa o valor da capacidade maxima de adsorcao em \mbox{[}M /M \mbox{]}. . 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir}{Langmuir}}  var1(q1, k1);}
+\DoxyCodeLine{Real q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorcao em \mbox{[}M /M \mbox{]}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_langmuir_a7d5371bb358d985a54809e1d51d62dc3}\label{class_langmuir_a7d5371bb358d985a54809e1d51d62dc3}} 
+\index{Langmuir@{Langmuir}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Langmuir@{Langmuir}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Langmuir\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao para alterar a capacidade maxima de adsorcao em \mbox{[}M /M \mbox{]}. . 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir}{Langmuir}}  var1(q1, k1);}
+\DoxyCodeLine{Real q2(3.0);}
+\DoxyCodeLine{var1.Qmax(q2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorcao em \mbox{[}M /M \mbox{]}. . \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Two\+Parameters/Langmuir.\+h\item 
+Isotherm\+Lib/src/\+Isotherm/\+Two\+Parameters/Langmuir.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,429 @@
+\hypertarget{class_henderson}{}\doxysection{Referência da Classe Henderson}
+\label{class_henderson}\index{Henderson@{Henderson}}
+
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_henderson}{Henderson}}.  
+
+
+
+
+{\ttfamily \#include $<$Henderson.\+h$>$}
+
+Diagrama de hierarquia para Henderson\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_henderson}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_henderson_a8f022471a8b5224f22dd32ec0587dfeb}{Define\+Identity}} (\char`\"{}Henderson\char`\"{}, ID\+::\+Henderson)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_henderson_a5ea13cb21ad08a528284b4c22f5dc428}{Henderson}} ()=default
+\item 
+\mbox{\hyperlink{class_henderson_a088f15f42cb1bf7dd41662e26b65abd1}{Henderson}} (const \mbox{\hyperlink{class_henderson}{Henderson}} \&\+\_\+henderson)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_henderson_a5d506f5319c679164d70a976bf31f161}\label{class_henderson_a5d506f5319c679164d70a976bf31f161}} 
+virtual {\bfseries $\sim$\+Henderson} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_henderson_a430b811ca6a8163ea56007fd79a83226}{Henderson}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_henderson}{Henderson}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_henderson}{Henderson}} \& \mbox{\hyperlink{class_henderson_a0d2053b4dfc9d6ef8d7e856562288910}{operator=}} (const \mbox{\hyperlink{class_henderson}{Henderson}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_henderson_a73715a271132180a325725e5a264eb78}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_henderson_aa20208b855f398fe67c0a819b314a7fe}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_henderson}{Henderson}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o parâmetro da equação de \mbox{\hyperlink{class_henderson}{Henderson}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_henderson_aabd792d7526ac47ce877c011bfcb29df}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_henderson_aa04df4b0c9cf6c5721513c8a4854406d}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante da isoterma de \mbox{\hyperlink{class_henderson}{Henderson}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_henderson_a61e5e6f8a5f32f44536fb506bbbd279d}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor associado a constante da isoterma de \mbox{\hyperlink{class_henderson}{Henderson}}. \end{DoxyCompactList}\item 
+virtual Real \mbox{\hyperlink{class_henderson_a0319d85000137d5804e8d78563a8bc0c}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_henderson_ae227da3c62e99b706ab7a596280b31c3}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_henderson}{Henderson}} $\ast$ \mbox{\hyperlink{class_henderson_a67e0469e7253fa6dd9950198c4930402}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de \mbox{\hyperlink{class_henderson}{Henderson}}. 
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_henderson}{Henderson}}.
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}ln (-\/ln (1 -\/ C\+\_\+e)) = ln (K\+\_\+1) + K\+\_\+2ln(1\+\_\+\{max\})\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000021}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_henderson_a5ea13cb21ad08a528284b4c22f5dc428}\label{class_henderson_a5ea13cb21ad08a528284b4c22f5dc428}} 
+\index{Henderson@{Henderson}!Henderson@{Henderson}}
+\index{Henderson@{Henderson}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{Henderson()}{Henderson()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Henderson\+::\+Henderson (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_henderson_a088f15f42cb1bf7dd41662e26b65abd1}\label{class_henderson_a088f15f42cb1bf7dd41662e26b65abd1}} 
+\index{Henderson@{Henderson}!Henderson@{Henderson}}
+\index{Henderson@{Henderson}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{Henderson()}{Henderson()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Henderson\+::\+Henderson (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_henderson}{Henderson}} \&}]{\+\_\+henderson }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henderson}{Henderson}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_henderson}{Henderson}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_henderson}{Henderson}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_henderson_a430b811ca6a8163ea56007fd79a83226}\label{class_henderson_a430b811ca6a8163ea56007fd79a83226}} 
+\index{Henderson@{Henderson}!Henderson@{Henderson}}
+\index{Henderson@{Henderson}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{Henderson()}{Henderson()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Henderson\+::\+Henderson (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_henderson}{Henderson}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_henderson_aa20208b855f398fe67c0a819b314a7fe}{K1}}(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}{K2}}(1.0);}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(Q1, \mbox{\hyperlink{class_henderson_aa20208b855f398fe67c0a819b314a7fe}{K1}}, \mbox{\hyperlink{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de \mbox{\hyperlink{class_henderson}{Henderson}}. \\
+\hline
+{\em \+\_\+k2} & Constante da isoterma de \mbox{\hyperlink{class_henderson}{Henderson}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_henderson_a67e0469e7253fa6dd9950198c4930402}\label{class_henderson_a67e0469e7253fa6dd9950198c4930402}} 
+\index{Henderson@{Henderson}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_henderson}{Henderson}} $\ast$ Henderson\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_henderson_a8f022471a8b5224f22dd32ec0587dfeb}\label{class_henderson_a8f022471a8b5224f22dd32ec0587dfeb}} 
+\index{Henderson@{Henderson}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Henderson\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Henderson\char`\"{}}]{,  }\item[{ID\+::\+Henderson}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_henderson_aa20208b855f398fe67c0a819b314a7fe}\label{class_henderson_aa20208b855f398fe67c0a819b314a7fe}} 
+\index{Henderson@{Henderson}!K1@{K1}}
+\index{K1@{K1}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Henderson\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_henderson}{Henderson}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henderson}{Henderson}}  var1(QMAX, \mbox{\hyperlink{class_henderson_aa20208b855f398fe67c0a819b314a7fe}{K1}}, \mbox{\hyperlink{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_henderson}{Henderson}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_henderson_aa04df4b0c9cf6c5721513c8a4854406d}\label{class_henderson_aa04df4b0c9cf6c5721513c8a4854406d}} 
+\index{Henderson@{Henderson}!K1@{K1}}
+\index{K1@{K1}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Henderson\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante da isoterma de \mbox{\hyperlink{class_henderson}{Henderson}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henderson}{Henderson}}  var1(QMAX, \mbox{\hyperlink{class_henderson_aa20208b855f398fe67c0a819b314a7fe}{K1}}, \mbox{\hyperlink{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante da isoterma de \mbox{\hyperlink{class_henderson}{Henderson}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}\label{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}} 
+\index{Henderson@{Henderson}!K2@{K2}}
+\index{K2@{K2}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Henderson\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o parâmetro da equação de \mbox{\hyperlink{class_henderson}{Henderson}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henderson}{Henderson}}  var1(QMAX, \mbox{\hyperlink{class_henderson_aa20208b855f398fe67c0a819b314a7fe}{K1}}, \mbox{\hyperlink{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do parâmetro da equação de \mbox{\hyperlink{class_henderson}{Henderson}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_henderson_a61e5e6f8a5f32f44536fb506bbbd279d}\label{class_henderson_a61e5e6f8a5f32f44536fb506bbbd279d}} 
+\index{Henderson@{Henderson}!K2@{K2}}
+\index{K2@{K2}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Henderson\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor associado a constante da isoterma de \mbox{\hyperlink{class_henderson}{Henderson}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henderson}{Henderson}}  var1(QMAX, \mbox{\hyperlink{class_henderson_aa20208b855f398fe67c0a819b314a7fe}{K1}}, \mbox{\hyperlink{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor associado a constante da isoterma de \mbox{\hyperlink{class_henderson}{Henderson}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_henderson_a0d2053b4dfc9d6ef8d7e856562288910}\label{class_henderson_a0d2053b4dfc9d6ef8d7e856562288910}} 
+\index{Henderson@{Henderson}!operator=@{operator=}}
+\index{operator=@{operator=}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_henderson}{Henderson}} \& Henderson\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_henderson}{Henderson}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henderson}{Henderson}}  var1(QMAX, \mbox{\hyperlink{class_henderson_aa20208b855f398fe67c0a819b314a7fe}{K1}}, \mbox{\hyperlink{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}{K2}});}
+\DoxyCodeLine{\mbox{\hyperlink{class_henderson}{Henderson}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_henderson}{Henderson}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_henderson_a0319d85000137d5804e8d78563a8bc0c}\label{class_henderson_a0319d85000137d5804e8d78563a8bc0c}} 
+\index{Henderson@{Henderson}!Qe@{Qe}}
+\index{Qe@{Qe}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Henderson\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henderson}{Henderson}}  var1(QMAX, \mbox{\hyperlink{class_henderson_aa20208b855f398fe67c0a819b314a7fe}{K1}}, \mbox{\hyperlink{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_henderson_ae227da3c62e99b706ab7a596280b31c3}\label{class_henderson_ae227da3c62e99b706ab7a596280b31c3}} 
+\index{Henderson@{Henderson}!Qe@{Qe}}
+\index{Qe@{Qe}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Henderson\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_henderson_a73715a271132180a325725e5a264eb78}\label{class_henderson_a73715a271132180a325725e5a264eb78}} 
+\index{Henderson@{Henderson}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Henderson\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henderson}{Henderson}}  var1(QMAX, \mbox{\hyperlink{class_henderson_aa20208b855f398fe67c0a819b314a7fe}{K1}}, \mbox{\hyperlink{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_henderson_aabd792d7526ac47ce877c011bfcb29df}\label{class_henderson_aabd792d7526ac47ce877c011bfcb29df}} 
+\index{Henderson@{Henderson}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Henderson@{Henderson}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Henderson\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henderson}{Henderson}}  var1(QMAX, \mbox{\hyperlink{class_henderson_aa20208b855f398fe67c0a819b314a7fe}{K1}}, \mbox{\hyperlink{class_henderson_ac4fe7e5df4ec0fe93dab9349b63bb78a}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_henderson_8h}{Henderson.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Henderson.\+cpp\end{DoxyCompactItemize}

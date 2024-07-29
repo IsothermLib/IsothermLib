@@ -1,0 +1,439 @@
+\hypertarget{class_radke_prausnits_i_i}{}\doxysection{Referência da Classe Radke\+Prausnits\+II}
+\label{class_radke_prausnits_i_i}\index{RadkePrausnitsII@{RadkePrausnitsII}}
+
+
+Classe com as equações da isoterma de Radke-\/\+Prausnits II  
+
+
+
+
+{\ttfamily \#include $<$Radke\+Prausnits\+II.\+h$>$}
+
+Diagrama de hierarquia para Radke\+Prausnits\+II\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_radke_prausnits_i_i}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_radke_prausnits_i_i_a8f7dc131628db82f367222b96b642617}{Define\+Identity}} (\char`\"{}Radke\+Prausnits\+II\char`\"{}, ID\+::\+Radke\+Prausnits\+II)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_radke_prausnits_i_i_a99c98a4b19f14b1b5117f35baf223aed}{Radke\+Prausnits\+II}} ()=default
+\item 
+\mbox{\hyperlink{class_radke_prausnits_i_i_a873520d80bf8fbca2ae44ba323f4f6a0}{Radke\+Prausnits\+II}} (const \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}} \&radkeprausnitsii)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a8c3b131f9d6fc323ff2d90095db7aa9c}\label{class_radke_prausnits_i_i_a8c3b131f9d6fc323ff2d90095db7aa9c}} 
+virtual {\bfseries $\sim$\+Radke\+Prausnits\+II} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_radke_prausnits_i_i_a058dca7fff470403cc829ee6cc8651b3}{Radke\+Prausnits\+II}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de Radke-\/\+Prausnits\+II. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}} \& \mbox{\hyperlink{class_radke_prausnits_i_i_a15d393f0d2b73548da557c42fd331243}{operator=}} (const \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_radke_prausnits_i_i_ae5db6258c10d311adf8e4048b1b990b9}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_radke_prausnits_i_i_a87ffa9674a72f0428a18f6fbe834b0a9}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_radke_prausnits_i_i_a1f7676917bdcacd857f00df775a85259}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_radke_prausnits_i_i_a9a8045814b707d08b9551a0fafb56068}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_radke_prausnits_i_i_a3b364efef2a0ac6ddd8b1328861ee40b}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_radke_prausnits_i_i_a1bc2d82207f1e0a4b7810fe59dcd1ac7}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}} $\ast$ \mbox{\hyperlink{class_radke_prausnits_i_i_a014f2e223f3dcbd5447a0589feee3627}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de Radke-\/\+Prausnits II 
+
+Classe com as equações da isoterma de Radke-\/\+Prausnits II.
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e, T) = q\+\_\+\{max\}\textbackslash{}frac\{K\+\_\+1 $\ast$ C\}\{1 + K\+\_\+1 $\ast$ C$^\wedge$\{K\+\_\+2\}\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000045}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a99c98a4b19f14b1b5117f35baf223aed}\label{class_radke_prausnits_i_i_a99c98a4b19f14b1b5117f35baf223aed}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!RadkePrausnitsII@{RadkePrausnitsII}}
+\index{RadkePrausnitsII@{RadkePrausnitsII}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{RadkePrausnitsII()}{RadkePrausnitsII()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Radke\+Prausnits\+II\+::\+Radke\+Prausnits\+II (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a873520d80bf8fbca2ae44ba323f4f6a0}\label{class_radke_prausnits_i_i_a873520d80bf8fbca2ae44ba323f4f6a0}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!RadkePrausnitsII@{RadkePrausnitsII}}
+\index{RadkePrausnitsII@{RadkePrausnitsII}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{RadkePrausnitsII()}{RadkePrausnitsII()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Radke\+Prausnits\+II\+::\+Radke\+Prausnits\+II (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}} \&}]{radkeprausnitsii }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_radke_prausnits_i}{Radke\+PrausnitsI}} original. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a058dca7fff470403cc829ee6cc8651b3}\label{class_radke_prausnits_i_i_a058dca7fff470403cc829ee6cc8651b3}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!RadkePrausnitsII@{RadkePrausnitsII}}
+\index{RadkePrausnitsII@{RadkePrausnitsII}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{RadkePrausnitsII()}{RadkePrausnitsII()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Radke\+Prausnits\+II\+::\+Radke\+Prausnits\+II (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de Radke-\/\+Prausnits\+II. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}{K1}}(1.0);    }
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}{K2}}(1.0);        }
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var1(Q1, \mbox{\hyperlink{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}{K1}}, \mbox{\hyperlink{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. ~\newline
+ \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. ~\newline
+ \\
+\hline
+{\em \+\_\+k2} & Constante do expoente da isoterma de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a014f2e223f3dcbd5447a0589feee3627}\label{class_radke_prausnits_i_i_a014f2e223f3dcbd5447a0589feee3627}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}} $\ast$ Radke\+Prausnits\+II\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a8f7dc131628db82f367222b96b642617}\label{class_radke_prausnits_i_i_a8f7dc131628db82f367222b96b642617}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Radke\+Prausnits\+II\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Radke\+Prausnits\+II\char`\"{}}]{,  }\item[{ID\+::\+Radke\+Prausnits\+II}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}\label{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!K1@{K1}}
+\index{K1@{K1}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Radke\+Prausnits\+II\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var1(QMAX, \mbox{\hyperlink{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}{K1}}, \mbox{\hyperlink{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a1f7676917bdcacd857f00df775a85259}\label{class_radke_prausnits_i_i_a1f7676917bdcacd857f00df775a85259}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!K1@{K1}}
+\index{K1@{K1}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Radke\+Prausnits\+II\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var1(QMAX, \mbox{\hyperlink{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}{K1}}, \mbox{\hyperlink{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}\label{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!K2@{K2}}
+\index{K2@{K2}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Radke\+Prausnits\+II\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var1(QMAX, \mbox{\hyperlink{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}{K1}}, \mbox{\hyperlink{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do expoente da isoterma de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a9a8045814b707d08b9551a0fafb56068}\label{class_radke_prausnits_i_i_a9a8045814b707d08b9551a0fafb56068}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!K2@{K2}}
+\index{K2@{K2}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Radke\+Prausnits\+II\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var1(QMAX, \mbox{\hyperlink{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}{K1}}, \mbox{\hyperlink{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor do expoente da isoterma de \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a15d393f0d2b73548da557c42fd331243}\label{class_radke_prausnits_i_i_a15d393f0d2b73548da557c42fd331243}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!operator=@{operator=}}
+\index{operator=@{operator=}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}} \& Radke\+Prausnits\+II\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var1(QMAX, \mbox{\hyperlink{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}{K1}}, \mbox{\hyperlink{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}{K2}});              }
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_radke_prausnits_i_i}{Radke\+Prausnits\+II}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a3b364efef2a0ac6ddd8b1328861ee40b}\label{class_radke_prausnits_i_i_a3b364efef2a0ac6ddd8b1328861ee40b}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!Qe@{Qe}}
+\index{Qe@{Qe}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Radke\+Prausnits\+II\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var1(QMAX, \mbox{\hyperlink{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}{K1}}, \mbox{\hyperlink{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. ~\newline
+ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a1bc2d82207f1e0a4b7810fe59dcd1ac7}\label{class_radke_prausnits_i_i_a1bc2d82207f1e0a4b7810fe59dcd1ac7}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!Qe@{Qe}}
+\index{Qe@{Qe}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Radke\+Prausnits\+II\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_radke_prausnits_i_i_ae5db6258c10d311adf8e4048b1b990b9}\label{class_radke_prausnits_i_i_ae5db6258c10d311adf8e4048b1b990b9}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Radke\+Prausnits\+II\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var1(QMAX, \mbox{\hyperlink{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}{K1}}, \mbox{\hyperlink{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_radke_prausnits_i_i_a87ffa9674a72f0428a18f6fbe834b0a9}\label{class_radke_prausnits_i_i_a87ffa9674a72f0428a18f6fbe834b0a9}} 
+\index{RadkePrausnitsII@{RadkePrausnitsII}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!RadkePrausnitsII@{RadkePrausnitsII}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Radke\+Prausnits\+II\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}  var1(QMAX, \mbox{\hyperlink{class_radke_prausnits_i_i_a93f4ab0087995e7f21d35ed895eac7e5}{K1}}, \mbox{\hyperlink{class_radke_prausnits_i_i_a1b396012e7e82052b22550e90c9a88f1}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_radke_prausnits_i_i_8h}{Radke\+Prausnits\+II.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Radke\+Prausnits\+II.\+cpp\end{DoxyCompactItemize}

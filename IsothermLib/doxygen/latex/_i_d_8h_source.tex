@@ -1,0 +1,150 @@
+\hypertarget{_i_d_8h_source}{}\doxysection{ID.\+h}
+\label{_i_d_8h_source}\index{IsothermLib/include/Misc/ID.h@{IsothermLib/include/Misc/ID.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{8 \textcolor{comment}{// Name        : ID.h}}
+\DoxyCodeLine{9 \textcolor{comment}{// Author      : Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{10 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{11 \textcolor{comment}{// Description : Classe para identificação de cada classe}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// Copyright   : Copyright (C) <2021>  Joao Flavio Vasconcellos }}
+\DoxyCodeLine{14 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{15 \textcolor{comment}{//}}
+\DoxyCodeLine{16 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{17 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{18 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{19 \textcolor{comment}{//}}
+\DoxyCodeLine{20 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{21 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{22 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{23 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{24 \textcolor{comment}{//}}
+\DoxyCodeLine{25 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{26 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{27 \textcolor{comment}{//}}
+\DoxyCodeLine{28 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#ifndef \_\_ID\_ISOTHERM\_H\_\_}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define \_\_ID\_ISOTHERM\_H\_\_}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{34 \textcolor{comment}{// include c++}}
+\DoxyCodeLine{35 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{40 \textcolor{comment}{// include da GeneticAlgorithm}}
+\DoxyCodeLine{41 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <Misc/Configure.h>}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}} }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{class }\mbox{\hyperlink{class_i_d}{ID}} \{}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{50 \textcolor{comment}{// enum com o nome das classes da biblioteca}}
+\DoxyCodeLine{51 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{52     }
+\DoxyCodeLine{53 \textcolor{keyword}{public}:}
+\DoxyCodeLine{54     }
+\DoxyCodeLine{55   \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{56       }
+\DoxyCodeLine{57             \mbox{\hyperlink{class_isotherm}{Isotherm}} = 0}
+\DoxyCodeLine{58         ,   \mbox{\hyperlink{class_one_parameter}{OneParameter}}}
+\DoxyCodeLine{59         ,   \mbox{\hyperlink{class_two_parameters}{TwoParameters}}}
+\DoxyCodeLine{60         ,   \mbox{\hyperlink{class_three_parameters}{ThreeParameters}}}
+\DoxyCodeLine{61         ,   \mbox{\hyperlink{class_four_parameters}{FourParameters}}}
+\DoxyCodeLine{62         ,   \mbox{\hyperlink{class_five_parameters}{FiveParameters}}}
+\DoxyCodeLine{63         ,   \mbox{\hyperlink{class_henry}{Henry}} = 100}
+\DoxyCodeLine{64         ,   \mbox{\hyperlink{class_dubinin_radushkevich}{DubininRadushkevich}} = 200}
+\DoxyCodeLine{65         ,   \mbox{\hyperlink{class_elovich}{Elovich}}}
+\DoxyCodeLine{66         ,   \mbox{\hyperlink{class_freundlich}{Freundlich}}}
+\DoxyCodeLine{67         ,   \mbox{\hyperlink{class_harkin_jura}{HarkinJura}}}
+\DoxyCodeLine{68         ,   \mbox{\hyperlink{class_halsey}{Halsey}}}
+\DoxyCodeLine{69         ,   \mbox{\hyperlink{class_jovanovic}{Jovanovic}}}
+\DoxyCodeLine{70         ,   \mbox{\hyperlink{class_langmuir}{Langmuir}}}
+\DoxyCodeLine{71         ,   \mbox{\hyperlink{class_temkin}{Temkin}}}
+\DoxyCodeLine{72         ,   \mbox{\hyperlink{class_hill}{Hill}} = 300}
+\DoxyCodeLine{73         ,   HillDeBoer}
+\DoxyCodeLine{74         ,   \mbox{\hyperlink{class_redlich_peterson}{RedlichPeterson}}}
+\DoxyCodeLine{75         ,   \mbox{\hyperlink{class_sips}{Sips}}}
+\DoxyCodeLine{76     \textcolor{comment}{//    ,   Kiselev}}
+\DoxyCodeLine{77         ,   \mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}}
+\DoxyCodeLine{78         ,   \mbox{\hyperlink{class_holl_krich}{HollKrich}}}
+\DoxyCodeLine{79         ,   \mbox{\hyperlink{class_jossens}{Jossens}}}
+\DoxyCodeLine{80         ,   \mbox{\hyperlink{class_khan}{Khan}}}
+\DoxyCodeLine{81         ,   \mbox{\hyperlink{class_toth}{Toth}}}
+\DoxyCodeLine{82         ,   \mbox{\hyperlink{class_vieth_sladek}{ViethSladek}}}
+\DoxyCodeLine{83         ,   \mbox{\hyperlink{class_fritz_schlunder}{FritzSchlunder}}}
+\DoxyCodeLine{84         ,   \mbox{\hyperlink{class_langmuir_freundlich}{LangmuirFreundlich}}}
+\DoxyCodeLine{85         ,   \mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}}
+\DoxyCodeLine{86         ,   \mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}}
+\DoxyCodeLine{87         ,   \mbox{\hyperlink{class_brunauer_emmett_teller}{BrunauerEmmettTeller}}}
+\DoxyCodeLine{88         ,   \mbox{\hyperlink{class_radke_prausnits_i}{RadkePrausnitsI}}}
+\DoxyCodeLine{89         ,   \mbox{\hyperlink{class_radke_prausnits_i_i}{RadkePrausnitsII}}}
+\DoxyCodeLine{90         ,   \mbox{\hyperlink{class_radke_prausnits_i_i_i}{RadkePrausnitsIII}}}
+\DoxyCodeLine{91         ,   \mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}}
+\DoxyCodeLine{92         ,   \mbox{\hyperlink{class_mac_millan_teller}{MacMillanTeller}}}
+\DoxyCodeLine{93         ,   \mbox{\hyperlink{class_unilan}{Unilan}}}
+\DoxyCodeLine{94         ,   \mbox{\hyperlink{class_valenzuela_myers}{ValenzuelaMyers}}}
+\DoxyCodeLine{95   \textcolor{comment}{//      ,   Baudu = 400}}
+\DoxyCodeLine{96         ,   \mbox{\hyperlink{class_fritz_schlunder_v}{FritzSchlunderV}} = 500}
+\DoxyCodeLine{97         ,   \mbox{\hyperlink{class_frenkel_halsey_hill}{FrenkelHalseyHill}}}
+\DoxyCodeLine{98         ,   \mbox{\hyperlink{class_henderson}{Henderson}}       }
+\DoxyCodeLine{99         ,   \mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}}
+\DoxyCodeLine{100   \};    }
+\DoxyCodeLine{101     }
+\DoxyCodeLine{102 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{103 \textcolor{comment}{// Construtores / destrutora}}
+\DoxyCodeLine{104 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \textcolor{keyword}{public}:}
+\DoxyCodeLine{107     }
+\DoxyCodeLine{108     \mbox{\hyperlink{class_i_d}{ID}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{109     \mbox{\hyperlink{class_i_d}{ID}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_i_d}{ID}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{110     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_i_d}{\string~ID}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{111     }
+\DoxyCodeLine{112 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{113 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{114 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     \mbox{\hyperlink{class_i_d}{ID}}\& operator = (\textcolor{keyword}{const} \mbox{\hyperlink{class_i_d}{ID}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{117     }
+\DoxyCodeLine{118 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{119 \textcolor{comment}{// Funções virtuais}}
+\DoxyCodeLine{120 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{121     }
+\DoxyCodeLine{122 [[nodiscard]] \textcolor{keyword}{inline}  \textcolor{keyword}{virtual} std::string className()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}no class"{}};\}}
+\DoxyCodeLine{123 [[nodiscard]] \textcolor{keyword}{inline}  \textcolor{keyword}{virtual} UInt classID()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} 0;\}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \};}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define DefineIdentityBase( \_name, \_id) \(\backslash\)}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{     virtual std::string className() const \{return \_name;\} \(\backslash\)}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{     virtual UInt classID() const \{return \_id;\}}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define DefineIdentity( \_name, \_id) \(\backslash\)}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{     virtual std::string className() const override  \{return \_name;\} \(\backslash\)}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{     virtual UInt classID() const override \{return \_id;\}}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define DeclareIdentity() \(\backslash\)}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{     const char * className() const; \(\backslash\)}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{     int classID() const}}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{comment}{//\#define DefineIdentitySRC(\_clss, \_name, \_id) \(\backslash\)}}
+\DoxyCodeLine{140 \textcolor{comment}{//const char * \_clss :: className() const \{return \_name;\} \(\backslash\)}}
+\DoxyCodeLine{141 \textcolor{comment}{//int \_clss :: classID() const \{return \_id;\}}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_ID\_ISOTHERM\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{147         }
+\DoxyCodeLine{148         }
+\DoxyCodeLine{149                 }
+
+\end{DoxyCode}

@@ -1,0 +1,370 @@
+\hypertarget{class_elovich}{}\doxysection{Referência da Classe Elovich}
+\label{class_elovich}\index{Elovich@{Elovich}}
+
+
+Classe com as equacoes da isoterma de \mbox{\hyperlink{class_elovich}{Elovich}}  
+
+
+
+
+{\ttfamily \#include $<$Elovich.\+h$>$}
+
+Diagrama de hierarquia para Elovich\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_elovich}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_elovich_abc0ae7d24aaacbb78f01f1c7cbf039e9}\label{class_elovich_abc0ae7d24aaacbb78f01f1c7cbf039e9}} 
+{\bfseries Define\+Identity} (\char`\"{}Elovich\char`\"{}, ID\+::\+Elovich)
+\begin{DoxyCompactList}\small\item\em Definicao de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificacao de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_elovich_aa0f5a4e336813dea3c1843609413dd59}{Elovich}} ()=default
+\begin{DoxyCompactList}\small\item\em Construtora default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_elovich_aa3b1463cad58c61c8da972c1f22d8243}{Elovich}} (const \mbox{\hyperlink{class_elovich}{Elovich}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Construtora de copia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_elovich_a9aa185e52fa274cbcf215035d37b92e1}\label{class_elovich_a9aa185e52fa274cbcf215035d37b92e1}} 
+{\bfseries $\sim$\+Elovich} () override=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_elovich_aaf763c91c7f22fbfc426b36676c88f25}{Elovich}} (const Real \&\+\_\+qmax, const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Construtora com os parametros que definem a isoterma de \mbox{\hyperlink{class_elovich}{Elovich}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_elovich}{Elovich}} \& \mbox{\hyperlink{class_elovich_a0cdcc9b7d32d6e530408e32b198472ec}{operator=}} (const \mbox{\hyperlink{class_elovich}{Elovich}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_elovich_a42196f22f55804e6f8c6e4c2a61f2a13}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Funcao que informa o valor da capacidade maxima de adsorcao em \mbox{[}M /M \mbox{]}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_elovich_ac4dbb6ce5bbe9e3e6ea9a3d93323c5ea}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Funcao que retorna o coeficiente associado a constante de equilibrio de \mbox{\hyperlink{class_elovich}{Elovich}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_elovich_aa4bffaea0a9456ad412291a116ed8dcf}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Funcao para alterar a capacidade maxima de adsorcao em \mbox{[}M /M \mbox{]}. . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_elovich_a7fe7e2cff7f3f220371de18b112ce6aa}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Funcao que altera o coeficiente associado a constante de equilibrio de \mbox{\hyperlink{class_elovich}{Elovich}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_elovich_a4e0cbcddc3c609d52b3a2a82c45139d1}{Qe}} (const Real \&\+\_\+c, const Real \&\+\_\+temp) const override
+\begin{DoxyCompactList}\small\item\em Funcao que calcula a quantidade de sorcao no equili�brio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_elovich_a7fee237a0c03008f057f28beecaa9fc9}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_elovich}{Elovich}} $\ast$ \mbox{\hyperlink{class_elovich_a7e4465607f206d03191d21a69c1e679b}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equacoes da isoterma de \mbox{\hyperlink{class_elovich}{Elovich}} 
+
+Isoterma com dois parametros, $ K_1 $ e $ q_{max} $, cujas formulas sao as seguintes\+: \textbackslash{}begin\{align\} Q\+\_\+e (C\+\_\+e) \&= q\+\_\+\{max\} \textbackslash{}theta \textbackslash{}hfil \textbackslash{}\textbackslash{} \textbackslash{}\textbackslash{} \textbackslash{}theta \&= K\+\_\+1 C\+\_\+e e$^\wedge$\{-\/\textbackslash{}theta\} \textbackslash{}end\{align\} Um artigo de referencia pode ser encontrado \href{https://doi.org/10.1007/BF00908016}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Iasmim Barboza Storck 
+
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000061}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} NOTE
+\end{DoxyCopyright}
+Defines a class for stuff. 
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em \mbox{\hyperlink{class_elovich}{Elovich}}} & TTipo importante. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_elovich_aa0f5a4e336813dea3c1843609413dd59}\label{class_elovich_aa0f5a4e336813dea3c1843609413dd59}} 
+\index{Elovich@{Elovich}!Elovich@{Elovich}}
+\index{Elovich@{Elovich}!Elovich@{Elovich}}
+\doxysubsubsection{\texorpdfstring{Elovich()}{Elovich()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Elovich\+::\+Elovich (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_elovich}{Elovich}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros para esta funcao \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_elovich_aa3b1463cad58c61c8da972c1f22d8243}\label{class_elovich_aa3b1463cad58c61c8da972c1f22d8243}} 
+\index{Elovich@{Elovich}!Elovich@{Elovich}}
+\index{Elovich@{Elovich}!Elovich@{Elovich}}
+\doxysubsubsection{\texorpdfstring{Elovich()}{Elovich()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Elovich\+::\+Elovich (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_elovich}{Elovich}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de copia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_elovich}{Elovich}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_elovich}{Elovich}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variavel do tipo \mbox{\hyperlink{class_elovich}{Elovich}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_elovich_aaf763c91c7f22fbfc426b36676c88f25}\label{class_elovich_aaf763c91c7f22fbfc426b36676c88f25}} 
+\index{Elovich@{Elovich}!Elovich@{Elovich}}
+\index{Elovich@{Elovich}!Elovich@{Elovich}}
+\doxysubsubsection{\texorpdfstring{Elovich()}{Elovich()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Elovich\+::\+Elovich (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parametros que definem a isoterma de \mbox{\hyperlink{class_elovich}{Elovich}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Real qmax(1.0);}
+\DoxyCodeLine{Real k1(1.0);            }
+\DoxyCodeLine{\mbox{\hyperlink{class_elovich}{Elovich}} var1(qmax, k1);              }
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorcao. ~\newline
+ \\
+\hline
+{\em \+\_\+k1} & Constante da isoterma de \mbox{\hyperlink{class_elovich}{Elovich}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_elovich_a7e4465607f206d03191d21a69c1e679b}\label{class_elovich_a7e4465607f206d03191d21a69c1e679b}} 
+\index{Elovich@{Elovich}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!Elovich@{Elovich}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_elovich}{Elovich}} $\ast$ Elovich\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_elovich_ac4dbb6ce5bbe9e3e6ea9a3d93323c5ea}\label{class_elovich_ac4dbb6ce5bbe9e3e6ea9a3d93323c5ea}} 
+\index{Elovich@{Elovich}!K1@{K1}}
+\index{K1@{K1}!Elovich@{Elovich}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Elovich\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que retorna o coeficiente associado a constante de equilibrio de \mbox{\hyperlink{class_elovich}{Elovich}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_elovich}{Elovich}}  var1(q1, k1);              }
+\DoxyCodeLine{Real k2 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de equilibrio de \mbox{\hyperlink{class_elovich}{Elovich}}. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_elovich_a7fe7e2cff7f3f220371de18b112ce6aa}\label{class_elovich_a7fe7e2cff7f3f220371de18b112ce6aa}} 
+\index{Elovich@{Elovich}!K1@{K1}}
+\index{K1@{K1}!Elovich@{Elovich}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Elovich\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que altera o coeficiente associado a constante de equilibrio de \mbox{\hyperlink{class_elovich}{Elovich}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_elovich}{Elovich}}  var1(q1, k1);              }
+\DoxyCodeLine{Real k2(2.0);}
+\DoxyCodeLine{var1.K1(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de equilibrio de \mbox{\hyperlink{class_elovich}{Elovich}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_elovich_a0cdcc9b7d32d6e530408e32b198472ec}\label{class_elovich_a0cdcc9b7d32d6e530408e32b198472ec}} 
+\index{Elovich@{Elovich}!operator=@{operator=}}
+\index{operator=@{operator=}!Elovich@{Elovich}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_elovich}{Elovich}} \& Elovich\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_elovich}{Elovich}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_elovich}{Elovich}}  var1(q1, k2);              }
+\DoxyCodeLine{\mbox{\hyperlink{class_elovich}{Elovich}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variavel do tipo \mbox{\hyperlink{class_elovich}{Elovich}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Copia de \+\_\+orig. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_elovich_a7fee237a0c03008f057f28beecaa9fc9}\label{class_elovich_a7fee237a0c03008f057f28beecaa9fc9}} 
+\index{Elovich@{Elovich}!Qe@{Qe}}
+\index{Qe@{Qe}!Elovich@{Elovich}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Elovich\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_elovich_a4e0cbcddc3c609d52b3a2a82c45139d1}\label{class_elovich_a4e0cbcddc3c609d52b3a2a82c45139d1}} 
+\index{Elovich@{Elovich}!Qe@{Qe}}
+\index{Qe@{Qe}!Elovich@{Elovich}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Elovich\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c,  }\item[{const Real \&}]{\+\_\+temp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Funcao que calcula a quantidade de sorcao no equili�brio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_elovich}{Elovich}}  var1(q1, k1);              }
+\DoxyCodeLine{Real ce(1);}
+\DoxyCodeLine{Real qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentracao do soluto. \\
+\hline
+{\em \+\_\+temp} & Variavel nao utilizada neste modelo e que pode ser omitida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorcao no equilibrio. ~\newline
+ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_elovich_a42196f22f55804e6f8c6e4c2a61f2a13}\label{class_elovich_a42196f22f55804e6f8c6e4c2a61f2a13}} 
+\index{Elovich@{Elovich}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Elovich@{Elovich}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Elovich\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao que informa o valor da capacidade maxima de adsorcao em \mbox{[}M /M \mbox{]}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_elovich}{Elovich}}  var1(q1, k1);              }
+\DoxyCodeLine{Real q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Nao ha parametros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente de distribuicao em \mbox{[}M /M \mbox{]}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_elovich_aa4bffaea0a9456ad412291a116ed8dcf}\label{class_elovich_aa4bffaea0a9456ad412291a116ed8dcf}} 
+\index{Elovich@{Elovich}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Elovich@{Elovich}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Elovich\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcao para alterar a capacidade maxima de adsorcao em \mbox{[}M /M \mbox{]}. . 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_elovich}{Elovich}}  var1(q1, k1);              }
+\DoxyCodeLine{Real q2(3.0);}
+\DoxyCodeLine{var1.Qmax(q2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorcao em \mbox{[}M /M \mbox{]}. . \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Two\+Parameters/Elovich.\+h\item 
+Isotherm\+Lib/src/\+Isotherm/\+Two\+Parameters/Elovich.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\hypertarget{_two_parameters_8h_source}{}\doxysection{Two\+Parameters.\+h}
+\label{_two_parameters_8h_source}\index{IsothermLib/include/Isotherm/TwoParameters/TwoParameters.h@{IsothermLib/include/Isotherm/TwoParameters/TwoParameters.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// Name        : TwoParameters.h}}
+\DoxyCodeLine{3 \textcolor{comment}{// Authors     : Lara Botelho Brum}}
+\DoxyCodeLine{4 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
+\DoxyCodeLine{5 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{6 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{7 \textcolor{comment}{// Description : Classe base para as isotermas com 2 parametros}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Copyright   : Copyright (C) <2022>  Joao Flavio Vasconcellos}}
+\DoxyCodeLine{10 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{11 \textcolor{comment}{//}}
+\DoxyCodeLine{12 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{13 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{14 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{//}}
+\DoxyCodeLine{16 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{17 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{18 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{19 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{22 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{23 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#ifndef \_\_ISO\_\_TWOPARAMETERS\_H\_\_}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define \_\_ISO\_\_TWOPARAMETERS\_H\_\_}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{50 \textcolor{comment}{// include da isotherm++}}
+\DoxyCodeLine{51 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#include <Isotherm.h>}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{keyword}{class }\mbox{\hyperlink{class_two_parameters}{TwoParameters}} :   \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_isotherm}{Isotherm}}  \{}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{62 \textcolor{comment}{// ID da classe}}
+\DoxyCodeLine{63 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{keyword}{public}:}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     DefineIdentity  (   \textcolor{stringliteral}{"{}TwoParameters"{}}}
+\DoxyCodeLine{68                     ,   ID::TwoParameters}
+\DoxyCodeLine{69                     );}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{72 \textcolor{comment}{// Construtores / Destrutora}}
+\DoxyCodeLine{73 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     \mbox{\hyperlink{class_two_parameters}{TwoParameters}}() : \mbox{\hyperlink{class_two_parameters}{TwoParameters}}( 0.0, 0.0) \{\};}
+\DoxyCodeLine{78     \mbox{\hyperlink{class_two_parameters}{TwoParameters}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_two_parameters}{TwoParameters}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{79     \mbox{\hyperlink{class_two_parameters}{\string~TwoParameters}}() \textcolor{keyword}{override} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     \mbox{\hyperlink{class_two_parameters}{TwoParameters}}   (    \textcolor{keyword}{const} Real\&    \_par\_0      \textcolor{comment}{// Primeiro para¢metro}}
+\DoxyCodeLine{82                     ,    \textcolor{keyword}{const} Real\&    \_par\_1      \textcolor{comment}{// Segundo para¢metro}}
+\DoxyCodeLine{83                     )}
+\DoxyCodeLine{84     \{}
+\DoxyCodeLine{85         \mbox{\hyperlink{group___isotherm_template_ga40d851bca8f35e398268cbe18347804a}{coeffValue}}   = VecReal(\{\_par\_0, \_par\_1\});}
+\DoxyCodeLine{86     \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{89 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{90 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \mbox{\hyperlink{class_two_parameters}{TwoParameters}}\& operator = (\textcolor{keyword}{const} \mbox{\hyperlink{class_two_parameters}{TwoParameters}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_ISO\_\_TWOPARAMETERS\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{102 }
+
+\end{DoxyCode}

@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Isotherm++: Código-Fonte de IsothermLib/include/Isotherm/ThreeParameters/FowlerGuggenheim.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Isotherm++<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_3393ec37890ad9b3a7885029fce22598.html">IsothermLib</a></li><li class="navelem"><a class="el" href="dir_dbbde0c145412e2fe2852ce43eb851e2.html">include</a></li><li class="navelem"><a class="el" href="dir_f6e7fadfa303d2c82893c0cc076b5910.html">Isotherm</a></li><li class="navelem"><a class="el" href="dir_754fa93696d621a11f88f4c224f1beb2.html">ThreeParameters</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">FowlerGuggenheim.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_fowler_guggenheim_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Name        : FowlerGuggenheim.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Author      : Iasmim Barboza Storck</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//               Lara Botelho Brum</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Version     : 1.0</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// Description : Classe com as equações da isoterma de Fowler - Guggenheim</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Copyright   : Copyright (C) &lt;2021&gt;  Joao Flavio Vasconcellos </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//                                      (jflavio at iprj.uerj.br)</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// the Free Software Foundation, either version 3 of the License.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// GNU General Public License for more details.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#ifndef __FOWLERGUGGENHEIM_H__</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define __FOWLERGUGGENHEIM_H__</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// opção de debug</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">//#define __FOWLERGUGGENHEIM_DEBUG_H__</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// include da isotherm++</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &lt;Isotherm/ThreeParameters/ThreeParameters.h&gt;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><a class="code hl_define" href="group___configure.html#ga1e3e0e0eca304ffc8364100b22724d21">IST_NAMESPACE_OPEN</a></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html">   71</a></span><span class="keyword">class </span><a class="code hl_class" href="class_fowler_guggenheim.html">FowlerGuggenheim</a> :  <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="class_three_parameters.html">ThreeParameters</a>, </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    <span class="keyword">public</span> <a class="code hl_class" href="class_isotherm_template.html">IsothermTemplate</a> &lt; FowlerGuggenheim &gt; {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">// ID da classe</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#ae653765f17d06e615a284677f78a1d74">   86</a></span>    <a class="code hl_function" href="class_fowler_guggenheim.html#ae653765f17d06e615a284677f78a1d74">DefineIdentity</a>(<span class="stringliteral">&quot;Fowler - Guggenheim&quot;</span>, ID::FowlerGuggenheim);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">// Funções Construtoras/Destrutora</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#a549adef244506d4b202f5e0441cb76bf">  104</a></span>    <a class="code hl_function" href="class_fowler_guggenheim.html#a549adef244506d4b202f5e0441cb76bf">FowlerGuggenheim</a> () = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#a396b7f5f7a4065caef6a1a018019995e">  117</a></span>    <a class="code hl_function" href="class_fowler_guggenheim.html#a396b7f5f7a4065caef6a1a018019995e">FowlerGuggenheim</a> (<span class="keyword">const</span> <a class="code hl_class" href="class_fowler_guggenheim.html">FowlerGuggenheim</a>&amp; _fowlerguggenheim) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#acd92219e9178acd80c10e400a7806cd3">  122</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_fowler_guggenheim.html#acd92219e9178acd80c10e400a7806cd3">~FowlerGuggenheim</a> () = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <a class="code hl_function" href="class_fowler_guggenheim.html#a549adef244506d4b202f5e0441cb76bf">FowlerGuggenheim</a> (    <span class="keyword">const</span> Real&amp; _qmax,</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                    <span class="keyword">const</span> Real&amp; _k1,</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                    <span class="keyword">const</span> Real&amp; _k2,</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                    <span class="keyword">const</span> Real&amp; _rgas = Isotherm::RGASCONST) ;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment">// Sobrecarga de operadores</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#ae9c028c56270511994e30e525eaa344a">  166</a></span>    <a class="code hl_class" href="class_fowler_guggenheim.html">FowlerGuggenheim</a>&amp; <a class="code hl_function" href="class_fowler_guggenheim.html#ae9c028c56270511994e30e525eaa344a">operator = </a>(<span class="keyword">const</span> <a class="code hl_class" href="class_fowler_guggenheim.html">FowlerGuggenheim</a>&amp; _orig) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment">// Acesso as constantes da classe</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#a3cf850b6553968c19ec0efc995e458d2">  184</a></span>    <span class="keyword">inline</span> Real <a class="code hl_function" href="class_fowler_guggenheim.html#a3cf850b6553968c19ec0efc995e458d2">Qmax</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(0);};</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#a3d65d89dcdf12810673664bcc66115ef">  199</a></span>    <span class="keyword">inline</span> Real <a class="code hl_function" href="class_fowler_guggenheim.html#a3d65d89dcdf12810673664bcc66115ef">K1</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(1);};</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#a50df7a84e4decd9f6cf6c1828ba27cca">  213</a></span>    <span class="keyword">inline</span> Real <a class="code hl_function" href="class_fowler_guggenheim.html#a50df7a84e4decd9f6cf6c1828ba27cca">K2</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(2);};</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#a8a6881f17cb78ebdda8e7846d0fa7fa9">  227</a></span>    <span class="keyword">inline</span> Real <a class="code hl_function" href="class_fowler_guggenheim.html#a8a6881f17cb78ebdda8e7846d0fa7fa9">Rgas</a> ()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  RGAS;};</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="comment">// Alterando as constantes da classe</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#af105bdedb1c1a51f548c93aabc159932">  246</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_fowler_guggenheim.html#af105bdedb1c1a51f548c93aabc159932">Qmax</a> (<span class="keyword">const</span> Real&amp; _qmax) {*<span class="keyword">this</span> = <a class="code hl_function" href="class_fowler_guggenheim.html#a549adef244506d4b202f5e0441cb76bf">FowlerGuggenheim</a>(_qmax, <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(1), <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(2));};</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#ace5270bd9aa827716daeee2712dc0075">  261</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_fowler_guggenheim.html#ace5270bd9aa827716daeee2712dc0075">K1</a> (<span class="keyword">const</span> Real&amp; _k1)  {*<span class="keyword">this</span> = <a class="code hl_function" href="class_fowler_guggenheim.html#a549adef244506d4b202f5e0441cb76bf">FowlerGuggenheim</a>(<a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(0), _k1, <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(2));};</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#a22e56a9614a23a29015afc80f1a89803">  276</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_fowler_guggenheim.html#a22e56a9614a23a29015afc80f1a89803">K2</a> (<span class="keyword">const</span> Real&amp; _k2)  {*<span class="keyword">this</span> = <a class="code hl_function" href="class_fowler_guggenheim.html#a549adef244506d4b202f5e0441cb76bf">FowlerGuggenheim</a>(<a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(0), <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(1), _k2);};</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno"><a class="line" href="class_fowler_guggenheim.html#aea471bcfacd2fb488493e863b057b02a">  291</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_fowler_guggenheim.html#aea471bcfacd2fb488493e863b057b02a">Rgas</a> (<span class="keyword">const</span> Real&amp; _rgas) {*<span class="keyword">this</span> = <a class="code hl_function" href="class_fowler_guggenheim.html#a549adef244506d4b202f5e0441cb76bf">FowlerGuggenheim</a>(<a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(0), <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(1), <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(2), _rgas);};</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="comment">// Funções virtuais</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="keyword">virtual</span> Real <a class="code hl_function" href="class_fowler_guggenheim.html#a6da282311dc60a149486a2a2782faf33">Qe</a> (<span class="keyword">const</span> Real&amp; _c, <span class="keyword">const</span> Real&amp; _temp) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    [[nodiscard]] </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="keyword">inline</span> Real <a class="code hl_function" href="class_fowler_guggenheim.html#a6da282311dc60a149486a2a2782faf33">Qe</a>   (   <span class="keyword">const</span> Real&amp; _c</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    )<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class_fowler_guggenheim.html#a6da282311dc60a149486a2a2782faf33">Qe</a>(_c, 0);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    [[nodiscard]] </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_fowler_guggenheim.html">FowlerGuggenheim</a>* CloneImplementation()<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="class_fowler_guggenheim.html#a549adef244506d4b202f5e0441cb76bf">FowlerGuggenheim</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    }</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="comment">// Dados da classe</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>Real  FQe (<span class="keyword">const</span> Real&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>Real                 auxiCe = 0;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>Real                 RGAS = Isotherm::RGASCONST;                <span class="comment">// Constante universal dos gases</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>Real                 tempK = 0;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>};</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><a class="code hl_define" href="group___configure.html#ga9804ef63a551808d389310b891356c2a">IST_NAMESPACE_CLOSE</a></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="preprocessor">#endif  </span><span class="comment">/* FOWLERGUGGENHEIM_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
+<div class="ttc" id="aclass_fowler_guggenheim_html"><div class="ttname"><a href="class_fowler_guggenheim.html">FowlerGuggenheim</a></div><div class="ttdoc">Classe com as equações da isoterma de Fowler - Guggenheim</div><div class="ttdef"><b>Definition:</b> FowlerGuggenheim.h:72</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_a22e56a9614a23a29015afc80f1a89803"><div class="ttname"><a href="class_fowler_guggenheim.html#a22e56a9614a23a29015afc80f1a89803">FowlerGuggenheim::K2</a></div><div class="ttdeci">void K2(const Real &amp;_k2)</div><div class="ttdoc">Função para alterar o valor da constante de iteração entre as moléculas adsorvidas.</div><div class="ttdef"><b>Definition:</b> FowlerGuggenheim.h:276</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_a396b7f5f7a4065caef6a1a018019995e"><div class="ttname"><a href="class_fowler_guggenheim.html#a396b7f5f7a4065caef6a1a018019995e">FowlerGuggenheim::FowlerGuggenheim</a></div><div class="ttdeci">FowlerGuggenheim(const FowlerGuggenheim &amp;_fowlerguggenheim)=default</div><div class="ttdoc">Construtora de cópia.</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_a3cf850b6553968c19ec0efc995e458d2"><div class="ttname"><a href="class_fowler_guggenheim.html#a3cf850b6553968c19ec0efc995e458d2">FowlerGuggenheim::Qmax</a></div><div class="ttdeci">Real Qmax() const</div><div class="ttdoc">Função que informa o valor da capacidade maxima de adsorção.</div><div class="ttdef"><b>Definition:</b> FowlerGuggenheim.h:184</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_a3d65d89dcdf12810673664bcc66115ef"><div class="ttname"><a href="class_fowler_guggenheim.html#a3d65d89dcdf12810673664bcc66115ef">FowlerGuggenheim::K1</a></div><div class="ttdeci">Real K1() const</div><div class="ttdoc">Função que retorna o coeficiente associado a constante de Fowler - Guggenheim.</div><div class="ttdef"><b>Definition:</b> FowlerGuggenheim.h:199</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_a50df7a84e4decd9f6cf6c1828ba27cca"><div class="ttname"><a href="class_fowler_guggenheim.html#a50df7a84e4decd9f6cf6c1828ba27cca">FowlerGuggenheim::K2</a></div><div class="ttdeci">Real K2() const</div><div class="ttdoc">Função que retorna o valor do expoente da isoterma de Fowler - Guggenheim.</div><div class="ttdef"><b>Definition:</b> FowlerGuggenheim.h:213</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_a549adef244506d4b202f5e0441cb76bf"><div class="ttname"><a href="class_fowler_guggenheim.html#a549adef244506d4b202f5e0441cb76bf">FowlerGuggenheim::FowlerGuggenheim</a></div><div class="ttdeci">FowlerGuggenheim()=default</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_a6da282311dc60a149486a2a2782faf33"><div class="ttname"><a href="class_fowler_guggenheim.html#a6da282311dc60a149486a2a2782faf33">FowlerGuggenheim::Qe</a></div><div class="ttdeci">virtual Real Qe(const Real &amp;_c, const Real &amp;_temp) const</div><div class="ttdoc">Função que calcula a quantidade de sorção no equilíbrio.</div><div class="ttdef"><b>Definition:</b> FowlerGuggenheim.cpp:130</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_a8a6881f17cb78ebdda8e7846d0fa7fa9"><div class="ttname"><a href="class_fowler_guggenheim.html#a8a6881f17cb78ebdda8e7846d0fa7fa9">FowlerGuggenheim::Rgas</a></div><div class="ttdeci">Real Rgas() const</div><div class="ttdoc">Função que retorna o valor da constante universal dos gases.</div><div class="ttdef"><b>Definition:</b> FowlerGuggenheim.h:227</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_acd92219e9178acd80c10e400a7806cd3"><div class="ttname"><a href="class_fowler_guggenheim.html#acd92219e9178acd80c10e400a7806cd3">FowlerGuggenheim::~FowlerGuggenheim</a></div><div class="ttdeci">virtual ~FowlerGuggenheim()=default</div><div class="ttdoc">Destrutora.</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_ace5270bd9aa827716daeee2712dc0075"><div class="ttname"><a href="class_fowler_guggenheim.html#ace5270bd9aa827716daeee2712dc0075">FowlerGuggenheim::K1</a></div><div class="ttdeci">void K1(const Real &amp;_k1)</div><div class="ttdoc">Função que altera o coeficiente associado a constante de equilíbrio de Fowler-Guggenheim.</div><div class="ttdef"><b>Definition:</b> FowlerGuggenheim.h:261</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_ae653765f17d06e615a284677f78a1d74"><div class="ttname"><a href="class_fowler_guggenheim.html#ae653765f17d06e615a284677f78a1d74">FowlerGuggenheim::DefineIdentity</a></div><div class="ttdeci">DefineIdentity(&quot;Fowler - Guggenheim&quot;, ID::FowlerGuggenheim)</div><div class="ttdoc">Definição de ID para esta classe para fins de identificação de erros.</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_ae9c028c56270511994e30e525eaa344a"><div class="ttname"><a href="class_fowler_guggenheim.html#ae9c028c56270511994e30e525eaa344a">FowlerGuggenheim::operator=</a></div><div class="ttdeci">FowlerGuggenheim &amp; operator=(const FowlerGuggenheim &amp;_orig)=default</div><div class="ttdoc">Sobrecarga do operador =.</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_aea471bcfacd2fb488493e863b057b02a"><div class="ttname"><a href="class_fowler_guggenheim.html#aea471bcfacd2fb488493e863b057b02a">FowlerGuggenheim::Rgas</a></div><div class="ttdeci">void Rgas(const Real &amp;_rgas)</div><div class="ttdoc">Função para alterar o valor da constante universal dos gases.</div><div class="ttdef"><b>Definition:</b> FowlerGuggenheim.h:291</div></div>
+<div class="ttc" id="aclass_fowler_guggenheim_html_af105bdedb1c1a51f548c93aabc159932"><div class="ttname"><a href="class_fowler_guggenheim.html#af105bdedb1c1a51f548c93aabc159932">FowlerGuggenheim::Qmax</a></div><div class="ttdeci">void Qmax(const Real &amp;_qmax)</div><div class="ttdoc">Função para alterar a capacidade maxima de adsorção.</div><div class="ttdef"><b>Definition:</b> FowlerGuggenheim.h:246</div></div>
+<div class="ttc" id="aclass_isotherm_template_html"><div class="ttname"><a href="class_isotherm_template.html">IsothermTemplate</a></div><div class="ttdoc">Classe que gerencia o nome e detalhes sobre cada constante dos modelos das isotermas.</div><div class="ttdef"><b>Definition:</b> Isotherm.h:317</div></div>
+<div class="ttc" id="aclass_three_parameters_html"><div class="ttname"><a href="class_three_parameters.html">ThreeParameters</a></div><div class="ttdoc">Classe base para todas as classes com três parâmetros.</div><div class="ttdef"><b>Definition:</b> ThreeParameters.h:56</div></div>
+<div class="ttc" id="agroup___configure_html_ga1e3e0e0eca304ffc8364100b22724d21"><div class="ttname"><a href="group___configure.html#ga1e3e0e0eca304ffc8364100b22724d21">IST_NAMESPACE_OPEN</a></div><div class="ttdeci">#define IST_NAMESPACE_OPEN</div><div class="ttdoc">Definoção do início namespace da biblioteca Isotherm++</div><div class="ttdef"><b>Definition:</b> Configure.h:63</div></div>
+<div class="ttc" id="agroup___configure_html_ga9804ef63a551808d389310b891356c2a"><div class="ttname"><a href="group___configure.html#ga9804ef63a551808d389310b891356c2a">IST_NAMESPACE_CLOSE</a></div><div class="ttdeci">#define IST_NAMESPACE_CLOSE</div><div class="ttdoc">Definoção do fim namespace da biblioteca Isotherm++</div><div class="ttdef"><b>Definition:</b> Configure.h:66</div></div>
+<div class="ttc" id="agroup___isotherm_template_html_ga66905e5e5db160c8a6d803aed0d6d85c"><div class="ttname"><a href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Isotherm::Value</a></div><div class="ttdeci">const VecReal Value() const</div><div class="ttdoc">Vetor com os coeficientes de qualquer isoterma.</div><div class="ttdef"><b>Definition:</b> Isotherm.h:259</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,437 @@
+\hypertarget{class_koble_corrigan}{}\doxysection{Referência da Classe Koble\+Corrigan}
+\label{class_koble_corrigan}\index{KobleCorrigan@{KobleCorrigan}}
+
+
+Classe com as equações da isoterma de Koble-\/\+Corrigan  
+
+
+
+
+{\ttfamily \#include $<$Koble\+Corrigan.\+h$>$}
+
+Diagrama de hierarquia para Koble\+Corrigan\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_koble_corrigan}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_koble_corrigan_ad37fa7d910ad12e9b561db834a60337a}{Define\+Identity}} (\char`\"{}Koble\+Corrigan\char`\"{}, ID\+::\+Koble\+Corrigan)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_koble_corrigan_aff13b4ed4bd43c979a551ef135f58cf6}{Koble\+Corrigan}} ()=default
+\item 
+\mbox{\hyperlink{class_koble_corrigan_ae2bb66d39f223f482a3d895e03fcf12f}{Koble\+Corrigan}} (const \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}} \&\+\_\+koble\+\_\+corrigan)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_koble_corrigan_afb2a6920126c670272c956eba1acaad2}\label{class_koble_corrigan_afb2a6920126c670272c956eba1acaad2}} 
+virtual {\bfseries $\sim$\+Koble\+Corrigan} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_koble_corrigan_a9a5d5aaa019f04fa576bfaee447e9904}{Koble\+Corrigan}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de Koble-\/\+Corrigan. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}} \& \mbox{\hyperlink{class_koble_corrigan_a1f170595d6c7904cb698f49b9f67cffa}{operator=}} (const \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_koble_corrigan_a29c0d28c1abc2417202fcaa420e727d8}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_koble_corrigan_a3209afc3f9e338965f2e6d603cf6cdaf}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_koble_corrigan_ab83bbb3b4eac6da8277d98401c51b560}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_koble_corrigan_acf0a80669b0c1040612fe620d61029fc}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_koble_corrigan_af1857f2bfce0b5b300b10e3e9d9e33d9}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_koble_corrigan_a551554d8ba38cbb5f8c2cf816eaaeb52}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}} $\ast$ \mbox{\hyperlink{class_koble_corrigan_a6a69de46a41a4167a855685540760551}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de Koble-\/\+Corrigan 
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e, T) = q\+\_\+\{max\}\textbackslash{}frac\{C$^\wedge$\{\{K\+\_\+2\}\}\}\{1 + (K\+\_\+1 $\ast$ C$^\wedge$\{\{K\+\_\+2\}\})\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000035}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_koble_corrigan_aff13b4ed4bd43c979a551ef135f58cf6}\label{class_koble_corrigan_aff13b4ed4bd43c979a551ef135f58cf6}} 
+\index{KobleCorrigan@{KobleCorrigan}!KobleCorrigan@{KobleCorrigan}}
+\index{KobleCorrigan@{KobleCorrigan}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{KobleCorrigan()}{KobleCorrigan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Koble\+Corrigan\+::\+Koble\+Corrigan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_koble_corrigan_ae2bb66d39f223f482a3d895e03fcf12f}\label{class_koble_corrigan_ae2bb66d39f223f482a3d895e03fcf12f}} 
+\index{KobleCorrigan@{KobleCorrigan}!KobleCorrigan@{KobleCorrigan}}
+\index{KobleCorrigan@{KobleCorrigan}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{KobleCorrigan()}{KobleCorrigan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Koble\+Corrigan\+::\+Koble\+Corrigan (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}} \&}]{\+\_\+koble\+\_\+corrigan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_hill}{Hill}} original. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_koble_corrigan_a9a5d5aaa019f04fa576bfaee447e9904}\label{class_koble_corrigan_a9a5d5aaa019f04fa576bfaee447e9904}} 
+\index{KobleCorrigan@{KobleCorrigan}!KobleCorrigan@{KobleCorrigan}}
+\index{KobleCorrigan@{KobleCorrigan}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{KobleCorrigan()}{KobleCorrigan()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Koble\+Corrigan\+::\+Koble\+Corrigan (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de Koble-\/\+Corrigan. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}{K1}}(1.0);    }
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}{K2}}(1.0);        }
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var1(Q1, \mbox{\hyperlink{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}{K1}}, \mbox{\hyperlink{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. ~\newline
+ \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de Koble-\/\+Corrigan. ~\newline
+ \\
+\hline
+{\em \+\_\+k2} & Constante do expoente da isoterma de Koble-\/\+Corrigan. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_koble_corrigan_a6a69de46a41a4167a855685540760551}\label{class_koble_corrigan_a6a69de46a41a4167a855685540760551}} 
+\index{KobleCorrigan@{KobleCorrigan}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}} $\ast$ Koble\+Corrigan\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_koble_corrigan_ad37fa7d910ad12e9b561db834a60337a}\label{class_koble_corrigan_ad37fa7d910ad12e9b561db834a60337a}} 
+\index{KobleCorrigan@{KobleCorrigan}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Koble\+Corrigan\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Koble\+Corrigan\char`\"{}}]{,  }\item[{ID\+::\+Koble\+Corrigan}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}\label{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}} 
+\index{KobleCorrigan@{KobleCorrigan}!K1@{K1}}
+\index{K1@{K1}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Koble\+Corrigan\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var1(QMAX, \mbox{\hyperlink{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}{K1}}, \mbox{\hyperlink{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_koble_corrigan_ab83bbb3b4eac6da8277d98401c51b560}\label{class_koble_corrigan_ab83bbb3b4eac6da8277d98401c51b560}} 
+\index{KobleCorrigan@{KobleCorrigan}!K1@{K1}}
+\index{K1@{K1}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Koble\+Corrigan\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var1(QMAX, \mbox{\hyperlink{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}{K1}}, \mbox{\hyperlink{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}\label{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}} 
+\index{KobleCorrigan@{KobleCorrigan}!K2@{K2}}
+\index{K2@{K2}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Koble\+Corrigan\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var1(QMAX, \mbox{\hyperlink{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}{K1}}, \mbox{\hyperlink{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do expoente da isoterma de \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}}. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_koble_corrigan_acf0a80669b0c1040612fe620d61029fc}\label{class_koble_corrigan_acf0a80669b0c1040612fe620d61029fc}} 
+\index{KobleCorrigan@{KobleCorrigan}!K2@{K2}}
+\index{K2@{K2}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Koble\+Corrigan\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var1(QMAX, \mbox{\hyperlink{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}{K1}}, \mbox{\hyperlink{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor do expoente da isoterma de \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_koble_corrigan_a1f170595d6c7904cb698f49b9f67cffa}\label{class_koble_corrigan_a1f170595d6c7904cb698f49b9f67cffa}} 
+\index{KobleCorrigan@{KobleCorrigan}!operator=@{operator=}}
+\index{operator=@{operator=}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}} \& Koble\+Corrigan\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var1(QMAX, \mbox{\hyperlink{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}{K1}}, \mbox{\hyperlink{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}{K2}});              }
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_koble_corrigan}{Koble\+Corrigan}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_koble_corrigan_af1857f2bfce0b5b300b10e3e9d9e33d9}\label{class_koble_corrigan_af1857f2bfce0b5b300b10e3e9d9e33d9}} 
+\index{KobleCorrigan@{KobleCorrigan}!Qe@{Qe}}
+\index{Qe@{Qe}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Koble\+Corrigan\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var1(QMAX, \mbox{\hyperlink{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}{K1}}, \mbox{\hyperlink{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. ~\newline
+ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_koble_corrigan_a551554d8ba38cbb5f8c2cf816eaaeb52}\label{class_koble_corrigan_a551554d8ba38cbb5f8c2cf816eaaeb52}} 
+\index{KobleCorrigan@{KobleCorrigan}!Qe@{Qe}}
+\index{Qe@{Qe}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Koble\+Corrigan\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_koble_corrigan_a29c0d28c1abc2417202fcaa420e727d8}\label{class_koble_corrigan_a29c0d28c1abc2417202fcaa420e727d8}} 
+\index{KobleCorrigan@{KobleCorrigan}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Koble\+Corrigan\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var1(QMAX, \mbox{\hyperlink{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}{K1}}, \mbox{\hyperlink{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_koble_corrigan_a3209afc3f9e338965f2e6d603cf6cdaf}\label{class_koble_corrigan_a3209afc3f9e338965f2e6d603cf6cdaf}} 
+\index{KobleCorrigan@{KobleCorrigan}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!KobleCorrigan@{KobleCorrigan}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Koble\+Corrigan\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_koble_corrigan}{KobleCorrigan}}  var1(QMAX, \mbox{\hyperlink{class_koble_corrigan_a817d0100a6d287120ea44562771a9828}{K1}}, \mbox{\hyperlink{class_koble_corrigan_ae25377ef32ce514a92dbff5a96e37887}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_koble_corrigan_8h}{Koble\+Corrigan.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Koble\+Corrigan.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,437 @@
+\hypertarget{class_mac_millan_teller}{}\doxysection{Referência da Classe Mac\+Millan\+Teller}
+\label{class_mac_millan_teller}\index{MacMillanTeller@{MacMillanTeller}}
+
+
+Classe com as equações da isoterma de Mac\+Millan -\/ Teller.  
+
+
+
+
+{\ttfamily \#include $<$Mac\+Millan\+Teller.\+h$>$}
+
+Diagrama de hierarquia para Mac\+Millan\+Teller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_mac_millan_teller}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mac_millan_teller_a16874ca33d1bce78c632d97ec3c1fbe0}{Define\+Identity}} (\char`\"{}Mac\+Millan -\/ Teller\char`\"{}, ID\+::\+Mac\+Millan\+Teller)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mac_millan_teller_aa0809919f2858668d4a83589f7bd9ddf}{Mac\+Millan\+Teller}} ()=default
+\item 
+\mbox{\hyperlink{class_mac_millan_teller_ac14651b3469d9a1e91717f683226b466}{Mac\+Millan\+Teller}} (const \mbox{\hyperlink{class_mac_millan_teller}{Mac\+Millan\+Teller}} \&\+\_\+mac\+\_\+millan\+\_\+teller)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mac_millan_teller_a01ef50c47c8e10c01ce89c31f9b543a1}\label{class_mac_millan_teller_a01ef50c47c8e10c01ce89c31f9b543a1}} 
+virtual {\bfseries $\sim$\+Mac\+Millan\+Teller} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mac_millan_teller_a1cbe4182e723de97bd6571d71832c5c1}{Mac\+Millan\+Teller}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de Mac\+Millan -\/ Teller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mac_millan_teller}{Mac\+Millan\+Teller}} \& \mbox{\hyperlink{class_mac_millan_teller_a6214f9b5e1fed9e928c6051784ea4ed8}{operator=}} (const \mbox{\hyperlink{class_mac_millan_teller}{Mac\+Millan\+Teller}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_mac_millan_teller_afed0e7566621bb2655bf418169342adf}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de Mac\+Millan -\/ Teller. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o parâmetro da equação de Mac\+Millan -\/ Teller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mac_millan_teller_a627bbdf419cd8fb8c2886c4971b5f2fb}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mac_millan_teller_a86093178531030e58e1296104da81511}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante da isoterma de Mac\+Millan -\/ Teller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mac_millan_teller_ae9cef191953351f6a9eda78e0dd2b336}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor associado a constante da isoterma de Mac\+Millan -\/ Teller. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_mac_millan_teller_a06a3ca576f0145c3c964bb6d6e021896}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_mac_millan_teller_a6ad52341fc0e4dc0a414b4c2fabde160}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_mac_millan_teller}{Mac\+Millan\+Teller}} $\ast$ \mbox{\hyperlink{class_mac_millan_teller_a8dbcd3af9ecf82cc9add37b180c80701}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de Mac\+Millan -\/ Teller. 
+
+Classe com as equações da isoterma de Mac\+Millan -\/ Teller.
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e, T)= q\+\_\+\{max\}\mbox{[}\textbackslash{}frac\{K\+\_\+1\}\{ln(\textbackslash{}frac\{K\+\_\+2\}\{C\+\_\+e\})\}\mbox{]}$^\wedge$\{\textbackslash{}frac\{1\}\{3\}\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000041}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_mac_millan_teller_aa0809919f2858668d4a83589f7bd9ddf}\label{class_mac_millan_teller_aa0809919f2858668d4a83589f7bd9ddf}} 
+\index{MacMillanTeller@{MacMillanTeller}!MacMillanTeller@{MacMillanTeller}}
+\index{MacMillanTeller@{MacMillanTeller}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{MacMillanTeller()}{MacMillanTeller()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Mac\+Millan\+Teller\+::\+Mac\+Millan\+Teller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_mac_millan_teller}{MacMillanTeller}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mac_millan_teller_ac14651b3469d9a1e91717f683226b466}\label{class_mac_millan_teller_ac14651b3469d9a1e91717f683226b466}} 
+\index{MacMillanTeller@{MacMillanTeller}!MacMillanTeller@{MacMillanTeller}}
+\index{MacMillanTeller@{MacMillanTeller}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{MacMillanTeller()}{MacMillanTeller()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Mac\+Millan\+Teller\+::\+Mac\+Millan\+Teller (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_mac_millan_teller}{Mac\+Millan\+Teller}} \&}]{\+\_\+mac\+\_\+millan\+\_\+teller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_mac_millan_teller}{MacMillanTeller}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_mac_millan_teller}{MacMillanTeller}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo Mac\+Millan -\/ Teller original. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mac_millan_teller_a1cbe4182e723de97bd6571d71832c5c1}\label{class_mac_millan_teller_a1cbe4182e723de97bd6571d71832c5c1}} 
+\index{MacMillanTeller@{MacMillanTeller}!MacMillanTeller@{MacMillanTeller}}
+\index{MacMillanTeller@{MacMillanTeller}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{MacMillanTeller()}{MacMillanTeller()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Mac\+Millan\+Teller\+::\+Mac\+Millan\+Teller (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de Mac\+Millan -\/ Teller. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}{K1}}(1.0);    }
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}{K2}}(1.0);        }
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(Q1, \mbox{\hyperlink{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}{K1}}, \mbox{\hyperlink{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. ~\newline
+ \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de Mac\+Millan -\/ Teller. ~\newline
+ \\
+\hline
+{\em \+\_\+k2} & Constante da isoterma de Mac\+Millan -\/ Teller. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_mac_millan_teller_a8dbcd3af9ecf82cc9add37b180c80701}\label{class_mac_millan_teller_a8dbcd3af9ecf82cc9add37b180c80701}} 
+\index{MacMillanTeller@{MacMillanTeller}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_mac_millan_teller}{Mac\+Millan\+Teller}} $\ast$ Mac\+Millan\+Teller\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_mac_millan_teller_a16874ca33d1bce78c632d97ec3c1fbe0}\label{class_mac_millan_teller_a16874ca33d1bce78c632d97ec3c1fbe0}} 
+\index{MacMillanTeller@{MacMillanTeller}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Mac\+Millan\+Teller\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Mac\+Millan -\/ Teller\char`\"{}}]{,  }\item[{ID\+::\+Mac\+Millan\+Teller}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}\label{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}} 
+\index{MacMillanTeller@{MacMillanTeller}!K1@{K1}}
+\index{K1@{K1}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Mac\+Millan\+Teller\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de Mac\+Millan -\/ Teller. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_mac_millan_teller}{MacMillanTeller}}  var1(QMAX, \mbox{\hyperlink{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}{K1}}, \mbox{\hyperlink{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de Mac\+Millan -\/ Teller. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mac_millan_teller_a86093178531030e58e1296104da81511}\label{class_mac_millan_teller_a86093178531030e58e1296104da81511}} 
+\index{MacMillanTeller@{MacMillanTeller}!K1@{K1}}
+\index{K1@{K1}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Mac\+Millan\+Teller\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante da isoterma de Mac\+Millan -\/ Teller. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_mac_millan_teller}{MacMillanTeller}}  var1(QMAX, \mbox{\hyperlink{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}{K1}}, \mbox{\hyperlink{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante da isoterma de Mac\+Millan -\/ Teller. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}\label{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}} 
+\index{MacMillanTeller@{MacMillanTeller}!K2@{K2}}
+\index{K2@{K2}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Mac\+Millan\+Teller\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o parâmetro da equação de Mac\+Millan -\/ Teller. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_mac_millan_teller}{MacMillanTeller}}  var1(QMAX, \mbox{\hyperlink{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}{K1}}, \mbox{\hyperlink{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do parâmetro da equação de Mac\+Millan -\/ Teller. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mac_millan_teller_ae9cef191953351f6a9eda78e0dd2b336}\label{class_mac_millan_teller_ae9cef191953351f6a9eda78e0dd2b336}} 
+\index{MacMillanTeller@{MacMillanTeller}!K2@{K2}}
+\index{K2@{K2}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Mac\+Millan\+Teller\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor associado a constante da isoterma de Mac\+Millan -\/ Teller. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_mac_millan_teller}{MacMillanTeller}}  var1(QMAX, \mbox{\hyperlink{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}{K1}}, \mbox{\hyperlink{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor associado a constante da isoterma de Mac\+Millan -\/ Teller. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_mac_millan_teller_a6214f9b5e1fed9e928c6051784ea4ed8}\label{class_mac_millan_teller_a6214f9b5e1fed9e928c6051784ea4ed8}} 
+\index{MacMillanTeller@{MacMillanTeller}!operator=@{operator=}}
+\index{operator=@{operator=}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mac_millan_teller}{Mac\+Millan\+Teller}} \& Mac\+Millan\+Teller\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_mac_millan_teller}{Mac\+Millan\+Teller}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_mac_millan_teller}{MacMillanTeller}}  var1(QMAX, \mbox{\hyperlink{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}{K1}}, \mbox{\hyperlink{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}{K2}});              }
+\DoxyCodeLine{\mbox{\hyperlink{class_mac_millan_teller}{MacMillanTeller}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_mac_millan_teller}{Mac\+Millan\+Teller}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mac_millan_teller_a06a3ca576f0145c3c964bb6d6e021896}\label{class_mac_millan_teller_a06a3ca576f0145c3c964bb6d6e021896}} 
+\index{MacMillanTeller@{MacMillanTeller}!Qe@{Qe}}
+\index{Qe@{Qe}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Mac\+Millan\+Teller\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_mac_millan_teller}{MacMillanTeller}}  var1(QMAX, \mbox{\hyperlink{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}{K1}}, \mbox{\hyperlink{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. ~\newline
+ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_mac_millan_teller_a6ad52341fc0e4dc0a414b4c2fabde160}\label{class_mac_millan_teller_a6ad52341fc0e4dc0a414b4c2fabde160}} 
+\index{MacMillanTeller@{MacMillanTeller}!Qe@{Qe}}
+\index{Qe@{Qe}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Mac\+Millan\+Teller\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_mac_millan_teller_afed0e7566621bb2655bf418169342adf}\label{class_mac_millan_teller_afed0e7566621bb2655bf418169342adf}} 
+\index{MacMillanTeller@{MacMillanTeller}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Mac\+Millan\+Teller\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_mac_millan_teller}{MacMillanTeller}}  var1(QMAX, \mbox{\hyperlink{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}{K1}}, \mbox{\hyperlink{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mac_millan_teller_a627bbdf419cd8fb8c2886c4971b5f2fb}\label{class_mac_millan_teller_a627bbdf419cd8fb8c2886c4971b5f2fb}} 
+\index{MacMillanTeller@{MacMillanTeller}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!MacMillanTeller@{MacMillanTeller}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Mac\+Millan\+Teller\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Kilselev  var1(QMAX, \mbox{\hyperlink{class_mac_millan_teller_acc6c20856e7f9b0a023e6fd4220c892a}{K1}}, \mbox{\hyperlink{class_mac_millan_teller_ad479d973625cfc31f1cfd45ee604dfa2}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_mac_millan_teller_8h}{Mac\+Millan\+Teller.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Mac\+Millan\+Teller.\+cpp\end{DoxyCompactItemize}

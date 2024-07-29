@@ -1,0 +1,65 @@
+\hypertarget{_source_info_8h_source}{}\doxysection{Source\+Info.\+h}
+\label{_source_info_8h_source}\index{IsothermLib/include/Misc/SourceInfo.h@{IsothermLib/include/Misc/SourceInfo.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef \_\_ISOTHERM\_SOURCE\_INFO\_H\_\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define \_\_ISOTHERM\_SOURCE\_INFO\_H\_\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{12 \textcolor{comment}{// include c++}}
+\DoxyCodeLine{13 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{18 \textcolor{comment}{// include da biblioteca Isotherm}}
+\DoxyCodeLine{19 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <Misc/Configure.h>}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}} }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{class_source_info}{SourceInfo}} \{}
+\DoxyCodeLine{25     }
+\DoxyCodeLine{26 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{27 \textcolor{comment}{// Construtores / destrutora}}
+\DoxyCodeLine{28 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31     }
+\DoxyCodeLine{32     \mbox{\hyperlink{class_source_info}{SourceInfo}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_source_info}{SourceInfo}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_source_info}{SourceInfo}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{34     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_source_info}{\string~SourceInfo}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_source_info}{SourceInfo}}(\textcolor{keyword}{const} std::string\&, \textcolor{keyword}{const} \textcolor{keywordtype}{long}\&, \textcolor{keyword}{const} std::string\&);}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{37 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{38 \textcolor{comment}{// funções inline}}
+\DoxyCodeLine{39 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{41     [[nodiscard]] \textcolor{keyword}{inline} std::string  FileLocation ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} fileLocation;\};}
+\DoxyCodeLine{42     [[nodiscard]] \textcolor{keyword}{inline} \textcolor{keywordtype}{long}         LinePosition ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} lineLocation;\};}
+\DoxyCodeLine{43     [[nodiscard]] \textcolor{keyword}{inline} std::string  FunctionName ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} functionName;\};}
+\DoxyCodeLine{44     }
+\DoxyCodeLine{45 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{46 \textcolor{comment}{// Dados da classe}}
+\DoxyCodeLine{47 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{48     }
+\DoxyCodeLine{49 private :}
+\DoxyCodeLine{50     }
+\DoxyCodeLine{51     std::string         fileLocation;}
+\DoxyCodeLine{52     \textcolor{keywordtype}{long}                lineLocation    =   0;}
+\DoxyCodeLine{53     std::string         functionName;}
+\DoxyCodeLine{54     }
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define IST\_LOC SourceInfo( \_\_FILE\_\_, \_\_LINE\_\_, \_\_FUNCT\_\_)}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{61         }
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* \_\_ISOTHERM\_SOURCE\_INFO\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{63         }
+\DoxyCodeLine{64                 }
+\DoxyCodeLine{68    }
+
+\end{DoxyCode}

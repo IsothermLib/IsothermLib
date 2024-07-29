@@ -1,0 +1,482 @@
+\hypertarget{class_hill_deboer}{}\doxysection{Referência da Classe Hill\+Deboer}
+\label{class_hill_deboer}\index{HillDeboer@{HillDeboer}}
+
+
+Classe com as equações da isoterma de Hill-\/\+Deboer.  
+
+
+
+
+{\ttfamily \#include $<$Hill\+De\+Boer.\+h$>$}
+
+Diagrama de hierarquia para Hill\+Deboer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_hill_deboer}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hill_deboer_a945f8567c9fc64e4a2d96b6cfb35b14f}{Define\+Identity}} (\char`\"{}Hill\+De\+Boer\char`\"{}, ID\+::\+Hill\+De\+Boer)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hill_deboer_ac73c333f872fae96af593af685aea8f6}{Hill\+Deboer}} ()=default
+\item 
+\mbox{\hyperlink{class_hill_deboer_ab5edaeeafe46744681920f76eba879eb}{Hill\+Deboer}} (const \mbox{\hyperlink{class_hill_deboer}{Hill\+Deboer}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_hill_deboer_a590b54247d950b8da61b92b17249c150}\label{class_hill_deboer_a590b54247d950b8da61b92b17249c150}} 
+virtual {\bfseries $\sim$\+Hill\+Deboer} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hill_deboer_a4f163a4e36b54698354d7e1380ef9cce}{Hill\+Deboer}} (const Real \&\+\_\+qmax, const Real \&\+\_\+k1, const Real \&\+\_\+k2, const Real \&\+\_\+rgas=Isotherm\+::\+RGASCONST)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_hill_deboer}{Hill\+Deboer}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hill_deboer}{Hill\+Deboer}} \& \mbox{\hyperlink{class_hill_deboer_a04b1e0cd829cfc567116a18a8f2f842c}{operator=}} (const \mbox{\hyperlink{class_hill_deboer}{Hill\+Deboer}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_hill_deboer_afaa9172517fb51ca392eb47c86d7044b}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de equilíbrio de \mbox{\hyperlink{class_hill}{Hill}} -\/ Deboer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_hill_deboer_a267b3faf8b5601d9d28a10b4105a16d3}\label{class_hill_deboer_a267b3faf8b5601d9d28a10b4105a16d3}} 
+Real {\bfseries RGas} () const
+\item 
+Real \mbox{\hyperlink{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor associado a constante de iteração entre as moléculas adsorvidas. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_hill_deboer_aae977a7dccd90c2aebb82c1af547de78}{Rgas}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor da constante universal dos gases. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hill_deboer_a50b485e2d49ed2939db8acb9f59ded9b}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hill_deboer_ae0054e328fd0f5a3d19209e931c4fc64}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante de equilíbrio de \mbox{\hyperlink{class_hill}{Hill}} – Deboer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hill_deboer_a8dd5773e7503cfb01fafcc4eb3416c15}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor associado a constante de iteração entre as moléculas adsorvidas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hill_deboer_a1d0154b038168f1b9936792ef5364f31}{Rgas}} (const Real \&\+\_\+rgas)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor da constante universal dos gases. \end{DoxyCompactList}\item 
+virtual Real \mbox{\hyperlink{class_hill_deboer_a6a3850f751c1cbe66569c4ff64862474}{Qe}} (const Real \&\+\_\+c, const Real \&=0) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_hill_deboer}{Hill\+Deboer}} $\ast$ \mbox{\hyperlink{class_hill_deboer_a5324754250568c2f7ffec84f5822391f}{Clone\+Implementation}} () const override
+\item 
+\mbox{\Hypertarget{class_hill_deboer_abc46336ca75879e91b14b05d4199b5b9}\label{class_hill_deboer_abc46336ca75879e91b14b05d4199b5b9}} 
+Real {\bfseries FQe} (const Real \&) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de Hill-\/\+Deboer. 
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}f(\textbackslash{}theta ) = K\+\_\+1\+C-\/\textbackslash{}frac\{\textbackslash{}theta\}\{1-\/\textbackslash{}theta\}e$^\wedge$\{\textbackslash{}frac\{\textbackslash{}theta\}\{1-\/\textbackslash{}theta\}-\/\textbackslash{}frac\{K\+\_\+2\textbackslash{}theta\}\{RT\}\}=0\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000025}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_hill_deboer_ac73c333f872fae96af593af685aea8f6}\label{class_hill_deboer_ac73c333f872fae96af593af685aea8f6}} 
+\index{HillDeboer@{HillDeboer}!HillDeboer@{HillDeboer}}
+\index{HillDeboer@{HillDeboer}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{HillDeboer()}{HillDeboer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Hill\+Deboer\+::\+Hill\+Deboer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill_deboer}{HillDeboer}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_hill_deboer_ab5edaeeafe46744681920f76eba879eb}\label{class_hill_deboer_ab5edaeeafe46744681920f76eba879eb}} 
+\index{HillDeboer@{HillDeboer}!HillDeboer@{HillDeboer}}
+\index{HillDeboer@{HillDeboer}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{HillDeboer()}{HillDeboer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Hill\+Deboer\+::\+Hill\+Deboer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_hill_deboer}{Hill\+Deboer}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill_deboer}{HillDeboer}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill_deboer}{HillDeboer}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_hill_deboer}{Hill\+Deboer}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_hill_deboer_a4f163a4e36b54698354d7e1380ef9cce}\label{class_hill_deboer_a4f163a4e36b54698354d7e1380ef9cce}} 
+\index{HillDeboer@{HillDeboer}!HillDeboer@{HillDeboer}}
+\index{HillDeboer@{HillDeboer}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{HillDeboer()}{HillDeboer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Hill\+Deboer\+::\+Hill\+Deboer (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2,  }\item[{const Real \&}]{\+\_\+rgas = {\ttfamily Isotherm\+:\+:RGASCONST} }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_hill_deboer}{Hill\+Deboer}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}{K1}}(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}{K2}}(1.0);}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill_deboer}{HillDeboer}}  var1(Q1, \mbox{\hyperlink{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}{K1}}, \mbox{\hyperlink{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. \\
+\hline
+{\em \+\_\+k1} & Constante de equilíbrio de \mbox{\hyperlink{class_hill}{Hill}} – Deboer. \\
+\hline
+{\em \+\_\+k2} & Constante de iteração entre as moléculas adsorvidas. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_hill_deboer_a5324754250568c2f7ffec84f5822391f}\label{class_hill_deboer_a5324754250568c2f7ffec84f5822391f}} 
+\index{HillDeboer@{HillDeboer}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_hill_deboer}{Hill\+Deboer}} $\ast$ Hill\+Deboer\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_hill_deboer_a945f8567c9fc64e4a2d96b6cfb35b14f}\label{class_hill_deboer_a945f8567c9fc64e4a2d96b6cfb35b14f}} 
+\index{HillDeboer@{HillDeboer}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Hill\+Deboer\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Hill\+De\+Boer\char`\"{}}]{,  }\item[{ID\+::\+Hill\+De\+Boer}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}\label{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}} 
+\index{HillDeboer@{HillDeboer}!K1@{K1}}
+\index{K1@{K1}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Hill\+Deboer\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de equilíbrio de \mbox{\hyperlink{class_hill}{Hill}} -\/ Deboer. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill_deboer}{HillDeboer}}  var1(QMAX, \mbox{\hyperlink{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}{K1}}, \mbox{\hyperlink{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de equilíbrio de \mbox{\hyperlink{class_hill}{Hill}} – Deboer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hill_deboer_ae0054e328fd0f5a3d19209e931c4fc64}\label{class_hill_deboer_ae0054e328fd0f5a3d19209e931c4fc64}} 
+\index{HillDeboer@{HillDeboer}!K1@{K1}}
+\index{K1@{K1}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Hill\+Deboer\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante de equilíbrio de \mbox{\hyperlink{class_hill}{Hill}} – Deboer. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill_deboer}{HillDeboer}}  var1(QMAX, \mbox{\hyperlink{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}{K1}}, \mbox{\hyperlink{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de equilíbrio de \mbox{\hyperlink{class_hill}{Hill}} – Deboer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}\label{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}} 
+\index{HillDeboer@{HillDeboer}!K2@{K2}}
+\index{K2@{K2}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Hill\+Deboer\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor associado a constante de iteração entre as moléculas adsorvidas. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill_deboer}{HillDeboer}}  var1(QMAX, \mbox{\hyperlink{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}{K1}}, \mbox{\hyperlink{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor associado a constante de iteração entre as moléculas adsorvidas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hill_deboer_a8dd5773e7503cfb01fafcc4eb3416c15}\label{class_hill_deboer_a8dd5773e7503cfb01fafcc4eb3416c15}} 
+\index{HillDeboer@{HillDeboer}!K2@{K2}}
+\index{K2@{K2}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Hill\+Deboer\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor associado a constante de iteração entre as moléculas adsorvidas. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill_deboer}{HillDeboer}}  var1(QMAX, \mbox{\hyperlink{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}{K1}}, \mbox{\hyperlink{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor associado a constante de iteração entre as moléculas adsorvidas. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_hill_deboer_a04b1e0cd829cfc567116a18a8f2f842c}\label{class_hill_deboer_a04b1e0cd829cfc567116a18a8f2f842c}} 
+\index{HillDeboer@{HillDeboer}!operator=@{operator=}}
+\index{operator=@{operator=}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_hill_deboer}{Hill\+Deboer}} \& Hill\+Deboer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_hill_deboer}{Hill\+Deboer}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill_deboer}{HillDeboer}}  var1(QMAX, \mbox{\hyperlink{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}{K1}}, \mbox{\hyperlink{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}{K2}});}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill_deboer}{HillDeboer}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo Hill\+De\+Boer original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hill_deboer_a6a3850f751c1cbe66569c4ff64862474}\label{class_hill_deboer_a6a3850f751c1cbe66569c4ff64862474}} 
+\index{HillDeboer@{HillDeboer}!Qe@{Qe}}
+\index{Qe@{Qe}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}}
+{\footnotesize\ttfamily Real Hill\+Deboer\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c,  }\item[{const Real \&}]{\+\_\+temp = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill_deboer}{HillDeboer}}  var1(QMAX, \mbox{\hyperlink{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}{K1}}, \mbox{\hyperlink{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_hill_deboer_afaa9172517fb51ca392eb47c86d7044b}\label{class_hill_deboer_afaa9172517fb51ca392eb47c86d7044b}} 
+\index{HillDeboer@{HillDeboer}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Hill\+Deboer\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{HillDeBoer  var1(QMAX, \mbox{\hyperlink{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}{K1}}, \mbox{\hyperlink{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hill_deboer_a50b485e2d49ed2939db8acb9f59ded9b}\label{class_hill_deboer_a50b485e2d49ed2939db8acb9f59ded9b}} 
+\index{HillDeboer@{HillDeboer}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Hill\+Deboer\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill_deboer}{HillDeboer}}  var1(QMAX, \mbox{\hyperlink{class_hill_deboer_ae4e1bf1fbb4c362395a7bb18b9c05a44}{K1}}, \mbox{\hyperlink{class_hill_deboer_af5dd3340aa45c915911e7a328decef28}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_hill_deboer_aae977a7dccd90c2aebb82c1af547de78}\label{class_hill_deboer_aae977a7dccd90c2aebb82c1af547de78}} 
+\index{HillDeboer@{HillDeboer}!Rgas@{Rgas}}
+\index{Rgas@{Rgas}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{Rgas()}{Rgas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Hill\+Deboer\+::\+Rgas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor da constante universal dos gases. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_dubinin_radushkevich}{DubininRadushkevich}}  var1(q1, k1);}
+\DoxyCodeLine{Real rg = var1.Rgas();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da constante universal dos gases. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hill_deboer_a1d0154b038168f1b9936792ef5364f31}\label{class_hill_deboer_a1d0154b038168f1b9936792ef5364f31}} 
+\index{HillDeboer@{HillDeboer}!Rgas@{Rgas}}
+\index{Rgas@{Rgas}!HillDeboer@{HillDeboer}}
+\doxysubsubsection{\texorpdfstring{Rgas()}{Rgas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Hill\+Deboer\+::\+Rgas (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+rgas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor da constante universal dos gases. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_dubinin_radushkevich}{DubininRadushkevich}}  var1(q1, k1);}
+\DoxyCodeLine{Real rgas(62.363598221529);}
+\DoxyCodeLine{var1.Rgas(rgas);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+rgas} & Novo valor da constante universal dos gases. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+rgas} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_hill_de_boer_8h}{Hill\+De\+Boer.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Hill\+De\+Boer.\+cpp\end{DoxyCompactItemize}

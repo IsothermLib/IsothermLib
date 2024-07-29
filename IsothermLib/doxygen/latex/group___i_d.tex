@@ -1,0 +1,58 @@
+\hypertarget{group___i_d}{}\doxysection{Identificação da Classe}
+\label{group___i_d}\index{Identificação da Classe@{Identificação da Classe}}
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_i_d}{ID}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___i_d_ga0370691bc0e2073cc1de14683f562baf}{Define\+Identity\+Base}}(\+\_\+name,  \+\_\+id)
+\item 
+\#define \mbox{\hyperlink{group___i_d_gab741d98dd062c9d7580df9703144af29}{Define\+Identity}}(\+\_\+name,  \+\_\+id)
+\item 
+\#define \mbox{\hyperlink{group___i_d_ga94eec32e009c2a3eab45d25ec00816cc}{Declare\+Identity}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe \mbox{\hyperlink{class_i_d}{ID}} para identificação das classes no caso de erro. 
+
+\doxysubsection{Definições e macros}
+\mbox{\Hypertarget{group___i_d_ga94eec32e009c2a3eab45d25ec00816cc}\label{group___i_d_ga94eec32e009c2a3eab45d25ec00816cc}} 
+\index{Identificação da Classe@{Identificação da Classe}!DeclareIdentity@{DeclareIdentity}}
+\index{DeclareIdentity@{DeclareIdentity}!Identificação da Classe@{Identificação da Classe}}
+\doxysubsubsection{\texorpdfstring{DeclareIdentity}{DeclareIdentity}}
+{\footnotesize\ttfamily \#define Declare\+Identity(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Valor\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{     \textcolor{keyword}{const} \textcolor{keywordtype}{char} * className() \textcolor{keyword}{const}; \(\backslash\)}
+\DoxyCodeLine{     int classID() const}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___i_d_gab741d98dd062c9d7580df9703144af29}\label{group___i_d_gab741d98dd062c9d7580df9703144af29}} 
+\index{Identificação da Classe@{Identificação da Classe}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!Identificação da Classe@{Identificação da Classe}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity}{DefineIdentity}}
+{\footnotesize\ttfamily \#define Define\+Identity(\begin{DoxyParamCaption}\item[{}]{\+\_\+name,  }\item[{}]{\+\_\+id }\end{DoxyParamCaption})}
+
+{\bfseries Valor\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{     \textcolor{keyword}{virtual} std::string className()\textcolor{keyword}{ const override  }\{\textcolor{keywordflow}{return} \_name;\} \(\backslash\)}
+\DoxyCodeLine{     virtual UInt classID()\textcolor{keyword}{ const override }\{\textcolor{keywordflow}{return} \_id;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___i_d_ga0370691bc0e2073cc1de14683f562baf}\label{group___i_d_ga0370691bc0e2073cc1de14683f562baf}} 
+\index{Identificação da Classe@{Identificação da Classe}!DefineIdentityBase@{DefineIdentityBase}}
+\index{DefineIdentityBase@{DefineIdentityBase}!Identificação da Classe@{Identificação da Classe}}
+\doxysubsubsection{\texorpdfstring{DefineIdentityBase}{DefineIdentityBase}}
+{\footnotesize\ttfamily \#define Define\+Identity\+Base(\begin{DoxyParamCaption}\item[{}]{\+\_\+name,  }\item[{}]{\+\_\+id }\end{DoxyParamCaption})}
+
+{\bfseries Valor\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{     \textcolor{keyword}{virtual} std::string className()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \_name;\} \(\backslash\)}
+\DoxyCodeLine{     virtual UInt classID()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \_id;\}}
+
+\end{DoxyCode}

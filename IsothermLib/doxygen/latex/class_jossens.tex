@@ -1,0 +1,437 @@
+\hypertarget{class_jossens}{}\doxysection{Referência da Classe Jossens}
+\label{class_jossens}\index{Jossens@{Jossens}}
+
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_jossens}{Jossens}}  
+
+
+
+
+{\ttfamily \#include $<$Jossens.\+h$>$}
+
+Diagrama de hierarquia para Jossens\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_jossens}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jossens_a160b0f2ce0e36f124930f40244b7841d}{Define\+Identity}} (\char`\"{}Jossens\char`\"{}, ID\+::\+Jossens)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jossens_ab75f1f9d596c03562f904d88ae84d688}{Jossens}} ()=default
+\item 
+\mbox{\hyperlink{class_jossens_a860bf7ba77e60674e44165f69b85faac}{Jossens}} (const \mbox{\hyperlink{class_jossens}{Jossens}} \&\+\_\+jossens)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_jossens_ab38d074e2b6d89ef77d743296ad245f8}\label{class_jossens_ab38d074e2b6d89ef77d743296ad245f8}} 
+virtual {\bfseries $\sim$\+Jossens} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jossens_a81485709cc1e1c6fc2dcf314943d2b5d}{Jossens}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_jossens}{Jossens}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jossens}{Jossens}} \& \mbox{\hyperlink{class_jossens_a074c401cc10e0dad8c7099a9893c538b}{operator=}} (const \mbox{\hyperlink{class_jossens}{Jossens}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_jossens_a6b92b9f15aedd97a9120fa876764c2db}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_jossens}{Jossens}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_jossens_af2aec1deb76f490ce7e307e979210576}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_jossens}{Jossens}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jossens_afaea531839dcfa896b7a6cf92b85da61}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jossens_a5c59cc537d5132435f4f8f22e9a078b0}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_jossens}{Jossens}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jossens_a45985330f0ae859e0944b93faf4be7ed}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_jossens}{Jossens}}. \end{DoxyCompactList}\item 
+virtual Real \mbox{\hyperlink{class_jossens_aa9a072a61b6c9f62293e71df16a72101}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_jossens_aa751e7df90aed85e9b344bdf97438f5e}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_jossens}{Jossens}} $\ast$ \mbox{\hyperlink{class_jossens_a2877500bf7c57c3228889ad89408d34b}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de \mbox{\hyperlink{class_jossens}{Jossens}} 
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_jossens}{Jossens}}.
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: {\itshape EDITAR, CASO HAJA NECESSIDADE} \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e, T) = q\+\_\+\{max\}\textbackslash{}frac\{C\}\{1+K\+\_\+1(C$^\wedge$\{K\+\_\+2\})\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000029}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_jossens_ab75f1f9d596c03562f904d88ae84d688}\label{class_jossens_ab75f1f9d596c03562f904d88ae84d688}} 
+\index{Jossens@{Jossens}!Jossens@{Jossens}}
+\index{Jossens@{Jossens}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{Jossens()}{Jossens()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Jossens\+::\+Jossens (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jossens}{Jossens}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jossens_a860bf7ba77e60674e44165f69b85faac}\label{class_jossens_a860bf7ba77e60674e44165f69b85faac}} 
+\index{Jossens@{Jossens}!Jossens@{Jossens}}
+\index{Jossens@{Jossens}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{Jossens()}{Jossens()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Jossens\+::\+Jossens (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_jossens}{Jossens}} \&}]{\+\_\+jossens }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jossens}{Jossens}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_jossens}{Jossens}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_jossens}{Jossens}} original. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jossens_a81485709cc1e1c6fc2dcf314943d2b5d}\label{class_jossens_a81485709cc1e1c6fc2dcf314943d2b5d}} 
+\index{Jossens@{Jossens}!Jossens@{Jossens}}
+\index{Jossens@{Jossens}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{Jossens()}{Jossens()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Jossens\+::\+Jossens (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_jossens}{Jossens}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);                                                           *EDITAR, CASO HAJA NECESSIDADE*}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}{K1}}(1.0);                                                             *EDITAR, CASO HAJA NECESSIDADE*}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_jossens_af2aec1deb76f490ce7e307e979210576}{K2}}(1.0);                                                             *EDITAR, CASO HAJA NECESSIDADE*}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var1(Q1, \mbox{\hyperlink{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}{K1}}, \mbox{\hyperlink{class_jossens_af2aec1deb76f490ce7e307e979210576}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. {\itshape EDITAR, CASO HAJA NECESSIDADE} \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de \mbox{\hyperlink{class_jossens}{Jossens}}. {\itshape EDITAR, CASO HAJA NECESSIDADE} \\
+\hline
+{\em \+\_\+k2} & Constante do expoente da isoterma de \mbox{\hyperlink{class_jossens}{Jossens}}. {\itshape EDITAR, CASO HAJA NECESSIDADE} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_jossens_a2877500bf7c57c3228889ad89408d34b}\label{class_jossens_a2877500bf7c57c3228889ad89408d34b}} 
+\index{Jossens@{Jossens}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_jossens}{Jossens}} $\ast$ Jossens\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_jossens_a160b0f2ce0e36f124930f40244b7841d}\label{class_jossens_a160b0f2ce0e36f124930f40244b7841d}} 
+\index{Jossens@{Jossens}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Jossens\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Jossens\char`\"{}}]{,  }\item[{ID\+::\+Jossens}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}\label{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}} 
+\index{Jossens@{Jossens}!K1@{K1}}
+\index{K1@{K1}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Jossens\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_jossens}{Jossens}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jossens}{Jossens}}  var1(QMAX, \mbox{\hyperlink{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}{K1}}, \mbox{\hyperlink{class_jossens_af2aec1deb76f490ce7e307e979210576}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_jossens}{Jossens}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jossens_a5c59cc537d5132435f4f8f22e9a078b0}\label{class_jossens_a5c59cc537d5132435f4f8f22e9a078b0}} 
+\index{Jossens@{Jossens}!K1@{K1}}
+\index{K1@{K1}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Jossens\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_jossens}{Jossens}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jossens}{Jossens}}  var1(QMAX, \mbox{\hyperlink{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}{K1}}, \mbox{\hyperlink{class_jossens_af2aec1deb76f490ce7e307e979210576}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de \mbox{\hyperlink{class_jossens}{Jossens}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_jossens_af2aec1deb76f490ce7e307e979210576}\label{class_jossens_af2aec1deb76f490ce7e307e979210576}} 
+\index{Jossens@{Jossens}!K2@{K2}}
+\index{K2@{K2}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Jossens\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_jossens}{Jossens}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jossens}{Jossens}}  var1(QMAX, \mbox{\hyperlink{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}{K1}}, \mbox{\hyperlink{class_jossens_af2aec1deb76f490ce7e307e979210576}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do expoente da isoterma de \mbox{\hyperlink{class_jossens}{Jossens}}. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jossens_a45985330f0ae859e0944b93faf4be7ed}\label{class_jossens_a45985330f0ae859e0944b93faf4be7ed}} 
+\index{Jossens@{Jossens}!K2@{K2}}
+\index{K2@{K2}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Jossens\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_jossens}{Jossens}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jossens}{Jossens}}  var1(QMAX, \mbox{\hyperlink{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}{K1}}, \mbox{\hyperlink{class_jossens_af2aec1deb76f490ce7e307e979210576}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor do expoente da isoterma de \mbox{\hyperlink{class_jossens}{Jossens}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_jossens_a074c401cc10e0dad8c7099a9893c538b}\label{class_jossens_a074c401cc10e0dad8c7099a9893c538b}} 
+\index{Jossens@{Jossens}!operator=@{operator=}}
+\index{operator=@{operator=}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_jossens}{Jossens}} \& Jossens\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_jossens}{Jossens}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jossens}{Jossens}}  var1(QMAX, \mbox{\hyperlink{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}{K1}}, \mbox{\hyperlink{class_jossens_af2aec1deb76f490ce7e307e979210576}{K2}});                                                *EDITAR, CASO HAJA NECESSIDADE*}
+\DoxyCodeLine{\mbox{\hyperlink{class_jossens}{Jossens}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_jossens}{Jossens}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jossens_aa9a072a61b6c9f62293e71df16a72101}\label{class_jossens_aa9a072a61b6c9f62293e71df16a72101}} 
+\index{Jossens@{Jossens}!Qe@{Qe}}
+\index{Qe@{Qe}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Jossens\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jossens}{Jossens}}  var1(QMAX, \mbox{\hyperlink{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}{K1}}, \mbox{\hyperlink{class_jossens_af2aec1deb76f490ce7e307e979210576}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. ~\newline
+ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_jossens_aa751e7df90aed85e9b344bdf97438f5e}\label{class_jossens_aa751e7df90aed85e9b344bdf97438f5e}} 
+\index{Jossens@{Jossens}!Qe@{Qe}}
+\index{Qe@{Qe}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Jossens\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_jossens_a6b92b9f15aedd97a9120fa876764c2db}\label{class_jossens_a6b92b9f15aedd97a9120fa876764c2db}} 
+\index{Jossens@{Jossens}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Jossens\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jossens}{Jossens}}  var1(QMAX, \mbox{\hyperlink{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}{K1}}, \mbox{\hyperlink{class_jossens_af2aec1deb76f490ce7e307e979210576}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jossens_afaea531839dcfa896b7a6cf92b85da61}\label{class_jossens_afaea531839dcfa896b7a6cf92b85da61}} 
+\index{Jossens@{Jossens}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Jossens@{Jossens}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Jossens\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_jossens}{Jossens}}  var1(QMAX, \mbox{\hyperlink{class_jossens_a7aadb750711d39d9a32ba8b3ea557617}{K1}}, \mbox{\hyperlink{class_jossens_af2aec1deb76f490ce7e307e979210576}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_jossens_8h}{Jossens.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Jossens.\+cpp\end{DoxyCompactItemize}

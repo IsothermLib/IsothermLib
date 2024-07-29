@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>IsothermLib: Isotherm</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">IsothermLib<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div><div class="header">
+  <div class="headertitle"><div class="title">Isotherm</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> IsothermLib é uma biblioteca desenvolvida em C++20 em que se modelou diversas funções de isotermas de adsorção.</p>
+<ul>
+<li>A biblioteca foi desenvolvida no Instituto Politécnico da UERJ, campus de Nova Friburgo, Rio de Janeiro.</li>
+<li>Especialmente indicada para quem desenvolve modelos de fenômenos de transporte envolvendo processos de adsorção/desorção.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Instalação</h1>
+<p>Nesta versão a biblioteca foi testada e preparada para ser utilizada em ambiente Linux. Contudo, como usa somente os recursos do C++20 padrão, com alguns pequenos ajustes, ela poderá ser utilizada em outros sistemas operacionais.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Instruções de Compilação para a Biblioteca C++</h1>
+<p>Este documento fornece instruções para compilar a biblioteca C++ usando o sistema de build <code>CMake</code>. Siga as etapas abaixo para compilar a biblioteca a partir do código-fonte.</p>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Requisitos</h2>
+<p>Antes de começar, certifique-se de que você tem as seguintes ferramentas instaladas:</p>
+<ul>
+<li><b>CMake</b>: Ferramenta de configuração e geração de projetos de compilação. <a href="https://cmake.org/download/">Baixe e instale o CMake</a>.</li>
+<li><b>Make</b>: Ferramenta para automatizar a construção de projetos de software. Normalmente já está disponível em sistemas Unix e Linux. <a href="https://www.gnu.org/software/make/">Baixe e instale o Make</a>.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Passos para Compilar a Biblioteca</h2>
+<p>Siga as etapas abaixo para compilar a biblioteca.</p>
+<h3><a class="anchor" id="autotoc_md5"></a>
+1. Crie uma Pasta <code>build</code></h3>
+<p>Crie uma pasta chamada <code>build</code> na raiz do diretório do projeto. Esta pasta será usada para armazenar todos os arquivos gerados durante o processo de compilação.</p>
+<div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake ../.</div>
+</div><!-- fragment --><p>Compile o projeto usando o Make. Este comando compila o código-fonte e gera a biblioteca e os arquivos executáveis. </p><div class="fragment"><div class="line">make</div>
+</div><!-- fragment --><p> Se desejar instalar a biblioteca no sistema, você pode executar o comando make install. Você pode precisar de permissões de superusuário para esta etapa. </p><div class="fragment"><div class="line">sudo make install</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

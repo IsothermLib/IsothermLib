@@ -1,0 +1,279 @@
+\hypertarget{class_henry}{}\doxysection{Referência da Classe Henry}
+\label{class_henry}\index{Henry@{Henry}}
+
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_henry}{Henry}}.  
+
+
+
+
+{\ttfamily \#include $<$Henry.\+h$>$}
+
+Diagrama de hierarquia para Henry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_henry}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_henry_ad3b41069bebfd4c2752cf6f70f41d468}\label{class_henry_ad3b41069bebfd4c2752cf6f70f41d468}} 
+{\bfseries Define\+Identity} (\char`\"{}Henry\char`\"{}, ID\+::\+Henry)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_henry_aa92ced203a956240ee852b55731ef8e3}{Henry}} ()=default
+\begin{DoxyCompactList}\small\item\em Construtora default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_henry_a96a31f0c34cbcf968fe090d9f5a07686}{Henry}} (const \mbox{\hyperlink{class_henry}{Henry}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_henry_ae0538538f074e5706bfcf1998817a193}\label{class_henry_ae0538538f074e5706bfcf1998817a193}} 
+virtual {\bfseries $\sim$\+Henry} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_henry_a4c59254701a26d306ce47a374ebaad62}{Henry}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Construtora com o parâmetros que define a isoterma de \mbox{\hyperlink{class_henry}{Henry}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_henry}{Henry}} \& \mbox{\hyperlink{class_henry_a1884766cc0fbfa3d6bc7d77eef81a851}{operator=}} (const \mbox{\hyperlink{class_henry}{Henry}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_henry_a2250f9d0aab3716c5b60e35e9eb8448a}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor do coeficiente de distribuição. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_henry_a5debc5a246ddbffebf7782915cc05e5b}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor do coeficiente de distribuição. \end{DoxyCompactList}\item 
+virtual Real \mbox{\hyperlink{class_henry_af9bdf57767a9fee1579804f0bfdd1cab}{Qe}} (const Real \&\+\_\+c, const Real \&=0) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_henry}{Henry}} $\ast$ \mbox{\hyperlink{class_henry_a83e262d171edd0fca7e2ca8925983238}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de \mbox{\hyperlink{class_henry}{Henry}}. 
+
+Isoterma com um parâmetro, $ K_1 > 0 $, cuja fórmula é a seguinte\+: \textbackslash{}begin\{align\} Q\+\_\+e(\+C\+\_\+e) = K\+\_\+1 C\+\_\+e \textbackslash{}end\{align\} O artigo em que esta isoterma foi definida pode ser encontrado \href{https://doi.org/10.1098/rstl.1803.0004}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000011}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_henry_aa92ced203a956240ee852b55731ef8e3}\label{class_henry_aa92ced203a956240ee852b55731ef8e3}} 
+\index{Henry@{Henry}!Henry@{Henry}}
+\index{Henry@{Henry}!Henry@{Henry}}
+\doxysubsubsection{\texorpdfstring{Henry()}{Henry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Henry\+::\+Henry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henry}{Henry}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_henry_a96a31f0c34cbcf968fe090d9f5a07686}\label{class_henry_a96a31f0c34cbcf968fe090d9f5a07686}} 
+\index{Henry@{Henry}!Henry@{Henry}}
+\index{Henry@{Henry}!Henry@{Henry}}
+\doxysubsubsection{\texorpdfstring{Henry()}{Henry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Henry\+::\+Henry (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_henry}{Henry}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henry}{Henry}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_henry}{Henry}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_henry}{Henry}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_henry_a4c59254701a26d306ce47a374ebaad62}\label{class_henry_a4c59254701a26d306ce47a374ebaad62}} 
+\index{Henry@{Henry}!Henry@{Henry}}
+\index{Henry@{Henry}!Henry@{Henry}}
+\doxysubsubsection{\texorpdfstring{Henry()}{Henry()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Henry\+::\+Henry (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})}
+
+
+
+Construtora com o parâmetros que define a isoterma de \mbox{\hyperlink{class_henry}{Henry}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Real k1(1.0);}
+\DoxyCodeLine{\mbox{\hyperlink{class_henry}{Henry}}  var1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Coeficiente de distribuição. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_henry_a83e262d171edd0fca7e2ca8925983238}\label{class_henry_a83e262d171edd0fca7e2ca8925983238}} 
+\index{Henry@{Henry}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!Henry@{Henry}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_henry}{Henry}} $\ast$ Henry\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_henry_a2250f9d0aab3716c5b60e35e9eb8448a}\label{class_henry_a2250f9d0aab3716c5b60e35e9eb8448a}} 
+\index{Henry@{Henry}!K1@{K1}}
+\index{K1@{K1}!Henry@{Henry}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Henry\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor do coeficiente de distribuição. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henry}{Henry}}  var1(k1);}
+\DoxyCodeLine{Real   k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente de distribuição. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_henry_a5debc5a246ddbffebf7782915cc05e5b}\label{class_henry_a5debc5a246ddbffebf7782915cc05e5b}} 
+\index{Henry@{Henry}!K1@{K1}}
+\index{K1@{K1}!Henry@{Henry}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Henry\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor do coeficiente de distribuição. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henry}{Henry}}  var1(\_k1);}
+\DoxyCodeLine{Real   k11(3.0);}
+\DoxyCodeLine{var1.K1(k11);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente de distribuição. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_henry_a1884766cc0fbfa3d6bc7d77eef81a851}\label{class_henry_a1884766cc0fbfa3d6bc7d77eef81a851}} 
+\index{Henry@{Henry}!operator=@{operator=}}
+\index{operator=@{operator=}!Henry@{Henry}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_henry}{Henry}} \& Henry\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_henry}{Henry}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henry}{Henry}}  var1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_henry}{Henry}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_henry_af9bdf57767a9fee1579804f0bfdd1cab}\label{class_henry_af9bdf57767a9fee1579804f0bfdd1cab}} 
+\index{Henry@{Henry}!Qe@{Qe}}
+\index{Qe@{Qe}!Henry@{Henry}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}}
+{\footnotesize\ttfamily Real Henry\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c,  }\item[{const Real \&}]{ = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_henry}{Henry}}  var1(k);}
+\DoxyCodeLine{Real ce(1.0);}
+\DoxyCodeLine{Real qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+One\+Parameter/Henry.\+h\item 
+Isotherm\+Lib/src/\+Isotherm/\+One\+Parameter/Henry.\+cpp\end{DoxyCompactItemize}

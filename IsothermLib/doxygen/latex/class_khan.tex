@@ -1,0 +1,431 @@
+\hypertarget{class_khan}{}\doxysection{Referência da Classe Khan}
+\label{class_khan}\index{Khan@{Khan}}
+
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_khan}{Khan}}  
+
+
+
+
+{\ttfamily \#include $<$Khan.\+h$>$}
+
+Diagrama de hierarquia para Khan\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_khan}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_khan_ae2a9e2b53b26890ffad4d931537c411e}{Define\+Identity}} (\char`\"{}Khan\char`\"{}, ID\+::\+Khan)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_khan_a15a05f14eb1ba539c357b241ac113f9c}{Khan}} ()=default
+\item 
+\mbox{\hyperlink{class_khan_ac8becbde53dbce130b0dd547a67562d0}{Khan}} (const \mbox{\hyperlink{class_khan}{Khan}} \&\+\_\+khan)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_khan_a9af9d12ce74ead3ca4a500999f963f2b}\label{class_khan_a9af9d12ce74ead3ca4a500999f963f2b}} 
+virtual {\bfseries $\sim$\+Khan} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_khan_a655a8eaa11e256cd5a888d572648bfa2}{Khan}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_khan}{Khan}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_khan}{Khan}} \& \mbox{\hyperlink{class_khan_a08fc1504641daa3743b95ea05b6fd0c9}{operator=}} (const \mbox{\hyperlink{class_khan}{Khan}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_khan_a252ef55831bb0b7ded6c297d758f476b}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_khan_a49f3e068f7804051bfa667e6e4038f0b}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_khan}{Khan}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_khan_a79a30f115d790514c7cc0a9358cd87e8}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_khan}{Khan}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_khan_a55cf1869a74cd56f914114099ccf273a}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_khan_a1292c1c0e90db242858b9b01409a34fd}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_khan}{Khan}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_khan_a92212b89df9fd7aaf5cdad8c6dcb8b62}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_khan}{Khan}}. \end{DoxyCompactList}\item 
+virtual Real \mbox{\hyperlink{class_khan_a39ae5374e2c78858b5513b28da91d09b}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_khan_a69c60866c1f55de82583eb068eb25561}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_khan}{Khan}} $\ast$ \mbox{\hyperlink{class_khan_af9c6a866feaf0a3cc173052660ceaaf8}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de \mbox{\hyperlink{class_khan}{Khan}} 
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_khan}{Khan}}.
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ _K2 $, cujas fórmulas são as seguintes\+: {\itshape EDITAR, CASO HAJA NECESSIDADE} \textbackslash{}begin\{align\} \mbox{[}q = q\+\_\+\{max\}\textbackslash{}frac\{K\+\_\+1C\}\{(1+K\+\_\+1)\textbackslash{}\+K\+\_\+2\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000031}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_khan_a15a05f14eb1ba539c357b241ac113f9c}\label{class_khan_a15a05f14eb1ba539c357b241ac113f9c}} 
+\index{Khan@{Khan}!Khan@{Khan}}
+\index{Khan@{Khan}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{Khan()}{Khan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Khan\+::\+Khan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_khan}{Khan}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_khan_ac8becbde53dbce130b0dd547a67562d0}\label{class_khan_ac8becbde53dbce130b0dd547a67562d0}} 
+\index{Khan@{Khan}!Khan@{Khan}}
+\index{Khan@{Khan}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{Khan()}{Khan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Khan\+::\+Khan (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_khan}{Khan}} \&}]{\+\_\+khan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_khan}{Khan}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_khan}{Khan}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_khan}{Khan}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_khan_a655a8eaa11e256cd5a888d572648bfa2}\label{class_khan_a655a8eaa11e256cd5a888d572648bfa2}} 
+\index{Khan@{Khan}!Khan@{Khan}}
+\index{Khan@{Khan}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{Khan()}{Khan()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Khan\+::\+Khan (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_khan}{Khan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_khan_a49f3e068f7804051bfa667e6e4038f0b}{K1}}(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_khan_a79a30f115d790514c7cc0a9358cd87e8}{K2}}(1.0);}
+\DoxyCodeLine{\mbox{\hyperlink{class_khan}{Khan}}  var1(Q1, \mbox{\hyperlink{class_khan_a49f3e068f7804051bfa667e6e4038f0b}{K1}}, \mbox{\hyperlink{class_khan_a79a30f115d790514c7cc0a9358cd87e8}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de \mbox{\hyperlink{class_khan}{Khan}}. \\
+\hline
+{\em \+\_\+k2} & Constante do expoente da isoterma de \mbox{\hyperlink{class_khan}{Khan}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_khan_af9c6a866feaf0a3cc173052660ceaaf8}\label{class_khan_af9c6a866feaf0a3cc173052660ceaaf8}} 
+\index{Khan@{Khan}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_khan}{Khan}} $\ast$ Khan\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_khan_ae2a9e2b53b26890ffad4d931537c411e}\label{class_khan_ae2a9e2b53b26890ffad4d931537c411e}} 
+\index{Khan@{Khan}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Khan\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Khan\char`\"{}}]{,  }\item[{ID\+::\+Khan}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_khan_a49f3e068f7804051bfa667e6e4038f0b}\label{class_khan_a49f3e068f7804051bfa667e6e4038f0b}} 
+\index{Khan@{Khan}!K1@{K1}}
+\index{K1@{K1}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Khan\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_khan}{Khan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_khan}{Khan}}  var1(QMAX, \mbox{\hyperlink{class_khan_a49f3e068f7804051bfa667e6e4038f0b}{K1}}, \mbox{\hyperlink{class_khan_a79a30f115d790514c7cc0a9358cd87e8}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_khan}{Khan}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_khan_a1292c1c0e90db242858b9b01409a34fd}\label{class_khan_a1292c1c0e90db242858b9b01409a34fd}} 
+\index{Khan@{Khan}!K1@{K1}}
+\index{K1@{K1}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Khan\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_khan}{Khan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_khan}{Khan}}  var1(QMAX, \mbox{\hyperlink{class_khan_a49f3e068f7804051bfa667e6e4038f0b}{K1}}, \mbox{\hyperlink{class_khan_a79a30f115d790514c7cc0a9358cd87e8}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de \mbox{\hyperlink{class_khan}{Khan}} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_khan_a79a30f115d790514c7cc0a9358cd87e8}\label{class_khan_a79a30f115d790514c7cc0a9358cd87e8}} 
+\index{Khan@{Khan}!K2@{K2}}
+\index{K2@{K2}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Khan\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_khan}{Khan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_khan}{Khan}}  var1(QMAX, \mbox{\hyperlink{class_khan_a49f3e068f7804051bfa667e6e4038f0b}{K1}}, \mbox{\hyperlink{class_khan_a79a30f115d790514c7cc0a9358cd87e8}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do expoente da isoterma de \mbox{\hyperlink{class_khan}{Khan}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_khan_a92212b89df9fd7aaf5cdad8c6dcb8b62}\label{class_khan_a92212b89df9fd7aaf5cdad8c6dcb8b62}} 
+\index{Khan@{Khan}!K2@{K2}}
+\index{K2@{K2}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Khan\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_khan}{Khan}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_khan}{Khan}}  var1(QMAX, \mbox{\hyperlink{class_khan_a49f3e068f7804051bfa667e6e4038f0b}{K1}}, \mbox{\hyperlink{class_khan_a79a30f115d790514c7cc0a9358cd87e8}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor do expoente da isoterma de \mbox{\hyperlink{class_khan}{Khan}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_khan_a08fc1504641daa3743b95ea05b6fd0c9}\label{class_khan_a08fc1504641daa3743b95ea05b6fd0c9}} 
+\index{Khan@{Khan}!operator=@{operator=}}
+\index{operator=@{operator=}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_khan}{Khan}} \& Khan\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_khan}{Khan}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_khan}{Khan}}  var1(QMAX, \mbox{\hyperlink{class_khan_a49f3e068f7804051bfa667e6e4038f0b}{K1}}, \mbox{\hyperlink{class_khan_a79a30f115d790514c7cc0a9358cd87e8}{K2}});}
+\DoxyCodeLine{\mbox{\hyperlink{class_khan}{Khan}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_khan}{Khan}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_khan_a39ae5374e2c78858b5513b28da91d09b}\label{class_khan_a39ae5374e2c78858b5513b28da91d09b}} 
+\index{Khan@{Khan}!Qe@{Qe}}
+\index{Qe@{Qe}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Khan\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_khan}{Khan}}  var1(QMAX, \mbox{\hyperlink{class_khan_a49f3e068f7804051bfa667e6e4038f0b}{K1}}, \mbox{\hyperlink{class_khan_a79a30f115d790514c7cc0a9358cd87e8}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_khan_a69c60866c1f55de82583eb068eb25561}\label{class_khan_a69c60866c1f55de82583eb068eb25561}} 
+\index{Khan@{Khan}!Qe@{Qe}}
+\index{Qe@{Qe}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Khan\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_khan_a252ef55831bb0b7ded6c297d758f476b}\label{class_khan_a252ef55831bb0b7ded6c297d758f476b}} 
+\index{Khan@{Khan}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Khan\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_khan}{Khan}}  var1(QMAX, \mbox{\hyperlink{class_khan_a49f3e068f7804051bfa667e6e4038f0b}{K1}}, \mbox{\hyperlink{class_khan_a79a30f115d790514c7cc0a9358cd87e8}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_khan_a55cf1869a74cd56f914114099ccf273a}\label{class_khan_a55cf1869a74cd56f914114099ccf273a}} 
+\index{Khan@{Khan}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!Khan@{Khan}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Khan\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill}{Hill}}  var1(QMAX, \mbox{\hyperlink{class_khan_a49f3e068f7804051bfa667e6e4038f0b}{K1}}, \mbox{\hyperlink{class_khan_a79a30f115d790514c7cc0a9358cd87e8}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qm} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_khan_8h}{Khan.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Khan.\+cpp\end{DoxyCompactItemize}

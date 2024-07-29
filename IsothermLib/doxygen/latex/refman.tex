@@ -1,0 +1,373 @@
+  % Handle batch mode
+  % to overcome problems with too many open files
+  \let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}
+  % Set document class depending on configuration
+  \documentclass[twoside]{book}
+  %% moved from doxygen.sty due to workaround for LaTex 2019 version and unmaintained tabu package
+  \usepackage{ifthen}
+  \ifx\requestedLaTeXdate\undefined
+    \usepackage{array}
+  \else
+    \usepackage{array}[=2016-10-06]
+  \fi
+  %%
+  % Packages required by doxygen
+  \usepackage{fixltx2e} % for \textsubscript
+  \usepackage{doxygen}
+  \usepackage{graphicx}
+  \usepackage[utf8]{inputenc}
+  \usepackage{makeidx}
+  \PassOptionsToPackage{warn}{textcomp}
+  \usepackage{textcomp}
+  \usepackage[nointegrals]{wasysym}
+  \usepackage{ifxetex}
+  % NLS support packages
+  \usepackage[brazil]{babel}
+  % Define default fonts
+  % Font selection
+  \usepackage[T1]{fontenc}
+  % set main and monospaced font
+  \usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+  \usepackage{sectsty}
+  \allsectionsfont{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \renewcommand{\DoxyLabelFont}{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+   % Arguments of doxygenemoji:
+   % 1) ':<text>:' form of the emoji, already LaTeX-escaped
+   % 2) file with the name of the emoji without the .png extension
+   % in case image exist use this otherwise use the ':<text>:' form
+   \newcommand{\doxygenemoji}[2]{%
+     \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+   }
+  % Page & text layout
+  \usepackage{geometry}
+  \geometry{%
+    a4paper,%
+    top=2.5cm,%
+    bottom=2.5cm,%
+    left=2.5cm,%
+    right=2.5cm%
+  }
+  % Allow a bit of overflow to go unnoticed by other means
+  \tolerance=750
+  \hfuzz=15pt
+  \hbadness=750
+  \setlength{\emergencystretch}{15pt}
+  \setlength{\parindent}{0cm}
+  \newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+  \newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+  \doxynormalparskip
+  % Redefine paragraph/subparagraph environments, using sectsty fonts
+  \makeatletter
+  \renewcommand{\paragraph}{%
+    \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@parafont%
+    }%
+  }
+  \renewcommand{\subparagraph}{%
+    \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@subparafont%
+    }%
+  }
+  \makeatother
+  \makeatletter
+  \newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+  \makeatother
+  % Headers & footers
+  \usepackage{fancyhdr}
+  \pagestyle{fancyplain}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancypagestyle{fancyplain}{
+    \fancyhf{}
+    \fancyhead[LE, RO]{\bfseries\thepage}
+    \fancyhead[LO]{\bfseries\rightmark}
+    \fancyhead[RE]{\bfseries\leftmark}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize Gerado por Doxygen }
+  }
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize Gerado por Doxygen }
+    \renewcommand{\headrulewidth}{0pt}
+  }
+  \pagestyle{fancyplain}
+  \renewcommand{\chaptermark}[1]{%
+    \markboth{#1}{}%
+  }
+  \renewcommand{\sectionmark}[1]{%
+    \markright{\thesection\ #1}%
+  }
+  % ToC, LoF, LoT, bibliography, and index
+  % Indices & bibliography
+  \usepackage{natbib}
+  \usepackage[titles]{tocloft}
+  \setcounter{tocdepth}{3}
+  \setcounter{secnumdepth}{5}
+  % creating indexes
+  \makeindex
+  \usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+  % Hyperlinks
+    % Hyperlinks (required, but should be loaded last)
+    \ifpdf
+      \usepackage[pdftex,pagebackref=true]{hyperref}
+    \else
+      \ifxetex
+        \usepackage[pagebackref=true]{hyperref}
+      \else
+        \usepackage[ps2pdf,pagebackref=true]{hyperref}
+      \fi
+    \fi
+    \hypersetup{%
+      colorlinks=true,%
+      linkcolor=blue,%
+      citecolor=blue,%
+      unicode,%
+      pdftitle={Isotherm++},%
+      pdfsubject={}%
+    }
+  % Custom commands used by the header
+  % Custom commands
+  \newcommand{\clearemptydoublepage}{%
+    \newpage{\pagestyle{empty}\cleardoublepage}%
+  }
+  % caption style definition
+  \usepackage{caption}
+  \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+  % in page table of contents
+  \usepackage{etoc}
+  \etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+  % prevent numbers overlap the titles in toc
+  \renewcommand{\numberline}[1]{#1~}
+% End of preamble, now comes the document contents
+%===== C O N T E N T S =====
+\begin{document}
+  \raggedbottom
+  % Titlepage & ToC
+    % To avoid duplicate page anchors due to reuse of same numbers for
+    % the index (be it as roman numbers)
+    \hypersetup{pageanchor=false,
+                bookmarksnumbered=true,
+                pdfencoding=unicode
+               }
+  \pagenumbering{alph}
+  \begin{titlepage}
+  \vspace*{7cm}
+  \begin{center}%
+  {\Large Isotherm++}\\
+  \vspace*{1cm}
+  {\large Gerado por Doxygen 1.9.4}\\
+  \end{center}
+  \end{titlepage}
+  \clearemptydoublepage
+  \pagenumbering{roman}
+  \tableofcontents
+  \clearemptydoublepage
+  \pagenumbering{arabic}
+  % re-enable anchors again
+  \hypersetup{pageanchor=true}
+%--- Begin generated contents ---
+\chapter{Documentacao da Biblioteca Isotherm++}
+\label{index}\hypertarget{index}{}\input{index}
+\chapter{Lista de Bugs}
+\label{bug}
+\Hypertarget{bug}
+\input{bug}
+\chapter{Índice dos Módulos}
+\input{modules}
+\chapter{Índice Hierárquico}
+\input{hierarchy}
+\chapter{Índice dos Componentes}
+\input{annotated}
+\chapter{Índice dos Arquivos}
+\input{files}
+\chapter{Módulos}
+\input{group___isotherm}
+\input{group___isotherm_template}
+\input{group___five_parameters}
+\input{group___frenkel_halsey_hill}
+\input{group___four_parameters}
+\input{group___fritz_schlunder_i_v}
+\input{group___henry}
+\input{group___one_parameter}
+\input{group___three_parameters}
+\input{group___vieth_sladek}
+\input{group___dubinin_radushkevich}
+\input{group___elovich}
+\input{group___freundlich}
+\input{group___halsey}
+\input{group___harkin_jura}
+\input{group___jovanovic}
+\input{group___langmuir}
+\input{group___temkin}
+\input{group___two_parameters}
+\input{group___configure}
+\input{group___miscel_xC3_xA2nea}
+\input{group___one___parameter}
+\input{group___two___parameters}
+\input{group___three___parameters}
+\input{group___four___parameters}
+\input{group___five___parameters}
+\input{group___base}
+\input{group___i_d}
+\input{group___misc}
+\input{group___newton_raphson}
+\input{group___source_info}
+\input{group___type}
+\chapter{Classes}
+\input{class_brouers_sotolongo}
+\input{class_brunauer_emmett_teller}
+\input{class_dubinin_radushkevich}
+\input{class_elovich}
+\input{class_five_parameters}
+\input{class_four_parameters}
+\input{class_fowler}
+\input{class_fowler_guggenheim}
+\input{class_frenkel_halsey_hill}
+\input{class_freundlich}
+\input{class_fritz}
+\input{class_fritz_schlunder}
+\input{class_fritz_schlunder_i_v}
+\input{class_fritz_schlunder_v}
+\input{class_halsey}
+\input{class_harkin_jura}
+\input{class_henderson}
+\input{class_henry}
+\input{class_hill}
+\input{class_hill_deboer}
+\input{class_holl_krich}
+\input{class_i_d}
+\input{class_iso_exception}
+\input{class_isotherm}
+\input{class_isotherm_template}
+\input{class_jossens}
+\input{class_jovanovic}
+\input{class_khan}
+\input{class_kiselev}
+\input{class_koble}
+\input{class_koble_corrigan}
+\input{class_langmuir}
+\input{class_langmuir_freundlich}
+\input{class_langmuir_jovanovic}
+\input{class_mac_millan_teller}
+\input{class_one_parameter}
+\input{class_radke_prausnits_i}
+\input{class_radke_prausnits_i_i}
+\input{class_radke_prausnits_i_i_i}
+\input{class_redlich}
+\input{class_redlich_peterson}
+\input{class_sips}
+\input{class_source_info}
+\input{class_temkin}
+\input{class_three_parameters}
+\input{class_toth}
+\input{class_two_parameters}
+\input{class_unilan}
+\input{class_valenzuela}
+\input{class_valenzuela_myers}
+\input{class_vieth_sladek}
+\chapter{Arquivos}
+\input{_iso_exception_8h}
+\input{_iso_exception_8h_source}
+\input{_isotherm_error_8h_source}
+\input{_isotherm_8h_source}
+\input{_five_parameters_8h_source}
+\input{_frenkel_halsey_hill_8h_source}
+\input{_fritz_schlunder_v_8h}
+\input{_fritz_schlunder_v_8h_source}
+\input{_four_parameters_8h_source}
+\input{_fritz_schlunder_i_v_8h_source}
+\input{_henry_8h_source}
+\input{_one_parameter_8h_source}
+\input{_brouers_sotolongo_8h_source}
+\input{_brunauer_emmett_teller_8h}
+\input{_brunauer_emmett_teller_8h_source}
+\input{_fowler_guggenheim_8h}
+\input{_fowler_guggenheim_8h_source}
+\input{_fritz_schlunder_8h}
+\input{_fritz_schlunder_8h_source}
+\input{_henderson_8h}
+\input{_henderson_8h_source}
+\input{_hill_8h}
+\input{_hill_8h_source}
+\input{_hill_de_boer_8h}
+\input{_hill_de_boer_8h_source}
+\input{_holl_krich_8h}
+\input{_holl_krich_8h_source}
+\input{_jossens_8h}
+\input{_jossens_8h_source}
+\input{_khan_8h}
+\input{_khan_8h_source}
+\input{_kiselev_8h}
+\input{_kiselev_8h_source}
+\input{_koble_corrigan_8h}
+\input{_koble_corrigan_8h_source}
+\input{_langmuir_freundlich_8h}
+\input{_langmuir_freundlich_8h_source}
+\input{_langmuir_jovanovic_8h}
+\input{_langmuir_jovanovic_8h_source}
+\input{_mac_millan_teller_8h}
+\input{_mac_millan_teller_8h_source}
+\input{_radke_prausnits_i_8h}
+\input{_radke_prausnits_i_8h_source}
+\input{_radke_prausnits_i_i_8h}
+\input{_radke_prausnits_i_i_8h_source}
+\input{_radke_prausnits_i_i_i_8h}
+\input{_radke_prausnits_i_i_i_8h_source}
+\input{_redlich_peterson_8h}
+\input{_redlich_peterson_8h_source}
+\input{_sips_8h}
+\input{_sips_8h_source}
+\input{_three_parameters_8h_source}
+\input{_toth_8h}
+\input{_toth_8h_source}
+\input{_unilan_8h}
+\input{_unilan_8h_source}
+\input{_valenzuela_myers_8h}
+\input{_valenzuela_myers_8h_source}
+\input{_vieth_sladek_8h_source}
+\input{_dubinin_radushkevich_8h_source}
+\input{_elovich_8h_source}
+\input{_freundlich_8h_source}
+\input{_halsey_8h_source}
+\input{_harkin_jura_8h_source}
+\input{_jovanovic_8h_source}
+\input{_langmuir_8h_source}
+\input{_temkin_8h_source}
+\input{_two_parameters_8h_source}
+\input{_configure_8h_source}
+\input{_group_8h_source}
+\input{_i_d_8h_source}
+\input{_misc_8h_source}
+\input{_newton_raphson_8h_source}
+\input{_source_info_8h_source}
+\input{_type_8h_source}
+\chapter{Exemplos}
+\input{_teste_henry_8cpp-example}
+\input{_teste_dubinin_radushkevich_8cpp-example}
+\input{_teste_elovich_8cpp-example}
+\input{_teste_freundlich_8cpp-example}
+\input{_teste_halsey_8cpp-example}
+\input{_teste_harkin_jura_8cpp-example}
+\input{_teste_jovanovic_8cpp-example}
+\input{_teste_langmuir_8cpp-example}
+\input{_teste_temkin_8cpp-example}
+%--- End generated contents ---
+% Index
+  \backmatter
+  \newpage
+  \phantomsection
+  \clearemptydoublepage
+  \addcontentsline{toc}{chapter}{\indexname}
+  \printindex
+% Required for some languages (in combination with latexdocumentpre from the header)
+\end{document}

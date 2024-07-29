@@ -1,0 +1,427 @@
+\hypertarget{class_brouers_sotolongo}{}\doxysection{Referência da Classe Brouers\+Sotolongo}
+\label{class_brouers_sotolongo}\index{BrouersSotolongo@{BrouersSotolongo}}
+
+
+Classe com as equações da isoterma de Brouers -\/ Sotolongo.  
+
+
+
+
+{\ttfamily \#include $<$Brouers\+Sotolongo.\+h$>$}
+
+Diagrama de hierarquia para Brouers\+Sotolongo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_brouers_sotolongo}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_brouers_sotolongo_aeffbeda6ef12302ffd34095d8882610d}{Define\+Identity}} (\char`\"{}Brouers -\/ Sotolongo\char`\"{}, ID\+::\+Brouers\+Sotolongo)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_brouers_sotolongo_aa38e16d882b5857a5dac964274eec797}{Brouers\+Sotolongo}} ()=default
+\item 
+\mbox{\hyperlink{class_brouers_sotolongo_a3604b9e4f681bacb4030fced79c3c886}{Brouers\+Sotolongo}} (const \mbox{\hyperlink{class_brouers_sotolongo}{Brouers\+Sotolongo}} \&\+\_\+brouers\+\_\+sotolongo)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_brouers_sotolongo_a119b11e027fd098f0e487b2edc88e465}\label{class_brouers_sotolongo_a119b11e027fd098f0e487b2edc88e465}} 
+virtual {\bfseries $\sim$\+Brouers\+Sotolongo} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_brouers_sotolongo_a8112eccfecb30603fc2df9ab2bb0bdff}{Brouers\+Sotolongo}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de Brouers -\/ Sotolongo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_brouers_sotolongo}{Brouers\+Sotolongo}} \& \mbox{\hyperlink{class_brouers_sotolongo_a373170bf50254a8d6750ba30b5ba3538}{operator=}} (const \mbox{\hyperlink{class_brouers_sotolongo}{Brouers\+Sotolongo}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_brouers_sotolongo_a6958e48dd104688ebec1aaf547aaf87d}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de Brouers -\/ Sotolongo. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o parâmetro da equação de Brouers -\/ Sotolongo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_brouers_sotolongo_aa88c8709e71a72e2553b68912f3f574b}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_brouers_sotolongo_a8f10eb8ffb68d10681292108cb512f53}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante da isoterma de Brouers -\/ Sotolongo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_brouers_sotolongo_a4c0a80664fc9d7871e996ebe26fd69ae}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor associado a constante da isoterma de Brouers -\/ Sotolongo. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_brouers_sotolongo_a510b0afa00be1d323df1ccca54cee0c2}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_brouers_sotolongo_a8805291443765193ddedb283aa1f1dbd}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_brouers_sotolongo}{Brouers\+Sotolongo}} $\ast$ \mbox{\hyperlink{class_brouers_sotolongo_a1c385480eb698238aab4fc97cc544a20}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de Brouers -\/ Sotolongo. 
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} Q\+\_\+e(\+C\+\_\+e) = q\+\_\+\{max\}\mbox{[}1-\/e$^\wedge$\{-\/K\+\_\+1\+C\+\_\+e$^\wedge$\{K\+\_\+2\}\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1177/0263617416670909}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000013}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_brouers_sotolongo_aa38e16d882b5857a5dac964274eec797}\label{class_brouers_sotolongo_aa38e16d882b5857a5dac964274eec797}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!BrouersSotolongo@{BrouersSotolongo}}
+\index{BrouersSotolongo@{BrouersSotolongo}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{BrouersSotolongo()}{BrouersSotolongo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Brouers\+Sotolongo\+::\+Brouers\+Sotolongo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_brouers_sotolongo_a3604b9e4f681bacb4030fced79c3c886}\label{class_brouers_sotolongo_a3604b9e4f681bacb4030fced79c3c886}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!BrouersSotolongo@{BrouersSotolongo}}
+\index{BrouersSotolongo@{BrouersSotolongo}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{BrouersSotolongo()}{BrouersSotolongo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Brouers\+Sotolongo\+::\+Brouers\+Sotolongo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_brouers_sotolongo}{Brouers\+Sotolongo}} \&}]{\+\_\+brouers\+\_\+sotolongo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo Brouers -\/ Sotolongo original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_brouers_sotolongo_a8112eccfecb30603fc2df9ab2bb0bdff}\label{class_brouers_sotolongo_a8112eccfecb30603fc2df9ab2bb0bdff}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!BrouersSotolongo@{BrouersSotolongo}}
+\index{BrouersSotolongo@{BrouersSotolongo}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{BrouersSotolongo()}{BrouersSotolongo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Brouers\+Sotolongo\+::\+Brouers\+Sotolongo (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de Brouers -\/ Sotolongo. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}{K1}}(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}{K2}}(1.0);}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(Q1, \mbox{\hyperlink{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}{K1}}, \mbox{\hyperlink{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de Brouers -\/ Sotolongo. \\
+\hline
+{\em \+\_\+k2} & Constante da isoterma de Brouers -\/ Sotolongo. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_brouers_sotolongo_a1c385480eb698238aab4fc97cc544a20}\label{class_brouers_sotolongo_a1c385480eb698238aab4fc97cc544a20}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_brouers_sotolongo}{Brouers\+Sotolongo}} $\ast$ Brouers\+Sotolongo\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_brouers_sotolongo_aeffbeda6ef12302ffd34095d8882610d}\label{class_brouers_sotolongo_aeffbeda6ef12302ffd34095d8882610d}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Brouers\+Sotolongo\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Brouers -\/ Sotolongo\char`\"{}}]{,  }\item[{ID\+::\+Brouers\+Sotolongo}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}\label{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!K1@{K1}}
+\index{K1@{K1}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Brouers\+Sotolongo\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de Brouers -\/ Sotolongo. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}  var1(QMAX, \mbox{\hyperlink{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}{K1}}, \mbox{\hyperlink{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de Brouers -\/ Sotolongo. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_brouers_sotolongo_a8f10eb8ffb68d10681292108cb512f53}\label{class_brouers_sotolongo_a8f10eb8ffb68d10681292108cb512f53}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!K1@{K1}}
+\index{K1@{K1}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Brouers\+Sotolongo\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante da isoterma de Brouers -\/ Sotolongo. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}  var1(QMAX, \mbox{\hyperlink{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}{K1}}, \mbox{\hyperlink{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante da isoterma de Brouers -\/ Sotolongo. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}\label{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!K2@{K2}}
+\index{K2@{K2}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Brouers\+Sotolongo\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o parâmetro da equação de Brouers -\/ Sotolongo. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}  var1(QMAX, \mbox{\hyperlink{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}{K1}}, \mbox{\hyperlink{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do parâmetro da equação de Brouers -\/ Sotolongo. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_brouers_sotolongo_a4c0a80664fc9d7871e996ebe26fd69ae}\label{class_brouers_sotolongo_a4c0a80664fc9d7871e996ebe26fd69ae}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!K2@{K2}}
+\index{K2@{K2}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Brouers\+Sotolongo\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor associado a constante da isoterma de Brouers -\/ Sotolongo. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}  var1(QMAX, \mbox{\hyperlink{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}{K1}}, \mbox{\hyperlink{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor associado a constante da isoterma de Brouers -\/ Sotolongo. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_brouers_sotolongo_a373170bf50254a8d6750ba30b5ba3538}\label{class_brouers_sotolongo_a373170bf50254a8d6750ba30b5ba3538}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!operator=@{operator=}}
+\index{operator=@{operator=}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_brouers_sotolongo}{Brouers\+Sotolongo}} \& Brouers\+Sotolongo\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_brouers_sotolongo}{Brouers\+Sotolongo}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}  var1(QMAX, \mbox{\hyperlink{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}{K1}}, \mbox{\hyperlink{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}{K2}});}
+\DoxyCodeLine{\mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo Brouers -\/ Sotolongo original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_brouers_sotolongo_a510b0afa00be1d323df1ccca54cee0c2}\label{class_brouers_sotolongo_a510b0afa00be1d323df1ccca54cee0c2}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!Qe@{Qe}}
+\index{Qe@{Qe}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Brouers\+Sotolongo\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}  var1(QMAX, \mbox{\hyperlink{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}{K1}}, \mbox{\hyperlink{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_brouers_sotolongo_a8805291443765193ddedb283aa1f1dbd}\label{class_brouers_sotolongo_a8805291443765193ddedb283aa1f1dbd}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!Qe@{Qe}}
+\index{Qe@{Qe}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Brouers\+Sotolongo\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_brouers_sotolongo_a6958e48dd104688ebec1aaf547aaf87d}\label{class_brouers_sotolongo_a6958e48dd104688ebec1aaf547aaf87d}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Brouers\+Sotolongo\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}  var1(QMAX, \mbox{\hyperlink{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}{K1}}, \mbox{\hyperlink{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_brouers_sotolongo_aa88c8709e71a72e2553b68912f3f574b}\label{class_brouers_sotolongo_aa88c8709e71a72e2553b68912f3f574b}} 
+\index{BrouersSotolongo@{BrouersSotolongo}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!BrouersSotolongo@{BrouersSotolongo}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Brouers\+Sotolongo\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_brouers_sotolongo}{BrouersSotolongo}}  var1(QMAX, \mbox{\hyperlink{class_brouers_sotolongo_a8661c559b515d7b05ef045e60b07447a}{K1}}, \mbox{\hyperlink{class_brouers_sotolongo_a78eb6888a1eb21ccacf7044ccaa26270}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/Brouers\+Sotolongo.\+h\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Brouers\+Sotolongo.\+cpp\end{DoxyCompactItemize}

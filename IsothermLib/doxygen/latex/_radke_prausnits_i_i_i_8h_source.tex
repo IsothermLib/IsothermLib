@@ -1,0 +1,138 @@
+\hypertarget{_radke_prausnits_i_i_i_8h_source}{}\doxysection{Radke\+Prausnits\+III.\+h}
+\label{_radke_prausnits_i_i_i_8h_source}\index{IsothermLib/include/Isotherm/ThreeParameters/RadkePrausnitsIII.h@{IsothermLib/include/Isotherm/ThreeParameters/RadkePrausnitsIII.h}}
+\mbox{\hyperlink{_radke_prausnits_i_i_i_8h}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// Name        : RadkePrausnitsIII.h}}
+\DoxyCodeLine{3 \textcolor{comment}{// Author      : Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{4 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{5 \textcolor{comment}{// Description : Classe com as equações da isoterma de Radke-\/Prausnits III}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 \textcolor{comment}{// Copyright   : Copyright (C) <2021>  Joao Flavio Vasconcellos}}
+\DoxyCodeLine{8 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{9 \textcolor{comment}{//}}
+\DoxyCodeLine{10 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{11 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{12 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{13 \textcolor{comment}{//}}
+\DoxyCodeLine{14 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{15 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{16 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{17 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{18 \textcolor{comment}{//}}
+\DoxyCodeLine{19 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{20 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{21 \textcolor{comment}{//}}
+\DoxyCodeLine{22 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#ifndef \_\_RADKE\_PRAUSNITS\_III\_H\_\_}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define \_\_RADKE\_PRAUSNITS\_III\_H\_\_}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{39 \textcolor{comment}{// opção de debug}}
+\DoxyCodeLine{40 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{comment}{//\#define \_\_RADKE\_PRAUSNITS\_III\_DEBUG\_H\_\_}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{45 \textcolor{comment}{// include da biblioteca c++}}
+\DoxyCodeLine{46 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{51 \textcolor{comment}{// include da isotherm++}}
+\DoxyCodeLine{52 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#include <Isotherm/ThreeParameters/ThreeParameters.h>}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{class }\mbox{\hyperlink{class_radke_prausnits_i_i_i}{RadkePrausnitsIII}} :  \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_three_parameters}{ThreeParameters}},}
+\DoxyCodeLine{75               \textcolor{keyword}{public} \mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} < RadkePrausnitsIII > \{}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{79 \textcolor{comment}{// ID da classe}}
+\DoxyCodeLine{80 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{keyword}{public}:}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \mbox{\hyperlink{class_radke_prausnits_i_i_i_ae1a82ad526cc0bb7bda7a5a5dc5b8791}{DefineIdentity}}(\textcolor{stringliteral}{"{}RadkePrausnitsIII"{}}, ID::RadkePrausnitsIII);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{93 \textcolor{comment}{// Funções Construtoras/Destrutora}}
+\DoxyCodeLine{94 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{keyword}{public}:}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{108     \mbox{\hyperlink{class_radke_prausnits_i_i_i_a77ef6d983e78937e320c5aec0937ca79}{RadkePrausnitsIII}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{121     \mbox{\hyperlink{class_radke_prausnits_i_i_i_aed1c3596602775fa7f146ace18d3e650}{RadkePrausnitsIII}} (\textcolor{keyword}{const} \mbox{\hyperlink{class_radke_prausnits_i_i_i}{RadkePrausnitsIII}}\& radkeprausnitsiii) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{126     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_radke_prausnits_i_i_i_a823ec277632af69fbe44bc97e2adc2d6}{\string~RadkePrausnitsIII}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{146     \mbox{\hyperlink{class_radke_prausnits_i_i_i_a77ef6d983e78937e320c5aec0937ca79}{RadkePrausnitsIII}} (\textcolor{keyword}{const} Real\&, \textcolor{keyword}{const} Real\&, \textcolor{keyword}{const} Real\&);}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{149 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{150 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 \textcolor{keyword}{public}:}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 }
+\DoxyCodeLine{167     \mbox{\hyperlink{class_radke_prausnits_i_i_i}{RadkePrausnitsIII}}\& \mbox{\hyperlink{class_radke_prausnits_i_i_i_a2711387ecc18be7cac22ef20a566e743}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_radke_prausnits_i_i_i}{RadkePrausnitsIII}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{170 \textcolor{comment}{// Acesso as constantes da classe}}
+\DoxyCodeLine{171 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{185 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_radke_prausnits_i_i_i_a27da12cd6f71385060bdd87228c13b4a}{Qmax}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0);\};}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 }
+\DoxyCodeLine{200 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_radke_prausnits_i_i_i_a498aea2b70c206c1af0ea01ccedf37f6}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1);\};}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{214 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_radke_prausnits_i_i_i_a3769c1efe5289d4e8f50847d00a72d5d}{K2}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2);\};}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{217 \textcolor{comment}{// Alterando as constantes da classe}}
+\DoxyCodeLine{218 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{233      \textcolor{keywordtype}{void} \mbox{\hyperlink{class_radke_prausnits_i_i_i_aeeac5606a650f6d22076acb0ae3fa1ab}{Qmax}} (\textcolor{keyword}{const} Real\& \_qmax)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_radke_prausnits_i_i_i_a77ef6d983e78937e320c5aec0937ca79}{RadkePrausnitsIII}}(\_qmax, \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1), \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2));\};}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{248     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_radke_prausnits_i_i_i_a02dcf2bfc3304d42bbdfe65396659cab}{K1}} (\textcolor{keyword}{const} Real\& \_k1)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_radke_prausnits_i_i_i_a77ef6d983e78937e320c5aec0937ca79}{RadkePrausnitsIII}}(\mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), \_k1,  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2));\};}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{263     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_radke_prausnits_i_i_i_afa6b16a75f3c49f704ad8aed179ed06c}{K2}} (\textcolor{keyword}{const} Real\& \_k2)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_radke_prausnits_i_i_i_a77ef6d983e78937e320c5aec0937ca79}{RadkePrausnitsIII}}(\mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1),  \_k2);\};}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{267 \textcolor{comment}{// Funções virtuais}}
+\DoxyCodeLine{268 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{284  [[nodiscard]] Real \mbox{\hyperlink{class_radke_prausnits_i_i_i_a559d3eca843a5f25b1726e291e0e495a}{Qe}} (\textcolor{keyword}{const} Real\&, \textcolor{keyword}{const} Real\&) \textcolor{keyword}{const};}
+\DoxyCodeLine{285  }
+\DoxyCodeLine{286     [[nodiscard]] }
+\DoxyCodeLine{287     \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_radke_prausnits_i_i_i_a559d3eca843a5f25b1726e291e0e495a}{Qe}}   (   \textcolor{keyword}{const} Real\& \_c}
+\DoxyCodeLine{288     )\textcolor{keyword}{ const override}}
+\DoxyCodeLine{289 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{290         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_radke_prausnits_i_i_i_a559d3eca843a5f25b1726e291e0e495a}{Qe}}(\_c, 0);}
+\DoxyCodeLine{291     \}}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294 }
+\DoxyCodeLine{295     [[nodiscard]] }
+\DoxyCodeLine{296     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_radke_prausnits_i_i_i}{RadkePrausnitsIII}}* CloneImplementation()\textcolor{keyword}{ const override}}
+\DoxyCodeLine{297 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{298         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_radke_prausnits_i_i_i_a77ef6d983e78937e320c5aec0937ca79}{RadkePrausnitsIII}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{299     \}}
+\DoxyCodeLine{300 \};}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{302 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_RADKE\_PRAUSNITS\_III\_H\_\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

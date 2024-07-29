@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Isotherm++: Código-Fonte de IsothermLib/include/Isotherm/ThreeParameters/ViethSladek.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Isotherm++<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_3393ec37890ad9b3a7885029fce22598.html">IsothermLib</a></li><li class="navelem"><a class="el" href="dir_dbbde0c145412e2fe2852ce43eb851e2.html">include</a></li><li class="navelem"><a class="el" href="dir_f6e7fadfa303d2c82893c0cc076b5910.html">Isotherm</a></li><li class="navelem"><a class="el" href="dir_754fa93696d621a11f88f4c224f1beb2.html">ThreeParameters</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ViethSladek.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Name        : ViethSladek.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Authors     : Lara Botelho Brum</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//               Luan Rodrigues Soares de Souza</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//               Joao Flavio Vieira de Vasconcellos</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// Version     : 1.0</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// Description : Classe com as equações da isoterma de Vieth-Sladek</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Copyright   : Copyright (C) &lt;2021&gt;  Joao Flavio Vasconcellos </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//                                      (jflavio at iprj.uerj.br)</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// the Free Software Foundation, either version 3 of the License.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// GNU General Public License for more details.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#ifndef __VIETH_SLADEK_H__</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#define __VIETH_SLADEK_H__</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// opção de debug</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">//#define __VIETH_SLADEK_DEBUG_H__</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">// include da biblioteca c++</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">// include da isotherm++</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#include &lt;Isotherm/ThreeParameters/ThreeParameters.h&gt;</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><a class="code hl_define" href="group___configure.html#ga1e3e0e0eca304ffc8364100b22724d21">IST_NAMESPACE_OPEN</a></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_vieth_sladek.html">   71</a></span><span class="keyword">class </span><a class="code hl_class" href="class_vieth_sladek.html">ViethSladek</a> :  <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="class_three_parameters.html">ThreeParameters</a>, </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>              <span class="keyword">public</span> <a class="code hl_class" href="class_isotherm_template.html">IsothermTemplate</a> &lt; ViethSladek &gt; {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">// ID da classe</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">public</span>:    </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_vieth_sladek.html#ad80fee76b672d64f912d501e6f57450e">   85</a></span>    <a class="code hl_function" href="class_vieth_sladek.html#ad80fee76b672d64f912d501e6f57450e">DefineIdentity</a>  (   <span class="stringliteral">&quot;Vieth-Sladek&quot;</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    ,   ID::ViethSladek</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    );  </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">// Funções Construtoras/Destrutora</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_vieth_sladek.html#a6f841e24388fd76585a4d2a34df1f625">  106</a></span>    <a class="code hl_function" href="class_vieth_sladek.html#a6f841e24388fd76585a4d2a34df1f625">ViethSladek</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_vieth_sladek.html#a5a598af1f0d826dfdb2aac0f04303949">  119</a></span>    <a class="code hl_function" href="class_vieth_sladek.html#a5a598af1f0d826dfdb2aac0f04303949">ViethSladek</a> (<span class="keyword">const</span> <a class="code hl_class" href="class_vieth_sladek.html">ViethSladek</a>&amp; _vieth_sladek) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_vieth_sladek.html#ad8520454e2277f458043af14743f8f9e">  124</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_vieth_sladek.html#ad8520454e2277f458043af14743f8f9e">~ViethSladek</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <a class="code hl_function" href="class_vieth_sladek.html#a6f841e24388fd76585a4d2a34df1f625">ViethSladek</a> (   <span class="keyword">const</span> Real&amp;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                ,   <span class="keyword">const</span> Real&amp;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                ,   <span class="keyword">const</span> Real&amp;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                );</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">// Sobrecarga de operadores</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="class_vieth_sladek.html#a80e7ae502f98d19e944fb7d28dffb910">  168</a></span>    <a class="code hl_class" href="class_vieth_sladek.html">ViethSladek</a>&amp; <a class="code hl_function" href="class_vieth_sladek.html#a80e7ae502f98d19e944fb7d28dffb910">operator = </a>(<span class="keyword">const</span> <a class="code hl_class" href="class_vieth_sladek.html">ViethSladek</a>&amp; _orig) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment">// Acesso as constantes da classe</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="class_vieth_sladek.html#a858857b85bc8b19c105df1e516f2f5a9">  186</a></span><span class="keyword">inline</span> Real <a class="code hl_function" href="class_vieth_sladek.html#a858857b85bc8b19c105df1e516f2f5a9">Qmax</a> ()<span class="keyword"> const </span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(0);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>};</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="class_vieth_sladek.html#a0d18712acaf9ccea8945b466f014fb8f">  204</a></span><span class="keyword">inline</span> Real <a class="code hl_function" href="class_vieth_sladek.html#a0d18712acaf9ccea8945b466f014fb8f">K1</a> ()<span class="keyword"> const </span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(1);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>};</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="class_vieth_sladek.html#a3beb11c38ceba14c544134f8304643ea">  221</a></span><span class="keyword">inline</span> Real <a class="code hl_function" href="class_vieth_sladek.html#a3beb11c38ceba14c544134f8304643ea">K2</a> ()<span class="keyword"> const </span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordflow">return</span>  <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(2);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>};</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment">// Alterando as constantes da classe</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="class_vieth_sladek.html#a7e984c4ccb55663e072696a7dda6556c">  243</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_vieth_sladek.html#a7e984c4ccb55663e072696a7dda6556c">Qmax</a> (<span class="keyword">const</span> Real&amp; _qmax)  </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>{</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    *<span class="keyword">this</span> = <a class="code hl_function" href="class_vieth_sladek.html#a6f841e24388fd76585a4d2a34df1f625">ViethSladek</a> (_qmax, <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(1), <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(2));</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>};</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="class_vieth_sladek.html#a71cf17f7c19df787c6bb262080fbf1ea">  261</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_vieth_sladek.html#a71cf17f7c19df787c6bb262080fbf1ea">K1</a> (<span class="keyword">const</span> Real&amp; _k1)  </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>{</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    *<span class="keyword">this</span> = <a class="code hl_function" href="class_vieth_sladek.html#a6f841e24388fd76585a4d2a34df1f625">ViethSladek</a> (<a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(0), _k1, <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(2));</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>};</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="class_vieth_sladek.html#a5e3a3cd02ec17d23843c969d061dfea5">  279</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_vieth_sladek.html#a5e3a3cd02ec17d23843c969d061dfea5">K2</a> (<span class="keyword">const</span> Real&amp; _k2)  </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>{</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    *<span class="keyword">this</span> = <a class="code hl_function" href="class_vieth_sladek.html#a6f841e24388fd76585a4d2a34df1f625">ViethSladek</a>(<a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(0), <a class="code hl_function" href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Value</a>(1), _k2);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>};</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="comment">// Funções virtuais</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    [[nodiscard]]  Real <a class="code hl_function" href="class_vieth_sladek.html#add5e0827ca749c89b70d8ad46ae8b8b6">Qe</a> (<span class="keyword">const</span> Real&amp;, <span class="keyword">const</span> Real&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    [[nodiscard]] </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keyword">inline</span> Real <a class="code hl_function" href="class_vieth_sladek.html#add5e0827ca749c89b70d8ad46ae8b8b6">Qe</a>   (   <span class="keyword">const</span> Real&amp; _c</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    )<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class_vieth_sladek.html#add5e0827ca749c89b70d8ad46ae8b8b6">Qe</a>(_c, 0);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    }</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    [[nodiscard]] </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_vieth_sladek.html">ViethSladek</a>* CloneImplementation()<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="class_vieth_sladek.html#a6f841e24388fd76585a4d2a34df1f625">ViethSladek</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    }</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>};</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><a class="code hl_define" href="group___configure.html#ga9804ef63a551808d389310b891356c2a">IST_NAMESPACE_CLOSE</a></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="preprocessor">#endif </span><span class="comment">/* __VIETH_SLADEK_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        </div>
+<div class="ttc" id="aclass_isotherm_template_html"><div class="ttname"><a href="class_isotherm_template.html">IsothermTemplate</a></div><div class="ttdoc">Classe que gerencia o nome e detalhes sobre cada constante dos modelos das isotermas.</div><div class="ttdef"><b>Definition:</b> Isotherm.h:317</div></div>
+<div class="ttc" id="aclass_three_parameters_html"><div class="ttname"><a href="class_three_parameters.html">ThreeParameters</a></div><div class="ttdoc">Classe base para todas as classes com três parâmetros.</div><div class="ttdef"><b>Definition:</b> ThreeParameters.h:56</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html"><div class="ttname"><a href="class_vieth_sladek.html">ViethSladek</a></div><div class="ttdoc">Classe com as equações da isoterma de ViethSladek</div><div class="ttdef"><b>Definition:</b> ViethSladek.h:72</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html_a0d18712acaf9ccea8945b466f014fb8f"><div class="ttname"><a href="class_vieth_sladek.html#a0d18712acaf9ccea8945b466f014fb8f">ViethSladek::K1</a></div><div class="ttdeci">Real K1() const</div><div class="ttdoc">Função que retorna o coeficiente associado a constante de Vieth-Sladek.</div><div class="ttdef"><b>Definition:</b> ViethSladek.h:204</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html_a3beb11c38ceba14c544134f8304643ea"><div class="ttname"><a href="class_vieth_sladek.html#a3beb11c38ceba14c544134f8304643ea">ViethSladek::K2</a></div><div class="ttdeci">Real K2() const</div><div class="ttdoc">Função que retorna o parâmetro da equação de Vieth–Sladek.</div><div class="ttdef"><b>Definition:</b> ViethSladek.h:221</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html_a5a598af1f0d826dfdb2aac0f04303949"><div class="ttname"><a href="class_vieth_sladek.html#a5a598af1f0d826dfdb2aac0f04303949">ViethSladek::ViethSladek</a></div><div class="ttdeci">ViethSladek(const ViethSladek &amp;_vieth_sladek)=default</div><div class="ttdoc">Construtora de cópia.</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html_a5e3a3cd02ec17d23843c969d061dfea5"><div class="ttname"><a href="class_vieth_sladek.html#a5e3a3cd02ec17d23843c969d061dfea5">ViethSladek::K2</a></div><div class="ttdeci">void K2(const Real &amp;_k2)</div><div class="ttdoc">Função para alterar o valor associado ao parâmetro da equação de Vieth–Sladek.</div><div class="ttdef"><b>Definition:</b> ViethSladek.h:279</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html_a6f841e24388fd76585a4d2a34df1f625"><div class="ttname"><a href="class_vieth_sladek.html#a6f841e24388fd76585a4d2a34df1f625">ViethSladek::ViethSladek</a></div><div class="ttdeci">ViethSladek()=default</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html_a71cf17f7c19df787c6bb262080fbf1ea"><div class="ttname"><a href="class_vieth_sladek.html#a71cf17f7c19df787c6bb262080fbf1ea">ViethSladek::K1</a></div><div class="ttdeci">void K1(const Real &amp;_k1)</div><div class="ttdoc">Função que altera o coeficiente associado a constante de equilíbrio de ViethSladek.</div><div class="ttdef"><b>Definition:</b> ViethSladek.h:261</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html_a7e984c4ccb55663e072696a7dda6556c"><div class="ttname"><a href="class_vieth_sladek.html#a7e984c4ccb55663e072696a7dda6556c">ViethSladek::Qmax</a></div><div class="ttdeci">void Qmax(const Real &amp;_qmax)</div><div class="ttdoc">Função para alterar a capacidade maxima de adsorção.</div><div class="ttdef"><b>Definition:</b> ViethSladek.h:243</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html_a80e7ae502f98d19e944fb7d28dffb910"><div class="ttname"><a href="class_vieth_sladek.html#a80e7ae502f98d19e944fb7d28dffb910">ViethSladek::operator=</a></div><div class="ttdeci">ViethSladek &amp; operator=(const ViethSladek &amp;_orig)=default</div><div class="ttdoc">Sobrecarga do operador =.</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html_a858857b85bc8b19c105df1e516f2f5a9"><div class="ttname"><a href="class_vieth_sladek.html#a858857b85bc8b19c105df1e516f2f5a9">ViethSladek::Qmax</a></div><div class="ttdeci">Real Qmax() const</div><div class="ttdoc">Função que informa o valor da capacidade maxima de adsorção.</div><div class="ttdef"><b>Definition:</b> ViethSladek.h:186</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html_ad80fee76b672d64f912d501e6f57450e"><div class="ttname"><a href="class_vieth_sladek.html#ad80fee76b672d64f912d501e6f57450e">ViethSladek::DefineIdentity</a></div><div class="ttdeci">DefineIdentity(&quot;Vieth-Sladek&quot;, ID::ViethSladek)</div><div class="ttdoc">Definição de ID para esta classe para fins de identificação de erros.</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html_ad8520454e2277f458043af14743f8f9e"><div class="ttname"><a href="class_vieth_sladek.html#ad8520454e2277f458043af14743f8f9e">ViethSladek::~ViethSladek</a></div><div class="ttdeci">virtual ~ViethSladek()=default</div><div class="ttdoc">Destrutora.</div></div>
+<div class="ttc" id="aclass_vieth_sladek_html_add5e0827ca749c89b70d8ad46ae8b8b6"><div class="ttname"><a href="class_vieth_sladek.html#add5e0827ca749c89b70d8ad46ae8b8b6">ViethSladek::Qe</a></div><div class="ttdeci">Real Qe(const Real &amp;, const Real &amp;) const</div><div class="ttdoc">Função que calcula a quantidade de sorção no equilíbrio.</div><div class="ttdef"><b>Definition:</b> ViethSladek.cpp:75</div></div>
+<div class="ttc" id="agroup___configure_html_ga1e3e0e0eca304ffc8364100b22724d21"><div class="ttname"><a href="group___configure.html#ga1e3e0e0eca304ffc8364100b22724d21">IST_NAMESPACE_OPEN</a></div><div class="ttdeci">#define IST_NAMESPACE_OPEN</div><div class="ttdoc">Definoção do início namespace da biblioteca Isotherm++</div><div class="ttdef"><b>Definition:</b> Configure.h:63</div></div>
+<div class="ttc" id="agroup___configure_html_ga9804ef63a551808d389310b891356c2a"><div class="ttname"><a href="group___configure.html#ga9804ef63a551808d389310b891356c2a">IST_NAMESPACE_CLOSE</a></div><div class="ttdeci">#define IST_NAMESPACE_CLOSE</div><div class="ttdoc">Definoção do fim namespace da biblioteca Isotherm++</div><div class="ttdef"><b>Definition:</b> Configure.h:66</div></div>
+<div class="ttc" id="agroup___isotherm_template_html_ga66905e5e5db160c8a6d803aed0d6d85c"><div class="ttname"><a href="group___isotherm_template.html#ga66905e5e5db160c8a6d803aed0d6d85c">Isotherm::Value</a></div><div class="ttdeci">const VecReal Value() const</div><div class="ttdoc">Vetor com os coeficientes de qualquer isoterma.</div><div class="ttdef"><b>Definition:</b> Isotherm.h:259</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

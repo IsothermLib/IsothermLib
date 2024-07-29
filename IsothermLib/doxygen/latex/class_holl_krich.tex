@@ -1,0 +1,431 @@
+\hypertarget{class_holl_krich}{}\doxysection{Referência da Classe Holl\+Krich}
+\label{class_holl_krich}\index{HollKrich@{HollKrich}}
+
+
+Classe com as equações da isoterma de Holl-\/\+Krich  
+
+
+
+
+{\ttfamily \#include $<$Holl\+Krich.\+h$>$}
+
+Diagrama de hierarquia para Holl\+Krich\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_holl_krich}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_holl_krich_a9bcf729facf4641eedf99eeec6bc7d6e}{Define\+Identity}} (\char`\"{}Holl\+Krich\char`\"{}, ID\+::\+Holl\+Krich)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_holl_krich_abe7987974cec5a14d26c5fd33e3f011e}{Holl\+Krich}} ()=default
+\item 
+\mbox{\hyperlink{class_holl_krich_a8de8f7af4ac1350d0a4c30fc57603dc5}{Holl\+Krich}} (const \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}} \&\+\_\+hollkrich)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_holl_krich_ab7526ea86b49ba3be53f7faae96727ab}\label{class_holl_krich_ab7526ea86b49ba3be53f7faae96727ab}} 
+virtual {\bfseries $\sim$\+Holl\+Krich} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_holl_krich_ac2362297aa6d643c29b3d99a0a95c990}{Holl\+Krich}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_holl_krich}{Holl\+Krich}} \& \mbox{\hyperlink{class_holl_krich_a03c8200872d8bca1133559b725a15624}{operator=}} (const \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_holl_krich_a3baa8a397ba787b49089801e2e1c603b}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_holl_krich_a80ff7f153b6af86abe323141de5956cf}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_holl_krich_a1ae848b2bbee38897dc8a1d0d61aa7a7}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_holl_krich_a86fffb5a48e6ade8eca303b3fe836129}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. \end{DoxyCompactList}\item 
+virtual Real \mbox{\hyperlink{class_holl_krich_ab935d59d5dc79e7c7a81fd4caa7f1e31}{Qe}} (const Real \&, const Real \&) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_holl_krich_acd8c83827049ec13ca5678171e21c712}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}} $\ast$ \mbox{\hyperlink{class_holl_krich_a93ceb14de71702562c99aa0ee925a057}{Clone\+Implementation}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de Holl-\/\+Krich 
+
+Classe com as equações da isoterma de Holl -\/ Krich.
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e, T) = q\+\_\+\{max\}\textbackslash{}frac\{\{K\+\_\+1\}(C$^\wedge$\{K\+\_\+2\})\}\{1+K\+\_\+1(C$^\wedge$\{K\+\_\+2\})\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000027}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_holl_krich_abe7987974cec5a14d26c5fd33e3f011e}\label{class_holl_krich_abe7987974cec5a14d26c5fd33e3f011e}} 
+\index{HollKrich@{HollKrich}!HollKrich@{HollKrich}}
+\index{HollKrich@{HollKrich}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{HollKrich()}{HollKrich()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Holl\+Krich\+::\+Holl\+Krich (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_holl_krich_a8de8f7af4ac1350d0a4c30fc57603dc5}\label{class_holl_krich_a8de8f7af4ac1350d0a4c30fc57603dc5}} 
+\index{HollKrich@{HollKrich}!HollKrich@{HollKrich}}
+\index{HollKrich@{HollKrich}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{HollKrich()}{HollKrich()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Holl\+Krich\+::\+Holl\+Krich (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}} \&}]{\+\_\+hollkrich }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo Holl-\/\+Krich original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_holl_krich_ac2362297aa6d643c29b3d99a0a95c990}\label{class_holl_krich_ac2362297aa6d643c29b3d99a0a95c990}} 
+\index{HollKrich@{HollKrich}!HollKrich@{HollKrich}}
+\index{HollKrich@{HollKrich}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{HollKrich()}{HollKrich()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Holl\+Krich\+::\+Holl\+Krich (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);                                                           *EDITAR, CASO HAJA NECESSIDADE*}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}{K1}}(1.0);                                                             *EDITAR, CASO HAJA NECESSIDADE*}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}{K2}}(1.0);                                                             *EDITAR, CASO HAJA NECESSIDADE*}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var1(Q1, \mbox{\hyperlink{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}{K1}}, \mbox{\hyperlink{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. {\itshape EDITAR, CASO HAJA NECESSIDADE} \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. {\itshape EDITAR, CASO HAJA NECESSIDADE} \\
+\hline
+{\em \+\_\+k2} & Constante do expoente da isoterma de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. {\itshape EDITAR, CASO HAJA NECESSIDADE} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_holl_krich_a93ceb14de71702562c99aa0ee925a057}\label{class_holl_krich_a93ceb14de71702562c99aa0ee925a057}} 
+\index{HollKrich@{HollKrich}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}} $\ast$ Holl\+Krich\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_holl_krich_a9bcf729facf4641eedf99eeec6bc7d6e}\label{class_holl_krich_a9bcf729facf4641eedf99eeec6bc7d6e}} 
+\index{HollKrich@{HollKrich}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Holl\+Krich\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Holl\+Krich\char`\"{}}]{,  }\item[{ID\+::\+Holl\+Krich}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}\label{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}} 
+\index{HollKrich@{HollKrich}!K1@{K1}}
+\index{K1@{K1}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Holl\+Krich\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var1(QMAX, \mbox{\hyperlink{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}{K1}}, \mbox{\hyperlink{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_holl_krich_a1ae848b2bbee38897dc8a1d0d61aa7a7}\label{class_holl_krich_a1ae848b2bbee38897dc8a1d0d61aa7a7}} 
+\index{HollKrich@{HollKrich}!K1@{K1}}
+\index{K1@{K1}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Holl\+Krich\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var1(QMAX, \mbox{\hyperlink{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}{K1}}, \mbox{\hyperlink{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}\label{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}} 
+\index{HollKrich@{HollKrich}!K2@{K2}}
+\index{K2@{K2}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Holl\+Krich\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var1(QMAX, \mbox{\hyperlink{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}{K1}}, \mbox{\hyperlink{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do expoente da isoterma de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_holl_krich_a86fffb5a48e6ade8eca303b3fe836129}\label{class_holl_krich_a86fffb5a48e6ade8eca303b3fe836129}} 
+\index{HollKrich@{HollKrich}!K2@{K2}}
+\index{K2@{K2}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Holl\+Krich\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var1(QMAX, \mbox{\hyperlink{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}{K1}}, \mbox{\hyperlink{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor do expoente da isoterma de \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_holl_krich_a03c8200872d8bca1133559b725a15624}\label{class_holl_krich_a03c8200872d8bca1133559b725a15624}} 
+\index{HollKrich@{HollKrich}!operator=@{operator=}}
+\index{operator=@{operator=}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}} \& Holl\+Krich\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_holl_krich}{Holl\+Krich}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var1(QMAX, \mbox{\hyperlink{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}{K1}}, \mbox{\hyperlink{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}{K2}});                                              *EDITAR, CASO HAJA NECESSIDADE*}
+\DoxyCodeLine{HillKrich  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo Holl-\/\+Krich original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_holl_krich_ab935d59d5dc79e7c7a81fd4caa7f1e31}\label{class_holl_krich_ab935d59d5dc79e7c7a81fd4caa7f1e31}} 
+\index{HollKrich@{HollKrich}!Qe@{Qe}}
+\index{Qe@{Qe}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Holl\+Krich\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+ce,  }\item[{const Real \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var1(QMAX, \mbox{\hyperlink{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}{K1}}, \mbox{\hyperlink{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_holl_krich_acd8c83827049ec13ca5678171e21c712}\label{class_holl_krich_acd8c83827049ec13ca5678171e21c712}} 
+\index{HollKrich@{HollKrich}!Qe@{Qe}}
+\index{Qe@{Qe}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Holl\+Krich\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_holl_krich_a3baa8a397ba787b49089801e2e1c603b}\label{class_holl_krich_a3baa8a397ba787b49089801e2e1c603b}} 
+\index{HollKrich@{HollKrich}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Holl\+Krich\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var1(QMAX, \mbox{\hyperlink{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}{K1}}, \mbox{\hyperlink{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_holl_krich_a80ff7f153b6af86abe323141de5956cf}\label{class_holl_krich_a80ff7f153b6af86abe323141de5956cf}} 
+\index{HollKrich@{HollKrich}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!HollKrich@{HollKrich}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Holl\+Krich\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_holl_krich}{HollKrich}}  var1(QMAX, \mbox{\hyperlink{class_holl_krich_a4d7fa26f899136660cc0cf4b3fc10c8b}{K1}}, \mbox{\hyperlink{class_holl_krich_a7ce9800b3e2fc12f8006de6ed5dcd6fa}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_holl_krich_8h}{Holl\+Krich.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Holl\+Krich.\+cpp\end{DoxyCompactItemize}

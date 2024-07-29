@@ -1,0 +1,493 @@
+\hypertarget{class_fowler_guggenheim}{}\doxysection{Referência da Classe Fowler\+Guggenheim}
+\label{class_fowler_guggenheim}\index{FowlerGuggenheim@{FowlerGuggenheim}}
+
+
+Classe com as equações da isoterma de \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim  
+
+
+
+
+{\ttfamily \#include $<$Fowler\+Guggenheim.\+h$>$}
+
+Diagrama de hierarquia para Fowler\+Guggenheim\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_fowler_guggenheim}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fowler_guggenheim_ae653765f17d06e615a284677f78a1d74}{Define\+Identity}} (\char`\"{}Fowler -\/ Guggenheim\char`\"{}, ID\+::\+Fowler\+Guggenheim)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fowler_guggenheim_a549adef244506d4b202f5e0441cb76bf}{Fowler\+Guggenheim}} ()=default
+\item 
+\mbox{\hyperlink{class_fowler_guggenheim_a396b7f5f7a4065caef6a1a018019995e}{Fowler\+Guggenheim}} (const \mbox{\hyperlink{class_fowler_guggenheim}{Fowler\+Guggenheim}} \&\+\_\+fowlerguggenheim)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_fowler_guggenheim_acd92219e9178acd80c10e400a7806cd3}\label{class_fowler_guggenheim_acd92219e9178acd80c10e400a7806cd3}} 
+virtual {\bfseries $\sim$\+Fowler\+Guggenheim} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fowler_guggenheim_a2bd1ae809cf248998c36f3429d551d34}{Fowler\+Guggenheim}} (const Real \&\+\_\+qmax, const Real \&\+\_\+k1, const Real \&\+\_\+k2, const Real \&\+\_\+rgas=Isotherm\+::\+RGASCONST)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fowler_guggenheim}{Fowler\+Guggenheim}} \& \mbox{\hyperlink{class_fowler_guggenheim_ae9c028c56270511994e30e525eaa344a}{operator=}} (const \mbox{\hyperlink{class_fowler_guggenheim}{Fowler\+Guggenheim}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_fowler_guggenheim_a3cf850b6553968c19ec0efc995e458d2}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_fowler_guggenheim_a8a6881f17cb78ebdda8e7846d0fa7fa9}{Rgas}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor da constante universal dos gases. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fowler_guggenheim_af105bdedb1c1a51f548c93aabc159932}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fowler_guggenheim_ace5270bd9aa827716daeee2712dc0075}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante de equilíbrio de Fowler-\/\+Guggenheim. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fowler_guggenheim_a22e56a9614a23a29015afc80f1a89803}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor da constante de iteração entre as moléculas adsorvidas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fowler_guggenheim_aea471bcfacd2fb488493e863b057b02a}{Rgas}} (const Real \&\+\_\+rgas)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor da constante universal dos gases. \end{DoxyCompactList}\item 
+virtual Real \mbox{\hyperlink{class_fowler_guggenheim_a6da282311dc60a149486a2a2782faf33}{Qe}} (const Real \&\+\_\+c, const Real \&\+\_\+temp) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_fowler_guggenheim_ab97cb5f9050fc320403b45386f6dee31}{Qe}} (const Real \&\+\_\+c) const override
+\item 
+virtual \mbox{\hyperlink{class_fowler_guggenheim}{Fowler\+Guggenheim}} $\ast$ \mbox{\hyperlink{class_fowler_guggenheim_a52ee242bc10a3adb6b503cc3cf1845c4}{Clone\+Implementation}} () const override
+\item 
+\mbox{\Hypertarget{class_fowler_guggenheim_a97be51e819eeb31770e11c839cbfa184}\label{class_fowler_guggenheim_a97be51e819eeb31770e11c839cbfa184}} 
+Real {\bfseries FQe} (const Real \&) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim 
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}\mbox{[}f(\textbackslash{}theta = K\+\_\+1\+C-\/\textbackslash{}frac\{\textbackslash{}theta\}\{1-\/\textbackslash{}theta\}e$^\wedge$\{\textbackslash{}frac\{K\+\_\+2\textbackslash{}theta\}\{RT\}\}=0\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+João Flávio Vieira de Vasconcellos 
+
+Iasmim Barboza Storck 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000017}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_fowler_guggenheim_a549adef244506d4b202f5e0441cb76bf}\label{class_fowler_guggenheim_a549adef244506d4b202f5e0441cb76bf}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!FowlerGuggenheim@{FowlerGuggenheim}}
+\index{FowlerGuggenheim@{FowlerGuggenheim}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{FowlerGuggenheim()}{FowlerGuggenheim()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Fowler\+Guggenheim\+::\+Fowler\+Guggenheim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fowler_guggenheim_a396b7f5f7a4065caef6a1a018019995e}\label{class_fowler_guggenheim_a396b7f5f7a4065caef6a1a018019995e}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!FowlerGuggenheim@{FowlerGuggenheim}}
+\index{FowlerGuggenheim@{FowlerGuggenheim}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{FowlerGuggenheim()}{FowlerGuggenheim()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Fowler\+Guggenheim\+::\+Fowler\+Guggenheim (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_fowler_guggenheim}{Fowler\+Guggenheim}} \&}]{\+\_\+fowlerguggenheim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_fowler_guggenheim}{Fowler\+Guggenheim}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fowler_guggenheim_a2bd1ae809cf248998c36f3429d551d34}\label{class_fowler_guggenheim_a2bd1ae809cf248998c36f3429d551d34}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!FowlerGuggenheim@{FowlerGuggenheim}}
+\index{FowlerGuggenheim@{FowlerGuggenheim}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{FowlerGuggenheim()}{FowlerGuggenheim()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Fowler\+Guggenheim\+::\+Fowler\+Guggenheim (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax,  }\item[{const Real \&}]{\+\_\+k1,  }\item[{const Real \&}]{\+\_\+k2,  }\item[{const Real \&}]{\+\_\+rgas = {\ttfamily Isotherm\+:\+:RGASCONST} }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}{K1}}(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}{K2}}(1.0);}
+\DoxyCodeLine{\mbox{\hyperlink{class_sips}{Sips}}  var1(Q1, \mbox{\hyperlink{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}{K1}}, \mbox{\hyperlink{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim. \\
+\hline
+{\em \+\_\+k2} & Constante do expoente da isoterma de \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_fowler_guggenheim_a52ee242bc10a3adb6b503cc3cf1845c4}\label{class_fowler_guggenheim_a52ee242bc10a3adb6b503cc3cf1845c4}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_fowler_guggenheim}{Fowler\+Guggenheim}} $\ast$ Fowler\+Guggenheim\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_fowler_guggenheim_ae653765f17d06e615a284677f78a1d74}\label{class_fowler_guggenheim_ae653765f17d06e615a284677f78a1d74}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Fowler\+Guggenheim\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Fowler -\/ Guggenheim\char`\"{}}]{,  }\item[{ID\+::\+Fowler\+Guggenheim}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}\label{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!K1@{K1}}
+\index{K1@{K1}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Fowler\+Guggenheim\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}} var1(QMAX, \mbox{\hyperlink{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}{K1}}, \mbox{\hyperlink{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fowler_guggenheim_ace5270bd9aa827716daeee2712dc0075}\label{class_fowler_guggenheim_ace5270bd9aa827716daeee2712dc0075}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!K1@{K1}}
+\index{K1@{K1}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fowler\+Guggenheim\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante de equilíbrio de Fowler-\/\+Guggenheim. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var1(QMAX, \mbox{\hyperlink{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}{K1}}, \mbox{\hyperlink{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de equilíbrio de Fowler-\/\+Guggenheim. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}\label{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!K2@{K2}}
+\index{K2@{K2}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Fowler\+Guggenheim\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var1(QMAX, \mbox{\hyperlink{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}{K1}}, \mbox{\hyperlink{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do expoente da isoterma de \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fowler_guggenheim_a22e56a9614a23a29015afc80f1a89803}\label{class_fowler_guggenheim_a22e56a9614a23a29015afc80f1a89803}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!K2@{K2}}
+\index{K2@{K2}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fowler\+Guggenheim\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor da constante de iteração entre as moléculas adsorvidas. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var1(QMAX, \mbox{\hyperlink{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}{K1}}, \mbox{\hyperlink{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor da constante de iteração entre as moléculas adsorvidas. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_fowler_guggenheim_ae9c028c56270511994e30e525eaa344a}\label{class_fowler_guggenheim_ae9c028c56270511994e30e525eaa344a}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!operator=@{operator=}}
+\index{operator=@{operator=}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fowler_guggenheim}{Fowler\+Guggenheim}} \& Fowler\+Guggenheim\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_fowler_guggenheim}{Fowler\+Guggenheim}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var1(QMAX, \mbox{\hyperlink{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}{K1}}, \mbox{\hyperlink{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}{K2}});}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_fowler}{Fowler}} -\/ Guggenheim original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fowler_guggenheim_ab97cb5f9050fc320403b45386f6dee31}\label{class_fowler_guggenheim_ab97cb5f9050fc320403b45386f6dee31}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!Qe@{Qe}}
+\index{Qe@{Qe}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Fowler\+Guggenheim\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_fowler_guggenheim_a6da282311dc60a149486a2a2782faf33}\label{class_fowler_guggenheim_a6da282311dc60a149486a2a2782faf33}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!Qe@{Qe}}
+\index{Qe@{Qe}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Real Fowler\+Guggenheim\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+c,  }\item[{const Real \&}]{\+\_\+temp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var1(QMAX, \mbox{\hyperlink{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}{K1}}, \mbox{\hyperlink{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_fowler_guggenheim_a3cf850b6553968c19ec0efc995e458d2}\label{class_fowler_guggenheim_a3cf850b6553968c19ec0efc995e458d2}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Fowler\+Guggenheim\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var1(QMAX, \mbox{\hyperlink{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}{K1}}, \mbox{\hyperlink{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fowler_guggenheim_af105bdedb1c1a51f548c93aabc159932}\label{class_fowler_guggenheim_af105bdedb1c1a51f548c93aabc159932}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fowler\+Guggenheim\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var1(QMAX, \mbox{\hyperlink{class_fowler_guggenheim_a3d65d89dcdf12810673664bcc66115ef}{K1}}, \mbox{\hyperlink{class_fowler_guggenheim_a50df7a84e4decd9f6cf6c1828ba27cca}{K2}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_fowler_guggenheim_a8a6881f17cb78ebdda8e7846d0fa7fa9}\label{class_fowler_guggenheim_a8a6881f17cb78ebdda8e7846d0fa7fa9}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!Rgas@{Rgas}}
+\index{Rgas@{Rgas}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{Rgas()}{Rgas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Fowler\+Guggenheim\+::\+Rgas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor da constante universal dos gases. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var1(q1, k1);}
+\DoxyCodeLine{Real rg = var1.Rgas();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da constante universal dos gases. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fowler_guggenheim_aea471bcfacd2fb488493e863b057b02a}\label{class_fowler_guggenheim_aea471bcfacd2fb488493e863b057b02a}} 
+\index{FowlerGuggenheim@{FowlerGuggenheim}!Rgas@{Rgas}}
+\index{Rgas@{Rgas}!FowlerGuggenheim@{FowlerGuggenheim}}
+\doxysubsubsection{\texorpdfstring{Rgas()}{Rgas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fowler\+Guggenheim\+::\+Rgas (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+rgas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor da constante universal dos gases. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_fowler_guggenheim}{FowlerGuggenheim}}  var1(q1, k1, k2);}
+\DoxyCodeLine{Real rgas(62.363598221529);}
+\DoxyCodeLine{var1.Rgas(rgas);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+rgas} & Novo valor da constante universal dos gases. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+rgas} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_fowler_guggenheim_8h}{Fowler\+Guggenheim.\+h}}\item 
+Isotherm\+Lib/src/\+Isotherm/\+Three\+Parameters/Fowler\+Guggenheim.\+cpp\end{DoxyCompactItemize}

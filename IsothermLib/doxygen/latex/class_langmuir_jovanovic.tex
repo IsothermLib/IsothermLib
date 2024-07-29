@@ -1,0 +1,417 @@
+\hypertarget{class_langmuir_jovanovic}{}\doxysection{Referência da Classe Langmuir\+Jovanovic}
+\label{class_langmuir_jovanovic}\index{LangmuirJovanovic@{LangmuirJovanovic}}
+
+
+Classe com as equações da isoterma de Langmuir-\/\+Jovanovic  
+
+
+
+
+{\ttfamily \#include $<$Langmuir\+Jovanovic.\+h$>$}
+
+Diagrama de hierarquia para Langmuir\+Jovanovic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_langmuir_jovanovic}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_langmuir_jovanovic_aad811993a05686dd22a452db2a5e67c7}{Define\+Identity}} (\char`\"{}Langmuir\+Jovanovic\char`\"{}, ID\+::\+Langmuir\+Jovanovic)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_langmuir_jovanovic_aeea0b5dc9d964b5e5b923d82357c50c8}{Langmuir\+Jovanovic}} ()=default
+\item 
+\mbox{\hyperlink{class_langmuir_jovanovic_ae0b389e55219656628bcc2a67cb6c7d1}{Langmuir\+Jovanovic}} (const \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}} \&\+\_\+langmuir\+\_\+jovanovic)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_langmuir_jovanovic_ae447eed71c8567cac5eb96fbe7413937}\label{class_langmuir_jovanovic_ae447eed71c8567cac5eb96fbe7413937}} 
+virtual {\bfseries $\sim$\+Langmuir\+Jovanovic} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_langmuir_jovanovic_a4756a2f8e703e2f04fdb353155b8be05}{Langmuir\+Jovanovic}} (const Real \&, const Real \&, const Real \&)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}} \& \mbox{\hyperlink{class_langmuir_jovanovic_a636751a093b4c27c2d4e067a3b60ce86}{operator=}} (const \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}} \&)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_langmuir_jovanovic_a1c429a40ee85054772b11dbac89d2d75}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Função que informa o valor da capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. \end{DoxyCompactList}\item 
+Real \mbox{\hyperlink{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}{K2}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_langmuir_jovanovic_aa1a294edc8663d677dd03c96d9c1916c}{Qmax}} (const Real \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Função para alterar a capacidade maxima de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_langmuir_jovanovic_ac168d022d3d8eef9c63867eaaae9912b}{K1}} (const Real \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_langmuir_jovanovic_a5f12899e4721f84a10663d6128e78230}{K2}} (const Real \&\+\_\+k2)
+\begin{DoxyCompactList}\small\item\em Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. \end{DoxyCompactList}\item 
+virtual Real \mbox{\hyperlink{class_langmuir_jovanovic_a6484528ad5b4c4d8ffffa4e6b1956136}{Qe}} (const Real \&, const Real \&=0) const
+\begin{DoxyCompactList}\small\item\em Função que calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_langmuir_jovanovic_a33e70f1cb9345d6013a42bda7279e001}\label{class_langmuir_jovanovic_a33e70f1cb9345d6013a42bda7279e001}} 
+virtual \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}} $\ast$ {\bfseries clone} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de Langmuir-\/\+Jovanovic 
+
+Classe com as equações da isoterma de Langmuir-\/\+Jovanovic.
+
+Isoterma com três parâmetros, $ q_{max} $, $ K_1 $ e $ K_2 $, cujas fórmulas são as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e, T) = q\+\_\+\{max\}C \textbackslash{}frac\{1 -\/ e$^\wedge$\{-\/K\+\_\+1\+C$^\wedge$\+K\+\_\+2\}\}\{1 + C\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referência pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+João Flávio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000039}{Bug}}]Não há bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_langmuir_jovanovic_aeea0b5dc9d964b5e5b923d82357c50c8}\label{class_langmuir_jovanovic_aeea0b5dc9d964b5e5b923d82357c50c8}} 
+\index{LangmuirJovanovic@{LangmuirJovanovic}!LangmuirJovanovic@{LangmuirJovanovic}}
+\index{LangmuirJovanovic@{LangmuirJovanovic}!LangmuirJovanovic@{LangmuirJovanovic}}
+\doxysubsubsection{\texorpdfstring{LangmuirJovanovic()}{LangmuirJovanovic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Langmuir\+Jovanovic\+::\+Langmuir\+Jovanovic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+
+
+Construtora default. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}  var;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros para esta função \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_langmuir_jovanovic_ae0b389e55219656628bcc2a67cb6c7d1}\label{class_langmuir_jovanovic_ae0b389e55219656628bcc2a67cb6c7d1}} 
+\index{LangmuirJovanovic@{LangmuirJovanovic}!LangmuirJovanovic@{LangmuirJovanovic}}
+\index{LangmuirJovanovic@{LangmuirJovanovic}!LangmuirJovanovic@{LangmuirJovanovic}}
+\doxysubsubsection{\texorpdfstring{LangmuirJovanovic()}{LangmuirJovanovic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Langmuir\+Jovanovic\+::\+Langmuir\+Jovanovic (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}} \&}]{\+\_\+langmuir\+\_\+jovanovic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}  var;}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}  var1(var);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}} original. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_langmuir_jovanovic_a4756a2f8e703e2f04fdb353155b8be05}\label{class_langmuir_jovanovic_a4756a2f8e703e2f04fdb353155b8be05}} 
+\index{LangmuirJovanovic@{LangmuirJovanovic}!LangmuirJovanovic@{LangmuirJovanovic}}
+\index{LangmuirJovanovic@{LangmuirJovanovic}!LangmuirJovanovic@{LangmuirJovanovic}}
+\doxysubsubsection{\texorpdfstring{LangmuirJovanovic()}{LangmuirJovanovic()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Langmuir\+Jovanovic\+::\+Langmuir\+Jovanovic (\begin{DoxyParamCaption}\item[{const Real \&}]{,  }\item[{const Real \&}]{,  }\item[{const Real \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} QMAX(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}{K1}}(1.0);    }
+\DoxyCodeLine{\textcolor{keywordtype}{double} \mbox{\hyperlink{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}{K2}}(1.0);        }
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}  var1(Q1, \mbox{\hyperlink{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}{K1}}, \mbox{\hyperlink{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}{K2}});}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Capacidade maxima de adsorção. ~\newline
+ \\
+\hline
+{\em \+\_\+k1} & Constante da isortema de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. ~\newline
+ \\
+\hline
+{\em \+\_\+k2} & Constante do expoente da isoterma de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{class_langmuir_jovanovic_aad811993a05686dd22a452db2a5e67c7}\label{class_langmuir_jovanovic_aad811993a05686dd22a452db2a5e67c7}} 
+\index{LangmuirJovanovic@{LangmuirJovanovic}!DefineIdentity@{DefineIdentity}}
+\index{DefineIdentity@{DefineIdentity}!LangmuirJovanovic@{LangmuirJovanovic}}
+\doxysubsubsection{\texorpdfstring{DefineIdentity()}{DefineIdentity()}}
+{\footnotesize\ttfamily Langmuir\+Jovanovic\+::\+Define\+Identity (\begin{DoxyParamCaption}\item[{\char`\"{}Langmuir\+Jovanovic\char`\"{}}]{,  }\item[{ID\+::\+Langmuir\+Jovanovic}]{ }\end{DoxyParamCaption})}
+
+
+
+Definição de \mbox{\hyperlink{class_i_d}{ID}} para esta classe para fins de identificação de erros. 
+
+\mbox{\Hypertarget{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}\label{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}} 
+\index{LangmuirJovanovic@{LangmuirJovanovic}!K1@{K1}}
+\index{K1@{K1}!LangmuirJovanovic@{LangmuirJovanovic}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Langmuir\+Jovanovic\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o coeficiente associado a constante de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}  var1(QMAX, \mbox{\hyperlink{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}{K1}}, \mbox{\hyperlink{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1 = var1.K1();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado a constante de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_langmuir_jovanovic_ac168d022d3d8eef9c63867eaaae9912b}\label{class_langmuir_jovanovic_ac168d022d3d8eef9c63867eaaae9912b}} 
+\index{LangmuirJovanovic@{LangmuirJovanovic}!K1@{K1}}
+\index{K1@{K1}!LangmuirJovanovic@{LangmuirJovanovic}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Langmuir\+Jovanovic\+::\+K1 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que altera o coeficiente associado a constante de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}  var1(QMAX, \mbox{\hyperlink{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}{K1}}, \mbox{\hyperlink{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k1(2.0);}
+\DoxyCodeLine{var1.K1(k1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado a constante de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k1} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}\label{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}} 
+\index{LangmuirJovanovic@{LangmuirJovanovic}!K2@{K2}}
+\index{K2@{K2}!LangmuirJovanovic@{LangmuirJovanovic}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Langmuir\+Jovanovic\+::\+K2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna o valor do expoente da isoterma de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}  var1(QMAX, \mbox{\hyperlink{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}{K1}}, \mbox{\hyperlink{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2 = var1.K2();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor do expoente da isoterma de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_langmuir_jovanovic_a5f12899e4721f84a10663d6128e78230}\label{class_langmuir_jovanovic_a5f12899e4721f84a10663d6128e78230}} 
+\index{LangmuirJovanovic@{LangmuirJovanovic}!K2@{K2}}
+\index{K2@{K2}!LangmuirJovanovic@{LangmuirJovanovic}}
+\doxysubsubsection{\texorpdfstring{K2()}{K2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Langmuir\+Jovanovic\+::\+K2 (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+k2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar o valor do expoente da isoterma de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}  var1(QMAX, \mbox{\hyperlink{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}{K1}}, \mbox{\hyperlink{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} k2(3.0);}
+\DoxyCodeLine{var1.K2(k2);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k2} & Novo valor do expoente da isoterma de \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+k2} & \texorpdfstring{$<$}{<}= 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_langmuir_jovanovic_a636751a093b4c27c2d4e067a3b60ce86}\label{class_langmuir_jovanovic_a636751a093b4c27c2d4e067a3b60ce86}} 
+\index{LangmuirJovanovic@{LangmuirJovanovic}!operator=@{operator=}}
+\index{operator=@{operator=}!LangmuirJovanovic@{LangmuirJovanovic}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}} \& Langmuir\+Jovanovic\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}  var1(QMAX, \mbox{\hyperlink{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}{K1}}, \mbox{\hyperlink{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}{K2}});              }
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}  var2 = var1;}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{class_langmuir_jovanovic}{Langmuir\+Jovanovic}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_langmuir_jovanovic_a6484528ad5b4c4d8ffffa4e6b1956136}\label{class_langmuir_jovanovic_a6484528ad5b4c4d8ffffa4e6b1956136}} 
+\index{LangmuirJovanovic@{LangmuirJovanovic}!Qe@{Qe}}
+\index{Qe@{Qe}!LangmuirJovanovic@{LangmuirJovanovic}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}}
+{\footnotesize\ttfamily virtual Real Langmuir\+Jovanovic\+::\+Qe (\begin{DoxyParamCaption}\item[{const Real \&}]{,  }\item[{const Real \&}]{ = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função que calcula a quantidade de sorção no equilíbrio. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_hill}{Hill}}  var1(QMAX, \mbox{\hyperlink{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}{K1}}, \mbox{\hyperlink{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} ce(1.0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} qe = var1.Qe(ce);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. ~\newline
+ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+c} & \texorpdfstring{$<$}{<} 0. ~\newline
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_isotherm}{Isotherm}}.
+
+\mbox{\Hypertarget{class_langmuir_jovanovic_a1c429a40ee85054772b11dbac89d2d75}\label{class_langmuir_jovanovic_a1c429a40ee85054772b11dbac89d2d75}} 
+\index{LangmuirJovanovic@{LangmuirJovanovic}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!LangmuirJovanovic@{LangmuirJovanovic}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Real Langmuir\+Jovanovic\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que informa o valor da capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}  var1(QMAX, \mbox{\hyperlink{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}{K1}}, \mbox{\hyperlink{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1 = var1.Qmax();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em  } & Não há parâmetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da capacidade maxima de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_langmuir_jovanovic_aa1a294edc8663d677dd03c96d9c1916c}\label{class_langmuir_jovanovic_aa1a294edc8663d677dd03c96d9c1916c}} 
+\index{LangmuirJovanovic@{LangmuirJovanovic}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!LangmuirJovanovic@{LangmuirJovanovic}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Langmuir\+Jovanovic\+::\+Qmax (\begin{DoxyParamCaption}\item[{const Real \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para alterar a capacidade maxima de adsorção. 
+
+Uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_langmuir_jovanovic}{LangmuirJovanovic}}  var1(QMAX, \mbox{\hyperlink{class_langmuir_jovanovic_a8dace4b1f1d2b164fec369ce778f1047}{K1}}, \mbox{\hyperlink{class_langmuir_jovanovic_a5641d3bf25e27330243c1869f19aae16}{K2}});              }
+\DoxyCodeLine{\textcolor{keywordtype}{double} q1(3.0);}
+\DoxyCodeLine{var1.Qmax(q1);}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da capacidade maxima de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \+\_\+qmax} & \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+Isotherm\+Lib/include/\+Isotherm/\+Three\+Parameters/\mbox{\hyperlink{_langmuir_jovanovic_8h}{Langmuir\+Jovanovic.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,161 @@
+\hypertarget{_fritz_schlunder_i_v_8h_source}{}\doxysection{Fritz\+Schlunder\+IV.\+h}
+\label{_fritz_schlunder_i_v_8h_source}\index{IsothermLib/include/Isotherm/FourParameters/FritzSchlunderIV.h@{IsothermLib/include/Isotherm/FourParameters/FritzSchlunderIV.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// Name        : FritzSchlunderIV.h}}
+\DoxyCodeLine{3 \textcolor{comment}{// Authors     : Lara Botelho Brum}}
+\DoxyCodeLine{4 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
+\DoxyCodeLine{5 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{6 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{7 \textcolor{comment}{// Description : Classe com as equações da isoterma de Fritz-\/SchlundeIV.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Copyright   : Copyright (C) <2022>  Joao Flavio Vasconcellos }}
+\DoxyCodeLine{10 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{11 \textcolor{comment}{//}}
+\DoxyCodeLine{12 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{13 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{14 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{//}}
+\DoxyCodeLine{16 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{17 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{18 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{19 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{22 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{23 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#ifndef \_\_FRITZ\_SCHLUNDER\_IV\_H\_\_}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define \_\_FRITZ\_SCHLUNDER\_IV\_H\_\_}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{56 \textcolor{comment}{// include da biblioteca c++}}
+\DoxyCodeLine{57 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{62 \textcolor{comment}{// include da isotherm++}}
+\DoxyCodeLine{63 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#include <Isotherm/FourParameters/FourParameters.h>}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{keyword}{class }\mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}} :    \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_four_parameters}{FourParameters}},}
+\DoxyCodeLine{70                             \textcolor{keyword}{public} \mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} < FritzSchlunderIV > \{}
+\DoxyCodeLine{71     }
+\DoxyCodeLine{72     }
+\DoxyCodeLine{73 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{74 \textcolor{comment}{// ID da classe}}
+\DoxyCodeLine{75 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{keyword}{public}:    }
+\DoxyCodeLine{78     }
+\DoxyCodeLine{82     }
+\DoxyCodeLine{83     \mbox{\hyperlink{class_fritz_schlunder_i_v_a375e3c1a5921d9cb46838a98560adcba}{DefineIdentity}}  (   \textcolor{stringliteral}{"{}FritzSchlunderIV"{}}}
+\DoxyCodeLine{84                     ,   ID::FritzSchlunderIV}
+\DoxyCodeLine{85                     );  }
+\DoxyCodeLine{86     }
+\DoxyCodeLine{87     }
+\DoxyCodeLine{88 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{89 \textcolor{comment}{// Funcoes Construtoras/Destrutora}}
+\DoxyCodeLine{90 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{91     }
+\DoxyCodeLine{92 \textcolor{keyword}{public}:}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{104     \mbox{\hyperlink{class_fritz_schlunder_i_v_acad7710e57ccbfdefd81c104ae531e47}{FritzSchlunderIV}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{105     }
+\DoxyCodeLine{117     \mbox{\hyperlink{class_fritz_schlunder_i_v_a34b1de7778b45f6a896bd05e92687fbb}{FritzSchlunderIV}} (\textcolor{keyword}{const} \mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}\& \_fritz\_schlunder\_iv) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{118   }
+\DoxyCodeLine{122     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_fritz_schlunder_i_v_a59eedea872779b6ecece17d7abbc9e7d}{\string~FritzSchlunderIV}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{145     \mbox{\hyperlink{class_fritz_schlunder_i_v_acad7710e57ccbfdefd81c104ae531e47}{FritzSchlunderIV}} (  \textcolor{keyword}{const} Real\&, }
+\DoxyCodeLine{146                         \textcolor{keyword}{const} Real\&, }
+\DoxyCodeLine{147                         \textcolor{keyword}{const} Real\&, }
+\DoxyCodeLine{148                         \textcolor{keyword}{const} Real\&);}
+\DoxyCodeLine{149         }
+\DoxyCodeLine{150 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{151 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{152 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 \textcolor{keyword}{public}:}
+\DoxyCodeLine{155     }
+\DoxyCodeLine{156 }
+\DoxyCodeLine{169     \mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}\& \mbox{\hyperlink{class_fritz_schlunder_i_v_a68868f11054f3b7f19d2ffbba69138ee}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{170     }
+\DoxyCodeLine{171 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{172 \textcolor{comment}{// Acesso as constantes da classe}}
+\DoxyCodeLine{173 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{187 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_fritz_schlunder_i_v_a4dfb9e876805e330836975307537424b}{Qmax}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0);\};}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189 }
+\DoxyCodeLine{202 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_fritz_schlunder_i_v_a08465eae56921aa8454583c6ec6eb93f}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1);\};}
+\DoxyCodeLine{203     }
+\DoxyCodeLine{216 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_fritz_schlunder_i_v_a381a6ae2ee18ff0d0fd104fe634cad22}{K2}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2);\};}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{230 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_fritz_schlunder_i_v_aeb18aeb124919241e461f4934de4d461}{K3}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(3);\};}
+\DoxyCodeLine{231 }
+\DoxyCodeLine{232 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{233 \textcolor{comment}{// Alterando as constantes da classe}}
+\DoxyCodeLine{234 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{249     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fritz_schlunder_i_v_a3c085c84544c42abd566d5d77e5c0f14}{Qmax}} (\textcolor{keyword}{const} Real\& \_qmax)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_fritz_schlunder_i_v_acad7710e57ccbfdefd81c104ae531e47}{FritzSchlunderIV}} (   \_qmax, }
+\DoxyCodeLine{250                                                                 \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1), }
+\DoxyCodeLine{251                                                                 \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2),}
+\DoxyCodeLine{252                                                                 \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(3));\};}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{267     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fritz_schlunder_i_v_aaa1b7942b38cbeae31d9e7c0769fcfa4}{K1}} (\textcolor{keyword}{const} Real\& \_k1)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_fritz_schlunder_i_v_acad7710e57ccbfdefd81c104ae531e47}{FritzSchlunderIV}} (   \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), }
+\DoxyCodeLine{268                                                             \_k1, }
+\DoxyCodeLine{269                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2), }
+\DoxyCodeLine{270                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(3));\};}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{285     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fritz_schlunder_i_v_ad0d4de448aaa3a374797696ed63e5a86}{K2}} (\textcolor{keyword}{const} Real\& \_k2)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_fritz_schlunder_i_v_acad7710e57ccbfdefd81c104ae531e47}{FritzSchlunderIV}}(    \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), }
+\DoxyCodeLine{286                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1), }
+\DoxyCodeLine{287                                                             \_k2     ,}
+\DoxyCodeLine{288                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(3));\};}
+\DoxyCodeLine{289 }
+\DoxyCodeLine{303     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fritz_schlunder_i_v_a6e58c40da07663df42ed938e294da28a}{K3}} (\textcolor{keyword}{const} Real\& \_k3)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_fritz_schlunder_i_v_acad7710e57ccbfdefd81c104ae531e47}{FritzSchlunderIV}}(   \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), }
+\DoxyCodeLine{304                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1), }
+\DoxyCodeLine{305                                                             \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(2), }
+\DoxyCodeLine{306                                                             \_k3);\};}
+\DoxyCodeLine{307 }
+\DoxyCodeLine{308     }
+\DoxyCodeLine{309 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{310 \textcolor{comment}{// Funções virtuais}}
+\DoxyCodeLine{311 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{312     }
+\DoxyCodeLine{327     [[nodiscard]]  Real \mbox{\hyperlink{class_fritz_schlunder_i_v_a9f3c3c85a868121c74791cc27cd3a872}{Qe}} (\textcolor{keyword}{const} Real\&, \textcolor{keyword}{const} Real\&) \textcolor{keyword}{const};}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{329     [[nodiscard]] }
+\DoxyCodeLine{330     \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_fritz_schlunder_i_v_a9f3c3c85a868121c74791cc27cd3a872}{Qe}}   (   \textcolor{keyword}{const} Real\& \_c}
+\DoxyCodeLine{331     )\textcolor{keyword}{ const override}}
+\DoxyCodeLine{332 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{333         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_fritz_schlunder_i_v_a9f3c3c85a868121c74791cc27cd3a872}{Qe}}(\_c, 0);}
+\DoxyCodeLine{334     \}}
+\DoxyCodeLine{335 }
+\DoxyCodeLine{336 }
+\DoxyCodeLine{337 }
+\DoxyCodeLine{338     [[nodiscard]] }
+\DoxyCodeLine{339     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_fritz_schlunder_i_v}{FritzSchlunderIV}}* CloneImplementation()\textcolor{keyword}{ const override}}
+\DoxyCodeLine{340 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{341         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_fritz_schlunder_i_v_acad7710e57ccbfdefd81c104ae531e47}{FritzSchlunderIV}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{342     \}}
+\DoxyCodeLine{343 }
+\DoxyCodeLine{344     }
+\DoxyCodeLine{345 \};}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{347 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{349 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_FRITZ\_SCHLUNDER\_V\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{350         }
+\DoxyCodeLine{351          }
+
+\end{DoxyCode}
