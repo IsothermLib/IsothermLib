@@ -1,5 +1,5 @@
 \hypertarget{_harkin_jura_8h_source}{}\doxysection{Harkin\+Jura.\+h}
-\label{_harkin_jura_8h_source}\index{IsothermLib/include/Isotherm/TwoParameters/HarkinJura.h@{IsothermLib/include/Isotherm/TwoParameters/HarkinJura.h}}
+\label{_harkin_jura_8h_source}\index{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/HarkinJura.h@{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/HarkinJura.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
@@ -9,7 +9,7 @@
 \DoxyCodeLine{5 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
 \DoxyCodeLine{6 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
 \DoxyCodeLine{7 \textcolor{comment}{// Version     : 1.0}}
-\DoxyCodeLine{8 \textcolor{comment}{// Description : Classe com as equações da isoterma de HarkinJura}}
+\DoxyCodeLine{8 \textcolor{comment}{// Description : Classe com as equacoes da isoterma de HarkinJura}}
 \DoxyCodeLine{9 \textcolor{comment}{//}}
 \DoxyCodeLine{10 \textcolor{comment}{// Copyright   : Copyright (C) <2022>  Joao Flavio Vasconcellos}}
 \DoxyCodeLine{11 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
@@ -40,85 +40,94 @@
 \DoxyCodeLine{58 }
 \DoxyCodeLine{59 \textcolor{preprocessor}{\#include <Isotherm/TwoParameters/TwoParameters.h>}}
 \DoxyCodeLine{60 }
-\DoxyCodeLine{61 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{61 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceist}{ist}} \{}
 \DoxyCodeLine{62 }
-\DoxyCodeLine{63 }
-\DoxyCodeLine{64 }
-\DoxyCodeLine{65 \textcolor{keyword}{class }\mbox{\hyperlink{class_harkin_jura}{HarkinJura}} :  \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_two_parameters}{TwoParameters}}, }
-\DoxyCodeLine{66                     \textcolor{keyword}{public} \mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} < HarkinJura > \{}
-\DoxyCodeLine{67     }
+\DoxyCodeLine{63 \textcolor{keyword}{class }\mbox{\hyperlink{classist_1_1_harkin_jura}{HarkinJura}} :  \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{classist_1_1_two_parameters}{TwoParameters}}, }
+\DoxyCodeLine{64                     \textcolor{keyword}{public} \mbox{\hyperlink{classist_1_1_isotherm_template}{IsothermTemplate}} < HarkinJura > \{}
+\DoxyCodeLine{65     }
+\DoxyCodeLine{66 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{67 \textcolor{comment}{// ID da classe}}
 \DoxyCodeLine{68 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{69 \textcolor{comment}{// ID da classe}}
-\DoxyCodeLine{70 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{71 }
-\DoxyCodeLine{72 \textcolor{keyword}{public}:    }
-\DoxyCodeLine{73     }
-\DoxyCodeLine{74  }
-\DoxyCodeLine{79     \mbox{\hyperlink{class_harkin_jura_acb6a844e89b639563921c0723b87f477}{DefineIdentity}}(\textcolor{stringliteral}{"{}HarkinJura"{}}, ID::HarkinJura);  }
-\DoxyCodeLine{80     }
-\DoxyCodeLine{81 }
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{keyword}{private}:    }
+\DoxyCodeLine{71     }
+\DoxyCodeLine{72  }
+\DoxyCodeLine{77     DefineIdentity(\textcolor{stringliteral}{"{}HarkinJura"{}}, ID::HarkinJura);  }
+\DoxyCodeLine{78     }
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{81 \textcolor{comment}{// Funcoes Construtoras/Destrutora}}
 \DoxyCodeLine{82 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{83 \textcolor{comment}{// Funções Construtoras/Destrutora}}
-\DoxyCodeLine{84 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{85 }
-\DoxyCodeLine{86 \textcolor{keyword}{public}:}
-\DoxyCodeLine{87     }
-\DoxyCodeLine{98     \mbox{\hyperlink{class_harkin_jura_ad30f31e938e3df80873fa3de8076aea5}{HarkinJura}}() = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{99     }
-\DoxyCodeLine{111     \mbox{\hyperlink{class_harkin_jura_aadad4ba8d2b3f338ce240fa0fb0e1da2}{HarkinJura}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_harkin_jura}{HarkinJura}}\& \_orig) = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{112     }
-\DoxyCodeLine{116     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_harkin_jura_a647a013d8bfe3da11fbcdbef9e632b30}{\string~HarkinJura}}() = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{117     }
-\DoxyCodeLine{133     \mbox{\hyperlink{class_harkin_jura_ad30f31e938e3df80873fa3de8076aea5}{HarkinJura}} (\textcolor{keyword}{const} Real\& \_k1, \textcolor{keyword}{const} Real\& \_k2);}
-\DoxyCodeLine{134     }
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{keyword}{public}:}
+\DoxyCodeLine{85     }
+\DoxyCodeLine{96     \mbox{\hyperlink{classist_1_1_harkin_jura_a027424352beeb2ddddfb7b698fa3d58b}{HarkinJura}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{97     }
+\DoxyCodeLine{109     \mbox{\hyperlink{classist_1_1_harkin_jura_a45d81b01e163d61fb36f7ced735ace1f}{HarkinJura}}(\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_harkin_jura}{HarkinJura}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{110     }
+\DoxyCodeLine{114     \textcolor{keyword}{virtual} \mbox{\hyperlink{classist_1_1_harkin_jura_afea06852dda197296cd8aab32c457efc}{\string~HarkinJura}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{115     }
+\DoxyCodeLine{131     \mbox{\hyperlink{classist_1_1_harkin_jura_a027424352beeb2ddddfb7b698fa3d58b}{HarkinJura}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_k1, \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_k2);}
+\DoxyCodeLine{132     }
+\DoxyCodeLine{133 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{134 \textcolor{comment}{// Sobrecarga de operadores}}
 \DoxyCodeLine{135 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{136 \textcolor{comment}{// Sobrecarga de operadores}}
-\DoxyCodeLine{137 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{138 }
-\DoxyCodeLine{139 \textcolor{keyword}{public}:}
-\DoxyCodeLine{140     }
-\DoxyCodeLine{141 }
-\DoxyCodeLine{154     \mbox{\hyperlink{class_harkin_jura}{HarkinJura}}\& \mbox{\hyperlink{class_harkin_jura_aa6454aa6488eadb49ea6c13b63c09c7d}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_harkin_jura}{HarkinJura}}\& \_orig) = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{155 }
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 \textcolor{keyword}{public}:}
+\DoxyCodeLine{138     }
+\DoxyCodeLine{139 }
+\DoxyCodeLine{152     \mbox{\hyperlink{classist_1_1_harkin_jura}{HarkinJura}}\& \mbox{\hyperlink{classist_1_1_harkin_jura_a8867acba0a9a8ed06c2312aac7207997}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_harkin_jura}{HarkinJura}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{155 \textcolor{comment}{// Acesso as constantes da classe inline}}
 \DoxyCodeLine{156 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{157 \textcolor{comment}{// Acesso as constantes da classe inline}}
-\DoxyCodeLine{158 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{159 }
-\DoxyCodeLine{172 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_harkin_jura_a3993b652ec7815b4eceafc578ee324b0}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0);\};}
-\DoxyCodeLine{173 }
-\DoxyCodeLine{186 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_harkin_jura_a6997e2daf5a4026e6214275079684427}{K2}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1);\};}
-\DoxyCodeLine{187 }
+\DoxyCodeLine{157 }
+\DoxyCodeLine{170 \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_harkin_jura_aaf7754b3a86e4973d1802fa11a84c036}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(0);\};}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{184 \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_harkin_jura_ad800a81d70e99fe342ddf3389964b724}{K2}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(1);\};}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{187 \textcolor{comment}{// Alterando as constantes da classe}}
 \DoxyCodeLine{188 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{189 \textcolor{comment}{// Alterando as constantes da classe}}
-\DoxyCodeLine{190 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{191 }
-\DoxyCodeLine{205     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_harkin_jura_a17e29cc3581f568e98ada955071b16f3}{K1}} (\textcolor{keyword}{const} Real\& \_k1)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_harkin_jura_ad30f31e938e3df80873fa3de8076aea5}{HarkinJura}}(\_k1, \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1));\};}
+\DoxyCodeLine{189 \textcolor{keyword}{public}:}
+\DoxyCodeLine{190     }
+\DoxyCodeLine{204     \textcolor{keywordtype}{void} \mbox{\hyperlink{classist_1_1_harkin_jura_a43e1cc0eb5eda39769f0dd7618bd64b6}{K1}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_k1)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{classist_1_1_harkin_jura_a027424352beeb2ddddfb7b698fa3d58b}{HarkinJura}}(\_k1, \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(1));\};}
+\DoxyCodeLine{205 }
 \DoxyCodeLine{206 }
-\DoxyCodeLine{207 }
-\DoxyCodeLine{221     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_harkin_jura_aa30537401ce49dfec9e0bb45b2d89bb2}{K2}} (\textcolor{keyword}{const} Real\& \_k2)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_harkin_jura_ad30f31e938e3df80873fa3de8076aea5}{HarkinJura}}(\mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), \_k2);\};}
-\DoxyCodeLine{222 }
-\DoxyCodeLine{223 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{224 \textcolor{comment}{// Funções virtuais}}
-\DoxyCodeLine{225 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{226     }
-\DoxyCodeLine{241     [[nodiscard]] }
-\DoxyCodeLine{242     Real \mbox{\hyperlink{class_harkin_jura_aa38a93f6ff61d394f6f5b78b44ee5b57}{Qe}} (\textcolor{keyword}{const} Real\&\_c, \textcolor{keyword}{const} Real\& \_temp = 0) \textcolor{keyword}{const override};}
-\DoxyCodeLine{243     }
-\DoxyCodeLine{244     }
-\DoxyCodeLine{245 }
-\DoxyCodeLine{246     [[nodiscard]] }
-\DoxyCodeLine{247     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_harkin_jura}{HarkinJura}}* CloneImplementation()\textcolor{keyword}{ const override}}
-\DoxyCodeLine{248 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{249         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_harkin_jura_ad30f31e938e3df80873fa3de8076aea5}{HarkinJura}}(*\textcolor{keyword}{this});}
-\DoxyCodeLine{250     \}    }
-\DoxyCodeLine{251     }
-\DoxyCodeLine{252 \};}
-\DoxyCodeLine{253 }
-\DoxyCodeLine{256  }
-\DoxyCodeLine{257 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
-\DoxyCodeLine{258         }
-\DoxyCodeLine{259 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_HARKIN\_JURA\_H\_\_ */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{260 }
-\DoxyCodeLine{263    }
+\DoxyCodeLine{220     \textcolor{keywordtype}{void} \mbox{\hyperlink{classist_1_1_harkin_jura_ab1c84047bd44bf463dba1ba4ab041ba1}{K2}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_k2)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{classist_1_1_harkin_jura_a027424352beeb2ddddfb7b698fa3d58b}{HarkinJura}}(\mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(0), \_k2);\};}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{223 \textcolor{comment}{// Funcoes virtuais}}
+\DoxyCodeLine{224 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{225    }
+\DoxyCodeLine{226     \textcolor{keyword}{public}:}
+\DoxyCodeLine{227     }
+\DoxyCodeLine{242     }
+\DoxyCodeLine{243     [[nodiscard]] }
+\DoxyCodeLine{244     \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_harkin_jura_a64f3c6c496be822e70cf47d2a97edab1}{Qe}}   (   \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_c}
+\DoxyCodeLine{245     )\textcolor{keyword}{ const override}}
+\DoxyCodeLine{246 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{247         \textcolor{keywordflow}{return} \mbox{\hyperlink{classist_1_1_harkin_jura_a64f3c6c496be822e70cf47d2a97edab1}{Qe}}(\_c, 0);}
+\DoxyCodeLine{248     \}    }
+\DoxyCodeLine{249     }
+\DoxyCodeLine{250     \textcolor{keyword}{private}: }
+\DoxyCodeLine{251     [[nodiscard]] }
+\DoxyCodeLine{252     \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_harkin_jura_a64f3c6c496be822e70cf47d2a97edab1}{Qe}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\&\_c, \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_temp) \textcolor{keyword}{const override};}
+\DoxyCodeLine{253     }
+\DoxyCodeLine{254     [[nodiscard]]}
+\DoxyCodeLine{255     \textcolor{keyword}{virtual} std::unique\_ptr<Isotherm> CloneImplementation()\textcolor{keyword}{ const override}}
+\DoxyCodeLine{256 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{257         \textcolor{keywordflow}{return} std::make\_unique<HarkinJura>(*\textcolor{keyword}{this});}
+\DoxyCodeLine{258     \}       }
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260  }
+\DoxyCodeLine{261     }
+\DoxyCodeLine{262 \};}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{266 \}}
+\DoxyCodeLine{267         }
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_HARKIN\_JURA\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{272    }
 
 \end{DoxyCode}

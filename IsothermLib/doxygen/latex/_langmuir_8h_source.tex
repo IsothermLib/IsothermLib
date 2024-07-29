@@ -1,5 +1,5 @@
 \hypertarget{_langmuir_8h_source}{}\doxysection{Langmuir.\+h}
-\label{_langmuir_8h_source}\index{IsothermLib/include/Isotherm/TwoParameters/Langmuir.h@{IsothermLib/include/Isotherm/TwoParameters/Langmuir.h}}
+\label{_langmuir_8h_source}\index{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/Langmuir.h@{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/Langmuir.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
@@ -41,11 +41,11 @@
 \DoxyCodeLine{59 }
 \DoxyCodeLine{60 \textcolor{preprocessor}{\#include <Isotherm/TwoParameters/TwoParameters.h>}}
 \DoxyCodeLine{61 }
-\DoxyCodeLine{62 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{62 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceist}{ist}} \{}
 \DoxyCodeLine{63 }
 \DoxyCodeLine{64 }
-\DoxyCodeLine{65 \textcolor{keyword}{class }\mbox{\hyperlink{class_langmuir}{Langmuir}} :    \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_two_parameters}{TwoParameters}},}
-\DoxyCodeLine{66                     \textcolor{keyword}{public} \mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} < Langmuir >}
+\DoxyCodeLine{65 \textcolor{keyword}{class }\mbox{\hyperlink{classist_1_1_langmuir}{Langmuir}} :    \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{classist_1_1_two_parameters}{TwoParameters}},}
+\DoxyCodeLine{66                     \textcolor{keyword}{public} \mbox{\hyperlink{classist_1_1_isotherm_template}{IsothermTemplate}} < Langmuir >}
 \DoxyCodeLine{67 \{}
 \DoxyCodeLine{68 }
 \DoxyCodeLine{69 \textcolor{comment}{//==============================================================================}}
@@ -55,7 +55,7 @@
 \DoxyCodeLine{73 \textcolor{keyword}{public}:}
 \DoxyCodeLine{74 }
 \DoxyCodeLine{75 }
-\DoxyCodeLine{80     \mbox{\hyperlink{class_langmuir_aba9242ee86cefeb9419471c776798e0a}{DefineIdentity}}  (   \textcolor{stringliteral}{"{}Langmuir"{}}}
+\DoxyCodeLine{80     \mbox{\hyperlink{classist_1_1_langmuir_aefe548e4c09da9434fbbe5c2448a2ef1}{DefineIdentity}}  (   \textcolor{stringliteral}{"{}Langmuir"{}}}
 \DoxyCodeLine{81                     ,   ID::Langmuir}
 \DoxyCodeLine{82                     );}
 \DoxyCodeLine{83 }
@@ -65,15 +65,15 @@
 \DoxyCodeLine{87 }
 \DoxyCodeLine{88 \textcolor{keyword}{public}:}
 \DoxyCodeLine{89 }
-\DoxyCodeLine{100     \mbox{\hyperlink{class_langmuir_a5570f3ef03154b051e86f4fcc59d37bf}{Langmuir}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{100     \mbox{\hyperlink{classist_1_1_langmuir_a7900e6b66dee2d4295829e43cb7df3e9}{Langmuir}}() = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{101 }
-\DoxyCodeLine{113     \mbox{\hyperlink{class_langmuir_ae6850e7916610a71da2a34f2b00d36f2}{Langmuir}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_langmuir}{Langmuir}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{113     \mbox{\hyperlink{classist_1_1_langmuir_a252facac19313987e00d512445eff4f3}{Langmuir}}(\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_langmuir}{Langmuir}}\& \_orig) = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{114 }
-\DoxyCodeLine{118     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_langmuir_ace8ceb3b1dbadb52309599129efb22d4}{\string~Langmuir}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{118     \textcolor{keyword}{virtual} \mbox{\hyperlink{classist_1_1_langmuir_a3928e056724eb89caae91d63b01560d2}{\string~Langmuir}}() = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{119 }
 \DoxyCodeLine{128 }
-\DoxyCodeLine{135     \mbox{\hyperlink{class_langmuir_a5570f3ef03154b051e86f4fcc59d37bf}{Langmuir}}    (   \textcolor{keyword}{const} Real\& \_qmax}
-\DoxyCodeLine{136                 ,   \textcolor{keyword}{const} Real\& \_k1}
+\DoxyCodeLine{135     \mbox{\hyperlink{classist_1_1_langmuir_a7900e6b66dee2d4295829e43cb7df3e9}{Langmuir}}    (   \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_qmax}
+\DoxyCodeLine{136                 ,   \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_k1}
 \DoxyCodeLine{137                 );}
 \DoxyCodeLine{138 }
 \DoxyCodeLine{139 \textcolor{comment}{//==============================================================================}}
@@ -83,54 +83,59 @@
 \DoxyCodeLine{143 \textcolor{keyword}{public}:}
 \DoxyCodeLine{144 }
 \DoxyCodeLine{145 }
-\DoxyCodeLine{158     \mbox{\hyperlink{class_langmuir}{Langmuir}}\& \mbox{\hyperlink{class_langmuir_a7e9fa08ab12217910b0db17278a4401a}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_langmuir}{Langmuir}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{158     \mbox{\hyperlink{classist_1_1_langmuir}{Langmuir}}\& \mbox{\hyperlink{classist_1_1_langmuir_a8864904844c82f487b9010c4115c11f0}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_langmuir}{Langmuir}}\& \_orig) = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{159 }
 \DoxyCodeLine{160 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{161 \textcolor{comment}{// Acesso as constantes da classe inline}}
 \DoxyCodeLine{162 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{163 }
-\DoxyCodeLine{176     \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_langmuir_acf9e0a133519df65968e5f543ee61107}{Qmax}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0);\};}
-\DoxyCodeLine{177 }
-\DoxyCodeLine{190     \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_langmuir_a779f957a34fe92c8740b70f59c5ee35f}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1);\};}
-\DoxyCodeLine{191 }
-\DoxyCodeLine{192 }
-\DoxyCodeLine{193 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{194 \textcolor{comment}{// Alterando as constantes da classe}}
+\DoxyCodeLine{176     [[nodiscard]] }
+\DoxyCodeLine{177     \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_langmuir_a3fe8213b6ed09abe14711d05ebfa347d}{Qmax}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(0);\};}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{191     [[nodiscard]] }
+\DoxyCodeLine{192     \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_langmuir_aee9e86887f92228b25a528a8e3ff7a18}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(1);\};}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194 }
 \DoxyCodeLine{195 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{196 }
-\DoxyCodeLine{210     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_langmuir_a7d5371bb358d985a54809e1d51d62dc3}{Qmax}} (\textcolor{keyword}{const} Real\& \_qmax)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_langmuir_a5570f3ef03154b051e86f4fcc59d37bf}{Langmuir}}(\_qmax, \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1));\};}
-\DoxyCodeLine{211 }
-\DoxyCodeLine{212 }
-\DoxyCodeLine{226     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_langmuir_aab997cb1c26eca89af04cd20c1b484a4}{K1}} (\textcolor{keyword}{const} Real\& \_k1)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_langmuir_a5570f3ef03154b051e86f4fcc59d37bf}{Langmuir}}(\mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), \_k1);\};}
-\DoxyCodeLine{227 }
-\DoxyCodeLine{228 }
-\DoxyCodeLine{229 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{230 \textcolor{comment}{// Funcoes virtuais}}
+\DoxyCodeLine{196 \textcolor{comment}{// Alterando as constantes da classe}}
+\DoxyCodeLine{197 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{212     \textcolor{keywordtype}{void} \mbox{\hyperlink{classist_1_1_langmuir_a810eb02bdf109c390e9f39e7209c2ece}{Qmax}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_qmax)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{classist_1_1_langmuir_a7900e6b66dee2d4295829e43cb7df3e9}{Langmuir}}(\_qmax, \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(1));\};}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214 }
+\DoxyCodeLine{228     \textcolor{keywordtype}{void} \mbox{\hyperlink{classist_1_1_langmuir_a897b6fcbbdf3dddd4842ad52a6d28381}{K1}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_k1)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{classist_1_1_langmuir_a7900e6b66dee2d4295829e43cb7df3e9}{Langmuir}}(\mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(0), \_k1);\};}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230 }
 \DoxyCodeLine{231 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{232 }
-\DoxyCodeLine{247     [[nodiscard]] }
-\DoxyCodeLine{248     Real \mbox{\hyperlink{class_langmuir_a04d4f1f3a29d62419b5dc56427e645b1}{Qe}} (\textcolor{keyword}{const} Real\& \_c, \textcolor{keyword}{const} Real\&) \textcolor{keyword}{const};}
-\DoxyCodeLine{249     }
-\DoxyCodeLine{250     [[nodiscard]] }
-\DoxyCodeLine{251     \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_langmuir_a04d4f1f3a29d62419b5dc56427e645b1}{Qe}}   (\textcolor{keyword}{const} Real\& \_c)\textcolor{keyword}{ const override}}
-\DoxyCodeLine{252 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{253         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_langmuir_a04d4f1f3a29d62419b5dc56427e645b1}{Qe}}(\_c, 0);}
-\DoxyCodeLine{254     \}}
-\DoxyCodeLine{255     }
-\DoxyCodeLine{256     [[nodiscard]] }
-\DoxyCodeLine{257     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_langmuir}{Langmuir}}* CloneImplementation()\textcolor{keyword}{ const override}}
-\DoxyCodeLine{258 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{259         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_langmuir_a5570f3ef03154b051e86f4fcc59d37bf}{Langmuir}}(*\textcolor{keyword}{this});}
-\DoxyCodeLine{260     \}   }
-\DoxyCodeLine{261 }
-\DoxyCodeLine{262 \};}
-\DoxyCodeLine{263 }
+\DoxyCodeLine{232 \textcolor{comment}{// Funcoes virtuais}}
+\DoxyCodeLine{233 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{249     [[nodiscard]] }
+\DoxyCodeLine{250     \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_langmuir_a9905937545c15e2df2dc0ace377909c2}{Qe}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_c, \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\&) \textcolor{keyword}{const};}
+\DoxyCodeLine{251     }
+\DoxyCodeLine{252     [[nodiscard]] }
+\DoxyCodeLine{253     \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_langmuir_a9905937545c15e2df2dc0ace377909c2}{Qe}}   (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_c)\textcolor{keyword}{ const override}}
+\DoxyCodeLine{254 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{255         \textcolor{keywordflow}{return} \mbox{\hyperlink{classist_1_1_langmuir_a9905937545c15e2df2dc0ace377909c2}{Qe}}(\_c, 0);}
+\DoxyCodeLine{256     \}}
+\DoxyCodeLine{257     }
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259     [[nodiscard]]}
+\DoxyCodeLine{260     \textcolor{keyword}{virtual} std::unique\_ptr<Isotherm> CloneImplementation()\textcolor{keyword}{ const override}}
+\DoxyCodeLine{261 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{262         \textcolor{keywordflow}{return} std::make\_unique<Langmuir>(*\textcolor{keyword}{this});}
+\DoxyCodeLine{263     \}}
 \DoxyCodeLine{264 }
-\DoxyCodeLine{267 }
+\DoxyCodeLine{265   }
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267 \};}
 \DoxyCodeLine{268 }
-\DoxyCodeLine{269 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
-\DoxyCodeLine{270 }
-\DoxyCodeLine{271 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* LANGMUIR\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{269 }
 \DoxyCodeLine{272 }
+\DoxyCodeLine{273 }
+\DoxyCodeLine{274 \}}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* LANGMUIR\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{277 }
 
 \end{DoxyCode}

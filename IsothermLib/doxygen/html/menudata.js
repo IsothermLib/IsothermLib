@@ -25,10 +25,10 @@
 var menudata={children:[
 {text:"Página Principal",url:"index.html"},
 {text:"Páginas relacionadas",url:"pages.html"},
-{text:"Tópicos",url:"topics.html"},
-{text:"Namespaces",url:"namespaces.html",children:[
+{text:"Módulos",url:"modules.html"},
+{text:"<em>Namespaces</em>",url:"namespaces.html",children:[
 {text:"Lista de Namespaces",url:"namespaces.html"},
-{text:"Membros do namespace",url:"namespacemembers.html",children:[
+{text:"Membros do <em>Namespace</em>",url:"namespacemembers.html",children:[
 {text:"Todos",url:"namespacemembers.html"},
 {text:"Funções",url:"namespacemembers_func.html"}]}]},
 {text:"Classes",url:"annotated.html",children:[

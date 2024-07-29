@@ -1,5 +1,5 @@
 \hypertarget{_iso_exception_8h_source}{}\doxysection{Iso\+Exception.\+h}
-\label{_iso_exception_8h_source}\index{IsothermLib/include/Error/IsoException.h@{IsothermLib/include/Error/IsoException.h}}
+\label{_iso_exception_8h_source}\index{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Error/IsoException.h@{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Error/IsoException.h}}
 \mbox{\hyperlink{_iso_exception_8h}{Vá para a documentação desse arquivo.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
@@ -8,7 +8,7 @@
 \DoxyCodeLine{4 \textcolor{comment}{// Version     : 1.0}}
 \DoxyCodeLine{5 \textcolor{comment}{// Description : Classe para tratar as exceptions do programa}}
 \DoxyCodeLine{6 \textcolor{comment}{//}}
-\DoxyCodeLine{7 \textcolor{comment}{// Copyright   : Copyright (C) <2021>  Joao Flavio Vasconcellos }}
+\DoxyCodeLine{7 \textcolor{comment}{// Copyright   : Copyright (C) <2022>  Joao Flavio Vasconcellos }}
 \DoxyCodeLine{8 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
 \DoxyCodeLine{9 \textcolor{comment}{//}}
 \DoxyCodeLine{10 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
@@ -44,18 +44,18 @@
 \DoxyCodeLine{50 \textcolor{preprocessor}{\#include <Misc/SourceInfo.h>}}
 \DoxyCodeLine{51 }
 \DoxyCodeLine{52 }
-\DoxyCodeLine{53 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{53 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceist}{ist}} \{}
 \DoxyCodeLine{54 }
-\DoxyCodeLine{55 }
-\DoxyCodeLine{56 }
-\DoxyCodeLine{57 \textcolor{keyword}{enum} IsoExceptionIndex \{}
-\DoxyCodeLine{58     }
+\DoxyCodeLine{55 \textcolor{keyword}{enum} IsoExceptionIndex \{}
+\DoxyCodeLine{56     }
+\DoxyCodeLine{57 \textcolor{comment}{//    }}
+\DoxyCodeLine{58 \textcolor{comment}{//  Erros Gerais}}
 \DoxyCodeLine{59 \textcolor{comment}{//    }}
-\DoxyCodeLine{60 \textcolor{comment}{//  Erros Gerais}}
-\DoxyCodeLine{61 \textcolor{comment}{//    }}
-\DoxyCodeLine{62         BadCoefficient = 0}
-\DoxyCodeLine{63     ,   BadCeLEZero}
-\DoxyCodeLine{64     ,   BadCeLTZero}
+\DoxyCodeLine{60         BadCoefficient = 0}
+\DoxyCodeLine{61     ,   BadCeLEZero}
+\DoxyCodeLine{62     ,   BadCeLTZero}
+\DoxyCodeLine{63     ,   BadCeGEOne}
+\DoxyCodeLine{64     ,   BadCeGEK2}
 \DoxyCodeLine{65     ,   BadK1LEZero}
 \DoxyCodeLine{66     ,   BadK1LTZero}
 \DoxyCodeLine{67     ,   BadK2LEZero}
@@ -64,10 +64,10 @@
 \DoxyCodeLine{70     ,   BadK3LTZero}
 \DoxyCodeLine{71     ,   BadK4LEZero}
 \DoxyCodeLine{72     ,   BadK4LTZero}
-\DoxyCodeLine{73     ,   BadK2LEOne}
-\DoxyCodeLine{74     ,   BadK3GTOne       }
-\DoxyCodeLine{75     ,   BadK3Between01}
-\DoxyCodeLine{76     ,   BadK4Between01                    }
+\DoxyCodeLine{73     ,   BadK1LTOne}
+\DoxyCodeLine{74     ,   BadK2LEOne}
+\DoxyCodeLine{75     ,   BadK3GTOne                          }
+\DoxyCodeLine{76     ,   BadK3GEOne                          }
 \DoxyCodeLine{77     ,   BadQmaxLEZero                }
 \DoxyCodeLine{78     ,   BadTempLEZero}
 \DoxyCodeLine{79     ,   BadRGasLEZero                }
@@ -82,28 +82,28 @@
 \DoxyCodeLine{88         }
 \DoxyCodeLine{89 \};}
 \DoxyCodeLine{90 }
-\DoxyCodeLine{91 \textcolor{keyword}{class }\mbox{\hyperlink{class_iso_exception}{IsoException}} : \textcolor{keyword}{public} std::exception \{}
+\DoxyCodeLine{91 \textcolor{keyword}{class }\mbox{\hyperlink{classist_1_1_iso_exception}{IsoException}} : \textcolor{keyword}{public} std::exception \{}
 \DoxyCodeLine{92     }
 \DoxyCodeLine{93 }
 \DoxyCodeLine{94 \textcolor{keyword}{public}:    }
 \DoxyCodeLine{95 }
-\DoxyCodeLine{96     \textcolor{keyword}{friend} std::ostream\& operator << (std::ostream\&, \textcolor{keyword}{const} \mbox{\hyperlink{class_iso_exception}{IsoException}}\&);}
+\DoxyCodeLine{96     \textcolor{keyword}{friend} std::ostream\& operator << (std::ostream\&, \textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_iso_exception}{IsoException}}\&);}
 \DoxyCodeLine{97     }
 \DoxyCodeLine{98 \textcolor{keyword}{public}:}
 \DoxyCodeLine{99         }
-\DoxyCodeLine{100     \mbox{\hyperlink{class_iso_exception}{IsoException}} (  \textcolor{keyword}{const} \mbox{\hyperlink{class_source_info}{SourceInfo}}\&,}
+\DoxyCodeLine{100     \mbox{\hyperlink{classist_1_1_iso_exception}{IsoException}} (  \textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_source_info}{SourceInfo}}\&,}
 \DoxyCodeLine{101                     \textcolor{keyword}{const} std::string\&, }
 \DoxyCodeLine{102                     \textcolor{keyword}{const} IsoExceptionIndex\&, }
 \DoxyCodeLine{103                     \textcolor{keyword}{const} std::string\& = \textcolor{stringliteral}{"{}"{}},}
 \DoxyCodeLine{104                     \textcolor{keyword}{const} std::string\& = \textcolor{stringliteral}{"{}"{}});}
 \DoxyCodeLine{105 }
-\DoxyCodeLine{106     \mbox{\hyperlink{class_iso_exception}{IsoException}}( \textcolor{keyword}{const} std::string\& \_msg,}
+\DoxyCodeLine{106     \mbox{\hyperlink{classist_1_1_iso_exception}{IsoException}}( \textcolor{keyword}{const} std::string\& \_msg,}
 \DoxyCodeLine{107                   \textcolor{keyword}{const} std::string\& \_funct,}
 \DoxyCodeLine{108                   \textcolor{keyword}{const} std::string\& \_arquivo,}
-\DoxyCodeLine{109                   \textcolor{keyword}{const} UInt\& \_linha)  \{\};}
+\DoxyCodeLine{109                   \textcolor{keyword}{const} \mbox{\hyperlink{group___type_gaba0996d26f7be2572973245b51852757}{UInt}}\& \_linha)  \{\};}
 \DoxyCodeLine{110 }
-\DoxyCodeLine{111     \mbox{\hyperlink{class_iso_exception}{IsoException}} (\textcolor{keyword}{const} \mbox{\hyperlink{class_iso_exception}{IsoException}}\&) = \textcolor{keywordflow}{default};              }
-\DoxyCodeLine{112     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_iso_exception}{\string~IsoException}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{111     \mbox{\hyperlink{classist_1_1_iso_exception}{IsoException}} (\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_iso_exception}{IsoException}}\&) = \textcolor{keywordflow}{default};              }
+\DoxyCodeLine{112     \textcolor{keyword}{virtual} \mbox{\hyperlink{classist_1_1_iso_exception}{\string~IsoException}}() = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{113 }
 \DoxyCodeLine{114     \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char} * what() \textcolor{keyword}{const} \textcolor{keywordflow}{throw}() \{}
 \DoxyCodeLine{115         \textcolor{keywordflow}{return} msg.c\_str();}
@@ -111,7 +111,7 @@
 \DoxyCodeLine{117 }
 \DoxyCodeLine{118 \textcolor{keyword}{private}:}
 \DoxyCodeLine{119         }
-\DoxyCodeLine{120     \mbox{\hyperlink{class_source_info}{SourceInfo}}              sourceInfo;}
+\DoxyCodeLine{120     \mbox{\hyperlink{classist_1_1_source_info}{SourceInfo}}              sourceInfo;}
 \DoxyCodeLine{121     std::string             classe;}
 \DoxyCodeLine{122     IsoExceptionIndex       isoExceptionIndex;}
 \DoxyCodeLine{123     std::string             msg1;}
@@ -120,7 +120,7 @@
 \DoxyCodeLine{126 }
 \DoxyCodeLine{127 \};}
 \DoxyCodeLine{128 }
-\DoxyCodeLine{129 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{129 \}}
 \DoxyCodeLine{130 }
 \DoxyCodeLine{131         }
 \DoxyCodeLine{132 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_ISOEXCEPTION\_H\_\_ */}\textcolor{preprocessor}{}}

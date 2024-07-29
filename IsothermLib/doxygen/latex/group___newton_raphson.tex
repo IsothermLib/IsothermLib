@@ -1,18 +1,33 @@
-\hypertarget{group___newton_raphson}{}\doxysection{Método de Newton-\/\+Rapshon}
-\label{group___newton_raphson}\index{Método de Newton-\/Rapshon@{Método de Newton-\/Rapshon}}
-\doxysubsection*{Definições de Tipos}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{group___newton_raphson_ga8e6c941133f62671ccda04d4456c2b39}\label{group___newton_raphson_ga8e6c941133f62671ccda04d4456c2b39}} 
-typedef std\+::function$<$ Real(Real)$>$ {\bfseries NRFunction}
-\end{DoxyCompactItemize}
+\hypertarget{group___newton_raphson}{}\doxysection{Método de Newton-\/\+Raphson}
+\label{group___newton_raphson}\index{Método de Newton-\/Raphson@{Método de Newton-\/Raphson}}
 \doxysubsection*{Funções}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{group___newton_raphson_ga0ae930c8a4c5d945f5c60ee2d3994b73}\label{group___newton_raphson_ga0ae930c8a4c5d945f5c60ee2d3994b73}} 
-Real {\bfseries Newton\+Raphson} (NRFunction, const Real \&)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{group___newton_raphson_ga72a2c64028346f7e075ac137b4c69b5b}{Newton\+Raphson}} (std\+::function$<$ \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}(\mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}})$>$ func, const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&initial\+\_\+guess)
+\begin{DoxyCompactList}\small\item\em Função para o método Newton-\/\+Raphson. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
 Programação do método Newton-\/\+Raphson para o cálculo de raízes de funções. 
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{group___newton_raphson_ga72a2c64028346f7e075ac137b4c69b5b}\label{group___newton_raphson_ga72a2c64028346f7e075ac137b4c69b5b}} 
+\index{Método de Newton-\/Raphson@{Método de Newton-\/Raphson}!NewtonRaphson@{NewtonRaphson}}
+\index{NewtonRaphson@{NewtonRaphson}!Método de Newton-\/Raphson@{Método de Newton-\/Raphson}}
+\doxysubsubsection{\texorpdfstring{NewtonRaphson()}{NewtonRaphson()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} Newton\+Raphson (\begin{DoxyParamCaption}\item[{std\+::function$<$ \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}(\mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}})$>$}]{func,  }\item[{const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&}]{initial\+\_\+guess }\end{DoxyParamCaption})}
+
+
+
+Função para o método Newton-\/\+Raphson. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em func} & A função cuja raiz está sendo calculada. \\
+\hline
+{\em initial\+\_\+guess} & O palpite inicial para a raiz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A raiz da função. 
+\end{DoxyReturn}

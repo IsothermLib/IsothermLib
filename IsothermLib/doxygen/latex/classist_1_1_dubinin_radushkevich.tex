@@ -1,0 +1,306 @@
+\hypertarget{classist_1_1_dubinin_radushkevich}{}\doxysection{Referência da Classe ist\+::Dubinin\+Radushkevich}
+\label{classist_1_1_dubinin_radushkevich}\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+
+
+Classe com as equações da isoterma de Dubinin-\/\+Radushkevich.  
+
+
+
+
+{\ttfamily \#include $<$Dubinin\+Radushkevich.\+h$>$}
+
+Diagrama de hierarquia para ist\+::Dubinin\+Radushkevich\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.989324cm]{classist_1_1_dubinin_radushkevich}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_a7542ccd20e32a3dad156a16df5fef6e0}\label{classist_1_1_dubinin_radushkevich_a7542ccd20e32a3dad156a16df5fef6e0}} 
+{\bfseries Define\+Identity} (\char`\"{}Dubinin\+Radushkevich\char`\"{}, ID\+::\+Dubinin\+Radushkevich)
+\begin{DoxyCompactList}\small\item\em Definição de \mbox{\hyperlink{classist_1_1_i_d}{ID}} para esta classe para fins de identificação de erros. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_af5bbaa9dc4f1a322d4dea66843d2cd17}\label{classist_1_1_dubinin_radushkevich_af5bbaa9dc4f1a322d4dea66843d2cd17}} 
+{\bfseries Dubinin\+Radushkevich} ()=default
+\begin{DoxyCompactList}\small\item\em Construtora default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classist_1_1_dubinin_radushkevich_aa8e0ad40c643da1f68f6767b0bb54f83}{Dubinin\+Radushkevich}} (const \mbox{\hyperlink{classist_1_1_dubinin_radushkevich}{Dubinin\+Radushkevich}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Construtora de cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_acb1ca07d1765b95a10d8580cead9f34a}\label{classist_1_1_dubinin_radushkevich_acb1ca07d1765b95a10d8580cead9f34a}} 
+virtual {\bfseries $\sim$\+Dubinin\+Radushkevich} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classist_1_1_dubinin_radushkevich_ad9789b9f41dfdd3e81bc727fe992a292}{Dubinin\+Radushkevich}} (const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&\+\_\+qmax, const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&\+\_\+k1, const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&\+\_\+rgas=Isotherm\+::\+RGASCONST)
+\begin{DoxyCompactList}\small\item\em Construtora com os parâmetros que definem a isoterma de Dubinin-\/\+Radushkevich. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classist_1_1_dubinin_radushkevich}{Dubinin\+Radushkevich}} \& \mbox{\hyperlink{classist_1_1_dubinin_radushkevich_a5face82ede7ff28ce0a7de07b5818df8}{operator=}} (const \mbox{\hyperlink{classist_1_1_dubinin_radushkevich}{Dubinin\+Radushkevich}} \&\+\_\+orig)=default
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador =. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_dubinin_radushkevich_a09fdd45f0c998222220c26e31735d24b}{Qmax}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o valor da constante de equilíbrio de Dubinin-\/\+Radushkevich. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_dubinin_radushkevich_a8b095fa505a32165d81da276fa1b2095}{K1}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o coeficiente associado à energia de adsorção. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_dubinin_radushkevich_ab186b667d2391f34f0541a05352bd640}{Rgas}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o valor da constante universal dos gases. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classist_1_1_dubinin_radushkevich_ab8660f7413ec26647111028432e6a3af}{Qmax}} (const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&\+\_\+qmax)
+\begin{DoxyCompactList}\small\item\em Altera a constante de equilíbrio de Dubinin-\/\+Radushkevich. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classist_1_1_dubinin_radushkevich_aa0408c85633466dc2570f5adf7bd25e1}{K1}} (const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&\+\_\+k1)
+\begin{DoxyCompactList}\small\item\em Altera o coeficiente associado à energia de adsorção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classist_1_1_dubinin_radushkevich_a44ce82b95b13d1bfb549948d0cba4629}{Rgas}} (const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&\+\_\+rgas)
+\begin{DoxyCompactList}\small\item\em Altera o valor da constante universal dos gases. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_dubinin_radushkevich_ae25d5c8ab65edb12214d817dbff1673a}{Qe}} (const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&\+\_\+c, const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&\+\_\+temp) const
+\begin{DoxyCompactList}\small\item\em Calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_dubinin_radushkevich_a4a28604a11d035b30f88df5c1d5d315d}{Qe}} (const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&\+\_\+c) const override
+\begin{DoxyCompactList}\small\item\em Calcula a quantidade de sorção no equilíbrio. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}} $>$ \mbox{\hyperlink{classist_1_1_dubinin_radushkevich_ae46a7375ad657b611d9e5d468fe798bb}{Clone\+Implementation}} () const override
+\begin{DoxyCompactList}\small\item\em Faz o clone da classe virtual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Classe com as equações da isoterma de Dubinin-\/\+Radushkevich. 
+
+Isoterma com dois parâmetros, $ q_{max} $ e $ K_1 $, cujas fórmulas são as seguintes\+:
+
+\[
+    Q_e (C_e, T) = q_{max} \exp( -K_1 \epsilon^2 )
+\] \[
+    \epsilon = R T \ln \left(1 + \frac{1}{C_e} \right)
+\] Um artigo de referência pode ser encontrado \href{https://doi.org/10.1021/cr60204a006}{\texttt{ aqui}}. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_aa8e0ad40c643da1f68f6767b0bb54f83}\label{classist_1_1_dubinin_radushkevich_aa8e0ad40c643da1f68f6767b0bb54f83}} 
+\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}!DubininRadushkevich@{DubininRadushkevich}}
+\index{DubininRadushkevich@{DubininRadushkevich}!ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+\doxysubsubsection{\texorpdfstring{DubininRadushkevich()}{DubininRadushkevich()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ist\+::\+Dubinin\+Radushkevich\+::\+Dubinin\+Radushkevich (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classist_1_1_dubinin_radushkevich}{Dubinin\+Radushkevich}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtora de cópia. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{classist_1_1_dubinin_radushkevich}{Dubinin\+Radushkevich}} original. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_ad9789b9f41dfdd3e81bc727fe992a292}\label{classist_1_1_dubinin_radushkevich_ad9789b9f41dfdd3e81bc727fe992a292}} 
+\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}!DubininRadushkevich@{DubininRadushkevich}}
+\index{DubininRadushkevich@{DubininRadushkevich}!ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+\doxysubsubsection{\texorpdfstring{DubininRadushkevich()}{DubininRadushkevich()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ist\+::\+Dubinin\+Radushkevich\+::\+Dubinin\+Radushkevich (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&}]{\+\_\+qmax,  }\item[{const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&}]{\+\_\+k1,  }\item[{const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&}]{\+\_\+rgas = {\ttfamily Isotherm\+:\+:RGASCONST} }\end{DoxyParamCaption})}
+
+
+
+Construtora com os parâmetros que definem a isoterma de Dubinin-\/\+Radushkevich. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Constante de equilíbrio de Dubinin-\/\+Radushkevich. \\
+\hline
+{\em \+\_\+k1} & Coeficiente associado à energia de adsorção. \\
+\hline
+{\em \+\_\+rgas} & Valor da constante universal dos gases diferente do padrão. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & se \+\_\+qmax \texorpdfstring{$<$}{<}= 0, \+\_\+k1 \texorpdfstring{$<$}{<}= 0, ou \+\_\+rgas \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_ae46a7375ad657b611d9e5d468fe798bb}\label{classist_1_1_dubinin_radushkevich_ae46a7375ad657b611d9e5d468fe798bb}} 
+\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}!CloneImplementation@{CloneImplementation}}
+\index{CloneImplementation@{CloneImplementation}!ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+\doxysubsubsection{\texorpdfstring{CloneImplementation()}{CloneImplementation()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}} $>$ ist\+::\+Dubinin\+Radushkevich\+::\+Clone\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Faz o clone da classe virtual. 
+
+\begin{DoxyReturn}{Retorna}
+Uma cópia da instância corrente. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classist_1_1_isotherm}{ist\+::\+Isotherm}}.
+
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_a8b095fa505a32165d81da276fa1b2095}\label{classist_1_1_dubinin_radushkevich_a8b095fa505a32165d81da276fa1b2095}} 
+\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}!K1@{K1}}
+\index{K1@{K1}!ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} ist\+::\+Dubinin\+Radushkevich\+::\+K1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o coeficiente associado à energia de adsorção. 
+
+\begin{DoxyReturn}{Retorna}
+Valor do coeficiente associado à energia de adsorção. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_aa0408c85633466dc2570f5adf7bd25e1}\label{classist_1_1_dubinin_radushkevich_aa0408c85633466dc2570f5adf7bd25e1}} 
+\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}!K1@{K1}}
+\index{K1@{K1}!ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+\doxysubsubsection{\texorpdfstring{K1()}{K1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ist\+::\+Dubinin\+Radushkevich\+::\+K1 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&}]{\+\_\+k1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Altera o coeficiente associado à energia de adsorção. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+k1} & Novo valor do coeficiente associado à energia de adsorção. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & se \+\_\+k1 \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_a5face82ede7ff28ce0a7de07b5818df8}\label{classist_1_1_dubinin_radushkevich_a5face82ede7ff28ce0a7de07b5818df8}} 
+\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}!operator=@{operator=}}
+\index{operator=@{operator=}!ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classist_1_1_dubinin_radushkevich}{Dubinin\+Radushkevich}} \& ist\+::\+Dubinin\+Radushkevich\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classist_1_1_dubinin_radushkevich}{Dubinin\+Radushkevich}} \&}]{\+\_\+orig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Sobrecarga do operador =. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+orig} & Variável do tipo \mbox{\hyperlink{classist_1_1_dubinin_radushkevich}{Dubinin\+Radushkevich}} original. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cópia de \+\_\+orig. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_a4a28604a11d035b30f88df5c1d5d315d}\label{classist_1_1_dubinin_radushkevich_a4a28604a11d035b30f88df5c1d5d315d}} 
+\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}!Qe@{Qe}}
+\index{Qe@{Qe}!ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} ist\+::\+Dubinin\+Radushkevich\+::\+Qe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&}]{\+\_\+c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calcula a quantidade de sorção no equilíbrio. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & se \+\_\+c \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplementa \mbox{\hyperlink{classist_1_1_isotherm}{ist\+::\+Isotherm}}.
+
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_ae25d5c8ab65edb12214d817dbff1673a}\label{classist_1_1_dubinin_radushkevich_ae25d5c8ab65edb12214d817dbff1673a}} 
+\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}!Qe@{Qe}}
+\index{Qe@{Qe}!ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+\doxysubsubsection{\texorpdfstring{Qe()}{Qe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} ist\+::\+Dubinin\+Radushkevich\+::\+Qe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&}]{\+\_\+c,  }\item[{const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&}]{\+\_\+temp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calcula a quantidade de sorção no equilíbrio. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+c} & Concentração do soluto. \\
+\hline
+{\em \+\_\+temp} & Temperatura em K. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor da quantidade de sorção no equilíbrio. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & se \+\_\+c \texorpdfstring{$<$}{<}= 0 ou \+\_\+temp \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{classist_1_1_isotherm}{ist\+::\+Isotherm}}.
+
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_a09fdd45f0c998222220c26e31735d24b}\label{classist_1_1_dubinin_radushkevich_a09fdd45f0c998222220c26e31735d24b}} 
+\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} ist\+::\+Dubinin\+Radushkevich\+::\+Qmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o valor da constante de equilíbrio de Dubinin-\/\+Radushkevich. 
+
+\begin{DoxyReturn}{Retorna}
+Valor da constante de equilíbrio de Dubinin-\/\+Radushkevich. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_ab8660f7413ec26647111028432e6a3af}\label{classist_1_1_dubinin_radushkevich_ab8660f7413ec26647111028432e6a3af}} 
+\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}!Qmax@{Qmax}}
+\index{Qmax@{Qmax}!ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+\doxysubsubsection{\texorpdfstring{Qmax()}{Qmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ist\+::\+Dubinin\+Radushkevich\+::\+Qmax (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&}]{\+\_\+qmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Altera a constante de equilíbrio de Dubinin-\/\+Radushkevich. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+qmax} & Novo valor da constante de equilíbrio de Dubinin-\/\+Radushkevich. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & se \+\_\+qmax \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_ab186b667d2391f34f0541a05352bd640}\label{classist_1_1_dubinin_radushkevich_ab186b667d2391f34f0541a05352bd640}} 
+\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}!Rgas@{Rgas}}
+\index{Rgas@{Rgas}!ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+\doxysubsubsection{\texorpdfstring{Rgas()}{Rgas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} ist\+::\+Dubinin\+Radushkevich\+::\+Rgas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o valor da constante universal dos gases. 
+
+\begin{DoxyReturn}{Retorna}
+Valor da constante universal dos gases. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classist_1_1_dubinin_radushkevich_a44ce82b95b13d1bfb549948d0cba4629}\label{classist_1_1_dubinin_radushkevich_a44ce82b95b13d1bfb549948d0cba4629}} 
+\index{ist::DubininRadushkevich@{ist::DubininRadushkevich}!Rgas@{Rgas}}
+\index{Rgas@{Rgas}!ist::DubininRadushkevich@{ist::DubininRadushkevich}}
+\doxysubsubsection{\texorpdfstring{Rgas()}{Rgas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ist\+::\+Dubinin\+Radushkevich\+::\+Rgas (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&}]{\+\_\+rgas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Altera o valor da constante universal dos gases. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+rgas} & Novo valor da constante universal dos gases. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & se \+\_\+rgas \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Documents/\+Desennvolvimento/\+Isotherm\+Lib/\+Isotherm\+Lib/include/\+Isotherm/\+Two\+Parameters/Dubinin\+Radushkevich.\+h\item 
+D\+:/\+Documents/\+Desennvolvimento/\+Isotherm\+Lib/\+Isotherm\+Lib/src/\+Isotherm/\+Two\+Parameters/Dubinin\+Radushkevich.\+cpp\end{DoxyCompactItemize}

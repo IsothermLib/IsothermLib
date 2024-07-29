@@ -1,5 +1,5 @@
-\hypertarget{_iso_exception_8h}{}\doxysection{Referência do Arquivo Isotherm\+Lib/include/\+Error/\+Iso\+Exception.h}
-\label{_iso_exception_8h}\index{IsothermLib/include/Error/IsoException.h@{IsothermLib/include/Error/IsoException.h}}
+\hypertarget{_iso_exception_8h}{}\doxysection{Referência do Arquivo D\+:/\+Documents/\+Desennvolvimento/\+Isotherm\+Lib/\+Isotherm\+Lib/include/\+Error/\+Iso\+Exception.h}
+\label{_iso_exception_8h}\index{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Error/IsoException.h@{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Error/IsoException.h}}
 {\ttfamily \#include $<$exception$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$Misc/\+Configure.\+h$>$}\newline
@@ -7,44 +7,51 @@
 \doxysubsection*{Componentes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{class_iso_exception}{Iso\+Exception}}
-\begin{DoxyCompactList}\small\item\em Classe para tratar as exceptions do programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \mbox{\hyperlink{classist_1_1_iso_exception}{ist\+::\+Iso\+Exception}}
+\end{DoxyCompactItemize}
+\doxysubsection*{\texorpdfstring{$<$}{<}em\texorpdfstring{$>$}{>}Namespaces\texorpdfstring{$<$}{<}/em\texorpdfstring{$>$}{>}}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceist}{ist}}
+\begin{DoxyCompactList}\small\item\em Classe base de todas as outras classes de isotermas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Enumerações}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{_iso_exception_8h_a4183629f593e0912cf811750a9648b4c}\label{_iso_exception_8h_a4183629f593e0912cf811750a9648b4c}} 
+\mbox{\Hypertarget{namespaceist_acdaa0298f22a79496afe5aafe0948059}\label{namespaceist_acdaa0298f22a79496afe5aafe0948059}} 
 enum {\bfseries Iso\+Exception\+Index} \{ \newline
 {\bfseries Bad\+Coefficient} = 0
 , {\bfseries Bad\+Ce\+LEZero}
 , {\bfseries Bad\+Ce\+LTZero}
+, {\bfseries Bad\+Ce\+GEOne}
+, \newline
+{\bfseries Bad\+Ce\+GEK2}
 , {\bfseries Bad\+K1\+LEZero}
-, \newline
-{\bfseries Bad\+K1\+LTZero}
+, {\bfseries Bad\+K1\+LTZero}
 , {\bfseries Bad\+K2\+LEZero}
-, {\bfseries Bad\+K2\+LTZero}
+, \newline
+{\bfseries Bad\+K2\+LTZero}
 , {\bfseries Bad\+K3\+LEZero}
-, \newline
-{\bfseries Bad\+K3\+LTZero}
+, {\bfseries Bad\+K3\+LTZero}
 , {\bfseries Bad\+K4\+LEZero}
-, {\bfseries Bad\+K4\+LTZero}
+, \newline
+{\bfseries Bad\+K4\+LTZero}
+, {\bfseries Bad\+K1\+LTOne}
 , {\bfseries Bad\+K2\+LEOne}
+, {\bfseries Bad\+K3\+GTOne}
 , \newline
-{\bfseries Bad\+K3\+GTOne}
-, {\bfseries Bad\+K3\+Between01}
-, {\bfseries Bad\+K4\+Between01}
+{\bfseries Bad\+K3\+GEOne}
 , {\bfseries Bad\+Qmax\+LEZero}
-, \newline
-{\bfseries Bad\+Temp\+LEZero}
+, {\bfseries Bad\+Temp\+LEZero}
 , {\bfseries Bad\+RGas\+LEZero}
-, {\bfseries Bad\+Result}
+, \newline
+{\bfseries Bad\+Result}
 , {\bfseries Bad\+Over\+Flow}
-, \newline
-{\bfseries Bad\+Log\+Ce\+GTK2}
+, {\bfseries Bad\+Log\+Ce\+GTK2}
 , {\bfseries Convergence\+Problem}
-, {\bfseries Bad\+Theta\+GEOne}
-, {\bfseries Bad\+Theta\+LEZero}
 , \newline
-{\bfseries Bad\+KCe\+K1\+LEOne}
+{\bfseries Bad\+Theta\+GEOne}
+, {\bfseries Bad\+Theta\+LEZero}
+, {\bfseries Bad\+KCe\+K1\+LEOne}
  \}
 \end{DoxyCompactItemize}
 
@@ -57,7 +64,7 @@ Joao Flavio Vieira de Vasconcellos
 1.\+0 
 \end{DoxyVersion}
 \begin{DoxyDate}{Data}
-2021 
+2022 
 \end{DoxyDate}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]Não há bugs conhecidos \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]Nao ha bugs conhecidos \end{DoxyRefDesc}

@@ -1,5 +1,5 @@
 \hypertarget{_jovanovic_8h_source}{}\doxysection{Jovanovic.\+h}
-\label{_jovanovic_8h_source}\index{IsothermLib/include/Isotherm/TwoParameters/Jovanovic.h@{IsothermLib/include/Isotherm/TwoParameters/Jovanovic.h}}
+\label{_jovanovic_8h_source}\index{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/Jovanovic.h@{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/Jovanovic.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 }
@@ -42,11 +42,11 @@
 \DoxyCodeLine{59 \textcolor{preprocessor}{\#include<Isotherm/TwoParameters/TwoParameters.h>}}
 \DoxyCodeLine{60 }
 \DoxyCodeLine{61 }
-\DoxyCodeLine{62 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{62 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceist}{ist}} \{}
 \DoxyCodeLine{63 }
 \DoxyCodeLine{64 }
-\DoxyCodeLine{65 \textcolor{keyword}{class }\mbox{\hyperlink{class_jovanovic}{Jovanovic}} : \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_two_parameters}{TwoParameters}},}
-\DoxyCodeLine{66                   \textcolor{keyword}{public} \mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} < Jovanovic > \{}
+\DoxyCodeLine{65 \textcolor{keyword}{class }\mbox{\hyperlink{classist_1_1_jovanovic}{Jovanovic}} : \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{classist_1_1_two_parameters}{TwoParameters}},}
+\DoxyCodeLine{66                   \textcolor{keyword}{public} \mbox{\hyperlink{classist_1_1_isotherm_template}{IsothermTemplate}} < Jovanovic > \{}
 \DoxyCodeLine{67 }
 \DoxyCodeLine{68 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{69 \textcolor{comment}{// ID da classe}}
@@ -54,7 +54,7 @@
 \DoxyCodeLine{71 }
 \DoxyCodeLine{72 \textcolor{keyword}{public}:}
 \DoxyCodeLine{73 }
-\DoxyCodeLine{78     \mbox{\hyperlink{class_jovanovic_ae6f4ff53e550e8fa0cdb1f57eedc537b}{DefineIdentity}}(\textcolor{stringliteral}{"{}Jovanovic"{}}, ID::Jovanovic);}
+\DoxyCodeLine{78     \mbox{\hyperlink{classist_1_1_jovanovic_ab6c6296047d0094d2252393aa19e7b16}{DefineIdentity}}(\textcolor{stringliteral}{"{}Jovanovic"{}}, ID::Jovanovic);}
 \DoxyCodeLine{79 }
 \DoxyCodeLine{80 }
 \DoxyCodeLine{81 \textcolor{comment}{//==============================================================================}}
@@ -63,14 +63,14 @@
 \DoxyCodeLine{84 }
 \DoxyCodeLine{85 \textcolor{keyword}{public}:}
 \DoxyCodeLine{86 }
-\DoxyCodeLine{97     \mbox{\hyperlink{class_jovanovic_a9613cae91ef53fb33694a20e131f66fb}{Jovanovic}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{97     \mbox{\hyperlink{classist_1_1_jovanovic_ad3ee7030800465db9e198d00826ae55d}{Jovanovic}}() = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{98 }
-\DoxyCodeLine{110     \mbox{\hyperlink{class_jovanovic_a83dbfff7837e92a966bef86d1f5bd92f}{Jovanovic}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_jovanovic}{Jovanovic}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{110     \mbox{\hyperlink{classist_1_1_jovanovic_ac2a62e13f206f6f9622328d057f0f095}{Jovanovic}}(\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_jovanovic}{Jovanovic}}\& \_orig) = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{111 }
-\DoxyCodeLine{115     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_jovanovic_ad728b685f8caba5c6fdb39f54582939f}{\string~Jovanovic}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{115     \textcolor{keyword}{virtual} \mbox{\hyperlink{classist_1_1_jovanovic_a718bb6873e2dbcf8465661eb23c14ac5}{\string~Jovanovic}}() = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{116 }
 \DoxyCodeLine{132 }
-\DoxyCodeLine{133     \mbox{\hyperlink{class_jovanovic_a9613cae91ef53fb33694a20e131f66fb}{Jovanovic}}(\textcolor{keyword}{const} Real\& \_k1, \textcolor{keyword}{const} Real\& \_qmax);}
+\DoxyCodeLine{133     \mbox{\hyperlink{classist_1_1_jovanovic_ad3ee7030800465db9e198d00826ae55d}{Jovanovic}}(\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_k1, \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_qmax);}
 \DoxyCodeLine{134 }
 \DoxyCodeLine{135 }
 \DoxyCodeLine{136 \textcolor{comment}{//==============================================================================}}
@@ -80,52 +80,55 @@
 \DoxyCodeLine{140 \textcolor{keyword}{public}:}
 \DoxyCodeLine{141 }
 \DoxyCodeLine{142 }
-\DoxyCodeLine{155     \mbox{\hyperlink{class_jovanovic}{Jovanovic}}\& \mbox{\hyperlink{class_jovanovic_adfc173c656e947c0ae2f5395d9b55c87}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_jovanovic}{Jovanovic}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{155     \mbox{\hyperlink{classist_1_1_jovanovic}{Jovanovic}}\& \mbox{\hyperlink{classist_1_1_jovanovic_aee8365e89176af3a808b3ccd7536d15b}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_jovanovic}{Jovanovic}}\&) = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{156 }
 \DoxyCodeLine{157 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{158 \textcolor{comment}{// Acesso as constantes da classe}}
 \DoxyCodeLine{159 }
 \DoxyCodeLine{160 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{161 }
-\DoxyCodeLine{174 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_jovanovic_a7dc2f46729408642379956f5955d3479}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1);\};}
-\DoxyCodeLine{175 }
+\DoxyCodeLine{174 [[nodiscard]]}
+\DoxyCodeLine{175 \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_jovanovic_a1dc51e46094b2b53ebb6602b86017028}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(1);\};}
 \DoxyCodeLine{176 }
-\DoxyCodeLine{189 \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_jovanovic_aabed4d9481846dbfb41481299157c60c}{Qmax}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0);\};}
-\DoxyCodeLine{190 }
-\DoxyCodeLine{191 }
-\DoxyCodeLine{192 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{193 \textcolor{comment}{// Alterando as constantes da classe}}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{190 [[nodiscard]]}
+\DoxyCodeLine{191 \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_jovanovic_a4ba50ffda1701d50eb2f787c449de087}{Qmax}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(0);\};}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 }
 \DoxyCodeLine{194 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{195 }
-\DoxyCodeLine{209     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jovanovic_a75b3d78c4ba9180e7030c88a9a2e00ef}{Qmax}} (\textcolor{keyword}{const} Real\& \_qmax)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_jovanovic_a9613cae91ef53fb33694a20e131f66fb}{Jovanovic}}(\_qmax, \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1));\};}
-\DoxyCodeLine{210 }
-\DoxyCodeLine{211 }
-\DoxyCodeLine{225     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jovanovic_a26b9bc0ac4402fdf466c86f9418a1e52}{K1}} (\textcolor{keyword}{const} Real\& \_k1)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_jovanovic_a9613cae91ef53fb33694a20e131f66fb}{Jovanovic}}(\mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), \_k1);\};}
-\DoxyCodeLine{226 }
-\DoxyCodeLine{227 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{228 \textcolor{comment}{// Funcoes virtuais}}
+\DoxyCodeLine{195 \textcolor{comment}{// Alterando as constantes da classe}}
+\DoxyCodeLine{196 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{211     \textcolor{keywordtype}{void} \mbox{\hyperlink{classist_1_1_jovanovic_a10515c1be826cc41f4f0c80b09c5aedd}{Qmax}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_qmax)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{classist_1_1_jovanovic_ad3ee7030800465db9e198d00826ae55d}{Jovanovic}}(\_qmax, \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(1));\};}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213 }
+\DoxyCodeLine{227     \textcolor{keywordtype}{void} \mbox{\hyperlink{classist_1_1_jovanovic_acb338d6037557917979fc4cb99990f0d}{K1}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_k1)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{classist_1_1_jovanovic_ad3ee7030800465db9e198d00826ae55d}{Jovanovic}}(\mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(0), \_k1);\};}
+\DoxyCodeLine{228 }
 \DoxyCodeLine{229 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{230 }
-\DoxyCodeLine{245     [[nodiscard]]}
-\DoxyCodeLine{246     Real \mbox{\hyperlink{class_jovanovic_a3cdb82a3e8da4b3e382e45530e88b04c}{Qe}} (   \textcolor{keyword}{const} Real\& \_c}
-\DoxyCodeLine{247             ,   \textcolor{keyword}{const} Real\& \_temp = 0}
-\DoxyCodeLine{248             ) \textcolor{keyword}{const};}
-\DoxyCodeLine{249 }
-\DoxyCodeLine{250 }
-\DoxyCodeLine{251     [[nodiscard]] }
-\DoxyCodeLine{252     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_jovanovic}{Jovanovic}}* CloneImplementation()\textcolor{keyword}{ const override}}
-\DoxyCodeLine{253 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{254         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_jovanovic_a9613cae91ef53fb33694a20e131f66fb}{Jovanovic}}(*\textcolor{keyword}{this});}
-\DoxyCodeLine{255     \}   }
-\DoxyCodeLine{256 }
-\DoxyCodeLine{257 \};}
+\DoxyCodeLine{230 \textcolor{comment}{// Funcoes virtuais}}
+\DoxyCodeLine{231 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{247     [[nodiscard]]}
+\DoxyCodeLine{248     \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_jovanovic_ac9c83b4f40dc7366042930a46fc218cf}{Qe}} (   \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_c}
+\DoxyCodeLine{249             ,   \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_temp = 0}
+\DoxyCodeLine{250             ) \textcolor{keyword}{const};}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253     [[nodiscard]]}
+\DoxyCodeLine{254     \textcolor{keyword}{virtual} std::unique\_ptr<Isotherm> CloneImplementation()\textcolor{keyword}{ const override}}
+\DoxyCodeLine{255 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{256         \textcolor{keywordflow}{return} std::make\_unique<Jovanovic>(*\textcolor{keyword}{this});}
+\DoxyCodeLine{257     \}}
 \DoxyCodeLine{258 }
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260 \};}
 \DoxyCodeLine{261 }
-\DoxyCodeLine{262 }
-\DoxyCodeLine{263 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
 \DoxyCodeLine{264 }
-\DoxyCodeLine{265 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* JOVANOVIC\_H */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{266 }
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266 \}}
 \DoxyCodeLine{267 }
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* JOVANOVIC\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270 }
 
 \end{DoxyCode}

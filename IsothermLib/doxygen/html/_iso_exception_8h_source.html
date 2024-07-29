@@ -1,19 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IsothermLib: Código-Fonte de D:/Desenvolvimento/IsothermLib - Github/IsothermLib/include/Error/IsoException.h</title>
+<title>IsothermLib: Código-Fonte de D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Error/IsoException.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -31,10 +36,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.10.0 -->
+<!-- Gerado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -43,16 +48,11 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,16 +62,9 @@ $(function() { codefold.init(0); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Carregando...</div>
-<div class="SRStatus" id="Searching">Procurando...</div>
-<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -83,7 +76,7 @@ $(function() { codefold.init(0); });
   <div class="headertitle"><div class="title">IsoException.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_iso_exception_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//==============================================================================</span></div>
+<a href="_iso_exception_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//==============================================================================</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Name        : IsoException.h</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Author      : Joao Flavio Vieira de Vasconcellos</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Version     : 1.0</span></div>
@@ -125,7 +118,6 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &lt;Misc/SourceInfo.h&gt;</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="namespaceist.html">   53</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceist.html">ist</a> {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">enum</span> IsoExceptionIndex {</div>
@@ -164,7 +156,6 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="foldopen" id="foldopen00091" data-start="{" data-end="};">
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classist_1_1_iso_exception.html">   91</a></span><span class="keyword">class </span><a class="code hl_class" href="classist_1_1_iso_exception.html">IsoException</a> : <span class="keyword">public</span> std::exception {</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
@@ -202,21 +193,19 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    std::string             msg;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>};</div>
-</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
-</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        </div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#endif </span><span class="comment">/* __ISOEXCEPTION_H__ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassist_1_1_iso_exception_html"><div class="ttname"><a href="classist_1_1_iso_exception.html">ist::IsoException</a></div><div class="ttdef"><b>Definição</b> IsoException.h:91</div></div>
-<div class="ttc" id="aclassist_1_1_source_info_html"><div class="ttname"><a href="classist_1_1_source_info.html">ist::SourceInfo</a></div><div class="ttdef"><b>Definição</b> SourceInfo.h:24</div></div>
-<div class="ttc" id="agroup___type_html_gaba0996d26f7be2572973245b51852757"><div class="ttname"><a href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a></div><div class="ttdeci">unsigned int UInt</div><div class="ttdef"><b>Definição</b> Type.h:16</div></div>
-<div class="ttc" id="anamespaceist_html"><div class="ttname"><a href="namespaceist.html">ist</a></div><div class="ttdoc">Classe base de todas as outras classes de isotermas.</div><div class="ttdef"><b>Definição</b> IsoException.h:53</div></div>
+<div class="ttc" id="aclassist_1_1_iso_exception_html"><div class="ttname"><a href="classist_1_1_iso_exception.html">ist::IsoException</a></div><div class="ttdef"><b>Definition:</b> IsoException.h:91</div></div>
+<div class="ttc" id="aclassist_1_1_source_info_html"><div class="ttname"><a href="classist_1_1_source_info.html">ist::SourceInfo</a></div><div class="ttdef"><b>Definition:</b> SourceInfo.h:24</div></div>
+<div class="ttc" id="agroup___type_html_gaba0996d26f7be2572973245b51852757"><div class="ttname"><a href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a></div><div class="ttdeci">unsigned int UInt</div><div class="ttdef"><b>Definition:</b> Type.h:16</div></div>
+<div class="ttc" id="anamespaceist_html"><div class="ttname"><a href="namespaceist.html">ist</a></div><div class="ttdoc">Classe base de todas as outras classes de isotermas.</div><div class="ttdef"><b>Definition:</b> IsoException.h:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

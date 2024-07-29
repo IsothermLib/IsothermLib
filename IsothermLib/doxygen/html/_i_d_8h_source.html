@@ -1,19 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IsothermLib: Código-Fonte de D:/Desenvolvimento/IsothermLib - Github/IsothermLib/include/Misc/ID.h</title>
+<title>IsothermLib: Código-Fonte de D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Misc/ID.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -31,10 +36,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.10.0 -->
+<!-- Gerado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -43,16 +48,11 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,16 +62,9 @@ $(function() { codefold.init(0); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Carregando...</div>
-<div class="SRStatus" id="Searching">Procurando...</div>
-<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -123,7 +116,6 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceist.html">ist</a> {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classist_1_1_i_d.html">   47</a></span><span class="keyword">class </span><a class="code hl_class" href="classist_1_1_i_d.html">ID</a> {</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">//==============================================================================</span></div>
@@ -205,7 +197,6 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>[[nodiscard]] <span class="keyword">inline</span>  <span class="keyword">virtual</span> <a class="code hl_typedef" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> classID()<span class="keyword"> const </span>{<span class="keywordflow">return</span> 0;}</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>};</div>
-</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#define DefineIdentityBase(_name, _id) \</span></div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">     virtual std::string className() const {return _name;} \</span></div>
@@ -225,26 +216,25 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        </div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        </div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="ttc" id="aclassist_1_1_dubinin_radushkevich_html"><div class="ttname"><a href="classist_1_1_dubinin_radushkevich.html">ist::DubininRadushkevich</a></div><div class="ttdoc">Classe com as equações da isoterma de Dubinin-Radushkevich.</div><div class="ttdef"><b>Definição</b> DubininRadushkevich.h:53</div></div>
-<div class="ttc" id="aclassist_1_1_elovich_html"><div class="ttname"><a href="classist_1_1_elovich.html">ist::Elovich</a></div><div class="ttdoc">Defines a class for stuff.</div><div class="ttdef"><b>Definição</b> Elovich.h:70</div></div>
-<div class="ttc" id="aclassist_1_1_freundlich_html"><div class="ttname"><a href="classist_1_1_freundlich.html">ist::Freundlich</a></div><div class="ttdef"><b>Definição</b> Freundlich.h:63</div></div>
-<div class="ttc" id="aclassist_1_1_halsey_html"><div class="ttname"><a href="classist_1_1_halsey.html">ist::Halsey</a></div><div class="ttdef"><b>Definição</b> Halsey.h:67</div></div>
-<div class="ttc" id="aclassist_1_1_harkin_jura_html"><div class="ttname"><a href="classist_1_1_harkin_jura.html">ist::HarkinJura</a></div><div class="ttdef"><b>Definição</b> HarkinJura.h:64</div></div>
-<div class="ttc" id="aclassist_1_1_henry_html"><div class="ttname"><a href="classist_1_1_henry.html">ist::Henry</a></div><div class="ttdef"><b>Definição</b> Henry.h:64</div></div>
-<div class="ttc" id="aclassist_1_1_i_d_html"><div class="ttname"><a href="classist_1_1_i_d.html">ist::ID</a></div><div class="ttdef"><b>Definição</b> ID.h:47</div></div>
-<div class="ttc" id="aclassist_1_1_isotherm_html"><div class="ttname"><a href="classist_1_1_isotherm.html">ist::Isotherm</a></div><div class="ttdef"><b>Definição</b> Isotherm.h:80</div></div>
-<div class="ttc" id="aclassist_1_1_jovanovic_html"><div class="ttname"><a href="classist_1_1_jovanovic.html">ist::Jovanovic</a></div><div class="ttdef"><b>Definição</b> Jovanovic.h:66</div></div>
-<div class="ttc" id="aclassist_1_1_langmuir_html"><div class="ttname"><a href="classist_1_1_langmuir.html">ist::Langmuir</a></div><div class="ttdef"><b>Definição</b> Langmuir.h:67</div></div>
-<div class="ttc" id="aclassist_1_1_one_parameter_html"><div class="ttname"><a href="classist_1_1_one_parameter.html">ist::OneParameter</a></div><div class="ttdef"><b>Definição</b> OneParameter.h:58</div></div>
-<div class="ttc" id="aclassist_1_1_temkin_html"><div class="ttname"><a href="classist_1_1_temkin.html">ist::Temkin</a></div><div class="ttdef"><b>Definição</b> Temkin.h:65</div></div>
-<div class="ttc" id="aclassist_1_1_two_parameters_html"><div class="ttname"><a href="classist_1_1_two_parameters.html">ist::TwoParameters</a></div><div class="ttdef"><b>Definição</b> TwoParameters.h:59</div></div>
-<div class="ttc" id="agroup___type_html_gaba0996d26f7be2572973245b51852757"><div class="ttname"><a href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a></div><div class="ttdeci">unsigned int UInt</div><div class="ttdef"><b>Definição</b> Type.h:16</div></div>
-<div class="ttc" id="anamespaceist_html"><div class="ttname"><a href="namespaceist.html">ist</a></div><div class="ttdoc">Classe base de todas as outras classes de isotermas.</div><div class="ttdef"><b>Definição</b> IsoException.h:53</div></div>
+<div class="ttc" id="aclassist_1_1_dubinin_radushkevich_html"><div class="ttname"><a href="classist_1_1_dubinin_radushkevich.html">ist::DubininRadushkevich</a></div><div class="ttdoc">Classe com as equações da isoterma de Dubinin-Radushkevich.</div><div class="ttdef"><b>Definition:</b> DubininRadushkevich.h:56</div></div>
+<div class="ttc" id="aclassist_1_1_elovich_html"><div class="ttname"><a href="classist_1_1_elovich.html">ist::Elovich</a></div><div class="ttdoc">Implementa a isoterma de Elovich para adsor��o.</div><div class="ttdef"><b>Definition:</b> Elovich.h:68</div></div>
+<div class="ttc" id="aclassist_1_1_freundlich_html"><div class="ttname"><a href="classist_1_1_freundlich.html">ist::Freundlich</a></div><div class="ttdef"><b>Definition:</b> Freundlich.h:63</div></div>
+<div class="ttc" id="aclassist_1_1_halsey_html"><div class="ttname"><a href="classist_1_1_halsey.html">ist::Halsey</a></div><div class="ttdef"><b>Definition:</b> Halsey.h:67</div></div>
+<div class="ttc" id="aclassist_1_1_harkin_jura_html"><div class="ttname"><a href="classist_1_1_harkin_jura.html">ist::HarkinJura</a></div><div class="ttdef"><b>Definition:</b> HarkinJura.h:64</div></div>
+<div class="ttc" id="aclassist_1_1_henry_html"><div class="ttname"><a href="classist_1_1_henry.html">ist::Henry</a></div><div class="ttdef"><b>Definition:</b> Henry.h:64</div></div>
+<div class="ttc" id="aclassist_1_1_i_d_html"><div class="ttname"><a href="classist_1_1_i_d.html">ist::ID</a></div><div class="ttdef"><b>Definition:</b> ID.h:47</div></div>
+<div class="ttc" id="aclassist_1_1_isotherm_html"><div class="ttname"><a href="classist_1_1_isotherm.html">ist::Isotherm</a></div><div class="ttdef"><b>Definition:</b> Isotherm.h:80</div></div>
+<div class="ttc" id="aclassist_1_1_jovanovic_html"><div class="ttname"><a href="classist_1_1_jovanovic.html">ist::Jovanovic</a></div><div class="ttdef"><b>Definition:</b> Jovanovic.h:66</div></div>
+<div class="ttc" id="aclassist_1_1_langmuir_html"><div class="ttname"><a href="classist_1_1_langmuir.html">ist::Langmuir</a></div><div class="ttdef"><b>Definition:</b> Langmuir.h:67</div></div>
+<div class="ttc" id="aclassist_1_1_one_parameter_html"><div class="ttname"><a href="classist_1_1_one_parameter.html">ist::OneParameter</a></div><div class="ttdef"><b>Definition:</b> OneParameter.h:58</div></div>
+<div class="ttc" id="aclassist_1_1_temkin_html"><div class="ttname"><a href="classist_1_1_temkin.html">ist::Temkin</a></div><div class="ttdef"><b>Definition:</b> Temkin.h:65</div></div>
+<div class="ttc" id="aclassist_1_1_two_parameters_html"><div class="ttname"><a href="classist_1_1_two_parameters.html">ist::TwoParameters</a></div><div class="ttdef"><b>Definition:</b> TwoParameters.h:59</div></div>
+<div class="ttc" id="agroup___type_html_gaba0996d26f7be2572973245b51852757"><div class="ttname"><a href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a></div><div class="ttdeci">unsigned int UInt</div><div class="ttdef"><b>Definition:</b> Type.h:16</div></div>
+<div class="ttc" id="anamespaceist_html"><div class="ttname"><a href="namespaceist.html">ist</a></div><div class="ttdoc">Classe base de todas as outras classes de isotermas.</div><div class="ttdef"><b>Definition:</b> IsoException.h:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

@@ -1,6 +1,7 @@
 //==============================================================================
 // Name        : DubininRadushkevich.h
-// Authors     : Iasmim Barboza Storck
+// Authors     : Aline Zuliani Lunkes
+//               Iasmim Barboza Storck
 //               Lara Botelho Brum
 //               Luan Rodrigues Soares de Souza
 //               Joao Flavio Vieira de Vasconcellos
@@ -42,6 +43,8 @@ namespace ist {
  * @brief Classe com as equações da isoterma de Dubinin-Radushkevich
  * 
  * Isoterma com dois parâmetros, \f$ q_{max} \f$ e \f$ K_1 \f$, cujas fórmulas são as seguintes:
+
+
  * \f[
  *     Q_e (C_e, T) = q_{max} \exp( -K_1 \epsilon^2 )
  * \f]

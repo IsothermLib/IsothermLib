@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['value_0',['Value',['../group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba',1,'ist::Isotherm']]],
-  ['variáveis_1',['Tipo de Variáveis',['../group___type.html',1,'']]]
+  ['zero_0',['ZERO',['../namespaceist.html#ad584e8f0589e7a2299902243d3b89386',1,'ist']]]
 ];

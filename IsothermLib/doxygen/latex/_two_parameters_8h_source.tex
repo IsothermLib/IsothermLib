@@ -1,5 +1,5 @@
 \hypertarget{_two_parameters_8h_source}{}\doxysection{Two\+Parameters.\+h}
-\label{_two_parameters_8h_source}\index{IsothermLib/include/Isotherm/TwoParameters/TwoParameters.h@{IsothermLib/include/Isotherm/TwoParameters/TwoParameters.h}}
+\label{_two_parameters_8h_source}\index{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/TwoParameters.h@{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/TwoParameters.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
@@ -40,9 +40,9 @@
 \DoxyCodeLine{54 }
 \DoxyCodeLine{55 }
 \DoxyCodeLine{56 }
-\DoxyCodeLine{57 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{57 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceist}{ist}} \{}
 \DoxyCodeLine{58 }
-\DoxyCodeLine{59 \textcolor{keyword}{class }\mbox{\hyperlink{class_two_parameters}{TwoParameters}} :   \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_isotherm}{Isotherm}}  \{}
+\DoxyCodeLine{59 \textcolor{keyword}{class }\mbox{\hyperlink{classist_1_1_two_parameters}{TwoParameters}} :   \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}}  \{}
 \DoxyCodeLine{60 }
 \DoxyCodeLine{61 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{62 \textcolor{comment}{// ID da classe}}
@@ -60,15 +60,15 @@
 \DoxyCodeLine{74 }
 \DoxyCodeLine{75 \textcolor{keyword}{protected}:}
 \DoxyCodeLine{76 }
-\DoxyCodeLine{77     \mbox{\hyperlink{class_two_parameters}{TwoParameters}}() : \mbox{\hyperlink{class_two_parameters}{TwoParameters}}( 0.0, 0.0) \{\};}
-\DoxyCodeLine{78     \mbox{\hyperlink{class_two_parameters}{TwoParameters}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_two_parameters}{TwoParameters}}\&) = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{79     \mbox{\hyperlink{class_two_parameters}{\string~TwoParameters}}() \textcolor{keyword}{override} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{77     \mbox{\hyperlink{classist_1_1_two_parameters}{TwoParameters}}() : \mbox{\hyperlink{classist_1_1_two_parameters}{TwoParameters}}( 0.0, 0.0) \{\};}
+\DoxyCodeLine{78     \mbox{\hyperlink{classist_1_1_two_parameters}{TwoParameters}}(\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_two_parameters}{TwoParameters}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{79     \mbox{\hyperlink{classist_1_1_two_parameters}{\string~TwoParameters}}() \textcolor{keyword}{override} = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{80 }
-\DoxyCodeLine{81     \mbox{\hyperlink{class_two_parameters}{TwoParameters}}   (    \textcolor{keyword}{const} Real\&    \_par\_0      \textcolor{comment}{// Primeiro para¢metro}}
-\DoxyCodeLine{82                     ,    \textcolor{keyword}{const} Real\&    \_par\_1      \textcolor{comment}{// Segundo para¢metro}}
+\DoxyCodeLine{81     \mbox{\hyperlink{classist_1_1_two_parameters}{TwoParameters}}   (    \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\&    \_par\_0      \textcolor{comment}{// Primeiro para{\ucr}metro}}
+\DoxyCodeLine{82                     ,    \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\&    \_par\_1      \textcolor{comment}{// Segundo para{\ucr}metro}}
 \DoxyCodeLine{83                     )}
 \DoxyCodeLine{84     \{}
-\DoxyCodeLine{85         \mbox{\hyperlink{group___isotherm_template_ga40d851bca8f35e398268cbe18347804a}{coeffValue}}   = VecReal(\{\_par\_0, \_par\_1\});}
+\DoxyCodeLine{85         \mbox{\hyperlink{group___isotherm_template_ga9f9cd71c8e24d951ea5acc91137316c1}{coeffValue}}   = VecReal(\{\_par\_0, \_par\_1\});}
 \DoxyCodeLine{86     \}}
 \DoxyCodeLine{87 }
 \DoxyCodeLine{88 \textcolor{comment}{//==============================================================================}}
@@ -77,14 +77,13 @@
 \DoxyCodeLine{91 }
 \DoxyCodeLine{92 \textcolor{keyword}{protected}:}
 \DoxyCodeLine{93 }
-\DoxyCodeLine{94     \mbox{\hyperlink{class_two_parameters}{TwoParameters}}\& operator = (\textcolor{keyword}{const} \mbox{\hyperlink{class_two_parameters}{TwoParameters}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{94     \mbox{\hyperlink{classist_1_1_two_parameters}{TwoParameters}}\& operator = (\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_two_parameters}{TwoParameters}}\&) = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{95 }
-\DoxyCodeLine{96 }
-\DoxyCodeLine{97 \};}
-\DoxyCodeLine{98 }
-\DoxyCodeLine{99 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
-\DoxyCodeLine{100 }
-\DoxyCodeLine{101 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_ISO\_\_TWOPARAMETERS\_H\_\_ */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{102 }
+\DoxyCodeLine{96 \};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_ISO\_\_TWOPARAMETERS\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{101 }
 
 \end{DoxyCode}

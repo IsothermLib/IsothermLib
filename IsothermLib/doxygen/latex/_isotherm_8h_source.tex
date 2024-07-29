@@ -1,322 +1,327 @@
 \hypertarget{_isotherm_8h_source}{}\doxysection{Isotherm.\+h}
-\label{_isotherm_8h_source}\index{IsothermLib/include/Isotherm.h@{IsothermLib/include/Isotherm.h}}
+\label{_isotherm_8h_source}\index{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm.h@{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{2 \textcolor{comment}{// Name        : Isotherm.h}}
-\DoxyCodeLine{3 \textcolor{comment}{// Authors     : Lara Botelho Brum}}
-\DoxyCodeLine{4 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
-\DoxyCodeLine{5 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
-\DoxyCodeLine{6 \textcolor{comment}{// Version     : 1.0}}
-\DoxyCodeLine{7 \textcolor{comment}{// Description : Classe base da biblioteca Isotherm++}}
-\DoxyCodeLine{8 \textcolor{comment}{//}}
-\DoxyCodeLine{9 \textcolor{comment}{// Copyright   : Copyright (C) <2021>  Joao Flavio Vasconcellos }}
-\DoxyCodeLine{10 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
-\DoxyCodeLine{11 \textcolor{comment}{//}}
-\DoxyCodeLine{12 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
-\DoxyCodeLine{13 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
-\DoxyCodeLine{14 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
-\DoxyCodeLine{15 \textcolor{comment}{//}}
-\DoxyCodeLine{16 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
-\DoxyCodeLine{17 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
-\DoxyCodeLine{18 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
-\DoxyCodeLine{19 \textcolor{comment}{// GNU General Public License for more details.}}
-\DoxyCodeLine{20 \textcolor{comment}{//}}
-\DoxyCodeLine{21 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
-\DoxyCodeLine{22 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
-\DoxyCodeLine{23 \textcolor{comment}{//}}
-\DoxyCodeLine{24 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{25 }
+\DoxyCodeLine{3 \textcolor{comment}{// Authors     : Iasmim Barboza Storck}}
+\DoxyCodeLine{4 \textcolor{comment}{//               Lara Botelho Brum}}
+\DoxyCodeLine{5 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
+\DoxyCodeLine{6 \textcolor{comment}{//               Jo{\ucr}o Fl{\ucr}vio Vieira de Vasconcellos}}
+\DoxyCodeLine{7 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{8 \textcolor{comment}{// Description : Classe base da biblioteca IsothermLib++}}
+\DoxyCodeLine{9 \textcolor{comment}{//}}
+\DoxyCodeLine{10 \textcolor{comment}{// Copyright   : Copyright (C) <2022>  Jo{\ucr}o Fl{\ucr}vio Vasconcellos }}
+\DoxyCodeLine{11 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{14 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{15 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{16 \textcolor{comment}{//}}
+\DoxyCodeLine{17 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{18 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{19 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{20 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{21 \textcolor{comment}{//}}
+\DoxyCodeLine{22 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{23 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{24 \textcolor{comment}{//}}
+\DoxyCodeLine{25 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{26 }
-\DoxyCodeLine{44 }
-\DoxyCodeLine{45 \textcolor{preprocessor}{\#ifndef \_\_ISOTHERM\_H\_\_}}
-\DoxyCodeLine{46 \textcolor{preprocessor}{\#define \_\_ISOTHERM\_H\_\_}}
-\DoxyCodeLine{47 }
-\DoxyCodeLine{48 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{49 \textcolor{comment}{// include da lib c++ }}
-\DoxyCodeLine{50 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{51 }
-\DoxyCodeLine{52 \textcolor{preprocessor}{\#include <functional>}       \textcolor{comment}{// std::function}}
-\DoxyCodeLine{53 \textcolor{preprocessor}{\#include <memory>}           \textcolor{comment}{// std::shared\_ptr}}
-\DoxyCodeLine{54 \textcolor{preprocessor}{\#include <vector>}           \textcolor{comment}{// std::vector}}
-\DoxyCodeLine{55 }
-\DoxyCodeLine{56 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{57 \textcolor{comment}{// include da Isotherm++}}
-\DoxyCodeLine{58 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{59 }
-\DoxyCodeLine{60 \textcolor{preprocessor}{\#include <Misc/ID.h>}}
-\DoxyCodeLine{61 }
-\DoxyCodeLine{62 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
-\DoxyCodeLine{63 }
-\DoxyCodeLine{64 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{65 \textcolor{comment}{// typedef}}
-\DoxyCodeLine{66 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{67 }
-\DoxyCodeLine{68 \textcolor{keyword}{typedef} std::pair < std::string, std::string >                 \mbox{\hyperlink{group___isotherm_gaaaf968cd7cc4622f664c9c82f39f9d62}{PairString}}; }
-\DoxyCodeLine{69 \textcolor{keyword}{typedef} std::vector < PairString >                             VecPairString; }
-\DoxyCodeLine{70 \textcolor{keyword}{typedef} std::vector < Real >                                   VecReal;}
-\DoxyCodeLine{71 \textcolor{keyword}{typedef} std::function<Real(\textcolor{keyword}{const} Real\&, \textcolor{keyword}{const} Real\&)>          FunctionEscala;}
-\DoxyCodeLine{72 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#ifndef \_\_ISOTHERM\_H\_\_}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define \_\_ISOTHERM\_H\_\_}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{50 \textcolor{comment}{// include da lib c++ }}
+\DoxyCodeLine{51 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#include <functional>}       \textcolor{comment}{// std::function}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#include <memory>}           \textcolor{comment}{// std::shared\_ptr}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#include <vector>}           \textcolor{comment}{// std::vector}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{58 \textcolor{comment}{// include da Isotherm++}}
+\DoxyCodeLine{59 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#include <Misc/ID.h>}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceist}{ist}} \{}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{66 \textcolor{comment}{// typedef}}
+\DoxyCodeLine{67 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{keyword}{typedef} std::pair < std::string, std::string >                 PairString; }
+\DoxyCodeLine{70 \textcolor{keyword}{typedef} std::vector < PairString >                             VecPairString; }
+\DoxyCodeLine{71 \textcolor{keyword}{typedef} std::vector < Real >                                   VecReal;}
+\DoxyCodeLine{72 \textcolor{keyword}{typedef} std::function<\mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}(\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\&, \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\&)>          FunctionEscala;}
 \DoxyCodeLine{73 }
-\DoxyCodeLine{74 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{75 \textcolor{comment}{// classe isotherm}}
-\DoxyCodeLine{76 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{77 }
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{76 \textcolor{comment}{// classe isotherm}}
+\DoxyCodeLine{77 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{78 }
-\DoxyCodeLine{79 \textcolor{keyword}{class }\mbox{\hyperlink{class_isotherm}{Isotherm}} \{}
-\DoxyCodeLine{80     }
-\DoxyCodeLine{81 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{82 \textcolor{comment}{// ID da classe}}
-\DoxyCodeLine{83 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{84 }
-\DoxyCodeLine{85 \textcolor{keyword}{public}:}
-\DoxyCodeLine{86 }
-\DoxyCodeLine{87     DefineIdentityBase  (   \textcolor{stringliteral}{"{}Isotherm"{}}}
-\DoxyCodeLine{88                         ,   ID::Isotherm}
-\DoxyCodeLine{89                         );}
-\DoxyCodeLine{90 }
-\DoxyCodeLine{91 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{92 \textcolor{comment}{// constantes do modelo}}
-\DoxyCodeLine{93 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{94 }
-\DoxyCodeLine{95 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{96 }
-\DoxyCodeLine{97 \textcolor{keyword}{inline} \textcolor{keyword}{static} \textcolor{keyword}{const} Real RGASCONST = 8.31446261815324L;}
-\DoxyCodeLine{98 }
-\DoxyCodeLine{99 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{100 \textcolor{comment}{// Funções friend}}
-\DoxyCodeLine{101 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{102 }
-\DoxyCodeLine{103 \textcolor{keyword}{public}:}
-\DoxyCodeLine{104 }
-\DoxyCodeLine{105 \textcolor{keyword}{friend} std::ostream \& operator << (std::ostream \&, \textcolor{keyword}{const} \mbox{\hyperlink{class_isotherm}{Isotherm}}\&);}
-\DoxyCodeLine{106 }
-\DoxyCodeLine{107 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{108 \textcolor{comment}{// Construtoras / Destrutora}}
-\DoxyCodeLine{109 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{110 }
-\DoxyCodeLine{111 \textcolor{keyword}{public}:}
-\DoxyCodeLine{112 }
-\DoxyCodeLine{113     \mbox{\hyperlink{class_isotherm}{Isotherm}}() = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{114     \mbox{\hyperlink{class_isotherm}{Isotherm}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_isotherm}{Isotherm}}\&) = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{115     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_isotherm}{\string~Isotherm}}() = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{116 }
-\DoxyCodeLine{117 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{118 \textcolor{comment}{// Sobrecarga de operadores}}
-\DoxyCodeLine{119 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{120 }
-\DoxyCodeLine{121 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{122 }
-\DoxyCodeLine{123     \mbox{\hyperlink{class_isotherm}{Isotherm}}\& operator = (\textcolor{keyword}{const} \mbox{\hyperlink{class_isotherm}{Isotherm}}\&) = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{124 }
-\DoxyCodeLine{125 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{126 \textcolor{comment}{// Funções inline}}
-\DoxyCodeLine{127 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{128 }
-\DoxyCodeLine{129 \textcolor{keyword}{public}:}
-\DoxyCodeLine{130 }
-\DoxyCodeLine{131 [[nodiscard]] \textcolor{keyword}{inline} Real DQDC (\textcolor{keyword}{const} Real\& \_ce, \textcolor{keyword}{const} Real\& \_temperature = 0)\textcolor{keyword}{ const}}
-\DoxyCodeLine{132 \textcolor{keyword}{}\{}
-\DoxyCodeLine{133 }
-\DoxyCodeLine{134 \textcolor{keyword}{const} Real PERC (1e-\/06);}
-\DoxyCodeLine{135 }
-\DoxyCodeLine{136     \textcolor{keywordflow}{if} (\_ce > 0.0)}
-\DoxyCodeLine{137     \{}
-\DoxyCodeLine{138         \textcolor{keywordflow}{return}  0.5 * ( Qe(\_ce * (1 + PERC), \_temperature) -\/}
-\DoxyCodeLine{139                         Qe(\_ce * (1 -\/ PERC), \_temperature))}
-\DoxyCodeLine{140                 / (\_ce * PERC);}
-\DoxyCodeLine{141     \}}
-\DoxyCodeLine{142 }
-\DoxyCodeLine{143     \textcolor{keywordflow}{return}  (Qe(PERC, \_temperature) -\/ Qe(0, \_temperature)) / PERC;}
-\DoxyCodeLine{144 }
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{keyword}{class }\mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}} \{}
+\DoxyCodeLine{81     }
+\DoxyCodeLine{82 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{83 \textcolor{comment}{// ID da classe}}
+\DoxyCodeLine{84 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{keyword}{public}:}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     DefineIdentityBase  (   \textcolor{stringliteral}{"{}Isotherm"{}}}
+\DoxyCodeLine{89                         ,   ID::Isotherm}
+\DoxyCodeLine{90                         );}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{93 \textcolor{comment}{// constantes do modelo}}
+\DoxyCodeLine{94 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{keyword}{inline} \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} RGASCONST = 8.31446261815324L;}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{101 \textcolor{comment}{// Funções friend}}
+\DoxyCodeLine{102 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{keyword}{public}:}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \textcolor{keyword}{friend} std::ostream \& operator << (std::ostream \&, \textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}}\&);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{109 \textcolor{comment}{// Construtoras / Destrutora}}
+\DoxyCodeLine{110 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 \textcolor{keyword}{public}:}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114     \mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{115     \mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}}(\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{116     \textcolor{keyword}{virtual} \mbox{\hyperlink{classist_1_1_isotherm}{\string~Isotherm}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{119 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{120 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     \mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}}\& operator = (\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{127 \textcolor{comment}{// Funções inline}}
+\DoxyCodeLine{128 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{keyword}{public}:}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 [[nodiscard]] \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} DQDC (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_ce, \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_temperature = 0)\textcolor{keyword}{ const}}
+\DoxyCodeLine{133 \textcolor{keyword}{}\{}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} PERC (1e-\/06);}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137     \textcolor{keywordflow}{if} (\_ce > 0.0)}
+\DoxyCodeLine{138     \{}
+\DoxyCodeLine{139         \textcolor{keywordflow}{return}  0.5 * ( Qe(\_ce * (1 + PERC), \_temperature) -\/}
+\DoxyCodeLine{140                         Qe(\_ce * (1 -\/ PERC), \_temperature))}
+\DoxyCodeLine{141                 / (\_ce * PERC);}
+\DoxyCodeLine{142     \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     \textcolor{keywordflow}{return}  (Qe(PERC, \_temperature) -\/ Qe(0, \_temperature)) / PERC;}
 \DoxyCodeLine{145 }
-\DoxyCodeLine{146 \};}
-\DoxyCodeLine{147 }
-\DoxyCodeLine{148 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{149 \textcolor{comment}{// Funções}}
-\DoxyCodeLine{150 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{151 }
-\DoxyCodeLine{152 \textcolor{keyword}{public}:}
-\DoxyCodeLine{153 }
-\DoxyCodeLine{154     \textcolor{keywordtype}{void} PlotGraph  (   \textcolor{keyword}{const} std::string\&  \textcolor{comment}{// Nome do arquivo}}
-\DoxyCodeLine{155                     ,   FunctionEscala\&     \textcolor{comment}{// Função de conversão de escala direção x}}
-\DoxyCodeLine{156                     ,   FunctionEscala\&     \textcolor{comment}{// função de conversão de escala direção y}}
-\DoxyCodeLine{157                     ,   \textcolor{keyword}{const} UInt\&         \textcolor{comment}{// Numero de pontos}}
-\DoxyCodeLine{158                     ,   \textcolor{keyword}{const} Real\&         \textcolor{comment}{// Valor Inicial}}
-\DoxyCodeLine{159                     ,   \textcolor{keyword}{const} Real\&         \textcolor{comment}{// Valor final}}
-\DoxyCodeLine{160                     ,   \textcolor{keyword}{const} Real\& = 0) \textcolor{keyword}{const};   \textcolor{comment}{// Temperatura, opcional}}
-\DoxyCodeLine{161 }
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147 \};}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{150 \textcolor{comment}{// Funções}}
+\DoxyCodeLine{151 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 \textcolor{keyword}{public}:}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155     \textcolor{keywordtype}{void} PlotGraph  (   \textcolor{keyword}{const} std::string\&  \textcolor{comment}{// Nome do arquivo}}
+\DoxyCodeLine{156                     ,   \textcolor{keyword}{const} FunctionEscala\&     \textcolor{comment}{// Funçao de conversao de escala direçao x}}
+\DoxyCodeLine{157                     ,   \textcolor{keyword}{const} FunctionEscala\&     \textcolor{comment}{// funçao de conversao de escala direçao y}}
+\DoxyCodeLine{158                     ,   \textcolor{keyword}{const} \mbox{\hyperlink{group___type_gaba0996d26f7be2572973245b51852757}{UInt}}\&         \textcolor{comment}{// Numero de pontos}}
+\DoxyCodeLine{159                     ,   \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\&         \textcolor{comment}{// Valor Inicial}}
+\DoxyCodeLine{160                     ,   \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\&         \textcolor{comment}{// Valor final}}
+\DoxyCodeLine{161                     ,   \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& = 0) \textcolor{keyword}{const};   \textcolor{comment}{// Temperatura, opcional}}
 \DoxyCodeLine{162 }
 \DoxyCodeLine{163 }
 \DoxyCodeLine{164 }
-\DoxyCodeLine{165 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{166 \textcolor{comment}{// Funcoes puramente virtuais}}
-\DoxyCodeLine{167 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{168 }
-\DoxyCodeLine{169 \textcolor{keyword}{public}:}
-\DoxyCodeLine{170 }
-\DoxyCodeLine{171         \textcolor{keyword}{virtual} Real Qe  ( \textcolor{keyword}{const} Real\&, \textcolor{keyword}{const} Real\&) \textcolor{keyword}{const} = 0;}
-\DoxyCodeLine{172 }
-\DoxyCodeLine{173         [[maybe\_unused]] \textcolor{keyword}{virtual} std::string CodeString (\textcolor{keyword}{const} UInt\&) \textcolor{keyword}{const};}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{167 \textcolor{comment}{// Funcoes puramente virtuais}}
+\DoxyCodeLine{168 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \textcolor{keyword}{public}:}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172         [[nodiscard]] }
+\DoxyCodeLine{173         \textcolor{keyword}{virtual} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} Qe  ( \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\&, \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\&) \textcolor{keyword}{const} = 0;}
 \DoxyCodeLine{174 }
-\DoxyCodeLine{175         [[maybe\_unused]] \textcolor{keyword}{virtual} std::string NameString (\textcolor{keyword}{const} UInt\&) \textcolor{keyword}{const};}
+\DoxyCodeLine{175         [[maybe\_unused]] \textcolor{keyword}{virtual} std::string CodeString (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_gaba0996d26f7be2572973245b51852757}{UInt}}\&) \textcolor{keyword}{const};}
 \DoxyCodeLine{176 }
-\DoxyCodeLine{177         [[nodiscard]] \textcolor{keyword}{virtual} Real Qe ( \textcolor{keyword}{const} Real\& \_x )\textcolor{keyword}{ const}}
-\DoxyCodeLine{178 \textcolor{keyword}{        }\{}
-\DoxyCodeLine{179                 \textcolor{keywordflow}{return} Qe(\_x, 0);}
-\DoxyCodeLine{180 }
-\DoxyCodeLine{181         \};}
+\DoxyCodeLine{177         [[maybe\_unused]] \textcolor{keyword}{virtual} std::string NameString (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_gaba0996d26f7be2572973245b51852757}{UInt}}\&) \textcolor{keyword}{const};}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179         [[nodiscard]] \textcolor{keyword}{virtual} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} Qe ( \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_x )\textcolor{keyword}{ const}}
+\DoxyCodeLine{180 \textcolor{keyword}{        }\{}
+\DoxyCodeLine{181                 \textcolor{keywordflow}{return} Qe(\_x, 0);}
 \DoxyCodeLine{182 }
-\DoxyCodeLine{183     }
-\DoxyCodeLine{184     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_isotherm}{Isotherm}}* Clone()  }
-\DoxyCodeLine{185     \{}
-\DoxyCodeLine{186         \textcolor{keywordflow}{return} CloneImplementation();}
-\DoxyCodeLine{187     \}   }
-\DoxyCodeLine{188     }
-\DoxyCodeLine{189 \textcolor{keyword}{private}:}
-\DoxyCodeLine{190 }
-\DoxyCodeLine{191     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_isotherm}{Isotherm}}* CloneImplementation() \textcolor{keyword}{const} = 0;        }
-\DoxyCodeLine{192 }
-\DoxyCodeLine{193 }
-\DoxyCodeLine{194 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{195 \textcolor{comment}{// Variáveis da classe}}
+\DoxyCodeLine{183         \};}
+\DoxyCodeLine{184   }
+\DoxyCodeLine{185         }
+\DoxyCodeLine{186     [[nodiscard]]    }
+\DoxyCodeLine{187     \textcolor{keyword}{virtual} std::unique\_ptr<Isotherm> Clone()\textcolor{keyword}{  const }}
+\DoxyCodeLine{188 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{189         \textcolor{keywordflow}{return} CloneImplementation();}
+\DoxyCodeLine{190     \}   }
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192     [[nodiscard]]}
+\DoxyCodeLine{193     \textcolor{keyword}{virtual} std::unique\_ptr<Isotherm> CloneImplementation() \textcolor{keyword}{const} = 0;        }
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195 }
 \DoxyCodeLine{196 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{197 }
-\DoxyCodeLine{198 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{197 \textcolor{comment}{// Variaveis da classe}}
+\DoxyCodeLine{198 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{199 }
-\DoxyCodeLine{200 \textcolor{keyword}{virtual} \textcolor{keyword}{const} VecPairString\&  InfoIsotherm() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{200 \textcolor{keyword}{protected}:}
 \DoxyCodeLine{201 }
-\DoxyCodeLine{202 \textcolor{keyword}{public}:}
+\DoxyCodeLine{202 \textcolor{keyword}{virtual} \textcolor{keyword}{const} VecPairString\&  InfoIsotherm() \textcolor{keyword}{const} = 0;}
 \DoxyCodeLine{203 }
-\DoxyCodeLine{207     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_gad350b84f084bd8b5875471a31f3a822f}{begin}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().begin();\};}
-\DoxyCodeLine{208 }
-\DoxyCodeLine{212     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_ga2bbb261e804f8f9fee325ab820aac15e}{end}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().end();\};}
-\DoxyCodeLine{213 }
-\DoxyCodeLine{214     [[nodiscard]] \textcolor{keyword}{inline} \textcolor{keyword}{auto} cbegin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().cbegin();\};}
+\DoxyCodeLine{204 \textcolor{keyword}{public}:}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{209     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_ga42e1a76c60ee3db32d63feaeba5b60fc}{begin}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().begin();\};}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{214     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_ga43421457c5008b10214d1657dde6b4f4}{end}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().end();\};}
 \DoxyCodeLine{215 }
-\DoxyCodeLine{219     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_gae95cd8e34bfe46ebc45c1027f3687f2a}{cend}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().cend();\};}
-\DoxyCodeLine{220 }
-\DoxyCodeLine{221     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rbegin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().rbegin();\};}
+\DoxyCodeLine{216     [[nodiscard]] \textcolor{keyword}{inline} \textcolor{keyword}{auto} cbegin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().cbegin();\};}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{221     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_gab6a510047bc5e560f5a4301974206fe4}{cend}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().cend();\};}
 \DoxyCodeLine{222 }
-\DoxyCodeLine{226     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_ga5d6659b5a282b69fd4007900dc4c0299}{rend}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().rend();\};}
-\DoxyCodeLine{227 }
-\DoxyCodeLine{228     \textcolor{keyword}{inline} \textcolor{keyword}{auto} crbegin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().crbegin();\};}
+\DoxyCodeLine{223     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rbegin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().rbegin();\};}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{228     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_ga807bf7d3d8764b174f4e6171c5e00422}{rend}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().rend();\};}
 \DoxyCodeLine{229 }
-\DoxyCodeLine{233     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_gaed3213908540d77887f1f90c6b95ce8c}{crend}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().crend();\};}
-\DoxyCodeLine{234 }
-\DoxyCodeLine{235 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{230     \textcolor{keyword}{inline} \textcolor{keyword}{auto} crbegin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().crbegin();\};}
+\DoxyCodeLine{231 }
+\DoxyCodeLine{235     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_ga0b08818b32dda60b7b675279cad01786}{crend}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().crend();\};}
 \DoxyCodeLine{236 }
-\DoxyCodeLine{237     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_gad350b84f084bd8b5875471a31f3a822f}{begin}}() \{\textcolor{keywordflow}{return}  InfoIsotherm().begin();\};}
+\DoxyCodeLine{237 \textcolor{keyword}{protected}:}
 \DoxyCodeLine{238 }
-\DoxyCodeLine{242     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_gad9005d45ab4fb8fe7d806b2b83f07553}{end}}() \{\textcolor{keywordflow}{return}  InfoIsotherm().end();\};}
-\DoxyCodeLine{243     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rbegin() \{\textcolor{keywordflow}{return}  InfoIsotherm().rbegin();\};}
-\DoxyCodeLine{244 }
-\DoxyCodeLine{248     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_ga83cae0d00cee4ce99b7b2f52bc0666c9}{rend}}() \{\textcolor{keywordflow}{return}  InfoIsotherm().rend();\};}
-\DoxyCodeLine{249 }
-\DoxyCodeLine{250 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{251 \textcolor{comment}{// Acesso as variáveis}}
+\DoxyCodeLine{239     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_ga42e1a76c60ee3db32d63feaeba5b60fc}{begin}}() \{\textcolor{keywordflow}{return}  InfoIsotherm().begin();\};}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{244     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_gab8730321b5dba394e186577ba6b05da5}{end}}() \{\textcolor{keywordflow}{return}  InfoIsotherm().end();\};}
+\DoxyCodeLine{245     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rbegin() \{\textcolor{keywordflow}{return}  InfoIsotherm().rbegin();\};}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{250     \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{group___isotherm_template_ga3e91172c45d0f3f5635383bc51ef2dac}{rend}}() \{\textcolor{keywordflow}{return}  InfoIsotherm().rend();\};}
+\DoxyCodeLine{251 }
 \DoxyCodeLine{252 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{253 }
-\DoxyCodeLine{254 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{253 \textcolor{comment}{// Acesso as variaveis}}
+\DoxyCodeLine{254 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{255 }
-\DoxyCodeLine{259 [[nodiscard]] \textcolor{keyword}{inline} \textcolor{keyword}{const} VecReal  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \mbox{\hyperlink{group___isotherm_template_ga40d851bca8f35e398268cbe18347804a}{coeffValue}};\};}
-\DoxyCodeLine{260 [[nodiscard]] \textcolor{keyword}{inline} Real \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}} (\textcolor{keyword}{const} UInt\& \_i)\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \mbox{\hyperlink{group___isotherm_template_ga40d851bca8f35e398268cbe18347804a}{coeffValue}}[\_i];\};}
-\DoxyCodeLine{261 }
-\DoxyCodeLine{262 }
-\DoxyCodeLine{263 \textcolor{keyword}{inline} Real \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}} (\textcolor{keyword}{const} UInt\& \_i) \{\textcolor{keywordflow}{return} \mbox{\hyperlink{group___isotherm_template_ga40d851bca8f35e398268cbe18347804a}{coeffValue}}[\_i];\};}
-\DoxyCodeLine{264 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}} (\textcolor{keyword}{const} UInt\& \_i, \textcolor{keyword}{const} Real\& \_val) \{\mbox{\hyperlink{group___isotherm_template_ga40d851bca8f35e398268cbe18347804a}{coeffValue}}[\_i] = \_val;\};}
-\DoxyCodeLine{265 }
-\DoxyCodeLine{266 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{267 \textcolor{comment}{// Dados privados da classe}}
+\DoxyCodeLine{256 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{261 [[nodiscard]] \textcolor{keyword}{inline} \textcolor{keyword}{const} VecReal  \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \mbox{\hyperlink{group___isotherm_template_ga9f9cd71c8e24d951ea5acc91137316c1}{coeffValue}};\};}
+\DoxyCodeLine{262 [[nodiscard]] \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_gaba0996d26f7be2572973245b51852757}{UInt}}\& \_i)\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \mbox{\hyperlink{group___isotherm_template_ga9f9cd71c8e24d951ea5acc91137316c1}{coeffValue}}[\_i];\};}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264 }
+\DoxyCodeLine{265 \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_gaba0996d26f7be2572973245b51852757}{UInt}}\& \_i) \{\textcolor{keywordflow}{return} \mbox{\hyperlink{group___isotherm_template_ga9f9cd71c8e24d951ea5acc91137316c1}{coeffValue}}[\_i];\};}
+\DoxyCodeLine{266 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_gaba0996d26f7be2572973245b51852757}{UInt}}\& \_i, \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_val) \{\mbox{\hyperlink{group___isotherm_template_ga9f9cd71c8e24d951ea5acc91137316c1}{coeffValue}}[\_i] = \_val;\};}
+\DoxyCodeLine{267 }
 \DoxyCodeLine{268 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{269 }
-\DoxyCodeLine{270 \textcolor{keyword}{public}:}
+\DoxyCodeLine{269 \textcolor{comment}{// Dados privados da classe}}
+\DoxyCodeLine{270 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{271 }
-\DoxyCodeLine{275 [[nodiscard]] \textcolor{keyword}{inline} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{group___isotherm_template_gaf8b1de2be8b2cf6179d8dcae675f0ce5}{NumberConst}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \mbox{\hyperlink{group___isotherm_template_ga40d851bca8f35e398268cbe18347804a}{coeffValue}}.size();\};}
-\DoxyCodeLine{276 }
-\DoxyCodeLine{277 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{278 \textcolor{comment}{// Dados privados da classe}}
+\DoxyCodeLine{272 \textcolor{keyword}{public}:}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{277 [[nodiscard]] \textcolor{keyword}{inline} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{group___isotherm_template_ga4fc7cb4a19d0481a3d4b878f8a049c48}{NumberConst}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} \mbox{\hyperlink{group___isotherm_template_ga9f9cd71c8e24d951ea5acc91137316c1}{coeffValue}}.size();\};}
+\DoxyCodeLine{278 }
 \DoxyCodeLine{279 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{280 }
-\DoxyCodeLine{281 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{280 \textcolor{comment}{// Dados privados da classe}}
+\DoxyCodeLine{281 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{282 }
-\DoxyCodeLine{286 VecReal                                                 \mbox{\hyperlink{group___isotherm_template_ga40d851bca8f35e398268cbe18347804a}{coeffValue}};}
-\DoxyCodeLine{287 \textcolor{keywordtype}{bool}                                                    setup = \textcolor{keyword}{false};}
-\DoxyCodeLine{288 }
-\DoxyCodeLine{289 \};}
+\DoxyCodeLine{283 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{288 VecReal                                                 \mbox{\hyperlink{group___isotherm_template_ga9f9cd71c8e24d951ea5acc91137316c1}{coeffValue}};}
+\DoxyCodeLine{289 \textcolor{keywordtype}{bool}                                                    setup = \textcolor{keyword}{false};}
 \DoxyCodeLine{290 }
-\DoxyCodeLine{313 }
-\DoxyCodeLine{314 }
-\DoxyCodeLine{315 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{316 \textcolor{keyword}{class }\mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} : \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_isotherm}{Isotherm}}}
-\DoxyCodeLine{317 \{}
+\DoxyCodeLine{291 \};}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294 \textcolor{keyword}{typedef} std::shared\_ptr<Isotherm>                   PtrIsotherm;}
+\DoxyCodeLine{295 }
 \DoxyCodeLine{318 }
-\DoxyCodeLine{319 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{320 \textcolor{comment}{// Sobrecarga de operadores}}
-\DoxyCodeLine{321 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{322 }
-\DoxyCodeLine{323 \textcolor{keyword}{public}:}
-\DoxyCodeLine{324 }
-\DoxyCodeLine{325     \textcolor{keyword}{inline} \textcolor{keyword}{auto} begin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().begin();\};}
-\DoxyCodeLine{326     \textcolor{keyword}{inline} \textcolor{keyword}{auto} end()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().end();\};}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{320 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{321 \textcolor{keyword}{class }\mbox{\hyperlink{classist_1_1_isotherm_template}{IsothermTemplate}} : \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}}}
+\DoxyCodeLine{322 \{}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{325 \textcolor{comment}{// Sobrecarga de operadores}}
+\DoxyCodeLine{326 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{327 }
-\DoxyCodeLine{328     \textcolor{keyword}{inline} \textcolor{keyword}{auto} begin() \{\textcolor{keywordflow}{return}  InfoIsotherm().begin();\};}
-\DoxyCodeLine{329     \textcolor{keyword}{inline} \textcolor{keyword}{auto} end() \{\textcolor{keywordflow}{return}  InfoIsotherm().end();\};}
-\DoxyCodeLine{330 }
-\DoxyCodeLine{331     \textcolor{keyword}{inline} \textcolor{keyword}{auto} cbegin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().cbegin();\};}
-\DoxyCodeLine{332     \textcolor{keyword}{inline} \textcolor{keyword}{auto} cend()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().cend();\};}
-\DoxyCodeLine{333 }
-\DoxyCodeLine{334     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rbegin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().rbegin();\};}
-\DoxyCodeLine{335     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rend()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().rend();\};}
-\DoxyCodeLine{336 }
-\DoxyCodeLine{337     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rbegin() \{\textcolor{keywordflow}{return}  InfoIsotherm().rbegin();\};}
-\DoxyCodeLine{338     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rend() \{\textcolor{keywordflow}{return}  InfoIsotherm().rend();\};}
-\DoxyCodeLine{339 }
-\DoxyCodeLine{340     \textcolor{keyword}{inline} \textcolor{keyword}{auto} crbegin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().crbegin();\};}
-\DoxyCodeLine{341     \textcolor{keyword}{inline} \textcolor{keyword}{auto} crend()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().crend();\};}
-\DoxyCodeLine{342 }
-\DoxyCodeLine{343 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{344 \textcolor{comment}{// Função privada da classe}}
-\DoxyCodeLine{345 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{346 }
-\DoxyCodeLine{347 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{348 }
-\DoxyCodeLine{349     \textcolor{keyword}{const}   VecPairString\& InfoIsotherm()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} infoIsotherm; \}}
-\DoxyCodeLine{350 }
-\DoxyCodeLine{351 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{352 \textcolor{comment}{// Dados privados da classe}}
-\DoxyCodeLine{353 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{354 }
-\DoxyCodeLine{355 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{356 }
-\DoxyCodeLine{357     \textcolor{keyword}{static} VecPairString                    infoIsotherm;       }
-\DoxyCodeLine{358 }
-\DoxyCodeLine{359 \};}
-\DoxyCodeLine{360 }
+\DoxyCodeLine{328 \textcolor{keyword}{public}:}
+\DoxyCodeLine{329 }
+\DoxyCodeLine{330     \textcolor{keyword}{inline} \textcolor{keyword}{auto} begin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().begin();\};}
+\DoxyCodeLine{331     \textcolor{keyword}{inline} \textcolor{keyword}{auto} end()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().end();\};}
+\DoxyCodeLine{332 }
+\DoxyCodeLine{333     \textcolor{keyword}{inline} \textcolor{keyword}{auto} begin() \{\textcolor{keywordflow}{return}  InfoIsotherm().begin();\};}
+\DoxyCodeLine{334     \textcolor{keyword}{inline} \textcolor{keyword}{auto} end() \{\textcolor{keywordflow}{return}  InfoIsotherm().end();\};}
+\DoxyCodeLine{335 }
+\DoxyCodeLine{336     \textcolor{keyword}{inline} \textcolor{keyword}{auto} cbegin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().cbegin();\};}
+\DoxyCodeLine{337     \textcolor{keyword}{inline} \textcolor{keyword}{auto} cend()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().cend();\};}
+\DoxyCodeLine{338 }
+\DoxyCodeLine{339     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rbegin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().rbegin();\};}
+\DoxyCodeLine{340     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rend()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().rend();\};}
+\DoxyCodeLine{341 }
+\DoxyCodeLine{342     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rbegin() \{\textcolor{keywordflow}{return}  InfoIsotherm().rbegin();\};}
+\DoxyCodeLine{343     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rend() \{\textcolor{keywordflow}{return}  InfoIsotherm().rend();\};}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345     \textcolor{keyword}{inline} \textcolor{keyword}{auto} crbegin()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().crbegin();\};}
+\DoxyCodeLine{346     \textcolor{keyword}{inline} \textcolor{keyword}{auto} crend()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  InfoIsotherm().crend();\};}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{348 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{349 \textcolor{comment}{// Funçao privada da classe}}
+\DoxyCodeLine{350 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{351 }
+\DoxyCodeLine{352 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{354     \textcolor{keyword}{const}   VecPairString\& InfoIsotherm()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} infoIsotherm; \}}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{356 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{357 \textcolor{comment}{// Dados privados da classe}}
+\DoxyCodeLine{358 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{359 }
+\DoxyCodeLine{360 \textcolor{keyword}{protected}:}
 \DoxyCodeLine{361 }
-\DoxyCodeLine{362 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
+\DoxyCodeLine{362     \textcolor{keyword}{static} VecPairString                    infoIsotherm;       }
 \DoxyCodeLine{363 }
-\DoxyCodeLine{364 }
-\DoxyCodeLine{365 \textcolor{keyword}{namespace }std}
-\DoxyCodeLine{366 \{}
-\DoxyCodeLine{367 }
-\DoxyCodeLine{368     \textcolor{keyword}{inline} \textcolor{keyword}{auto} begin( \textcolor{keyword}{const} ist::Isotherm\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.begin();\}}
-\DoxyCodeLine{369     \textcolor{keyword}{inline} \textcolor{keyword}{auto} end( \textcolor{keyword}{const} ist::Isotherm\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.end();\}}
-\DoxyCodeLine{370 }
-\DoxyCodeLine{371     \textcolor{keyword}{inline} \textcolor{keyword}{auto} cbegin( \textcolor{keyword}{const} ist::Isotherm\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.cbegin();\}}
-\DoxyCodeLine{372     \textcolor{keyword}{inline} \textcolor{keyword}{auto} cend( \textcolor{keyword}{const} ist::Isotherm\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.cend();\}}
-\DoxyCodeLine{373 }
-\DoxyCodeLine{374     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rbegin( \textcolor{keyword}{const} ist::Isotherm\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.rbegin();\}}
-\DoxyCodeLine{375     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rend( \textcolor{keyword}{const} ist::Isotherm\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.rend();\}}
-\DoxyCodeLine{376 }
-\DoxyCodeLine{377     \textcolor{keyword}{inline} \textcolor{keyword}{auto} crbegin( \textcolor{keyword}{const} ist::Isotherm\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.crbegin();\}}
-\DoxyCodeLine{378     \textcolor{keyword}{inline} \textcolor{keyword}{auto} crend( \textcolor{keyword}{const} ist::Isotherm\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.crend();\}}
-\DoxyCodeLine{379 }
-\DoxyCodeLine{380 \}}
+\DoxyCodeLine{364 \};}
+\DoxyCodeLine{365 }
+\DoxyCodeLine{366 }
+\DoxyCodeLine{367 \}}
+\DoxyCodeLine{368 }
+\DoxyCodeLine{369 }
+\DoxyCodeLine{370 \textcolor{keyword}{namespace }std}
+\DoxyCodeLine{371 \{}
+\DoxyCodeLine{372 }
+\DoxyCodeLine{373     \textcolor{keyword}{inline} \textcolor{keyword}{auto} begin( \textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_isotherm}{ist::Isotherm}}\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.\mbox{\hyperlink{group___isotherm_template_ga42e1a76c60ee3db32d63feaeba5b60fc}{begin}}();\}}
+\DoxyCodeLine{374     \textcolor{keyword}{inline} \textcolor{keyword}{auto} end( \textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_isotherm}{ist::Isotherm}}\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.\mbox{\hyperlink{group___isotherm_template_ga43421457c5008b10214d1657dde6b4f4}{end}}();\}}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{376     \textcolor{keyword}{inline} \textcolor{keyword}{auto} cbegin( \textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_isotherm}{ist::Isotherm}}\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.cbegin();\}}
+\DoxyCodeLine{377     \textcolor{keyword}{inline} \textcolor{keyword}{auto} cend( \textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_isotherm}{ist::Isotherm}}\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.\mbox{\hyperlink{group___isotherm_template_gab6a510047bc5e560f5a4301974206fe4}{cend}}();\}}
+\DoxyCodeLine{378 }
+\DoxyCodeLine{379     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rbegin( \textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_isotherm}{ist::Isotherm}}\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.rbegin();\}}
+\DoxyCodeLine{380     \textcolor{keyword}{inline} \textcolor{keyword}{auto} rend( \textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_isotherm}{ist::Isotherm}}\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.\mbox{\hyperlink{group___isotherm_template_ga807bf7d3d8764b174f4e6171c5e00422}{rend}}();\}}
 \DoxyCodeLine{381 }
-\DoxyCodeLine{382 }
-\DoxyCodeLine{383 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_ISOTHERM\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{382     \textcolor{keyword}{inline} \textcolor{keyword}{auto} crbegin( \textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_isotherm}{ist::Isotherm}}\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.crbegin();\}}
+\DoxyCodeLine{383     \textcolor{keyword}{inline} \textcolor{keyword}{auto} crend( \textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_isotherm}{ist::Isotherm}}\& \_iso ) \{\textcolor{keywordflow}{return}  \_iso.\mbox{\hyperlink{group___isotherm_template_ga0b08818b32dda60b7b675279cad01786}{crend}}();\}}
 \DoxyCodeLine{384 }
-\DoxyCodeLine{385 }
+\DoxyCodeLine{385 \}}
+\DoxyCodeLine{386 }
+\DoxyCodeLine{387 }
+\DoxyCodeLine{388 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_ISOTHERM\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{389 }
+\DoxyCodeLine{390 }
 
 \end{DoxyCode}

@@ -1,0 +1,571 @@
+\hypertarget{namespaceist}{}\doxysection{Refência do Namespace ist}
+\label{namespaceist}\index{ist@{ist}}
+
+
+Classe base de todas as outras classes de isotermas.  
+
+
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classist_1_1_dubinin_radushkevich}{Dubinin\+Radushkevich}}
+\begin{DoxyCompactList}\small\item\em Classe com as equações da isoterma de Dubinin-\/\+Radushkevich. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classist_1_1_elovich}{Elovich}}
+\begin{DoxyCompactList}\small\item\em Implementa a isoterma de \mbox{\hyperlink{classist_1_1_elovich}{Elovich}} para adsor��o. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classist_1_1_freundlich}{Freundlich}}
+\item 
+class \mbox{\hyperlink{classist_1_1_halsey}{Halsey}}
+\item 
+class \mbox{\hyperlink{classist_1_1_harkin_jura}{Harkin\+Jura}}
+\item 
+class \mbox{\hyperlink{classist_1_1_henry}{Henry}}
+\item 
+class \mbox{\hyperlink{classist_1_1_i_d}{ID}}
+\item 
+class \mbox{\hyperlink{classist_1_1_iso_exception}{Iso\+Exception}}
+\item 
+class \mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}}
+\item 
+class \mbox{\hyperlink{classist_1_1_isotherm_template}{Isotherm\+Template}}
+\begin{DoxyCompactList}\small\item\em Classe que gerencia o nome e detalhes sobre cada constante dos modelos das isotermas. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classist_1_1_jovanovic}{Jovanovic}}
+\item 
+class \mbox{\hyperlink{classist_1_1_langmuir}{Langmuir}}
+\item 
+class \mbox{\hyperlink{classist_1_1_one_parameter}{One\+Parameter}}
+\item 
+class \mbox{\hyperlink{classist_1_1_source_info}{Source\+Info}}
+\item 
+class \mbox{\hyperlink{classist_1_1_temkin}{Temkin}}
+\item 
+class \mbox{\hyperlink{classist_1_1_two_parameters}{Two\+Parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::pair$<$ std\+::string, std\+::string $>$ {\bfseries Pair\+String}
+\item 
+typedef std\+::vector$<$ Pair\+String $>$ {\bfseries Vec\+Pair\+String}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} $>$ {\bfseries Vec\+Real}
+\item 
+typedef std\+::function$<$ \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}(const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&, const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \&)$>$ {\bfseries Function\+Escala}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classist_1_1_isotherm}{Isotherm}} $>$ {\bfseries Ptr\+Isotherm}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceist_acdaa0298f22a79496afe5aafe0948059}\label{namespaceist_acdaa0298f22a79496afe5aafe0948059}} 
+enum {\bfseries Iso\+Exception\+Index} \{ \newline
+{\bfseries Bad\+Coefficient} = 0
+, {\bfseries Bad\+Ce\+LEZero}
+, {\bfseries Bad\+Ce\+LTZero}
+, {\bfseries Bad\+Ce\+GEOne}
+, \newline
+{\bfseries Bad\+Ce\+GEK2}
+, {\bfseries Bad\+K1\+LEZero}
+, {\bfseries Bad\+K1\+LTZero}
+, {\bfseries Bad\+K2\+LEZero}
+, \newline
+{\bfseries Bad\+K2\+LTZero}
+, {\bfseries Bad\+K3\+LEZero}
+, {\bfseries Bad\+K3\+LTZero}
+, {\bfseries Bad\+K4\+LEZero}
+, \newline
+{\bfseries Bad\+K4\+LTZero}
+, {\bfseries Bad\+K1\+LTOne}
+, {\bfseries Bad\+K2\+LEOne}
+, {\bfseries Bad\+K3\+GTOne}
+, \newline
+{\bfseries Bad\+K3\+GEOne}
+, {\bfseries Bad\+Qmax\+LEZero}
+, {\bfseries Bad\+Temp\+LEZero}
+, {\bfseries Bad\+RGas\+LEZero}
+, \newline
+{\bfseries Bad\+Result}
+, {\bfseries Bad\+Over\+Flow}
+, {\bfseries Bad\+Log\+Ce\+GTK2}
+, {\bfseries Convergence\+Problem}
+, \newline
+{\bfseries Bad\+Theta\+GEOne}
+, {\bfseries Bad\+Theta\+LEZero}
+, {\bfseries Bad\+KCe\+K1\+LEOne}
+ \}
+\item 
+\mbox{\Hypertarget{namespaceist_a1e8b86a353fe95b4f92ec60a0366be11}\label{namespaceist_a1e8b86a353fe95b4f92ec60a0366be11}} 
+enum {\bfseries Iso\+Error\+Index} \{ {\bfseries Bad\+Coeff\+Definition} = 0
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceist_a6ae432e3924601e3c847fdc046bd0e5d}\label{namespaceist_a6ae432e3924601e3c847fdc046bd0e5d}} 
+void {\bfseries ISOTHERM\+\_\+\+Err} (const \mbox{\hyperlink{classist_1_1_source_info}{Source\+Info}} \&, const std\+::string \&, const Iso\+Error\+Index \&, const std\+::string \&=\char`\"{}\char`\"{}, const std\+::string \&=\char`\"{}\char`\"{})
+\item 
+const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{namespaceist_ad584e8f0589e7a2299902243d3b89386}{ZERO}} (1e250 $\ast$std\+::numeric\+\_\+limits$<$ \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} $>$\+::min())
+\begin{DoxyCompactList}\small\item\em Valor para zero usado em processos iterativos. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{group___type_gaba0996d26f7be2572973245b51852757}{UInt}} \mbox{\hyperlink{namespaceist_a8ff9fb9169ace12fcdab79e11750b40a}{LSIZE}} (0x50)
+\begin{DoxyCompactList}\small\item\em Tamanho default da linha utilizada pela função {\ttfamily Print\+Line}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceist_a0d0ebe90ae994bdace443d2cdf74c622}\label{namespaceist_a0d0ebe90ae994bdace443d2cdf74c622}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&\+\_\+os, const \mbox{\hyperlink{classist_1_1_iso_exception}{Iso\+Exception}} \&\+\_\+iso\+Exception)
+\item 
+\mbox{\Hypertarget{namespaceist_aec5794e395f0802ddf4198fca61ef23c}\label{namespaceist_aec5794e395f0802ddf4198fca61ef23c}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&\+\_\+os, const \mbox{\hyperlink{classist_1_1_isotherm}{ist\+::\+Isotherm}} \&\+\_\+tp)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+Vec\+Pair\+String \mbox{\hyperlink{namespaceist_aea1e06485d622152234b8f3665f69f9b}{details\+Henry}}
+\item 
+Vec\+Pair\+String \mbox{\hyperlink{namespaceist_a57f891aa0f2df223ffc4d5592460d465}{details\+One\+Parameter}}
+\item 
+Vec\+Pair\+String \mbox{\hyperlink{namespaceist_aeb043a667226ffcb6632120058c3f9a1}{details\+Dubinin\+Radushkevich}}
+\item 
+Vec\+Pair\+String \mbox{\hyperlink{namespaceist_a04c36d6cdfb44dbefef668ebfa0a849b}{details\+Elovich}}
+\item 
+Vec\+Pair\+String \mbox{\hyperlink{namespaceist_ad8e02f300a1a6e245ba2c60950fd6126}{details\+Freundlich}}
+\item 
+Vec\+Pair\+String \mbox{\hyperlink{namespaceist_a2aebd993e100f5b749184b19a50363d6}{details\+Halsey}}
+\item 
+Vec\+Pair\+String \mbox{\hyperlink{namespaceist_a0a3fa53d9685552bc8d64cf8dd1520d7}{details\+Harkin\+Jura}}
+\item 
+Vec\+Pair\+String \mbox{\hyperlink{namespaceist_a1e1609accebee071cfcc5588d39d067a}{details\+Jovanovic}}
+\item 
+Vec\+Pair\+String \mbox{\hyperlink{namespaceist_aba69ee8a28ff0a0352b897e7134c6728}{details\+Langmuir}}
+\item 
+Vec\+Pair\+String \mbox{\hyperlink{namespaceist_aaa17f86acac50a25f32fc96ebd21bc57}{details\+Temkin}}
+\item 
+Vec\+Pair\+String \mbox{\hyperlink{namespaceist_a593946a5f0b84dd596833bafc6c55e20}{details\+Dubinin\+Two\+Parameters}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe base de todas as outras classes de isotermas. 
+
+Define o namespace {\ttfamily ist} e suas constantes.
+
+Classe base para todas as classes com dois parametros. 
+
+Classe com as equacoes da isoterma de \mbox{\hyperlink{classist_1_1_temkin}{Temkin}}. 
+
+Classe com a equacao da isoterma de \mbox{\hyperlink{classist_1_1_langmuir}{Langmuir}} 
+
+Classe com a equacoes da isoterma de \mbox{\hyperlink{classist_1_1_jovanovic}{Jovanovic}}. 
+
+Classe com as equacoes da isoterma de \mbox{\hyperlink{classist_1_1_harkin_jura}{Harkin\+Jura}} 
+
+Classe com as equacoes da isoterma de \mbox{\hyperlink{classist_1_1_halsey}{Halsey}} 
+
+Classe com a equacao da isoterma de \mbox{\hyperlink{classist_1_1_freundlich}{Freundlich}} 
+
+Classe base para todas as classes com um unico parametro. 
+
+Classe com as equacoes da isoterma de \mbox{\hyperlink{classist_1_1_henry}{Henry}}. 
+
+\begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Jo{\ucr}o Fl{\ucr}vio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2021 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000002}{Bug}}]N{\ucr}o h{\ucr} bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License.
+\end{DoxyCopyright}
+Isoterma com um parametro, $ K_1 > 0 $, cuja formula e a seguinte\+: \textbackslash{}begin\{align\} Q\+\_\+e(\+C\+\_\+e) = K\+\_\+1 C\+\_\+e \textbackslash{}end\{align\} O artigo em que esta isoterma foi definida pode ser encontrado \href{https://doi.org/10.1098/rstl.1803.0004}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Iasmim Barboza Storck 
+
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000004}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License.
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000005}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License.
+\end{DoxyCopyright}
+Isoterma com dois parametros, $ K_1 $ e $ K_2 $, cujas formulas sao as seguintes\+: \textbackslash{}begin\{align\} Q\+\_\+e(\+C\+\_\+e) = K\+\_\+1\+C\+\_\+e$^\wedge$\{\textbackslash{}frac\{1\}\{K\+\_\+2\}\} \textbackslash{}end\{align\} Um artigo de referencia pode ser encontrado \href{https://tinyurl.com/yxruu6c7}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Iasmim Barboza Storck 
+
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000007}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License.
+\end{DoxyCopyright}
+Isoterma com dois parametros, $ K_1 $ e $ K_2 $, cujas formulas sao as seguintes\+: \textbackslash{}begin\{align\} ln(\+Q\+\_\+e(\+C\+\_\+e)) = \textbackslash{}frac\{1\}\{K\+\_\+2\}ln\textbackslash{}left(\textbackslash{}frac\{K\+\_\+1\}\{C\+\_\+e\}\textbackslash{}right) \textbackslash{}end\{align\} Um artigo de referencia pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Iasmim Barboza Storck 
+
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000008}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License.
+\end{DoxyCopyright}
+Isoterma com dois parametros, $ K_1 $ e $ K_2 $, cujas formulas sao as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}\textbackslash{}frac\{1\}\{Q\+\_\+e(\+C\+\_\+e, T)$^\wedge$\{2\}\} = \textbackslash{}frac\{K\+\_\+2 -\/ 1\}\{K\+\_\+1\}log(\+C\+\_\+e)\mbox{]} \textbackslash{}end\{align\} Um artigo de referencia pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Iasmim Barboza Storck 
+
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000009}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License.
+\end{DoxyCopyright}
+Isoterma com dois parametros, $ q_{max} $ e $ K_1 $, cujas formulas sao as seguintes\+: \textbackslash{}begin\{equation\} \textbackslash{}ln( Q\+\_\+e (C\+\_\+e)) = \textbackslash{}ln(q\+\_\+\{max\}) -\/ K\+\_\+1 C\+\_\+e \textbackslash{}end\{equation\} Um artigo de referencia pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Iasmim Barboza Storck 
+
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000010}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License.
+\end{DoxyCopyright}
+Isoterma com dois parametros, $ q_{max} $ e $ K_1 $, cujas formulas sao as seguintes\+: \textbackslash{}begin\{align\} \mbox{[}Q\+\_\+e(\+C\+\_\+e, T) = q\+\_\+\{max\}\textbackslash{}frac\{K\+\_\+1\+C\+\_\+e\}\{1+K\+\_\+1\+C\+\_\+e\}\mbox{]} \textbackslash{}end\{align\} Um artigo de referencia pode ser encontrado \href{https://doi.org/10.1016/B978-0-12-804609-8.00005-4}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Iasmim Barboza Storck 
+
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000011}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License.
+\end{DoxyCopyright}
+Isoterma com dois parametros, $ K_1 $ e $ K_2 $, cujas formulas sao as seguintes\+: \textbackslash{}begin\{align\} Q\+\_\+e(\+C\+\_\+e, T) = \textbackslash{}frac\{R T\}\{K\+\_\+2\}ln(\+K\+\_\+1 C\+\_\+e ) \textbackslash{}end\{align\} Um artigo de referencia pode ser encontrado \href{https://doi.org/10.1016/0167-4838(95)00006-G}{\texttt{ aqui}}. \begin{DoxyAuthor}{Autores}
+Iasmim Barboza Storck 
+
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000012}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License.
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Autores}
+Lara Botelho Brum 
+
+Luan Rodrigues Soares de Souza 
+
+Joao Flavio Vieira de Vasconcellos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2022 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000013}{Bug}}]Nao ha bugs conhecidos.\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+GNU Public License.
+\end{DoxyCopyright}
+O bloco abaixo abre o namespace {\ttfamily ist}, define algumas constantes e, em seguida, fecha o namespace. Estas constantes podem ser usadas por outras partes da biblioteca. 
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{namespaceist_a8ff9fb9169ace12fcdab79e11750b40a}\label{namespaceist_a8ff9fb9169ace12fcdab79e11750b40a}} 
+\index{ist@{ist}!LSIZE@{LSIZE}}
+\index{LSIZE@{LSIZE}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{LSIZE()}{LSIZE()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{group___type_gaba0996d26f7be2572973245b51852757}{UInt}} ist\+::\+LSIZE (\begin{DoxyParamCaption}\item[{0x50}]{ }\end{DoxyParamCaption})}
+
+
+
+Tamanho default da linha utilizada pela função {\ttfamily Print\+Line}. 
+
+Esta constante define o tamanho padrão da linha a ser utilizada em funções de impressão e outras operações relacionadas à exibição de dados. \mbox{\Hypertarget{namespaceist_ad584e8f0589e7a2299902243d3b89386}\label{namespaceist_ad584e8f0589e7a2299902243d3b89386}} 
+\index{ist@{ist}!ZERO@{ZERO}}
+\index{ZERO@{ZERO}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{ZERO()}{ZERO()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} ist\+::\+ZERO (\begin{DoxyParamCaption}\item[{1e250 $\ast$std\+::numeric\+\_\+limits$<$ \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} $>$}]{\+::min() }\end{DoxyParamCaption})}
+
+
+
+Valor para zero usado em processos iterativos. 
+
+Esta constante é definida como um valor grande multiplicado pelo valor mínimo representável por {\ttfamily Real}. É utilizada para representar zero de maneira segura durante iterações numéricas. 
+
+\doxysubsection{Variáveis}
+\mbox{\Hypertarget{namespaceist_aeb043a667226ffcb6632120058c3f9a1}\label{namespaceist_aeb043a667226ffcb6632120058c3f9a1}} 
+\index{ist@{ist}!detailsDubininRadushkevich@{detailsDubininRadushkevich}}
+\index{detailsDubininRadushkevich@{detailsDubininRadushkevich}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{detailsDubininRadushkevich}{detailsDubininRadushkevich}}
+{\footnotesize\ttfamily Vec\+Pair\+String ist\+::details\+Dubinin\+Radushkevich}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        PairString  ( \textcolor{stringliteral}{"{}Qmax"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Constante de equiibrio de Dubinin-\/Radushkevich"{}})}
+\DoxyCodeLine{    ,   PairString  ( \textcolor{stringliteral}{"{}K1"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Coeficiente associado a energia de adsorcao"{}})\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceist_a593946a5f0b84dd596833bafc6c55e20}\label{namespaceist_a593946a5f0b84dd596833bafc6c55e20}} 
+\index{ist@{ist}!detailsDubininTwoParameters@{detailsDubininTwoParameters}}
+\index{detailsDubininTwoParameters@{detailsDubininTwoParameters}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{detailsDubininTwoParameters}{detailsDubininTwoParameters}}
+{\footnotesize\ttfamily Vec\+Pair\+String ist\+::details\+Dubinin\+Two\+Parameters}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        PairString  ( \textcolor{stringliteral}{"{}Nao definido"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Nao definido"{}})}
+\DoxyCodeLine{    ,   PairString  ( \textcolor{stringliteral}{"{}Nao definido"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Nao definido"{}})}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceist_a04c36d6cdfb44dbefef668ebfa0a849b}\label{namespaceist_a04c36d6cdfb44dbefef668ebfa0a849b}} 
+\index{ist@{ist}!detailsElovich@{detailsElovich}}
+\index{detailsElovich@{detailsElovich}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{detailsElovich}{detailsElovich}}
+{\footnotesize\ttfamily Vec\+Pair\+String ist\+::details\+Elovich}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        PairString  ( \textcolor{stringliteral}{"{}Qmax"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Capacidade maxima de adsorcao"{}})}
+\DoxyCodeLine{    ,   PairString  ( \textcolor{stringliteral}{"{}K1"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Constante da isoterma de Elovich"{}})}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceist_ad8e02f300a1a6e245ba2c60950fd6126}\label{namespaceist_ad8e02f300a1a6e245ba2c60950fd6126}} 
+\index{ist@{ist}!detailsFreundlich@{detailsFreundlich}}
+\index{detailsFreundlich@{detailsFreundlich}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{detailsFreundlich}{detailsFreundlich}}
+{\footnotesize\ttfamily Vec\+Pair\+String ist\+::details\+Freundlich}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        PairString  ( \textcolor{stringliteral}{"{}K1"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Coeficiente de distribuicao"{}})}
+\DoxyCodeLine{    ,   PairString  ( \textcolor{stringliteral}{"{}K2"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Fator de correcao"{}})\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceist_a2aebd993e100f5b749184b19a50363d6}\label{namespaceist_a2aebd993e100f5b749184b19a50363d6}} 
+\index{ist@{ist}!detailsHalsey@{detailsHalsey}}
+\index{detailsHalsey@{detailsHalsey}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{detailsHalsey}{detailsHalsey}}
+{\footnotesize\ttfamily Vec\+Pair\+String ist\+::details\+Halsey}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        PairString  ( \textcolor{stringliteral}{"{}K1"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Constante da isoterma de Halsey"{}})}
+\DoxyCodeLine{    ,   PairString  ( \textcolor{stringliteral}{"{}K2"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Constante de ligacao de equiibrio isotermica"{}})}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceist_a0a3fa53d9685552bc8d64cf8dd1520d7}\label{namespaceist_a0a3fa53d9685552bc8d64cf8dd1520d7}} 
+\index{ist@{ist}!detailsHarkinJura@{detailsHarkinJura}}
+\index{detailsHarkinJura@{detailsHarkinJura}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{detailsHarkinJura}{detailsHarkinJura}}
+{\footnotesize\ttfamily Vec\+Pair\+String ist\+::details\+Harkin\+Jura}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        PairString  ( \textcolor{stringliteral}{"{}K1"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Constante da isoterma de Harkin-\/Jura"{}})}
+\DoxyCodeLine{    ,   PairString  ( \textcolor{stringliteral}{"{}K2"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Constante da isoterma de Harkin-\/Jura"{}})}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceist_aea1e06485d622152234b8f3665f69f9b}\label{namespaceist_aea1e06485d622152234b8f3665f69f9b}} 
+\index{ist@{ist}!detailsHenry@{detailsHenry}}
+\index{detailsHenry@{detailsHenry}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{detailsHenry}{detailsHenry}}
+{\footnotesize\ttfamily Vec\+Pair\+String ist\+::details\+Henry}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}K1"{}}, \textcolor{stringliteral}{"{}Coeficiente de distribuicao"{}}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceist_a1e1609accebee071cfcc5588d39d067a}\label{namespaceist_a1e1609accebee071cfcc5588d39d067a}} 
+\index{ist@{ist}!detailsJovanovic@{detailsJovanovic}}
+\index{detailsJovanovic@{detailsJovanovic}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{detailsJovanovic}{detailsJovanovic}}
+{\footnotesize\ttfamily Vec\+Pair\+String ist\+::details\+Jovanovic}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        PairString  ( \textcolor{stringliteral}{"{}Qmax"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Capacidade maxima de adsorcao"{}})}
+\DoxyCodeLine{    ,   PairString  ( \textcolor{stringliteral}{"{}K1"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Constante da isoterma de Jovanovic"{}})}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceist_aba69ee8a28ff0a0352b897e7134c6728}\label{namespaceist_aba69ee8a28ff0a0352b897e7134c6728}} 
+\index{ist@{ist}!detailsLangmuir@{detailsLangmuir}}
+\index{detailsLangmuir@{detailsLangmuir}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{detailsLangmuir}{detailsLangmuir}}
+{\footnotesize\ttfamily Vec\+Pair\+String ist\+::details\+Langmuir}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        PairString  ( \textcolor{stringliteral}{"{}Qmax"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Capacidade maxima de adsorcao"{}})}
+\DoxyCodeLine{    ,   PairString  ( \textcolor{stringliteral}{"{}K1"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Constante de equilibrio de Langmuir"{}})}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceist_a57f891aa0f2df223ffc4d5592460d465}\label{namespaceist_a57f891aa0f2df223ffc4d5592460d465}} 
+\index{ist@{ist}!detailsOneParameter@{detailsOneParameter}}
+\index{detailsOneParameter@{detailsOneParameter}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{detailsOneParameter}{detailsOneParameter}}
+{\footnotesize\ttfamily Vec\+Pair\+String ist\+::details\+One\+Parameter}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        PairString  ( \textcolor{stringliteral}{"{}Nao definido"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Nao definido"{}})}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceist_aaa17f86acac50a25f32fc96ebd21bc57}\label{namespaceist_aaa17f86acac50a25f32fc96ebd21bc57}} 
+\index{ist@{ist}!detailsTemkin@{detailsTemkin}}
+\index{detailsTemkin@{detailsTemkin}!ist@{ist}}
+\doxysubsubsection{\texorpdfstring{detailsTemkin}{detailsTemkin}}
+{\footnotesize\ttfamily Vec\+Pair\+String ist\+::details\+Temkin}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        PairString  ( \textcolor{stringliteral}{"{}K1"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Constante da isoterma de Temkin"{}})}
+\DoxyCodeLine{    ,   PairString  ( \textcolor{stringliteral}{"{}K2"{}}}
+\DoxyCodeLine{                    , \textcolor{stringliteral}{"{}Constante de ligacao de equiibrio isotermica"{}})}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}

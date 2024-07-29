@@ -1,22 +1,7 @@
 var searchData=
 [
-  ['c_0',['Instruções de Compilação para a Biblioteca C++',['../md__d_1_2_desenvolvimento_2_isotherm_lib_01-_01_github_2_r_e_a_d_m_e.html#autotoc_md2',1,'']]],
-  ['cend_1',['cend',['../group___isotherm_template.html#gab6a510047bc5e560f5a4301974206fe4',1,'ist::Isotherm']]],
-  ['cinco_20parametros_2',['Isotermas com cinco parametros',['../group___isotherm_five___parameters.html',1,'']]],
-  ['classe_3',['Identificacao da Classe',['../group___isotherm_i_d.html',1,'']]],
-  ['classes_4',['Informações sobre as classes',['../group___source_info.html',1,'']]],
-  ['classes_20base_20das_20isotermas_5',['Classes base das isotermas',['../group___isotherm_base.html',1,'']]],
-  ['classes_20e_20programas_20acessórios_6',['Miscelânea: Classes e Programas Acessórios',['../group___isotherm_misc.html',1,'']]],
-  ['cloneimplementation_7',['CloneImplementation',['../classist_1_1_dubinin_radushkevich.html#ae46a7375ad657b611d9e5d468fe798bb',1,'ist::DubininRadushkevich']]],
-  ['coeffvalue_8',['coeffValue',['../group___isotherm_template.html#ga9f9cd71c8e24d951ea5acc91137316c1',1,'ist::Isotherm']]],
-  ['com_20cinco_20parametros_9',['Isotermas com cinco parametros',['../group___isotherm_five___parameters.html',1,'']]],
-  ['com_20dois_20parametros_10',['Isotermas com dois parametros',['../group___isotherm_two___parameters.html',1,'']]],
-  ['com_20quatro_20parametros_11',['Isotermas com quatro parametros',['../group___isotherm_four___parameters.html',1,'']]],
-  ['com_20tres_20parametros_12',['Isotermas com tres parametros',['../group___isotherm_three___parameters.html',1,'']]],
-  ['com_20um_20parametro_13',['Isotermas com um parametro',['../group___isotherm_one___parameter.html',1,'']]],
-  ['compilação_20para_20a_20biblioteca_20c_14',['Instruções de Compilação para a Biblioteca C++',['../md__d_1_2_desenvolvimento_2_isotherm_lib_01-_01_github_2_r_e_a_d_m_e.html#autotoc_md2',1,'']]],
-  ['compilar_20a_20biblioteca_15',['Passos para Compilar a Biblioteca',['../md__d_1_2_desenvolvimento_2_isotherm_lib_01-_01_github_2_r_e_a_d_m_e.html#autotoc_md4',1,'']]],
-  ['configurações_20da_20biblioteca_16',['Configurações da Biblioteca',['../group___isotherm_config.html',1,'']]],
-  ['crend_17',['crend',['../group___isotherm_template.html#ga0b08818b32dda60b7b675279cad01786',1,'ist::Isotherm']]],
-  ['crie_20uma_20pasta_20tt_20build_20tt_18',['1. Crie uma Pasta &lt;tt&gt;build&lt;/tt&gt;',['../md__d_1_2_desenvolvimento_2_isotherm_lib_01-_01_github_2_r_e_a_d_m_e.html#autotoc_md5',1,'']]]
+  ['defineidentity_0',['DefineIdentity',['../classist_1_1_henry.html#aba2f2f74cbe5528bd265a2083f8e127a',1,'ist::Henry::DefineIdentity()'],['../classist_1_1_one_parameter.html#a88ff69963178c0bd38b205d81f0a88cd',1,'ist::OneParameter::DefineIdentity()'],['../classist_1_1_dubinin_radushkevich.html#a7542ccd20e32a3dad156a16df5fef6e0',1,'ist::DubininRadushkevich::DefineIdentity()'],['../classist_1_1_freundlich.html#ab6136a65e7729980eec902cddd4a670e',1,'ist::Freundlich::DefineIdentity()'],['../classist_1_1_halsey.html#af347c0f939e31466f61b308c35041336',1,'ist::Halsey::DefineIdentity()'],['../classist_1_1_jovanovic.html#ab6c6296047d0094d2252393aa19e7b16',1,'ist::Jovanovic::DefineIdentity()'],['../classist_1_1_langmuir.html#aefe548e4c09da9434fbbe5c2448a2ef1',1,'ist::Langmuir::DefineIdentity()'],['../classist_1_1_temkin.html#a6cbfdf25234d4fb3e1e572e681152c33',1,'ist::Temkin::DefineIdentity()']]],
+  ['documentação_20da_20biblioteca_20isotherm_2b_2b_1',['Documentação da Biblioteca Isotherm++',['../index.html',1,'']]],
+  ['dubinin_2dradushkevich_2',['Dubinin-Radushkevich',['../group___dubinin_radushkevich.html',1,'']]],
+  ['dubininradushkevich_3',['DubininRadushkevich',['../classist_1_1_dubinin_radushkevich.html#af5bbaa9dc4f1a322d4dea66843d2cd17',1,'ist::DubininRadushkevich::DubininRadushkevich()=default'],['../classist_1_1_dubinin_radushkevich.html#aa8e0ad40c643da1f68f6767b0bb54f83',1,'ist::DubininRadushkevich::DubininRadushkevich(const DubininRadushkevich &amp;_orig)=default'],['../classist_1_1_dubinin_radushkevich.html#ad9789b9f41dfdd3e81bc727fe992a292',1,'ist::DubininRadushkevich::DubininRadushkevich(const Real &amp;_qmax, const Real &amp;_k1, const Real &amp;_rgas=Isotherm::RGASCONST)'],['../classist_1_1_dubinin_radushkevich.html',1,'ist::DubininRadushkevich']]]
 ];

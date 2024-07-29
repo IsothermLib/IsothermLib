@@ -1,71 +1,62 @@
 \hypertarget{_configure_8h_source}{}\doxysection{Configure.\+h}
-\label{_configure_8h_source}\index{IsothermLib/include/Misc/Configure.h@{IsothermLib/include/Misc/Configure.h}}
+\label{_configure_8h_source}\index{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Misc/Configure.h@{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Misc/Configure.h}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 }
-\DoxyCodeLine{2 }
-\DoxyCodeLine{3 }
-\DoxyCodeLine{4 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{5 \textcolor{comment}{// Name        : Config.h}}
-\DoxyCodeLine{6 \textcolor{comment}{// Authors     : Lara Botelho Brum}}
-\DoxyCodeLine{7 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
-\DoxyCodeLine{8 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
-\DoxyCodeLine{9 \textcolor{comment}{// Version     : 1.0}}
-\DoxyCodeLine{10 \textcolor{comment}{// Description : Arquivo onde são definidas algumas variáveis de}}
-\DoxyCodeLine{11 \textcolor{comment}{//               configuração do programa}}
+\DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// Name        : IsothermConfig.h}}
+\DoxyCodeLine{3 \textcolor{comment}{// Authors     : Lara Botelho Brum}}
+\DoxyCodeLine{4 \textcolor{comment}{//               Luan Rodrigues Soares de Souza}}
+\DoxyCodeLine{5 \textcolor{comment}{//               Joao Flavio Vieira de Vasconcellos}}
+\DoxyCodeLine{6 \textcolor{comment}{// Version     : 1.0}}
+\DoxyCodeLine{7 \textcolor{comment}{// Description : Arquivo onde são definidas algumas variáveis de}}
+\DoxyCodeLine{8 \textcolor{comment}{//               configuração do programa}}
+\DoxyCodeLine{9 \textcolor{comment}{//}}
+\DoxyCodeLine{10 \textcolor{comment}{// Copyright   : Copyright (C) <2024>  Joao Flavio Vasconcellos }}
+\DoxyCodeLine{11 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
 \DoxyCodeLine{12 \textcolor{comment}{//}}
-\DoxyCodeLine{13 \textcolor{comment}{// Copyright   : Copyright (C) <2021>  Joao Flavio Vasconcellos }}
-\DoxyCodeLine{14 \textcolor{comment}{//                                      (jflavio at iprj.uerj.br)}}
-\DoxyCodeLine{15 \textcolor{comment}{//}}
-\DoxyCodeLine{16 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
-\DoxyCodeLine{17 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
-\DoxyCodeLine{18 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
-\DoxyCodeLine{19 \textcolor{comment}{//}}
-\DoxyCodeLine{20 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
-\DoxyCodeLine{21 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
-\DoxyCodeLine{22 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
-\DoxyCodeLine{23 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{13 \textcolor{comment}{// This program is free software: you can redistribute it and/or modify}}
+\DoxyCodeLine{14 \textcolor{comment}{// it under the terms of the GNU General Public License as published by}}
+\DoxyCodeLine{15 \textcolor{comment}{// the Free Software Foundation, either version 3 of the License.}}
+\DoxyCodeLine{16 \textcolor{comment}{//}}
+\DoxyCodeLine{17 \textcolor{comment}{// This program is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{18 \textcolor{comment}{// but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{19 \textcolor{comment}{// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}}
+\DoxyCodeLine{20 \textcolor{comment}{// GNU General Public License for more details.}}
+\DoxyCodeLine{21 \textcolor{comment}{//}}
+\DoxyCodeLine{22 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
+\DoxyCodeLine{23 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
 \DoxyCodeLine{24 \textcolor{comment}{//}}
-\DoxyCodeLine{25 \textcolor{comment}{// You should have received a copy of the GNU General Public License}}
-\DoxyCodeLine{26 \textcolor{comment}{// along with this program.  If not, see <http://www.gnu.org/licenses/>.}}
-\DoxyCodeLine{27 \textcolor{comment}{//}}
-\DoxyCodeLine{28 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{29 }
-\DoxyCodeLine{30 }
-\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_CONFIGURE\_ISOTHERM\_H\_\_}}
-\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_CONFIGURE\_ISOTHERM\_H\_\_}}
-\DoxyCodeLine{41 }
-\DoxyCodeLine{42 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{43 \textcolor{comment}{//  Includes c++}}
-\DoxyCodeLine{44 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{45 }
-\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <iosfwd>}}
-\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <functional>}}
-\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <limits>}}
-\DoxyCodeLine{49 }
-\DoxyCodeLine{50 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{51 \textcolor{comment}{//  Includes da biblioteca}}
-\DoxyCodeLine{52 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{25 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#ifndef ISOTHERM\_CONFIG\_H\_}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define ISOTHERM\_CONFIG\_H\_}}
 \DoxyCodeLine{53 }
-\DoxyCodeLine{54 \textcolor{preprocessor}{\#include <Misc/Type.h>}}
-\DoxyCodeLine{55 }
-\DoxyCodeLine{56 }
-\DoxyCodeLine{57 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{58 \textcolor{comment}{//  Definição do namespace}}
-\DoxyCodeLine{59 \textcolor{comment}{//==============================================================================}}
-\DoxyCodeLine{60 }
-\DoxyCodeLine{63 \textcolor{preprocessor}{\#define IST\_NAMESPACE\_OPEN namespace ist \{}}
-\DoxyCodeLine{66 \textcolor{preprocessor}{\#define IST\_NAMESPACE\_CLOSE \}}}
-\DoxyCodeLine{67 }
-\DoxyCodeLine{68 }
-\DoxyCodeLine{69 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
-\DoxyCodeLine{70 }
-\DoxyCodeLine{71 \textcolor{keyword}{const} Real      \mbox{\hyperlink{group___configure_ga3fcc52b52534a3ea51f05de6a4349c70}{ZERO}}(1e250 * std::numeric\_limits<Real>::min()); }
-\DoxyCodeLine{72 \textcolor{keyword}{const} UInt      \mbox{\hyperlink{group___configure_ga12c6a4b3c2ea75b302da1a5e443e2a94}{LSIZE}}(0x50);                                                                       }
-\DoxyCodeLine{73 }
-\DoxyCodeLine{74 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
-\DoxyCodeLine{75 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CONFIGURE\_ISOTHERM\_H\_\_ */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{76 }
-\DoxyCodeLine{77   }
+\DoxyCodeLine{54 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{55 \textcolor{comment}{//  Includes C++}}
+\DoxyCodeLine{56 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#include <iosfwd>}           }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#include <functional>}      }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#include <limits>}          }
+\DoxyCodeLine{62 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{63 \textcolor{comment}{//  Includes da biblioteca Isotherm}}
+\DoxyCodeLine{64 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#include <Misc/Type.h>}    }
+\DoxyCodeLine{68 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{69 \textcolor{comment}{//  Definição do namespace}}
+\DoxyCodeLine{70 \textcolor{comment}{//==============================================================================}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{87 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceist}{ist}} \{}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{96 \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{namespaceist_ad584e8f0589e7a2299902243d3b89386}{ZERO}}(1e250 * std::numeric\_limits<Real>::min()); }
+\DoxyCodeLine{97 }
+\DoxyCodeLine{104 \textcolor{keyword}{const} \mbox{\hyperlink{group___type_gaba0996d26f7be2572973245b51852757}{UInt}} \mbox{\hyperlink{namespaceist_a8ff9fb9169ace12fcdab79e11750b40a}{LSIZE}}(0x50); }
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \textcolor{comment}{// Fecha o namespace `ist`}}
+\DoxyCodeLine{107 \}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ISOTHERM\_CONFIG\_H\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{110   \textcolor{comment}{// Fecha o grupo de documentação `IsothermConfig`}}
 
 \end{DoxyCode}

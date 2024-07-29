@@ -1,0 +1,39 @@
+Isotherm\+Lib é uma biblioteca desenvolvida em C++20 em que se modelou diversas funções de isotermas de adsorção.
+
+
+\begin{DoxyItemize}
+\item A biblioteca foi desenvolvida no Instituto Politécnico da UERJ, campus de Nova Friburgo, Rio de Janeiro.
+\item Especialmente indicada para quem desenvolve modelos de fenômenos de transporte envolvendo processos de adsorção/desorção.
+\end{DoxyItemize}\hypertarget{md__d___documents__desennvolvimento__isotherm_lib__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Instalação}\label{md__d___documents__desennvolvimento__isotherm_lib__r_e_a_d_m_e_autotoc_md1}
+Nesta versão a biblioteca foi testada e preparada para ser utilizada em ambiente Linux. Contudo, como usa somente os recursos do C++20 padrão, com alguns pequenos ajustes, ela poderá ser utilizada em outros sistemas operacionais.\hypertarget{md__d___documents__desennvolvimento__isotherm_lib__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Instruções de Compilação para a Biblioteca C++}\label{md__d___documents__desennvolvimento__isotherm_lib__r_e_a_d_m_e_autotoc_md2}
+Este documento fornece instruções para compilar a biblioteca C++ usando o sistema de build {\ttfamily CMake}. Siga as etapas abaixo para compilar a biblioteca a partir do código-\/fonte.\hypertarget{md__d___documents__desennvolvimento__isotherm_lib__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{Requisitos}\label{md__d___documents__desennvolvimento__isotherm_lib__r_e_a_d_m_e_autotoc_md3}
+Antes de começar, certifique-\/se de que você tem as seguintes ferramentas instaladas\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{CMake}}\+: Ferramenta de configuração e geração de projetos de compilação. \href{https://cmake.org/download/}{\texttt{ Baixe e instale o CMake}}.
+\item {\bfseries{Make}}\+: Ferramenta para automatizar a construção de projetos de software. Normalmente já está disponível em sistemas Unix e Linux. \href{https://www.gnu.org/software/make/}{\texttt{ Baixe e instale o Make}}.
+\end{DoxyItemize}\hypertarget{md__d___documents__desennvolvimento__isotherm_lib__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{Passos para Compilar a Biblioteca}\label{md__d___documents__desennvolvimento__isotherm_lib__r_e_a_d_m_e_autotoc_md4}
+Siga as etapas abaixo para compilar a biblioteca.\hypertarget{md__d___documents__desennvolvimento__isotherm_lib__r_e_a_d_m_e_autotoc_md5}{}\doxysubsubsection{1. Crie uma Pasta $<$tt$>$build$<$/tt$>$}\label{md__d___documents__desennvolvimento__isotherm_lib__r_e_a_d_m_e_autotoc_md5}
+Crie uma pasta chamada {\ttfamily build} na raiz do diretório do projeto. Esta pasta será usada para armazenar todos os arquivos gerados durante o processo de compilação.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake ../.}
+
+\end{DoxyCode}
+
+
+Compile o projeto usando o Make. Este comando compila o código-\/fonte e gera a biblioteca e os arquivos executáveis. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make}
+
+\end{DoxyCode}
+ Se desejar instalar a biblioteca no sistema, você poderá executar o comando make install. Você pode precisar de permissões de superusuário para esta etapa. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo make install}
+
+\end{DoxyCode}
+ 

@@ -1,8 +1,26 @@
 var searchData=
 [
-  ['halsey_0',['Halsey',['../classist_1_1_halsey.html',1,'ist::Halsey'],['../classist_1_1_halsey.html#a9e73199f4f2ffdd66b46be10d3ba55ea',1,'ist::Halsey::Halsey()=default'],['../classist_1_1_halsey.html#aa11a4804bbf470ce6ff73e641df79289',1,'ist::Halsey::Halsey(const Halsey &amp;_orig)=default'],['../classist_1_1_halsey.html#adb1bd056c788f56c0e1351a852551656',1,'ist::Halsey::Halsey(const Real &amp;_k1, const Real &amp;_k2)']]],
-  ['harkin_20jura_1',['Harkin-Jura',['../group___harkin_jura.html',1,'']]],
-  ['harkinjura_2',['HarkinJura',['../classist_1_1_harkin_jura.html',1,'ist::HarkinJura'],['../classist_1_1_harkin_jura.html#a027424352beeb2ddddfb7b698fa3d58b',1,'ist::HarkinJura::HarkinJura()=default'],['../classist_1_1_harkin_jura.html#a45d81b01e163d61fb36f7ced735ace1f',1,'ist::HarkinJura::HarkinJura(const HarkinJura &amp;_orig)=default'],['../classist_1_1_harkin_jura.html#a4b88f159a07e53d05a341dd1f2dd0f64',1,'ist::HarkinJura::HarkinJura(const Real &amp;_k1, const Real &amp;_k2)']]],
-  ['helsey_3',['Isoterma de Helsey',['../group___halsey.html',1,'']]],
-  ['henry_4',['Henry',['../classist_1_1_henry.html',1,'ist::Henry'],['../classist_1_1_henry.html#a054b418008c2717a72740d72251695f7',1,'ist::Henry::Henry()=default'],['../classist_1_1_henry.html#aa378d54688e164bbed03168ea7c3d68f',1,'ist::Henry::Henry(const Henry &amp;_orig)=default'],['../classist_1_1_henry.html#aa2d5edf1c37b28d82946a3ccc0b220af',1,'ist::Henry::Henry(const Real &amp;_k1)'],['../group___henry.html',1,'Henry']]]
+  ['id_0',['ID',['../classist_1_1_i_d.html',1,'ist']]],
+  ['identificacao_20da_20classe_1',['Identificacao da Classe',['../group___isotherm_i_d.html',1,'']]],
+  ['informações_20sobre_20as_20classes_2',['Informações sobre as classes',['../group___source_info.html',1,'']]],
+  ['isoexception_3',['IsoException',['../class_iso_exception.html',1,'IsoException'],['../classist_1_1_iso_exception.html',1,'ist::IsoException']]],
+  ['isoexception_2eh_4',['IsoException.h',['../_iso_exception_8h.html',1,'']]],
+  ['isoterma_20de_20helsey_5',['Isoterma de Helsey',['../group___halsey.html',1,'']]],
+  ['isotermas_20com_20cinco_20parametros_6',['Isotermas com cinco parametros',['../group___isotherm_five___parameters.html',1,'']]],
+  ['isotermas_20com_20dois_20parametros_7',['Isotermas com dois parametros',['../group___isotherm_two___parameters.html',1,'']]],
+  ['isotermas_20com_20quatro_20parametros_8',['Isotermas com quatro parametros',['../group___isotherm_four___parameters.html',1,'']]],
+  ['isotermas_20com_20tres_20parametros_9',['Isotermas com tres parametros',['../group___isotherm_three___parameters.html',1,'']]],
+  ['isotermas_20com_20um_20parametro_10',['Isotermas com um parametro',['../group___isotherm_one___parameter.html',1,'']]],
+  ['isotherm_11',['Isotherm',['../classist_1_1_isotherm.html',1,'ist::Isotherm'],['../md__d___documents__desennvolvimento__isotherm_lib__r_e_a_d_m_e.html',1,'(<em>Namespace</em> global)']]],
+  ['isothermtemplate_12',['IsothermTemplate',['../group___isotherm_template.html',1,'(<em>Namespace</em> global)'],['../classist_1_1_isotherm_template.html',1,'ist::IsothermTemplate&lt; T &gt;']]],
+  ['isothermtemplate_3c_20dubininradushkevich_20_3e_13',['IsothermTemplate&lt; DubininRadushkevich &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
+  ['isothermtemplate_3c_20elovich_20_3e_14',['IsothermTemplate&lt; Elovich &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
+  ['isothermtemplate_3c_20freundlich_20_3e_15',['IsothermTemplate&lt; Freundlich &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
+  ['isothermtemplate_3c_20halsey_20_3e_16',['IsothermTemplate&lt; Halsey &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
+  ['isothermtemplate_3c_20harkinjura_20_3e_17',['IsothermTemplate&lt; HarkinJura &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
+  ['isothermtemplate_3c_20henry_20_3e_18',['IsothermTemplate&lt; Henry &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
+  ['isothermtemplate_3c_20jovanovic_20_3e_19',['IsothermTemplate&lt; Jovanovic &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
+  ['isothermtemplate_3c_20langmuir_20_3e_20',['IsothermTemplate&lt; Langmuir &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
+  ['isothermtemplate_3c_20temkin_20_3e_21',['IsothermTemplate&lt; Temkin &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
+  ['ist_22',['ist',['../namespaceist.html',1,'']]]
 ];

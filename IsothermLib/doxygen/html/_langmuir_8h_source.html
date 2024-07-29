@@ -1,19 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IsothermLib: Código-Fonte de D:/Desenvolvimento/IsothermLib - Github/IsothermLib/include/Isotherm/TwoParameters/Langmuir.h</title>
+<title>IsothermLib: Código-Fonte de D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/Langmuir.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/SVG"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -31,10 +36,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.10.0 -->
+<!-- Gerado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -43,16 +48,11 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,16 +62,9 @@ $(function() { codefold.init(0); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Carregando...</div>
-<div class="SRStatus" id="Searching">Procurando...</div>
-<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -125,7 +118,6 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceist.html">ist</a> {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="foldopen" id="foldopen00065" data-start="{" data-end="};">
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classist_1_1_langmuir.html">   65</a></span><span class="keyword">class </span><a class="code hl_class" href="classist_1_1_langmuir.html">Langmuir</a> :    <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classist_1_1_two_parameters.html">TwoParameters</a>,</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    <span class="keyword">public</span> <a class="code hl_class" href="classist_1_1_isotherm_template.html">IsothermTemplate</a> &lt; Langmuir &gt;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>{</div>
@@ -211,7 +203,6 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  </div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>};</div>
-</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
@@ -220,26 +211,26 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">#endif  </span><span class="comment">/* LANGMUIR_H */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="ttc" id="aclassist_1_1_isotherm_template_html"><div class="ttname"><a href="classist_1_1_isotherm_template.html">ist::IsothermTemplate</a></div><div class="ttdoc">Classe que gerencia o nome e detalhes sobre cada constante dos modelos das isotermas.</div><div class="ttdef"><b>Definição</b> Isotherm.h:322</div></div>
-<div class="ttc" id="aclassist_1_1_langmuir_html"><div class="ttname"><a href="classist_1_1_langmuir.html">ist::Langmuir</a></div><div class="ttdef"><b>Definição</b> Langmuir.h:67</div></div>
+<div class="ttc" id="aclassist_1_1_isotherm_template_html"><div class="ttname"><a href="classist_1_1_isotherm_template.html">ist::IsothermTemplate</a></div><div class="ttdoc">Classe que gerencia o nome e detalhes sobre cada constante dos modelos das isotermas.</div><div class="ttdef"><b>Definition:</b> Isotherm.h:322</div></div>
+<div class="ttc" id="aclassist_1_1_langmuir_html"><div class="ttname"><a href="classist_1_1_langmuir.html">ist::Langmuir</a></div><div class="ttdef"><b>Definition:</b> Langmuir.h:67</div></div>
 <div class="ttc" id="aclassist_1_1_langmuir_html_a252facac19313987e00d512445eff4f3"><div class="ttname"><a href="classist_1_1_langmuir.html#a252facac19313987e00d512445eff4f3">ist::Langmuir::Langmuir</a></div><div class="ttdeci">Langmuir(const Langmuir &amp;_orig)=default</div><div class="ttdoc">Construtora de copia.</div></div>
 <div class="ttc" id="aclassist_1_1_langmuir_html_a3928e056724eb89caae91d63b01560d2"><div class="ttname"><a href="classist_1_1_langmuir.html#a3928e056724eb89caae91d63b01560d2">ist::Langmuir::~Langmuir</a></div><div class="ttdeci">virtual ~Langmuir()=default</div><div class="ttdoc">Destrutora.</div></div>
-<div class="ttc" id="aclassist_1_1_langmuir_html_a3fe8213b6ed09abe14711d05ebfa347d"><div class="ttname"><a href="classist_1_1_langmuir.html#a3fe8213b6ed09abe14711d05ebfa347d">ist::Langmuir::Qmax</a></div><div class="ttdeci">Real Qmax() const</div><div class="ttdoc">Funcao que informa o valor da capacidade maxima de adsorcao em [M /M ]. .</div><div class="ttdef"><b>Definição</b> Langmuir.h:177</div></div>
+<div class="ttc" id="aclassist_1_1_langmuir_html_a3fe8213b6ed09abe14711d05ebfa347d"><div class="ttname"><a href="classist_1_1_langmuir.html#a3fe8213b6ed09abe14711d05ebfa347d">ist::Langmuir::Qmax</a></div><div class="ttdeci">Real Qmax() const</div><div class="ttdoc">Funcao que informa o valor da capacidade maxima de adsorcao em [M /M ]. .</div><div class="ttdef"><b>Definition:</b> Langmuir.h:177</div></div>
 <div class="ttc" id="aclassist_1_1_langmuir_html_a7900e6b66dee2d4295829e43cb7df3e9"><div class="ttname"><a href="classist_1_1_langmuir.html#a7900e6b66dee2d4295829e43cb7df3e9">ist::Langmuir::Langmuir</a></div><div class="ttdeci">Langmuir()=default</div><div class="ttdoc">Construtora default.</div></div>
-<div class="ttc" id="aclassist_1_1_langmuir_html_a810eb02bdf109c390e9f39e7209c2ece"><div class="ttname"><a href="classist_1_1_langmuir.html#a810eb02bdf109c390e9f39e7209c2ece">ist::Langmuir::Qmax</a></div><div class="ttdeci">void Qmax(const Real &amp;_qmax)</div><div class="ttdoc">Funcao para alterar a capacidade maxima de adsorcao em [M /M ]. .</div><div class="ttdef"><b>Definição</b> Langmuir.h:212</div></div>
+<div class="ttc" id="aclassist_1_1_langmuir_html_a810eb02bdf109c390e9f39e7209c2ece"><div class="ttname"><a href="classist_1_1_langmuir.html#a810eb02bdf109c390e9f39e7209c2ece">ist::Langmuir::Qmax</a></div><div class="ttdeci">void Qmax(const Real &amp;_qmax)</div><div class="ttdoc">Funcao para alterar a capacidade maxima de adsorcao em [M /M ]. .</div><div class="ttdef"><b>Definition:</b> Langmuir.h:212</div></div>
 <div class="ttc" id="aclassist_1_1_langmuir_html_a8864904844c82f487b9010c4115c11f0"><div class="ttname"><a href="classist_1_1_langmuir.html#a8864904844c82f487b9010c4115c11f0">ist::Langmuir::operator=</a></div><div class="ttdeci">Langmuir &amp; operator=(const Langmuir &amp;_orig)=default</div><div class="ttdoc">Sobrecarga do operador =.</div></div>
-<div class="ttc" id="aclassist_1_1_langmuir_html_a897b6fcbbdf3dddd4842ad52a6d28381"><div class="ttname"><a href="classist_1_1_langmuir.html#a897b6fcbbdf3dddd4842ad52a6d28381">ist::Langmuir::K1</a></div><div class="ttdeci">void K1(const Real &amp;_k1)</div><div class="ttdoc">Funcao que altera o coeficiente associado a constante de equilibrio de Langmuir.</div><div class="ttdef"><b>Definição</b> Langmuir.h:228</div></div>
-<div class="ttc" id="aclassist_1_1_langmuir_html_a9905937545c15e2df2dc0ace377909c2"><div class="ttname"><a href="classist_1_1_langmuir.html#a9905937545c15e2df2dc0ace377909c2">ist::Langmuir::Qe</a></div><div class="ttdeci">Real Qe(const Real &amp;_c, const Real &amp;) const</div><div class="ttdoc">Funcao que calcula a quantidade de sorcao no equilibrio.</div><div class="ttdef"><b>Definição</b> Langmuir.cpp:100</div></div>
-<div class="ttc" id="aclassist_1_1_langmuir_html_aee9e86887f92228b25a528a8e3ff7a18"><div class="ttname"><a href="classist_1_1_langmuir.html#aee9e86887f92228b25a528a8e3ff7a18">ist::Langmuir::K1</a></div><div class="ttdeci">Real K1() const</div><div class="ttdoc">Funcao que retorna o coeficiente associado a constante de equilibrio de Langmuir.</div><div class="ttdef"><b>Definição</b> Langmuir.h:192</div></div>
+<div class="ttc" id="aclassist_1_1_langmuir_html_a897b6fcbbdf3dddd4842ad52a6d28381"><div class="ttname"><a href="classist_1_1_langmuir.html#a897b6fcbbdf3dddd4842ad52a6d28381">ist::Langmuir::K1</a></div><div class="ttdeci">void K1(const Real &amp;_k1)</div><div class="ttdoc">Funcao que altera o coeficiente associado a constante de equilibrio de Langmuir.</div><div class="ttdef"><b>Definition:</b> Langmuir.h:228</div></div>
+<div class="ttc" id="aclassist_1_1_langmuir_html_a9905937545c15e2df2dc0ace377909c2"><div class="ttname"><a href="classist_1_1_langmuir.html#a9905937545c15e2df2dc0ace377909c2">ist::Langmuir::Qe</a></div><div class="ttdeci">Real Qe(const Real &amp;_c, const Real &amp;) const</div><div class="ttdoc">Funcao que calcula a quantidade de sorcao no equilibrio.</div><div class="ttdef"><b>Definition:</b> Langmuir.cpp:100</div></div>
+<div class="ttc" id="aclassist_1_1_langmuir_html_aee9e86887f92228b25a528a8e3ff7a18"><div class="ttname"><a href="classist_1_1_langmuir.html#aee9e86887f92228b25a528a8e3ff7a18">ist::Langmuir::K1</a></div><div class="ttdeci">Real K1() const</div><div class="ttdoc">Funcao que retorna o coeficiente associado a constante de equilibrio de Langmuir.</div><div class="ttdef"><b>Definition:</b> Langmuir.h:192</div></div>
 <div class="ttc" id="aclassist_1_1_langmuir_html_aefe548e4c09da9434fbbe5c2448a2ef1"><div class="ttname"><a href="classist_1_1_langmuir.html#aefe548e4c09da9434fbbe5c2448a2ef1">ist::Langmuir::DefineIdentity</a></div><div class="ttdeci">DefineIdentity(&quot;Langmuir&quot;, ID::Langmuir)</div><div class="ttdoc">Definicao de ID para esta classe para fins de identificacao de erros.</div></div>
-<div class="ttc" id="aclassist_1_1_two_parameters_html"><div class="ttname"><a href="classist_1_1_two_parameters.html">ist::TwoParameters</a></div><div class="ttdef"><b>Definição</b> TwoParameters.h:59</div></div>
-<div class="ttc" id="agroup___isotherm_template_html_ga6655cbd631d8109709473c7243eeadba"><div class="ttname"><a href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">ist::Isotherm::Value</a></div><div class="ttdeci">const VecReal Value() const</div><div class="ttdoc">Vetor com os coeficientes de qualquer isoterma.</div><div class="ttdef"><b>Definição</b> Isotherm.h:261</div></div>
-<div class="ttc" id="agroup___type_html_ga445a5f0e2a34c9d97d69a3c2d1957907"><div class="ttname"><a href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a></div><div class="ttdeci">double Real</div><div class="ttdef"><b>Definição</b> Type.h:15</div></div>
-<div class="ttc" id="anamespaceist_html"><div class="ttname"><a href="namespaceist.html">ist</a></div><div class="ttdoc">Classe base de todas as outras classes de isotermas.</div><div class="ttdef"><b>Definição</b> IsoException.h:53</div></div>
+<div class="ttc" id="aclassist_1_1_two_parameters_html"><div class="ttname"><a href="classist_1_1_two_parameters.html">ist::TwoParameters</a></div><div class="ttdef"><b>Definition:</b> TwoParameters.h:59</div></div>
+<div class="ttc" id="agroup___isotherm_template_html_ga6655cbd631d8109709473c7243eeadba"><div class="ttname"><a href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">ist::Isotherm::Value</a></div><div class="ttdeci">const VecReal Value() const</div><div class="ttdoc">Vetor com os coeficientes de qualquer isoterma.</div><div class="ttdef"><b>Definition:</b> Isotherm.h:261</div></div>
+<div class="ttc" id="agroup___type_html_ga445a5f0e2a34c9d97d69a3c2d1957907"><div class="ttname"><a href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a></div><div class="ttdeci">double Real</div><div class="ttdef"><b>Definition:</b> Type.h:15</div></div>
+<div class="ttc" id="anamespaceist_html"><div class="ttname"><a href="namespaceist.html">ist</a></div><div class="ttdoc">Classe base de todas as outras classes de isotermas.</div><div class="ttdef"><b>Definition:</b> IsoException.h:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

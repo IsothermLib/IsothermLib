@@ -1,5 +1,5 @@
 \hypertarget{_temkin_8h_source}{}\doxysection{Temkin.\+h}
-\label{_temkin_8h_source}\index{IsothermLib/include/Isotherm/TwoParameters/Temkin.h@{IsothermLib/include/Isotherm/TwoParameters/Temkin.h}}
+\label{_temkin_8h_source}\index{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/Temkin.h@{D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/Temkin.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{comment}{//==============================================================================}}
@@ -40,11 +40,11 @@
 \DoxyCodeLine{58 }
 \DoxyCodeLine{59 \textcolor{preprocessor}{\#include <Isotherm/TwoParameters/TwoParameters.h>}}
 \DoxyCodeLine{60 }
-\DoxyCodeLine{61 \mbox{\hyperlink{group___configure_ga1e3e0e0eca304ffc8364100b22724d21}{IST\_NAMESPACE\_OPEN}}}
+\DoxyCodeLine{61 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceist}{ist}} \{}
 \DoxyCodeLine{62 }
 \DoxyCodeLine{63 }
-\DoxyCodeLine{64 \textcolor{keyword}{class }\mbox{\hyperlink{class_temkin}{Temkin}} : \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{class_two_parameters}{TwoParameters}},}
-\DoxyCodeLine{65                             \textcolor{keyword}{public} \mbox{\hyperlink{class_isotherm_template}{IsothermTemplate}} < Temkin > \{}
+\DoxyCodeLine{64 \textcolor{keyword}{class }\mbox{\hyperlink{classist_1_1_temkin}{Temkin}} : \textcolor{keyword}{public} \textcolor{keyword}{virtual} \mbox{\hyperlink{classist_1_1_two_parameters}{TwoParameters}},}
+\DoxyCodeLine{65                             \textcolor{keyword}{public} \mbox{\hyperlink{classist_1_1_isotherm_template}{IsothermTemplate}} < Temkin > \{}
 \DoxyCodeLine{66 }
 \DoxyCodeLine{67 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{68 \textcolor{comment}{// ID da classe}}
@@ -53,7 +53,7 @@
 \DoxyCodeLine{71 \textcolor{keyword}{public}:}
 \DoxyCodeLine{72 }
 \DoxyCodeLine{73 }
-\DoxyCodeLine{78     \mbox{\hyperlink{class_temkin_a754ef73169eae95c54919827ecf06fb8}{DefineIdentity}} (\textcolor{stringliteral}{"{}Temkin"{}}, ID::Temkin);}
+\DoxyCodeLine{78     \mbox{\hyperlink{classist_1_1_temkin_a6cbfdf25234d4fb3e1e572e681152c33}{DefineIdentity}} (\textcolor{stringliteral}{"{}Temkin"{}}, ID::Temkin);}
 \DoxyCodeLine{79 }
 \DoxyCodeLine{80 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{81 \textcolor{comment}{// Funcoes Construtoras/Destrutora}}
@@ -61,13 +61,13 @@
 \DoxyCodeLine{83 }
 \DoxyCodeLine{84 \textcolor{keyword}{public}:}
 \DoxyCodeLine{85 }
-\DoxyCodeLine{96     \mbox{\hyperlink{class_temkin_a7537cfac56ea9dffe38e791928be85fd}{Temkin}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{96     \mbox{\hyperlink{classist_1_1_temkin_a06b4b82c0657cb8966c7d950b71bbb30}{Temkin}}() = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{97 }
-\DoxyCodeLine{109     \mbox{\hyperlink{class_temkin_a2a63b7baf7601365597d4d2a065b8528}{Temkin}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_temkin}{Temkin}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{109     \mbox{\hyperlink{classist_1_1_temkin_abbf3fe739513bc095ead4e17e76d9987}{Temkin}}(\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_temkin}{Temkin}}\& \_orig) = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{110 }
-\DoxyCodeLine{114     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_temkin_a95401c3c837bf6dc33ea8de28a601254}{\string~Temkin}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{114     \textcolor{keyword}{virtual} \mbox{\hyperlink{classist_1_1_temkin_a801deba19ebe98c7cef0271972f4626b}{\string~Temkin}}() = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{115 }
-\DoxyCodeLine{135     \mbox{\hyperlink{class_temkin_a7537cfac56ea9dffe38e791928be85fd}{Temkin}} (\textcolor{keyword}{const} Real\& \_k1, \textcolor{keyword}{const} Real\& \_k2,  \textcolor{keyword}{const} Real\& \_rgas = Isotherm::RGASCONST);}
+\DoxyCodeLine{135     \mbox{\hyperlink{classist_1_1_temkin_a06b4b82c0657cb8966c7d950b71bbb30}{Temkin}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_k1, \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_k2,  \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_rgas = Isotherm::RGASCONST);}
 \DoxyCodeLine{136 }
 \DoxyCodeLine{137 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{138 \textcolor{comment}{// Sobrecarga de operadores}}
@@ -76,61 +76,60 @@
 \DoxyCodeLine{141 \textcolor{keyword}{public}:}
 \DoxyCodeLine{142 }
 \DoxyCodeLine{143 }
-\DoxyCodeLine{156     \mbox{\hyperlink{class_temkin}{Temkin}}\& \mbox{\hyperlink{class_temkin_ad00500ea820c1bdfe42fef1423d80d9d}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_temkin}{Temkin}}\& \_orig) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{156     \mbox{\hyperlink{classist_1_1_temkin}{Temkin}}\& \mbox{\hyperlink{classist_1_1_temkin_a1e9ae5dcad41864f486398f4619cbe22}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{classist_1_1_temkin}{Temkin}}\& \_orig) = \textcolor{keywordflow}{default};}
 \DoxyCodeLine{157 }
 \DoxyCodeLine{158 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{159 \textcolor{comment}{// Acesso as constantes da classe inline}}
 \DoxyCodeLine{160 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{161 }
-\DoxyCodeLine{174     \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_temkin_a9adc2038db86e50a1ef24993da6b3b04}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0);\};}
+\DoxyCodeLine{174     \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_temkin_a5154e451acdd6f82d233d3270e5292c0}{K1}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(0);\};}
 \DoxyCodeLine{175 }
-\DoxyCodeLine{188     \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_temkin_ac14a981317be0fdc8975018ab4bfb3fe}{K2}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1);\};}
+\DoxyCodeLine{188     \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_temkin_a671bb506f5ca131519895bba7dcbc5ee}{K2}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(1);\};}
 \DoxyCodeLine{189 }
 \DoxyCodeLine{190 }
-\DoxyCodeLine{203     \textcolor{keyword}{inline} Real \mbox{\hyperlink{class_temkin_a64ba774ff2fab88430de674c8ecfc9f2}{Rgas}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  RGAS;\};}
+\DoxyCodeLine{203     \textcolor{keyword}{inline} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_temkin_a29c30a6d9d200083513ddf6224953094}{Rgas}} ()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return}  RGAS;\};}
 \DoxyCodeLine{204 }
 \DoxyCodeLine{205 }
 \DoxyCodeLine{206 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{207 \textcolor{comment}{// Alterando as constantes da classe}}
 \DoxyCodeLine{208 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{209 }
-\DoxyCodeLine{223     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_temkin_a12e04f6a412ba7f7290bc3230f3c1056}{K1}} (\textcolor{keyword}{const} Real\& \_k1)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_temkin_a7537cfac56ea9dffe38e791928be85fd}{Temkin}}(\_k1, \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1));\};}
+\DoxyCodeLine{223     \textcolor{keywordtype}{void} \mbox{\hyperlink{classist_1_1_temkin_ad2d7a22a498682dd39d097168e997086}{K1}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_k1)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{classist_1_1_temkin_a06b4b82c0657cb8966c7d950b71bbb30}{Temkin}}(\_k1, \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(1), this-\/>\mbox{\hyperlink{classist_1_1_temkin_a29c30a6d9d200083513ddf6224953094}{Rgas}}());\};}
 \DoxyCodeLine{224 }
 \DoxyCodeLine{225 }
-\DoxyCodeLine{239     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_temkin_a810fdc1446258592ba4f308535e8b423}{K2}} (\textcolor{keyword}{const} Real\& \_k2)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_temkin_a7537cfac56ea9dffe38e791928be85fd}{Temkin}}(\mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), \_k2);\};}
+\DoxyCodeLine{239     \textcolor{keywordtype}{void} \mbox{\hyperlink{classist_1_1_temkin_a0cba035ed2d9cdc610d4349a533c935a}{K2}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_k2)  \{*\textcolor{keyword}{this} = \mbox{\hyperlink{classist_1_1_temkin_a06b4b82c0657cb8966c7d950b71bbb30}{Temkin}}(\mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(0), \_k2, this-\/>\mbox{\hyperlink{classist_1_1_temkin_a29c30a6d9d200083513ddf6224953094}{Rgas}}());\};}
 \DoxyCodeLine{240 }
-\DoxyCodeLine{254     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_temkin_ace95c6383f86e2a35a9e7b8bec5c4a1c}{Rgas}} (\textcolor{keyword}{const} Real\& \_rgas) \{*\textcolor{keyword}{this} = \mbox{\hyperlink{class_temkin_a7537cfac56ea9dffe38e791928be85fd}{Temkin}}(\mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(0), \mbox{\hyperlink{group___isotherm_template_ga66905e5e5db160c8a6d803aed0d6d85c}{Value}}(1), \_rgas);\};}
+\DoxyCodeLine{254     \textcolor{keywordtype}{void} \mbox{\hyperlink{classist_1_1_temkin_a637786ab827f1161c20c7403c7ef14a3}{Rgas}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_rgas) \{*\textcolor{keyword}{this} = \mbox{\hyperlink{classist_1_1_temkin_a06b4b82c0657cb8966c7d950b71bbb30}{Temkin}}(\mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(0), \mbox{\hyperlink{group___isotherm_template_ga6655cbd631d8109709473c7243eeadba}{Value}}(1), \_rgas);\};}
 \DoxyCodeLine{255 }
 \DoxyCodeLine{256 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{257 \textcolor{comment}{// Funcoes virtuais}}
 \DoxyCodeLine{258 \textcolor{comment}{//==============================================================================}}
 \DoxyCodeLine{259 }
 \DoxyCodeLine{275     [[nodiscard]] }
-\DoxyCodeLine{276     Real \mbox{\hyperlink{class_temkin_ad0e5a407af8219eb67ebbcb546bfb904}{Qe}} (\textcolor{keyword}{const} Real\& \_c, \textcolor{keyword}{const} Real\& \_temp) \textcolor{keyword}{const};}
+\DoxyCodeLine{276     \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{classist_1_1_temkin_abe4580e6eb95e39e488055274f1b2b72}{Qe}} (\textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_c, \textcolor{keyword}{const} \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}\& \_temp) \textcolor{keyword}{const};}
 \DoxyCodeLine{277     }
 \DoxyCodeLine{278     }
-\DoxyCodeLine{279     [[nodiscard]] }
-\DoxyCodeLine{280     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_temkin}{Temkin}}* CloneImplementation()\textcolor{keyword}{ const override}}
-\DoxyCodeLine{281 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{282         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_temkin_a7537cfac56ea9dffe38e791928be85fd}{Temkin}}(*\textcolor{keyword}{this});}
-\DoxyCodeLine{283     \} }
-\DoxyCodeLine{284     }
+\DoxyCodeLine{279     }
+\DoxyCodeLine{280     [[nodiscard]]}
+\DoxyCodeLine{281     \textcolor{keyword}{virtual} std::unique\_ptr<Isotherm> CloneImplementation()\textcolor{keyword}{ const override}}
+\DoxyCodeLine{282 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{283         \textcolor{keywordflow}{return} std::make\_unique<Temkin>(*\textcolor{keyword}{this});}
+\DoxyCodeLine{284     \}    }
 \DoxyCodeLine{285     }
-\DoxyCodeLine{286     }
-\DoxyCodeLine{287 \textcolor{keyword}{private}:}
-\DoxyCodeLine{288 }
-\DoxyCodeLine{289 Real                    RGAS = Isotherm::RGASCONST;      }
+\DoxyCodeLine{286 \textcolor{keyword}{private}:}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288 \mbox{\hyperlink{group___type_ga445a5f0e2a34c9d97d69a3c2d1957907}{Real}}                    RGAS = Isotherm::RGASCONST;      }
+\DoxyCodeLine{289 }
 \DoxyCodeLine{290 }
-\DoxyCodeLine{291 }
-\DoxyCodeLine{292 \};}
+\DoxyCodeLine{291 \};}
+\DoxyCodeLine{292 }
 \DoxyCodeLine{293 }
-\DoxyCodeLine{294 }
+\DoxyCodeLine{296 }
 \DoxyCodeLine{297 }
-\DoxyCodeLine{298 }
-\DoxyCodeLine{299 \mbox{\hyperlink{group___configure_ga9804ef63a551808d389310b891356c2a}{IST\_NAMESPACE\_CLOSE}}}
-\DoxyCodeLine{300 }
-\DoxyCodeLine{301 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* TEMKIN\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{298 \}}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* TEMKIN\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{301 }
 \DoxyCodeLine{302 }
-\DoxyCodeLine{303 }
 
 \end{DoxyCode}
