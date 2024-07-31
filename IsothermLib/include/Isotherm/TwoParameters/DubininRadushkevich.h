@@ -4,11 +4,11 @@
 //               Iasmim Barboza Storck
 //               Lara Botelho Brum
 //               Luan Rodrigues Soares de Souza
-//               Joao Flavio Vieira de Vasconcellos
+//               João Flávio Vieira de Vasconcellos
 // Version     : 1.0
 // Description : Classe com as equações da isoterma de Dubinin-Radushkevich
 //
-// Copyright   : Copyright (C) <2024>  Joao Flavio Vasconcellos
+// Copyright   : Copyright (C) <2024>  João Flávio Vasconcellos
 //                                      (jflavio at iprj.uerj.br)
 //
 // This program is free software: you can redistribute it and/or modify
@@ -22,15 +22,19 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
-//
 //==============================================================================
 
 /** 
  * @defgroup DubininRadushkevich Dubinin-Radushkevich
- * @ingroup Two_Parameters
+ * @ingroup IsothermTwo_Parameters
  * @brief Classe DubininRadushkevich contém as equações da isoterma de Dubinin-Radushkevich.
  * @{
  */
+
+/// @file DubininRadushkevich.h
+/// @brief Contém a definição da classe DubininRadushkevich
+
+
 
 #ifndef DUBININ_RADUSHKEVICH_H
 #define DUBININ_RADUSHKEVICH_H
@@ -43,16 +47,17 @@ namespace ist {
  * @brief Classe com as equações da isoterma de Dubinin-Radushkevich
  * 
  * Isoterma com dois parâmetros, \f$ q_{max} \f$ e \f$ K_1 \f$, cujas fórmulas são as seguintes:
-
-
+ *
  * \f[
  *     Q_e (C_e, T) = q_{max} \exp( -K_1 \epsilon^2 )
  * \f]
  * \f[
  *     \epsilon = R T \ln \left(1 + \frac{1}{C_e} \right)
  * \f]
+ * 
  * Um artigo de referência pode ser encontrado [aqui](https://doi.org/10.1021/cr60204a006).
  */
+    
 class DubininRadushkevich : public virtual TwoParameters, public IsothermTemplate<DubininRadushkevich> {
 public:
     /**
@@ -186,8 +191,6 @@ public:
 private:
     Real RGAS = Isotherm::RGASCONST; ///< Valor default da constante universal dos gases.
 };
-
-/// @example TesteDubininRadushkevich.cpp
 
 } // namespace ist
 

@@ -1,55 +1,41 @@
 //==============================================================================
 // Name        : Henry.h
-// Authors     : Iasmim Barboza Storck
+// Authors     : Aline Zuliani Lunkes
+//               Iasmim Barboza Storck
 //               Lara Botelho Brum
 //               Luan Rodrigues Soares de Souza
 //               Joao Flavio Vieira de Vasconcellos
 // Version     : 1.0
-// Description : Classe com as equacoes da isoterma de Henry
+// Description : Classe com as equações da isoterma de Henry
 //
 // Copyright   : Copyright (C) <2024>  Joao Flavio Vasconcellos
 //                                      (jflavio at iprj.uerj.br)
 //
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License.
+// This program é software livre: você pode redistribuí-lo e/ou modificá-lo
+// sob os termos da Licença Pública Geral GNU conforme publicada pela
+// Free Software Foundation, na versão 3 da Licença.
 //
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
+// Este programa é distribuído na esperança de que seja útil,
+// mas SEM NENHUMA GARANTIA; sem mesmo a garantia implícita de
+// COMERCIABILIDADE ou ADEQUAÇÃO A UM DETERMINADO FIM. Veja a
+// Licença Pública Geral GNU para mais detalhes.
 //
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+// Você deve ter recebido uma cópia da Licença Pública Geral GNU
+// junto com este programa. Se não, veja <http://www.gnu.org/licenses/>.
 //
 //==============================================================================
 
-/** @defgroup Henry  Henry
- *  @ingroup One_Parameter
- *  Classe Henry e uma classe de um parametro
+/** @defgroup Henry Henry
+ *  @ingroup IsothermOne_Parameter
+ *  @brief Classe Henry contém a equaçção da isoterma de Henry.
  *  @{
  */
 
-/// <summary>
-/// Classe com as equacoes da isoterma de Henry.
-/// </summary>
-///  Isoterma com um parametro, \f$ K_1 > 0 \f$, cuja formula e a seguinte:
-///\begin{align}
-///     Q_e(C_e) = K_1 C_e
-///\end{align}
-///  O artigo em que esta isoterma foi definida pode ser encontrado [aqui](https://doi.org/10.1098/rstl.1803.0004 ).
-///  \authors   Iasmim Barboza Storck
-///  \authors   Lara Botelho Brum
-///  \authors   Luan Rodrigues Soares de Souza
-///  \authors   Joao Flavio Vieira de Vasconcellos
-///  \version   1.0
-///  \date      2022
-///  \bug       Nao ha bugs conhecidos.
-///
-///  \copyright GNU Public License.
+/// @file Henry.h
+/// @brief Contém a definição da classe Henry
 
 #ifndef __HENRY_H__
-#define	__HENRY_H__
+#define __HENRY_H__
 
 //==============================================================================
 // include da isotherm++
@@ -59,187 +45,129 @@
 
 namespace ist {
 
-class Henry :   public virtual OneParameter,
-                public IsothermTemplate < Henry >
-{
+/// <summary>
+/// @brief Classe com as equações da isoterma de Henry.
+/// </summary>
+/// Isoterma com um parâmetro, \f$ K_1 > 0 \f$, cuja fórmula é a seguinte:
+/// \f[
+/// Q_e(C_e) = K_1 C_e
+/// \f]
+/// O artigo em que esta isoterma foi definida pode ser encontrado [aqui](https://doi.org/10.1098/rstl.1803.0004).
+class Henry : public virtual OneParameter, public IsothermTemplate<Henry> {
+    
 //==============================================================================
 // ID da classe
 //==============================================================================
 
 public:
-
-/// <summary>
-/// Definicao de ID para esta classe para fins de identificacao de erros.
-/// </summary>
-    DefineIdentity  (   "Henry"
-                    ,   ID::Henry
-                    );
+    /// @brief Definição de ID para esta classe para fins de identificação de erros.
+    DefineIdentity("Henry", ID::Henry);
 
 //==============================================================================
-// Funcoes Construtoras/Destrutora
+// Funções Construtoras/Destrutora
 //==============================================================================
 
 public:
-
-/// <summary>
-/// Construtora default.
-/// </summary>
-/// <example>
-/// Uso:
-/// @code
-///     Henry  var;
-/// @endcode
-/// </example>
-/// @param " " Nao ha parametros para esta funcao
+    /// @brief Construtora default.
+    /// @code
+    /// Henry var;
+    /// @endcode
     Henry() = default;
 
-/// <summary>
-/// Construtora de copia.
-/// </summary>
-/// <example>
-/// Uso:
-/// @code
-///     Henry  var;
-///     Henry  var1(var);
-/// @endcode
-/// </example>
-/// @param  _orig Variavel do tipo Henry original.
+    /// @brief Construtora de cópia.
+    /// @param _orig Variável do tipo Henry original.
+    /// @code
+    /// Henry var;
+    /// Henry var1(var);
+    /// @endcode
     Henry(const Henry& _orig) = default;
 
-/// <summary>
-/// Destrutora.
-/// </summary>
+    /// @brief Destrutora.
     virtual ~Henry() = default;
 
-/// <summary>
-/// Construtora com o parametros que define a isoterma de Henry.
-/// </summary>
-/// <example>
-/// Uso:
-/// @code
-///     Real k1(1.0);
-///     Henry  var1(k1);
-/// @endcode
-/// </example>
-///  @param _k1 Coeficiente de distribuicao.
-///  @exception _k1 <= 0.
-    Henry (const Real& _k1);
+    /// @brief Construtora com o parâmetro que define a isoterma de Henry.
+    /// @param _k1 Coeficiente de distribuição.
+    /// @exception _k1 <= 0.
+    /// @code
+    /// Real k1(1.0);
+    /// Henry var1(k1);
+    /// @endcode
+    Henry(const Real& _k1);
 
 //==============================================================================
 // Sobrecarga de operadores
 //==============================================================================
 
 public:
-
-/// <summary>
-/// Sobrecarga do operador =.
-/// </summary>
-/// <example>
-/// Uso:
-/// @code
-///     Henry  var1(k1);
-/// @endcode
-/// </example>
-///  @param _orig Variavel do tipo Henry original.
-///  @return Copia de _orig.
-    Henry& operator = (const Henry& _orig) = default;
+    /// @brief Sobrecarga do operador =.
+    /// @param _orig Variável do tipo Henry original.
+    /// @return Cópia de _orig.
+    /// @code
+    /// Henry var1(k1);
+    /// Henry var2 = var1;
+    /// @endcode
+    Henry& operator=(const Henry& _orig) = default;
 
 //==============================================================================
-// Acesso as constantes da classe
+// Acesso às constantes da classe
 //==============================================================================
 
-/// <summary>
-/// Funcao que informa o valor do coeficiente de distribuicao.
-/// </summary>
-/// <example>
-/// Uso:
-/// @code
-///     Henry  var1(k1);
-///     Real   k1 = var1.K1();
-/// @endcode
-/// </example>
-///  @param " " Nao ha parametros.
-///  @return Valor do coeficiente de distribuicao.
-    [[nodiscard]]
-    inline Real K1 () const
-    {
-        return  Value(0);
-    };
+public:
+    /// @brief Função que informa o valor do coeficiente de distribuição.
+    /// @return Valor do coeficiente de distribuição.
+    /// @code
+    /// Henry var1(k1);
+    /// Real k1 = var1.K1();
+    /// @endcode
+    [[nodiscard]] inline Real K1() const {
+        return Value(0);
+    }
 
 //==============================================================================
 // Alterando as constantes da classe
 //==============================================================================
 
-/// <summary>
-/// Funcao para alterar o valor do coeficiente de distribuicao.
-/// </summary>
-/// <example>
-/// Uso:
-/// @code
-///     Henry  var1(_k1);
-///     Real   k11(3.0);
-///     var1.K1(k11);
-/// @endcode
-/// </example>
-///  @param _k1 Novo valor do coeficiente de distribuicao.
-///  @exception _k1 <= 0.
-    inline void K1 (const Real& _k1)
-    {
+public:
+    /// @brief Função para alterar o valor do coeficiente de distribuição.
+    /// @param _k1 Novo valor do coeficiente de distribuição.
+    /// @exception _k1 <= 0.
+    /// @code
+    /// Henry var1(k1);
+    /// Real k11(3.0);
+    /// var1.K1(k11);
+    /// @endcode
+    inline void K1(const Real& _k1) {
         *this = Henry(_k1);
-    };
+    }
 
 //==============================================================================
-// Funcoes virtuais
+// Funções virtuais
 //==============================================================================
 
 public:
-
-/// <summary>
-/// Funcao que calcula a quantidade de sorcao no equilibrio.
-/// </summary>
-/// <example>
-/// Uso:
-/// @code
-///     Henry  var1(k);
-///     Real ce(1.0);
-///     Real qe = var1.Qe(ce);
-/// @endcode
-/// </example>
-///  @param _c Concentracao do soluto.
-///  @return Valor da quantidade de sorcao no equilibrio.
-///  @exception _c < 0.
-    
-public:
-    
-    [[nodiscard]] 
-    inline Real Qe   (   const Real& _c
-    ) const override
-    {
+    /// @brief Função que calcula a quantidade de sorção no equilíbrio.
+    /// @param _c Concentração do soluto.
+    /// @return Valor da quantidade de sorção no equilíbrio.
+    /// @exception _c < 0.
+    /// @code
+    /// Henry var1(k);
+    /// Real ce(1.0);
+    /// Real qe = var1.Qe(ce);
+    /// @endcode
+    [[nodiscard]] inline Real Qe(const Real& _c) const override {
         return Qe(_c, 0);
     }
-      
-    
+
 protected:
+    [[nodiscard]] Real Qe(const Real& _c, const Real&) const override;
 
-    [[nodiscard]]
-    virtual Real Qe     (   const Real&  _c
-                        ,   const Real&) const ;
-
-    [[nodiscard]]
-    virtual std::unique_ptr<Isotherm> CloneImplementation() const override
-    {
+    [[nodiscard]] std::unique_ptr<Isotherm> CloneImplementation() const override {
         return std::make_unique<Henry>(*this);
     }
-    
 };
-
-/**
- *  @example TesteHenry.cpp
- *  Exemplo de utilizacao da classe Henry
- */
 
 }
 
-#endif	/* __HENRY_H__ */
+#endif /* __HENRY_H__ */
 
 /** @} */

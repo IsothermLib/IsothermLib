@@ -25,12 +25,13 @@
 var menudata={children:[
 {text:"Página Principal",url:"index.html"},
 {text:"Páginas relacionadas",url:"pages.html"},
-{text:"Módulos",url:"modules.html"},
-{text:"<em>Namespaces</em>",url:"namespaces.html",children:[
+{text:"Tópicos",url:"topics.html"},
+{text:"Namespaces",url:"namespaces.html",children:[
 {text:"Lista de Namespaces",url:"namespaces.html"},
-{text:"Membros do <em>Namespace</em>",url:"namespacemembers.html",children:[
+{text:"Membros do namespace",url:"namespacemembers.html",children:[
 {text:"Todos",url:"namespacemembers.html"},
-{text:"Funções",url:"namespacemembers_func.html"}]}]},
+{text:"Funções",url:"namespacemembers_func.html"},
+{text:"Enumerações",url:"namespacemembers_enum.html"}]}]},
 {text:"Classes",url:"annotated.html",children:[
 {text:"Lista de Classes",url:"annotated.html"},
 {text:"Índice dos Componentes",url:"classes.html"},
@@ -43,11 +44,13 @@ var menudata={children:[
 {text:"e",url:"functions.html#index_e"},
 {text:"f",url:"functions.html#index_f"},
 {text:"h",url:"functions.html#index_h"},
+{text:"i",url:"functions.html#index_i"},
 {text:"j",url:"functions.html#index_j"},
 {text:"k",url:"functions.html#index_k"},
 {text:"l",url:"functions.html#index_l"},
 {text:"n",url:"functions.html#index_n"},
 {text:"o",url:"functions.html#index_o"},
+{text:"p",url:"functions.html#index_p"},
 {text:"q",url:"functions.html#index_q"},
 {text:"r",url:"functions.html#index_r"},
 {text:"t",url:"functions.html#index_t"},
@@ -60,17 +63,23 @@ var menudata={children:[
 {text:"e",url:"functions_func.html#index_e"},
 {text:"f",url:"functions_func.html#index_f"},
 {text:"h",url:"functions_func.html#index_h"},
+{text:"i",url:"functions_func.html#index_i"},
 {text:"j",url:"functions_func.html#index_j"},
 {text:"k",url:"functions_func.html#index_k"},
 {text:"l",url:"functions_func.html#index_l"},
 {text:"n",url:"functions_func.html#index_n"},
 {text:"o",url:"functions_func.html#index_o"},
+{text:"p",url:"functions_func.html#index_p"},
 {text:"q",url:"functions_func.html#index_q"},
 {text:"r",url:"functions_func.html#index_r"},
 {text:"t",url:"functions_func.html#index_t"},
 {text:"v",url:"functions_func.html#index_v"},
 {text:"~",url:"functions_func.html#index__7E"}]},
-{text:"Variáveis",url:"functions_vars.html"}]}]},
+{text:"Variáveis",url:"functions_vars.html"},
+{text:"Símbolos relacionados",url:"functions_rela.html"}]}]},
 {text:"Arquivos",url:"files.html",children:[
-{text:"Lista de Arquivos",url:"files.html"}]},
-{text:"Exemplos",url:"examples.html"}]}
+{text:"Lista de Arquivos",url:"files.html"},
+{text:"Membros dos Arquivos",url:"globals.html",children:[
+{text:"Todos",url:"globals.html"},
+{text:"Funções",url:"globals_func.html"},
+{text:"Definições de Tipos",url:"globals_type.html"}]}]}]}

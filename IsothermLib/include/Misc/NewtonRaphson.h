@@ -3,10 +3,14 @@
 
 /**
  * @defgroup NewtonRaphson Método de Newton-Raphson
- * @ingroup Miscelânea
- * Programação do método Newton-Raphson para o cálculo de raízes de funções.
+ * @ingroup IsothermMisc
+ * @brief Programação do método Newton-Raphson para o cálculo de raízes de funções.
  * @{
  */
+
+/// @file NewtonRaphson.h
+/// @brief Contém a programação do método Newton-Raphson para o cálculo de raízes de funções
+
 
 #include <functional>
 #include <Misc/Misc.h>

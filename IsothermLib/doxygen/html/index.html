@@ -1,14 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IsothermLib: Documentação da Biblioteca Isotherm++</title>
+<title>IsothermLib: Documentação da Biblioteca IsothermLib</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -36,10 +38,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.9.4 -->
+<!-- Gerado por Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -48,7 +50,7 @@ var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -63,28 +65,36 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Documentação da Biblioteca Isotherm++ </div></div>
+  <div class="headertitle"><div class="title">Documentação da Biblioteca IsothermLib </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
 Introdução</h1>
-<p >Esta é a documentação da biblioteca Isotherm++. Ela foi projetada para aqueles que necessitam elaborar programas na área de transporte de massa envolvendo processos de adsorção/dessorção.</p>
-<p >Por isso, desenvolvemos esta biblioteca que tem embutida uma quantidade considerável de isotermas de adsorção conhecidas e outras, novas ou menos populares, poderão ser, a qualquer momento, adicionadas à biblioteca de modo bastante simples.</p>
-<p >A Isotherm++ foi inteiramente escrita em C++14 e não foi utilizado em sua construção bibliotecas outras além do STL.</p>
+<p>Esta é a documentação da biblioteca IsothermLib. Ela foi projetada para aqueles que necessitam elaborar programas na área de transporte de massa envolvendo processos de adsorção/dessorção.</p>
+<p>Por isso, desenvolvemos esta biblioteca que tem embutida uma quantidade considerável de isotermas de adsorção conhecidas e outras, novas ou menos populares, poderão ser, a qualquer momento, adicionadas à biblioteca de modo bastante simples.</p>
+<p>A IsothermLib foi inteiramente escrita em C++20 e não foi utilizado em sua construção bibliotecas outras além do STL.</p>
 <h1><a class="anchor" id="authors"></a>
 Autores</h1>
-<p >O código foi desenvolvido por:</p><ul>
+<p>O código foi desenvolvido por:</p><ul>
+<li>Aline Zuliani Lunkes</li>
 <li>Iasmim Barboza Storck</li>
 <li>Lara Botelho Brum</li>
 <li>Luan Rodrigues Soares de Souza</li>
 </ul>
-<p >sob a supervisão de</p><ul>
+<p>sob a supervisão de</p><ul>
 <li>João Flávio Vasconcellos</li>
 </ul>
 <h1><a class="anchor" id="license"></a>
@@ -92,10 +102,11 @@ Licença</h1>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) &lt;2024&gt; Joao Flavio Vasconcellos (jflavio at iprj.uerj.br)</dd></dl>
 <p>This project is released under the GNU Public License. along with this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>. </p>
 </div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"/>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
 </small></address>
 </body>
 </html>

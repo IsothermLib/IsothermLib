@@ -1,6 +1,12 @@
 var searchData=
 [
-  ['real_0',['Real',['../group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907',1,'Type.h']]],
-  ['rend_1',['rend',['../group___isotherm_template.html#ga807bf7d3d8764b174f4e6171c5e00422',1,'ist::Isotherm::rend() const'],['../group___isotherm_template.html#ga3e91172c45d0f3f5635383bc51ef2dac',1,'ist::Isotherm::rend()']]],
-  ['rgas_2',['Rgas',['../classist_1_1_dubinin_radushkevich.html#ab186b667d2391f34f0541a05352bd640',1,'ist::DubininRadushkevich::Rgas() const'],['../classist_1_1_dubinin_radushkevich.html#a44ce82b95b13d1bfb549948d0cba4629',1,'ist::DubininRadushkevich::Rgas(const Real &amp;_rgas)'],['../classist_1_1_temkin.html#a29c30a6d9d200083513ddf6224953094',1,'ist::Temkin::Rgas() const'],['../classist_1_1_temkin.html#a637786ab827f1161c20c7403c7ef14a3',1,'ist::Temkin::Rgas(const Real &amp;_rgas)']]]
+  ['parâmetro_0',['Isotermas com um parâmetro',['../group___isotherm_one___parameter.html',1,'']]],
+  ['parâmetros_1',['Isotermas com dois parâmetros',['../group___isotherm_two___parameters.html',1,'']]],
+  ['para_20a_20biblioteca_20c_2',['Instruções de Compilação para a Biblioteca C++',['../md__d_1_2_desenvolvimento_2_isotherm_lib_01-_01_github_2_r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['para_20compilar_20a_20biblioteca_3',['Passos para Compilar a Biblioteca',['../md__d_1_2_desenvolvimento_2_isotherm_lib_01-_01_github_2_r_e_a_d_m_e.html#autotoc_md4',1,'']]],
+  ['passos_20para_20compilar_20a_20biblioteca_4',['Passos para Compilar a Biblioteca',['../md__d_1_2_desenvolvimento_2_isotherm_lib_01-_01_github_2_r_e_a_d_m_e.html#autotoc_md4',1,'']]],
+  ['pasta_20tt_20build_20tt_5',['1. Crie uma Pasta &lt;tt&gt;build&lt;/tt&gt;',['../md__d_1_2_desenvolvimento_2_isotherm_lib_01-_01_github_2_r_e_a_d_m_e.html#autotoc_md5',1,'']]],
+  ['plotgraph_6',['PlotGraph',['../group___isotherm_template.html#ga6d6aee5ee64bbb62c892c052435758d2',1,'ist::Isotherm']]],
+  ['printline_7',['PrintLine',['../group___misc.html#ga5c916ce9ce4ea38eebfc72de836e7b64',1,'PrintLine(std::ostream &amp;os, const UInt &amp;size=ist::LSIZE):&#160;Misc.cpp'],['../group___misc.html#ga5c916ce9ce4ea38eebfc72de836e7b64',1,'PrintLine(std::ostream &amp;_os, const UInt &amp;_lsize):&#160;Misc.cpp']]],
+  ['programas_20acessórios_8',['Miscelânea: Classes e Programas Acessórios',['../group___isotherm_misc.html',1,'']]]
 ];

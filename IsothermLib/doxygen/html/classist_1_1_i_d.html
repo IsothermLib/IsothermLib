@@ -1,14 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>IsothermLib: Referência da Classe ist::ID</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -36,10 +38,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.9.4 -->
+<!-- Gerado por Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -48,7 +50,7 @@ var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -62,9 +64,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -80,10 +89,15 @@ $(function() {
   <div class="headertitle"><div class="title">Referência da Classe ist::ID</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe <a class="el" href="classist_1_1_i_d.html" title="Classe ID identifica cada uma das classes da biblioteca.">ID</a> identifica cada uma das classes da biblioteca.  
+ <a href="#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_i_d_8h_source.html">ID.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Tipos Públicos</h2></td></tr>
-<tr class="memitem:afc22a73400f44db861c2e552decf774f"><td class="memItemLeft" align="right" valign="top"><a id="afc22a73400f44db861c2e552decf774f" name="afc22a73400f44db861c2e552decf774f"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+<tr class="memitem:afc22a73400f44db861c2e552decf774f" id="r_afc22a73400f44db861c2e552decf774f"><td class="memItemLeft" align="right" valign="top"><a id="afc22a73400f44db861c2e552decf774f" name="afc22a73400f44db861c2e552decf774f"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
 &#160;&#160;<b>Isotherm</b> = 0
 , <b>OneParameter</b>
 , <b>TwoParameters</b>
@@ -96,76 +110,40 @@ Tipos Públicos</h2></td></tr>
 , <br />
 &#160;&#160;<b>Elovich</b>
 , <b>Freundlich</b>
-, <b>HarkinJura</b>
+, <b>HarkinsJura</b>
 , <b>Halsey</b>
 , <br />
 &#160;&#160;<b>Jovanovic</b>
 , <b>Langmuir</b>
 , <b>Temkin</b>
-, <b>Hill</b> = 300
-, <br />
-&#160;&#160;<b>HillDeBoer</b>
-, <b>RedlichPeterson</b>
-, <b>Sips</b>
-, <b>Kiselev</b>
-, <br />
-&#160;&#160;<b>FowlerGuggenheim</b>
-, <b>HollKrich</b>
-, <b>Jossens</b>
-, <b>Khan</b>
-, <br />
-&#160;&#160;<b>Toth</b>
-, <b>ViethSladek</b>
-, <b>FritzSchlunder</b>
-, <b>LangmuirFreundlich</b>
-, <br />
-&#160;&#160;<b>BrouersSotolongo</b>
-, <b>KobleCorrigan</b>
-, <b>BrunauerEmmettTeller</b>
-, <b>RadkePrausnitsI</b>
-, <br />
-&#160;&#160;<b>RadkePrausnitsII</b>
-, <b>RadkePrausnitsIII</b>
-, <b>LangmuirJovanovic</b>
-, <b>MacMillanTeller</b>
-, <br />
-&#160;&#160;<b>Unilan</b>
-, <b>ValenzuelaMyers</b>
-, <b>Baudu</b> = 400
-, <b>FritzSchlunderIV</b>
-, <br />
-&#160;&#160;<b>MarczewskiJaroniec</b>
-, <b>WeberVanVliet</b>
-, <b>FritzSchlunderV</b> = 500
-, <b>FrenkelHalseyHill</b>
-, <br />
-&#160;&#160;<b>Henderson</b>
 <br />
  }</td></tr>
 <tr class="separator:afc22a73400f44db861c2e552decf774f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:adc69ae16e96be198b15fd11b56a992e9"><td class="memItemLeft" align="right" valign="top"><a id="adc69ae16e96be198b15fd11b56a992e9" name="adc69ae16e96be198b15fd11b56a992e9"></a>
+<tr class="memitem:adc69ae16e96be198b15fd11b56a992e9" id="r_adc69ae16e96be198b15fd11b56a992e9"><td class="memItemLeft" align="right" valign="top"><a id="adc69ae16e96be198b15fd11b56a992e9" name="adc69ae16e96be198b15fd11b56a992e9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ID</b> (const <a class="el" href="classist_1_1_i_d.html">ID</a> &amp;)=default</td></tr>
 <tr class="separator:adc69ae16e96be198b15fd11b56a992e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1573cbe15c4b78f4c361e7f9d1a2e4d5"><td class="memItemLeft" align="right" valign="top"><a id="a1573cbe15c4b78f4c361e7f9d1a2e4d5" name="a1573cbe15c4b78f4c361e7f9d1a2e4d5"></a>
+<tr class="memitem:a1573cbe15c4b78f4c361e7f9d1a2e4d5" id="r_a1573cbe15c4b78f4c361e7f9d1a2e4d5"><td class="memItemLeft" align="right" valign="top"><a id="a1573cbe15c4b78f4c361e7f9d1a2e4d5" name="a1573cbe15c4b78f4c361e7f9d1a2e4d5"></a>
 <a class="el" href="classist_1_1_i_d.html">ID</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classist_1_1_i_d.html">ID</a> &amp;)=default</td></tr>
 <tr class="separator:a1573cbe15c4b78f4c361e7f9d1a2e4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2db03e16bca597d8bd0598517cd6c1d"><td class="memItemLeft" align="right" valign="top"><a id="aa2db03e16bca597d8bd0598517cd6c1d" name="aa2db03e16bca597d8bd0598517cd6c1d"></a>
+<tr class="memitem:aa2db03e16bca597d8bd0598517cd6c1d" id="r_aa2db03e16bca597d8bd0598517cd6c1d"><td class="memItemLeft" align="right" valign="top"><a id="aa2db03e16bca597d8bd0598517cd6c1d" name="aa2db03e16bca597d8bd0598517cd6c1d"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>className</b> () const</td></tr>
 <tr class="separator:aa2db03e16bca597d8bd0598517cd6c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cf37dbb5d97ac258f4f786cd4b22ef0"><td class="memItemLeft" align="right" valign="top"><a id="a5cf37dbb5d97ac258f4f786cd4b22ef0" name="a5cf37dbb5d97ac258f4f786cd4b22ef0"></a>
+<tr class="memitem:a5cf37dbb5d97ac258f4f786cd4b22ef0" id="r_a5cf37dbb5d97ac258f4f786cd4b22ef0"><td class="memItemLeft" align="right" valign="top"><a id="a5cf37dbb5d97ac258f4f786cd4b22ef0" name="a5cf37dbb5d97ac258f4f786cd4b22ef0"></a>
 virtual <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>classID</b> () const</td></tr>
 <tr class="separator:a5cf37dbb5d97ac258f4f786cd4b22ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
-<li>D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Misc/<a class="el" href="_i_d_8h_source.html">ID.h</a></li>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe <a class="el" href="classist_1_1_i_d.html" title="Classe ID identifica cada uma das classes da biblioteca.">ID</a> identifica cada uma das classes da biblioteca. </p>
+</div><hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<li>D:/Desenvolvimento/IsothermLib - Github/IsothermLib/include/Misc/<a class="el" href="_i_d_8h_source.html">ID.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
 </small></address>
 </body>
 </html>

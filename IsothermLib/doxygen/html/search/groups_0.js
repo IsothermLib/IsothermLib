@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_3cbr_3e_0',['&lt;br&gt;',['../group___isotherm.html',1,'']]]
+  ['acessórios_0',['Miscelânea: Classes e Programas Acessórios',['../group___isotherm_misc.html',1,'']]],
+  ['as_20classes_1',['Informações sobre as classes',['../group___source_info.html',1,'']]]
 ];

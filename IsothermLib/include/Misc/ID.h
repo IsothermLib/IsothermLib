@@ -25,10 +25,15 @@
 #define ISOTHERM_ID_H_
 
 /** @defgroup IsothermID Identificacao da Classe
- *  @ingroup Miscelânea
- *  Classe ID para identificacao das classes no caso de erro.
+ *  @ingroup IsothermMisc
+ *  @brief Classe ID para identificacao das classes no caso de erro.
  *  @{
  */
+
+/// @file ID.h
+/// @brief Contém a definição da classe ID
+
+
 
 //==============================================================================
 // Include C++
@@ -44,6 +49,9 @@
 
 namespace ist {
 
+/**
+ * @brief Classe ID identifica cada uma das classes da biblioteca.
+ */
 class ID {
 
 //==============================================================================
@@ -64,41 +72,11 @@ public:
         ,   DubininRadushkevich = 200
         ,   Elovich
         ,   Freundlich
-        ,   HarkinJura
+        ,   HarkinsJura
         ,   Halsey
         ,   Jovanovic
         ,   Langmuir
         ,   Temkin
-        ,   Hill = 300
-        ,   HillDeBoer
-        ,   RedlichPeterson
-        ,   Sips
-        ,   Kiselev
-        ,   FowlerGuggenheim
-        ,   HollKrich
-        ,   Jossens
-        ,   Khan
-        ,   Toth
-        ,   ViethSladek
-        ,   FritzSchlunder
-        ,   LangmuirFreundlich
-        ,   BrouersSotolongo
-        ,   KobleCorrigan
-        ,   BrunauerEmmettTeller
-        ,   RadkePrausnitsI
-        ,   RadkePrausnitsII
-        ,   RadkePrausnitsIII
-        ,   LangmuirJovanovic
-        ,   MacMillanTeller
-        ,   Unilan
-        ,   ValenzuelaMyers
-        ,   Baudu = 400
-        ,   FritzSchlunderIV
-        ,   MarczewskiJaroniec
-        ,   WeberVanVliet
-        ,   FritzSchlunderV = 500
-        ,   FrenkelHalseyHill
-        ,   Henderson       
   };    
     
 //==============================================================================

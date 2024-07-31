@@ -1,12 +1,14 @@
 //==============================================================================
-// Name        : HarkinJura.cpp
-// Author      : Luan Rodrigues Soares de Souza
-//               Joao Flavio Vieira de Vasconcellos
+// Name        : HarkinsJura.cpp
+// Authors     : Aline Zuliani Lunkes
 //               Iasmim Barboza Storck
+//               Lara Botelho Brum
+//               Luan Rodrigues Soares de Souza
+//               Joao Flavio Vieira de Vasconcellos
 // Version     : 1.0
 // Description : Classe com as equacoes da isoterma de Harkin-Jura
 //
-// Copyright   : Copyright (C) <2022>  Joao Flavio Vasconcellos
+// Copyright   : Copyright (C) <2024>  Joao Flavio Vasconcellos
 //                                      (jflavio at iprj.uerj.br)
 //
 // This program is free software: you can redistribute it and/or modify
@@ -36,7 +38,7 @@
 //==============================================================================
 
 #include <Error/IsoException.h>
-#include <Isotherm/TwoParameters/HarkinJura.h>
+#include <Isotherm/TwoParameters/HarkinsJura.h>
 
 
 namespace ist {
@@ -45,16 +47,16 @@ namespace ist {
 // Variaveis estaticas
 //==============================================================================
 
-VecPairString       detailsHarkinJura
+VecPairString       detailsHarkinsJura
     {
         PairString  ( "K1"
-                    , "Constante da isoterma de Harkin-Jura")
+                    , "Constante da isoterma de Harkins-Jura")
     ,   PairString  ( "K2"
-                    , "Constante da isoterma de Harkin-Jura")
+                    , "Constante da isoterma de Harkins-Jura")
     };
 
 template<>
-VecPairString IsothermTemplate < HarkinJura >::infoIsotherm = detailsHarkinJura;
+VecPairString IsothermTemplate < HarkinsJura >::infoIsotherm = detailsHarkinsJura;
 
 //==============================================================================
 // Funcoes da classe
@@ -62,8 +64,8 @@ VecPairString IsothermTemplate < HarkinJura >::infoIsotherm = detailsHarkinJura;
 
 
 #undef  __FUNCT__
-#define __FUNCT__ "HarkinJura :: HarkinJura (const Real&, const Real&)"
-HarkinJura :: HarkinJura    (   const Real&     _k1
+#define __FUNCT__ "HarkinsJura :: HarkinsJura (const Real&, const Real&)"
+HarkinsJura :: HarkinsJura    (   const Real&     _k1
                             ,   const Real&     _k2
                             ) 
                             : TwoParameters(_k1, _k2)
@@ -103,9 +105,9 @@ HarkinJura :: HarkinJura    (   const Real&     _k1
 //==============================================================================
 
 #undef  __FUNCT__
-#define __FUNCT__ "HarkinJura ::  Qe (const Real&, const Real&)"
+#define __FUNCT__ "HarkinsJura ::  Qe (const Real&, const Real&)"
 Real
-HarkinJura ::  Qe   ( const Real& _ce
+HarkinsJura ::  Qe   ( const Real& _ce
                     , const Real&
                     ) const  
 {

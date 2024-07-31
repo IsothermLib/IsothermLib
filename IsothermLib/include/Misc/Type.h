@@ -3,10 +3,14 @@
 
 /**
  * @defgroup Type Tipo de Variáveis
- * @ingroup Miscelânea
- * Definição do padrão dos tipos de variáveis inteiras e reais.
+ * @ingroup IsothermMisc
+ * @brief Definição do padrão dos tipos de variáveis inteiras e reais.
  * @{
  */
+
+/// @file Type.h
+/// @brief Defined o padrão das variáveis reais utilizadas na biblioteca.
+
 
 //==============================================================================
 // Typedefs

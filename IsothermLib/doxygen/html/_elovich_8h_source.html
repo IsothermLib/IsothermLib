@@ -1,14 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IsothermLib: Código-Fonte de D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/Elovich.h</title>
+<title>IsothermLib: Código-Fonte de D:/Desenvolvimento/IsothermLib - Github/IsothermLib/include/Isotherm/TwoParameters/Elovich.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -36,10 +38,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.9.4 -->
+<!-- Gerado por Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -48,11 +50,16 @@ var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,9 +69,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -76,17 +90,17 @@ $(function() {
   <div class="headertitle"><div class="title">Elovich.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//==============================================================================</span></div>
+<a href="_elovich_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//==============================================================================</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Name        : Elovich.h</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Authors     : Aline Zuliani Lunkes</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//               Iasmim Barboza Storck</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//               Lara Botelho Brum</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//               Luan Rodrigues Soares de Souza</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//               Jo�o Fl�vio Vieira de Vasconcellos</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//               João Flávio Vieira de Vasconcellos</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Version     : 1.0</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Description : Classe com as equa��es da isoterma de Elovich</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Description : Classe com as equações da isoterma de Elovich</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// Copyright   : Copyright (C) 2024 Jo�o Fl�vio Vieira de Vasconcellos </span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// Copyright   : Copyright (C) 2024 João Flávio Vieira de Vasconcellos </span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//                                      (jflavio@iprj.uerj.br)</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
@@ -103,90 +117,112 @@ $(function() {
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">//==============================================================================</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#ifndef ISO_ELOVICH_H</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define ISO_ELOVICH_H</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;Isotherm/TwoParameters/TwoParameters.h&gt;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceist.html">ist</a> {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html">   68</a></span><span class="keyword">class </span><a class="code hl_class" href="classist_1_1_elovich.html">Elovich</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classist_1_1_two_parameters.html">TwoParameters</a>, <span class="keyword">public</span> <a class="code hl_class" href="classist_1_1_isotherm_template.html">IsothermTemplate</a>&lt;Elovich&gt; {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a7d4f2c9a07db2e3a00f159e3b5f67a1a">   75</a></span>    <a class="code hl_function" href="classist_1_1_elovich.html#a7d4f2c9a07db2e3a00f159e3b5f67a1a">Elovich</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#ifndef ISO_ELOVICH_H</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define ISO_ELOVICH_H</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;<a class="code" href="_two_parameters_8h.html">Isotherm/TwoParameters/TwoParameters.h</a>&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceist.html">ist</a> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="};">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html">   61</a></span><span class="keyword">class </span><a class="code hl_class" href="classist_1_1_elovich.html">Elovich</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classist_1_1_two_parameters.html">TwoParameters</a>, <span class="keyword">public</span> <a class="code hl_class" href="classist_1_1_isotherm_template.html">IsothermTemplate</a>&lt;Elovich&gt; {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a7d4f2c9a07db2e3a00f159e3b5f67a1a">   68</a></span>    <a class="code hl_function" href="classist_1_1_elovich.html#a7d4f2c9a07db2e3a00f159e3b5f67a1a">Elovich</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a50497f03ee3fa656bdb319ee3350f691">   75</a></span>    <a class="code hl_function" href="classist_1_1_elovich.html#a50497f03ee3fa656bdb319ee3350f691">Elovich</a>(<span class="keyword">const</span> <a class="code hl_class" href="classist_1_1_elovich.html">Elovich</a>&amp; _orig) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a50497f03ee3fa656bdb319ee3350f691">   82</a></span>    <a class="code hl_function" href="classist_1_1_elovich.html#a50497f03ee3fa656bdb319ee3350f691">Elovich</a>(<span class="keyword">const</span> <a class="code hl_class" href="classist_1_1_elovich.html">Elovich</a>&amp; _orig) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#ad9148d717ca4dfcc54f8ffdc43594090">   87</a></span>    <a class="code hl_function" href="classist_1_1_elovich.html#ad9148d717ca4dfcc54f8ffdc43594090">~Elovich</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_function" href="classist_1_1_elovich.html#a7d4f2c9a07db2e3a00f159e3b5f67a1a">Elovich</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _qmax, <span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _k1);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a7568643c605dab74b88c3c44e718417c">  105</a></span>    <a class="code hl_class" href="classist_1_1_elovich.html">Elovich</a>&amp; <a class="code hl_function" href="classist_1_1_elovich.html#a7568643c605dab74b88c3c44e718417c">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classist_1_1_elovich.html">Elovich</a>&amp; _orig) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a86d15680662ada56feac42bd4a130eb8">  112</a></span>    [[nodiscard]] <span class="keyword">inline</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> <a class="code hl_function" href="classist_1_1_elovich.html#a86d15680662ada56feac42bd4a130eb8">Qmax</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(0);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a109216a85b737b8009241ebfbbf4dcfb">  122</a></span>    [[nodiscard]] <span class="keyword">inline</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> <a class="code hl_function" href="classist_1_1_elovich.html#a109216a85b737b8009241ebfbbf4dcfb">K1</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(1);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a13779dea100870425611175032a46097">  134</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classist_1_1_elovich.html#a13779dea100870425611175032a46097">Qmax</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _qmax)</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        *<span class="keyword">this</span> = <a class="code hl_function" href="classist_1_1_elovich.html#a7d4f2c9a07db2e3a00f159e3b5f67a1a">Elovich</a>(_qmax, <a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(1));</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#aa39e5caefc9e842bce718662a7e4d851">  146</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classist_1_1_elovich.html#aa39e5caefc9e842bce718662a7e4d851">K1</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _k1)</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    {</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        *<span class="keyword">this</span> = <a class="code hl_function" href="classist_1_1_elovich.html#a7d4f2c9a07db2e3a00f159e3b5f67a1a">Elovich</a>(<a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(0), _k1);</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    }</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    [[nodiscard]] <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> <a class="code hl_function" href="classist_1_1_elovich.html#a9448ea954431997f4fdf14e62b4f8dea">Qe</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _c, <span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _temp) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a83c5a755a93fd1f69a8d35883093a23f">  170</a></span>    [[nodiscard]] <span class="keyword">inline</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> <a class="code hl_function" href="classist_1_1_elovich.html#a83c5a755a93fd1f69a8d35883093a23f">Qe</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _c)<span class="keyword"> const override</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classist_1_1_elovich.html#a9448ea954431997f4fdf14e62b4f8dea">Qe</a>(_c, 0);</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    }</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#af9894d9ad0cfe6882ed8a753ab5443a0">  180</a></span>    [[nodiscard]] std::unique_ptr&lt;Isotherm&gt; <a class="code hl_function" href="classist_1_1_elovich.html#af9894d9ad0cfe6882ed8a753ab5443a0">CloneImplementation</a>()<span class="keyword"> const override</span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keywordflow">return</span> std::make_unique&lt;Elovich&gt;(*<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    [[nodiscard]] <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> FQe(<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _c) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> auxiCe = 0; </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>};</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#ad9148d717ca4dfcc54f8ffdc43594090">   80</a></span>    <a class="code hl_function" href="classist_1_1_elovich.html#ad9148d717ca4dfcc54f8ffdc43594090">~Elovich</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_function" href="classist_1_1_elovich.html#a7d4f2c9a07db2e3a00f159e3b5f67a1a">Elovich</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _qmax, <span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _k1);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a7568643c605dab74b88c3c44e718417c">   98</a></span>    <a class="code hl_class" href="classist_1_1_elovich.html">Elovich</a>&amp; <a class="code hl_function" href="classist_1_1_elovich.html#a7568643c605dab74b88c3c44e718417c">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classist_1_1_elovich.html">Elovich</a>&amp; _orig) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a86d15680662ada56feac42bd4a130eb8">  105</a></span>    [[nodiscard]] <span class="keyword">inline</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> <a class="code hl_function" href="classist_1_1_elovich.html#a86d15680662ada56feac42bd4a130eb8">Qmax</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(0);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a109216a85b737b8009241ebfbbf4dcfb">  115</a></span>    [[nodiscard]] <span class="keyword">inline</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> <a class="code hl_function" href="classist_1_1_elovich.html#a109216a85b737b8009241ebfbbf4dcfb">K1</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(1);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a13779dea100870425611175032a46097">  127</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classist_1_1_elovich.html#a13779dea100870425611175032a46097">Qmax</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _qmax)</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">if</span> (_qmax &lt;= 0) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;_qmax deve ser maior que zero&quot;</span>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        *<span class="keyword">this</span> = <a class="code hl_function" href="classist_1_1_elovich.html#a7d4f2c9a07db2e3a00f159e3b5f67a1a">Elovich</a>(_qmax, <a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(1));</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#aa39e5caefc9e842bce718662a7e4d851">  142</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classist_1_1_elovich.html#aa39e5caefc9e842bce718662a7e4d851">K1</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _k1)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">if</span> (_k1 &lt;= 0) {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;_k1 deve ser maior que zero&quot;</span>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        *<span class="keyword">this</span> = <a class="code hl_function" href="classist_1_1_elovich.html#a7d4f2c9a07db2e3a00f159e3b5f67a1a">Elovich</a>(<a class="code hl_function" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a>(0), _k1);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    }</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    [[nodiscard]] <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> <a class="code hl_function" href="classist_1_1_elovich.html#a9448ea954431997f4fdf14e62b4f8dea">Qe</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _c, <span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _temp) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="foldopen" id="foldopen00169" data-start="{" data-end="}">
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#a83c5a755a93fd1f69a8d35883093a23f">  169</a></span>    [[nodiscard]] <span class="keyword">inline</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> <a class="code hl_function" href="classist_1_1_elovich.html#a83c5a755a93fd1f69a8d35883093a23f">Qe</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _c)<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classist_1_1_elovich.html#a9448ea954431997f4fdf14e62b4f8dea">Qe</a>(_c, 0);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
+</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="foldopen" id="foldopen00179" data-start="{" data-end="}">
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="classist_1_1_elovich.html#af9894d9ad0cfe6882ed8a753ab5443a0">  179</a></span>    [[nodiscard]] std::unique_ptr&lt;Isotherm&gt; <a class="code hl_function" href="classist_1_1_elovich.html#af9894d9ad0cfe6882ed8a753ab5443a0">CloneImplementation</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">return</span> std::make_unique&lt;Elovich&gt;(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    }</div>
+</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    [[nodiscard]] <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> FQe(<span class="keyword">const</span> <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&amp; _c) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <a class="code hl_typedef" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> auxiCe = 0; </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>};</div>
+</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>} <span class="comment">// namespace ist</span></div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>} <span class="comment">// namespace ist</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">#endif </span><span class="comment">// ISO_ELOVICH_H</span></div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">#endif </span><span class="comment">// ISO_ELOVICH_H</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="ttc" id="aclassist_1_1_elovich_html"><div class="ttname"><a href="classist_1_1_elovich.html">ist::Elovich</a></div><div class="ttdoc">Implementa a isoterma de Elovich para adsor��o.</div><div class="ttdef"><b>Definition:</b> Elovich.h:68</div></div>
-<div class="ttc" id="aclassist_1_1_elovich_html_a109216a85b737b8009241ebfbbf4dcfb"><div class="ttname"><a href="classist_1_1_elovich.html#a109216a85b737b8009241ebfbbf4dcfb">ist::Elovich::K1</a></div><div class="ttdeci">Real K1() const</div><div class="ttdoc">Obt�m o valor da constante de equil�brio de Elovich.</div><div class="ttdef"><b>Definition:</b> Elovich.h:122</div></div>
-<div class="ttc" id="aclassist_1_1_elovich_html_a13779dea100870425611175032a46097"><div class="ttname"><a href="classist_1_1_elovich.html#a13779dea100870425611175032a46097">ist::Elovich::Qmax</a></div><div class="ttdeci">void Qmax(const Real &amp;_qmax)</div><div class="ttdoc">Define o valor da capacidade m�xima de adsor��o.</div><div class="ttdef"><b>Definition:</b> Elovich.h:134</div></div>
-<div class="ttc" id="aclassist_1_1_elovich_html_a50497f03ee3fa656bdb319ee3350f691"><div class="ttname"><a href="classist_1_1_elovich.html#a50497f03ee3fa656bdb319ee3350f691">ist::Elovich::Elovich</a></div><div class="ttdeci">Elovich(const Elovich &amp;_orig)=default</div><div class="ttdoc">Construtor de c�pia.</div></div>
-<div class="ttc" id="aclassist_1_1_elovich_html_a7568643c605dab74b88c3c44e718417c"><div class="ttname"><a href="classist_1_1_elovich.html#a7568643c605dab74b88c3c44e718417c">ist::Elovich::operator=</a></div><div class="ttdeci">Elovich &amp; operator=(const Elovich &amp;_orig)=default</div><div class="ttdoc">Sobrecarga do operador de atribui��o.</div></div>
-<div class="ttc" id="aclassist_1_1_elovich_html_a7d4f2c9a07db2e3a00f159e3b5f67a1a"><div class="ttname"><a href="classist_1_1_elovich.html#a7d4f2c9a07db2e3a00f159e3b5f67a1a">ist::Elovich::Elovich</a></div><div class="ttdeci">Elovich()=default</div><div class="ttdoc">Construtor padr�o.</div></div>
-<div class="ttc" id="aclassist_1_1_elovich_html_a83c5a755a93fd1f69a8d35883093a23f"><div class="ttname"><a href="classist_1_1_elovich.html#a83c5a755a93fd1f69a8d35883093a23f">ist::Elovich::Qe</a></div><div class="ttdeci">Real Qe(const Real &amp;_c) const override</div><div class="ttdoc">Calcula a quantidade de adsor��o no equil�brio com temperatura padr�o.</div><div class="ttdef"><b>Definition:</b> Elovich.h:170</div></div>
-<div class="ttc" id="aclassist_1_1_elovich_html_a86d15680662ada56feac42bd4a130eb8"><div class="ttname"><a href="classist_1_1_elovich.html#a86d15680662ada56feac42bd4a130eb8">ist::Elovich::Qmax</a></div><div class="ttdeci">Real Qmax() const</div><div class="ttdoc">Obt�m o valor da capacidade m�xima de adsor��o.</div><div class="ttdef"><b>Definition:</b> Elovich.h:112</div></div>
-<div class="ttc" id="aclassist_1_1_elovich_html_a9448ea954431997f4fdf14e62b4f8dea"><div class="ttname"><a href="classist_1_1_elovich.html#a9448ea954431997f4fdf14e62b4f8dea">ist::Elovich::Qe</a></div><div class="ttdeci">Real Qe(const Real &amp;_c, const Real &amp;_temp) const override</div><div class="ttdoc">Calcula a quantidade de adsor��o no equil�brio.</div><div class="ttdef"><b>Definition:</b> Elovich.cpp:103</div></div>
-<div class="ttc" id="aclassist_1_1_elovich_html_aa39e5caefc9e842bce718662a7e4d851"><div class="ttname"><a href="classist_1_1_elovich.html#aa39e5caefc9e842bce718662a7e4d851">ist::Elovich::K1</a></div><div class="ttdeci">void K1(const Real &amp;_k1)</div><div class="ttdoc">Define o valor da constante de equil�brio de Elovich.</div><div class="ttdef"><b>Definition:</b> Elovich.h:146</div></div>
+<div class="ttc" id="a_two_parameters_8h_html"><div class="ttname"><a href="_two_parameters_8h.html">TwoParameters.h</a></div><div class="ttdoc">Classe base para todas as isotermas com dois parâmetros.</div></div>
+<div class="ttc" id="aclassist_1_1_elovich_html"><div class="ttname"><a href="classist_1_1_elovich.html">ist::Elovich</a></div><div class="ttdoc">Classe com as equações da isoterma de Elovich.</div><div class="ttdef"><b>Definição</b> Elovich.h:61</div></div>
+<div class="ttc" id="aclassist_1_1_elovich_html_a109216a85b737b8009241ebfbbf4dcfb"><div class="ttname"><a href="classist_1_1_elovich.html#a109216a85b737b8009241ebfbbf4dcfb">ist::Elovich::K1</a></div><div class="ttdeci">Real K1() const</div><div class="ttdoc">Obtém o valor da constante de equilíbrio de Elovich.</div><div class="ttdef"><b>Definição</b> Elovich.h:115</div></div>
+<div class="ttc" id="aclassist_1_1_elovich_html_a13779dea100870425611175032a46097"><div class="ttname"><a href="classist_1_1_elovich.html#a13779dea100870425611175032a46097">ist::Elovich::Qmax</a></div><div class="ttdeci">void Qmax(const Real &amp;_qmax)</div><div class="ttdoc">Define o valor da capacidade máxima de adsorção.</div><div class="ttdef"><b>Definição</b> Elovich.h:127</div></div>
+<div class="ttc" id="aclassist_1_1_elovich_html_a50497f03ee3fa656bdb319ee3350f691"><div class="ttname"><a href="classist_1_1_elovich.html#a50497f03ee3fa656bdb319ee3350f691">ist::Elovich::Elovich</a></div><div class="ttdeci">Elovich(const Elovich &amp;_orig)=default</div><div class="ttdoc">Construtor de cópia.</div></div>
+<div class="ttc" id="aclassist_1_1_elovich_html_a7568643c605dab74b88c3c44e718417c"><div class="ttname"><a href="classist_1_1_elovich.html#a7568643c605dab74b88c3c44e718417c">ist::Elovich::operator=</a></div><div class="ttdeci">Elovich &amp; operator=(const Elovich &amp;_orig)=default</div><div class="ttdoc">Sobrecarga do operador de atribuição.</div></div>
+<div class="ttc" id="aclassist_1_1_elovich_html_a7d4f2c9a07db2e3a00f159e3b5f67a1a"><div class="ttname"><a href="classist_1_1_elovich.html#a7d4f2c9a07db2e3a00f159e3b5f67a1a">ist::Elovich::Elovich</a></div><div class="ttdeci">Elovich()=default</div><div class="ttdoc">Construtor padrão.</div></div>
+<div class="ttc" id="aclassist_1_1_elovich_html_a83c5a755a93fd1f69a8d35883093a23f"><div class="ttname"><a href="classist_1_1_elovich.html#a83c5a755a93fd1f69a8d35883093a23f">ist::Elovich::Qe</a></div><div class="ttdeci">Real Qe(const Real &amp;_c) const override</div><div class="ttdoc">Calcula a quantidade de adsorção no equilíbrio com temperatura padrão.</div><div class="ttdef"><b>Definição</b> Elovich.h:169</div></div>
+<div class="ttc" id="aclassist_1_1_elovich_html_a86d15680662ada56feac42bd4a130eb8"><div class="ttname"><a href="classist_1_1_elovich.html#a86d15680662ada56feac42bd4a130eb8">ist::Elovich::Qmax</a></div><div class="ttdeci">Real Qmax() const</div><div class="ttdoc">Obtém o valor da capacidade máxima de adsorção.</div><div class="ttdef"><b>Definição</b> Elovich.h:105</div></div>
+<div class="ttc" id="aclassist_1_1_elovich_html_a9448ea954431997f4fdf14e62b4f8dea"><div class="ttname"><a href="classist_1_1_elovich.html#a9448ea954431997f4fdf14e62b4f8dea">ist::Elovich::Qe</a></div><div class="ttdeci">Real Qe(const Real &amp;_c, const Real &amp;_temp) const override</div><div class="ttdoc">Calcula a quantidade de adsorção no equilíbrio.</div><div class="ttdef"><b>Definição</b> Elovich.cpp:104</div></div>
+<div class="ttc" id="aclassist_1_1_elovich_html_aa39e5caefc9e842bce718662a7e4d851"><div class="ttname"><a href="classist_1_1_elovich.html#aa39e5caefc9e842bce718662a7e4d851">ist::Elovich::K1</a></div><div class="ttdeci">void K1(const Real &amp;_k1)</div><div class="ttdoc">Define o valor da constante de equilíbrio de Elovich.</div><div class="ttdef"><b>Definição</b> Elovich.h:142</div></div>
 <div class="ttc" id="aclassist_1_1_elovich_html_ad9148d717ca4dfcc54f8ffdc43594090"><div class="ttname"><a href="classist_1_1_elovich.html#ad9148d717ca4dfcc54f8ffdc43594090">ist::Elovich::~Elovich</a></div><div class="ttdeci">~Elovich() override=default</div><div class="ttdoc">Destrutor.</div></div>
-<div class="ttc" id="aclassist_1_1_elovich_html_af9894d9ad0cfe6882ed8a753ab5443a0"><div class="ttname"><a href="classist_1_1_elovich.html#af9894d9ad0cfe6882ed8a753ab5443a0">ist::Elovich::CloneImplementation</a></div><div class="ttdeci">std::unique_ptr&lt; Isotherm &gt; CloneImplementation() const override</div><div class="ttdoc">Cria uma c�pia da implementa��o da isoterma.</div><div class="ttdef"><b>Definition:</b> Elovich.h:180</div></div>
-<div class="ttc" id="aclassist_1_1_isotherm_template_html"><div class="ttname"><a href="classist_1_1_isotherm_template.html">ist::IsothermTemplate</a></div><div class="ttdoc">Classe que gerencia o nome e detalhes sobre cada constante dos modelos das isotermas.</div><div class="ttdef"><b>Definition:</b> Isotherm.h:322</div></div>
-<div class="ttc" id="aclassist_1_1_two_parameters_html"><div class="ttname"><a href="classist_1_1_two_parameters.html">ist::TwoParameters</a></div><div class="ttdef"><b>Definition:</b> TwoParameters.h:59</div></div>
-<div class="ttc" id="agroup___isotherm_template_html_ga6655cbd631d8109709473c7243eeadba"><div class="ttname"><a href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">ist::Isotherm::Value</a></div><div class="ttdeci">const VecReal Value() const</div><div class="ttdoc">Vetor com os coeficientes de qualquer isoterma.</div><div class="ttdef"><b>Definition:</b> Isotherm.h:261</div></div>
-<div class="ttc" id="agroup___type_html_ga445a5f0e2a34c9d97d69a3c2d1957907"><div class="ttname"><a href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a></div><div class="ttdeci">double Real</div><div class="ttdef"><b>Definition:</b> Type.h:15</div></div>
-<div class="ttc" id="anamespaceist_html"><div class="ttname"><a href="namespaceist.html">ist</a></div><div class="ttdoc">Classe base de todas as outras classes de isotermas.</div><div class="ttdef"><b>Definition:</b> IsoException.h:53</div></div>
+<div class="ttc" id="aclassist_1_1_elovich_html_af9894d9ad0cfe6882ed8a753ab5443a0"><div class="ttname"><a href="classist_1_1_elovich.html#af9894d9ad0cfe6882ed8a753ab5443a0">ist::Elovich::CloneImplementation</a></div><div class="ttdeci">std::unique_ptr&lt; Isotherm &gt; CloneImplementation() const override</div><div class="ttdoc">Cria uma cópia da implementação da isoterma.</div><div class="ttdef"><b>Definição</b> Elovich.h:179</div></div>
+<div class="ttc" id="aclassist_1_1_isotherm_template_html"><div class="ttname"><a href="classist_1_1_isotherm_template.html">ist::IsothermTemplate</a></div><div class="ttdoc">Classe que gerencia o nome e detalhes sobre cada constante dos modelos das isotermas.</div><div class="ttdef"><b>Definição</b> Isotherm.h:433</div></div>
+<div class="ttc" id="aclassist_1_1_two_parameters_html"><div class="ttname"><a href="classist_1_1_two_parameters.html">ist::TwoParameters</a></div><div class="ttdoc">Classe base para isotermas com dois parâmetros.</div><div class="ttdef"><b>Definição</b> TwoParameters.h:61</div></div>
+<div class="ttc" id="agroup___isotherm_template_html_ga6655cbd631d8109709473c7243eeadba"><div class="ttname"><a href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">ist::Isotherm::Value</a></div><div class="ttdeci">const VecReal Value() const</div><div class="ttdoc">Retorna os coeficientes das isotermas.</div><div class="ttdef"><b>Definição</b> Isotherm.h:365</div></div>
+<div class="ttc" id="agroup___type_html_ga445a5f0e2a34c9d97d69a3c2d1957907"><div class="ttname"><a href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a></div><div class="ttdeci">double Real</div><div class="ttdef"><b>Definição</b> Type.h:19</div></div>
+<div class="ttc" id="anamespaceist_html"><div class="ttname"><a href="namespaceist.html">ist</a></div><div class="ttdoc">Classe base para todas as isotermas com dois parâmetros.</div><div class="ttdef"><b>Definição</b> IsoException.h:57</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
 </small></address>
 </body>
 </html>

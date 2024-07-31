@@ -1,10 +1,14 @@
 //==============================================================================
 // Name        : TwoParameters.cpp
-// Author      : Joao Flavio Vieira de Vasconcellos
+// Authors     : Aline Zuliani Lunkes
+//               Iasmim Barboza Storck
+//               Lara Botelho Brum
+//               Luan Rodrigues Soares de Souza
+//               Joao Flavio Vieira de Vasconcellos
 // Version     : 1.0
 // Description : Classe base para as isotermas com dois parametros
 //
-// Copyright   : Copyright (C) <2022>  Joao Flavio Vasconcellos
+// Copyright   : Copyright (C) <2024>  Joao Flavio Vasconcellos
 //                                      (jflavio at iprj.uerj.br)
 //
 // This program is free software: you can redistribute it and/or modify
@@ -33,7 +37,7 @@ namespace ist {
 // Variaveis estaticas
 //==============================================================================
 
-VecPairString       detailsDubininTwoParameters 
+VecPairString       detailsTwoParameters 
     {
         PairString  ( "Nao definido"
                     , "Nao definido")
@@ -42,7 +46,7 @@ VecPairString       detailsDubininTwoParameters
     };
 
 template<>
-VecPairString IsothermTemplate < TwoParameters >::infoIsotherm = detailsDubininTwoParameters;  
+VecPairString IsothermTemplate < TwoParameters >::infoIsotherm = detailsTwoParameters;  
 
 }
 

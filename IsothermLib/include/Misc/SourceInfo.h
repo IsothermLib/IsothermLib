@@ -3,10 +3,15 @@
 
 /**
  * @defgroup SourceInfo Informações sobre as classes
- * @ingroup Miscelânea
- * Classe com informações sobre outras classes para fins de identificação e localização de erros.
+ * @ingroup IsothermMisc
+ * @brief Classe com informações sobre outras classes para fins de identificação e localização de erros.
  * @{
  */
+
+/// @file SourceInfo.h
+/// @brief Define as informações sobre outras classes para fins de identificação e localização de erros
+
+
 
 //==============================================================================
 // Includes
@@ -21,6 +26,9 @@
 
 namespace ist {
 
+    /**
+ * @brief Classe SourceInfo  identifica qual classe causou uma exceção.
+ */
 class SourceInfo {
     
 //==============================================================================

@@ -1,14 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IsothermLib: &lt;br&gt;</title>
+<title>IsothermLib: Isotherm</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -36,10 +38,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.9.4 -->
+<!-- Gerado por Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -48,7 +50,7 @@ var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -63,55 +65,73 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces"><em>Namespaces</em></a> &#124;
+<a href="#files">Arquivos</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Componentes</a> &#124;
 <a href="#typedef-members">Definições de Tipos</a>  </div>
-  <div class="headertitle"><div class="title">&lt;br&gt;</div></div>
+  <div class="headertitle"><div class="title">Isotherm<div class="ingroups"><a class="el" href="group___isotherm___base.html">Classes base</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe base de todas as isotermas.  
+<a href="#details">Mais...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
+Arquivos</h2></td></tr>
+<tr class="memitem:_isotherm_8h" id="r__isotherm_8h"><td class="memItemLeft" align="right" valign="top">arquivo &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_isotherm_8h.html">Isotherm.h</a></td></tr>
+<tr class="memdesc:_isotherm_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a classe base para todas as isotermas. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-&lt;em&gt;Namespaces&lt;/em&gt;</h2></td></tr>
-<tr class="memitem:namespaceist"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceist.html">ist</a></td></tr>
-<tr class="memdesc:namespaceist"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe base de todas as outras classes de isotermas. <br /></td></tr>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceist" id="r_namespaceist"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceist.html">ist</a></td></tr>
+<tr class="memdesc:namespaceist"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe base para todas as isotermas com dois parâmetros. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Componentes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe base para todas as isotermas.  <a href="classist_1_1_isotherm.html#details">Mais...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Definições de Tipos</h2></td></tr>
-<tr class="memitem:ga8bde40f8e8632cd04cce0cdf42e35608"><td class="memItemLeft" align="right" valign="top"><a id="ga8bde40f8e8632cd04cce0cdf42e35608" name="ga8bde40f8e8632cd04cce0cdf42e35608"></a>
+<tr class="memitem:ga1c8826b9dae41ab2044a96e7e82993f1" id="r_ga1c8826b9dae41ab2044a96e7e82993f1"><td class="memItemLeft" align="right" valign="top"><a id="ga1c8826b9dae41ab2044a96e7e82993f1" name="ga1c8826b9dae41ab2044a96e7e82993f1"></a>
 typedef std::pair&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ist::PairString</b></td></tr>
-<tr class="separator:ga8bde40f8e8632cd04cce0cdf42e35608"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ffeadaec6e054c67ead50624653043c"><td class="memItemLeft" align="right" valign="top"><a id="ga1ffeadaec6e054c67ead50624653043c" name="ga1ffeadaec6e054c67ead50624653043c"></a>
+<tr class="separator:ga1c8826b9dae41ab2044a96e7e82993f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ab5fd7e1dc3fb63931ffb600abccec3" id="r_ga9ab5fd7e1dc3fb63931ffb600abccec3"><td class="memItemLeft" align="right" valign="top"><a id="ga9ab5fd7e1dc3fb63931ffb600abccec3" name="ga9ab5fd7e1dc3fb63931ffb600abccec3"></a>
 typedef std::vector&lt; PairString &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ist::VecPairString</b></td></tr>
-<tr class="separator:ga1ffeadaec6e054c67ead50624653043c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga85aa9a00d66a07eb8e641524c26dd0c5"><td class="memItemLeft" align="right" valign="top"><a id="ga85aa9a00d66a07eb8e641524c26dd0c5" name="ga85aa9a00d66a07eb8e641524c26dd0c5"></a>
+<tr class="separator:ga9ab5fd7e1dc3fb63931ffb600abccec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24b3b23c0b81153089e64e190bcdfcd4" id="r_ga24b3b23c0b81153089e64e190bcdfcd4"><td class="memItemLeft" align="right" valign="top"><a id="ga24b3b23c0b81153089e64e190bcdfcd4" name="ga24b3b23c0b81153089e64e190bcdfcd4"></a>
 typedef std::vector&lt; <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ist::VecReal</b></td></tr>
-<tr class="separator:ga85aa9a00d66a07eb8e641524c26dd0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga96521581665be421014002d08e9ce160"><td class="memItemLeft" align="right" valign="top"><a id="ga96521581665be421014002d08e9ce160" name="ga96521581665be421014002d08e9ce160"></a>
-typedef std::function&lt; <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>(const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ist::FunctionEscala</b></td></tr>
-<tr class="separator:ga96521581665be421014002d08e9ce160"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaab872f4fc83785b4f9c0b980bfc00dcb"><td class="memItemLeft" align="right" valign="top"><a id="gaab872f4fc83785b4f9c0b980bfc00dcb" name="gaab872f4fc83785b4f9c0b980bfc00dcb"></a>
+<tr class="separator:ga24b3b23c0b81153089e64e190bcdfcd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga350a60a52076efa6f74b6279abd65884" id="r_ga350a60a52076efa6f74b6279abd65884"><td class="memItemLeft" align="right" valign="top"><a id="ga350a60a52076efa6f74b6279abd65884" name="ga350a60a52076efa6f74b6279abd65884"></a>
+typedef std::function&lt; <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>(const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;)&#160;</td><td class="memItemRight" valign="bottom"><b>ist::FunctionEscala</b>)</td></tr>
+<tr class="separator:ga350a60a52076efa6f74b6279abd65884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab872f4fc83785b4f9c0b980bfc00dcb" id="r_gaab872f4fc83785b4f9c0b980bfc00dcb"><td class="memItemLeft" align="right" valign="top"><a id="gaab872f4fc83785b4f9c0b980bfc00dcb" name="gaab872f4fc83785b4f9c0b980bfc00dcb"></a>
 typedef std::shared_ptr&lt; <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ist::PtrIsotherm</b></td></tr>
 <tr class="separator:gaab872f4fc83785b4f9c0b980bfc00dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<p >Classe base de todas as isotermas. </p>
+<p>Classe base de todas as isotermas. </p>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
 </small></address>
 </body>
 </html>

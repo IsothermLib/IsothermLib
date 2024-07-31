@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oneparameter_0',['OneParameter',['../group___one_parameter.html',1,'']]]
+  ['langmuir_0',['Langmuir',['../group___langmuir.html',1,'']]]
 ];

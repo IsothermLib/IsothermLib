@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['um_20parametro_0',['Isotermas com um parametro',['../group___isotherm_one___parameter.html',1,'']]]
+  ['um_20parâmetro_0',['Isotermas com um parâmetro',['../group___isotherm_one___parameter.html',1,'']]]
 ];

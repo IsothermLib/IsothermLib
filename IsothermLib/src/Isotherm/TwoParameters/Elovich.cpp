@@ -1,9 +1,10 @@
 //==============================================================================
 // Name        : Elovich.cpp
-// Authors     : Lara Botelho Brum
+// Authors     : Aline Zuliani Lunkes
+//               Iasmim Barboza Storck
+//               Lara Botelho Brum
 //               Luan Rodrigues Soares de Souza
 //               Joao Flavio Vieira de Vasconcellos
-//               Iasmim Barboza Storck
 // Version     : 1.0
 // Description : Classe com as equacoes da isoterma de Elovich
 //

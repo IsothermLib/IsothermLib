@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sips_2eh_0',['Sips.h',['../_sips_8h.html',1,'']]]
+  ['newtonraphson_2eh_0',['NewtonRaphson.h',['../_newton_raphson_8h.html',1,'']]]
 ];

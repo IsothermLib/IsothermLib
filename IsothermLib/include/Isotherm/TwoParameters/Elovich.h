@@ -4,11 +4,11 @@
 //               Iasmim Barboza Storck
 //               Lara Botelho Brum
 //               Luan Rodrigues Soares de Souza
-//               Jo„o Fl·vio Vieira de Vasconcellos
+//               Jo√£o Fl√°vio Vieira de Vasconcellos
 // Version     : 1.0
-// Description : Classe com as equaÁıes da isoterma de Elovich
+// Description : Classe com as equa√ß√µes da isoterma de Elovich
 //
-// Copyright   : Copyright (C) 2024 Jo„o Fl·vio Vieira de Vasconcellos 
+// Copyright   : Copyright (C) 2024 Jo√£o Fl√°vio Vieira de Vasconcellos 
 //                                      (jflavio@iprj.uerj.br)
 //
 // This program is free software: you can redistribute it and/or modify
@@ -26,10 +26,14 @@
 //==============================================================================
 
 /** @defgroup Elovich Elovich
- *  @ingroup Two_Parameters
- *  Classe Elovich contÈm a equaÁ„o da isoterma de Elovich.
+ *  @ingroup IsothermTwo_Parameters
+ *  @brief Classe Elovich cont√©m a equa√ß√£o da isoterma de Elovich.
  *  @{
  */
+
+/// @file Elovich.h
+/// @brief Cont√©m a defini√ß√£o da classe Elovich
+
 
 #ifndef ISO_ELOVICH_H
 #define ISO_ELOVICH_H
@@ -40,10 +44,9 @@
 namespace ist {
 
 /**
- * @brief Implementa a isoterma de Elovich para adsorÁ„o.
+ * @brief Classe com as equa√ß√µes da isoterma de Elovich.
  * 
- * A isoterma de Elovich È uma equaÁ„o usada para descrever o processo de adsorÁ„o em funÁ„o da concentraÁ„o do soluto. 
- * Ela utiliza dois par‚metros, \f$ K_1 \f$ e \f$ q_{max} \f$, e suas fÛrmulas s„o as seguintes:
+ *  Isoterma com dois par√¢metros, \f$ q_{max} \f$ e \f$ K_1 \f$, cujas f√≥rmulas s√£o as seguintes:
  * 
  * \f[
  * Q_e (C_e) = q_{max} \theta
@@ -53,29 +56,19 @@ namespace ist {
  * \theta = K_1 C_e e^{-\theta}
  * \f]
  * 
- * Um artigo de referÍncia pode ser encontrado [aqui](https://doi.org/10.1007/BF00908016).
- * 
- * @authors Iasmim Barboza Storck
- *          Lara Botelho Brum
- *          Luan Rodrigues Soares de Souza
- *          Jo„o Fl·vio Vieira de Vasconcellos
- * @version 1.0
- * @date Julho 2024
- * @bug N„o h· bugs conhecidos.
- * 
- * @copyright GNU Public License.
+ * Um artigo de refer√™ncia pode ser encontrado [aqui](https://doi.org/10.1007/BF00908016).
  */
 class Elovich : public virtual TwoParameters, public IsothermTemplate<Elovich> {
 public:
     /**
-     * @brief Construtor padr„o.
+     * @brief Construtor padr√£o.
      * 
-     * Cria um objeto `Elovich` com valores padr„o.
+     * Cria um objeto `Elovich` com valores padr√£o.
      */
     Elovich() = default;
 
     /**
-     * @brief Construtor de cÛpia.
+     * @brief Construtor de c√≥pia.
      * 
      * @param _orig Objeto `Elovich` a ser copiado.
      */
@@ -87,9 +80,9 @@ public:
     ~Elovich() override = default;
 
     /**
-     * @brief Construtor com par‚metros.
+     * @brief Construtor com par√¢metros.
      * 
-     * @param _qmax Capacidade m·xima de adsorÁ„o.
+     * @param _qmax Capacidade m√°xima de adsor√ß√£o.
      * @param _k1 Constante da isoterma de Elovich.
      * 
      * @exception std::invalid_argument Se `_qmax` ou `_k1` forem menores ou iguais a zero.
@@ -97,17 +90,17 @@ public:
     Elovich(const Real& _qmax, const Real& _k1);
 
     /**
-     * @brief Sobrecarga do operador de atribuiÁ„o.
+     * @brief Sobrecarga do operador de atribui√ß√£o.
      * 
-     * @param _orig Objeto `Elovich` a ser atribuÌdo.
-     * @return ReferÍncia para o objeto atual.
+     * @param _orig Objeto `Elovich` a ser atribu√≠do.
+     * @return Refer√™ncia para o objeto atual.
      */
     Elovich& operator=(const Elovich& _orig) = default;
 
     /**
-     * @brief ObtÈm o valor da capacidade m·xima de adsorÁ„o.
+     * @brief Obt√©m o valor da capacidade m√°xima de adsor√ß√£o.
      * 
-     * @return Capacidade m·xima de adsorÁ„o em [M/M].
+     * @return Capacidade m√°xima de adsor√ß√£o em [M/M].
      */
     [[nodiscard]] inline Real Qmax() const
     {
@@ -115,9 +108,9 @@ public:
     }
 
     /**
-     * @brief ObtÈm o valor da constante de equilÌbrio de Elovich.
+     * @brief Obt√©m o valor da constante de equil√≠brio de Elovich.
      * 
-     * @return Constante de equilÌbrio de Elovich.
+     * @return Constante de equil√≠brio de Elovich.
      */
     [[nodiscard]] inline Real K1() const
     {
@@ -125,47 +118,53 @@ public:
     }
 
     /**
-     * @brief Define o valor da capacidade m·xima de adsorÁ„o.
+     * @brief Define o valor da capacidade m√°xima de adsor√ß√£o.
      * 
-     * @param _qmax Novo valor da capacidade m·xima de adsorÁ„o.
+     * @param _qmax Novo valor da capacidade m√°xima de adsor√ß√£o.
      * 
      * @exception std::invalid_argument Se `_qmax` for menor ou igual a zero.
      */
     inline void Qmax(const Real& _qmax)
     {
+        if (_qmax <= 0) {
+            throw std::invalid_argument("_qmax deve ser maior que zero");
+        }
         *this = Elovich(_qmax, Value(1));
     }
 
     /**
-     * @brief Define o valor da constante de equilÌbrio de Elovich.
+     * @brief Define o valor da constante de equil√≠brio de Elovich.
      * 
-     * @param _k1 Novo valor da constante de equilÌbrio de Elovich.
+     * @param _k1 Novo valor da constante de equil√≠brio de Elovich.
      * 
      * @exception std::invalid_argument Se `_k1` for menor ou igual a zero.
      */
     inline void K1(const Real& _k1)
     {
+        if (_k1 <= 0) {
+            throw std::invalid_argument("_k1 deve ser maior que zero");
+        }
         *this = Elovich(Value(0), _k1);
     }
 
     /**
-     * @brief Calcula a quantidade de adsorÁ„o no equilÌbrio.
+     * @brief Calcula a quantidade de adsor√ß√£o no equil√≠brio.
      * 
-     * @param _c ConcentraÁ„o do soluto.
-     * @param _temp Par‚metro de temperatura, n„o utilizado neste modelo.
+     * @param _c Concentra√ß√£o do soluto.
+     * @param _temp Par√¢metro de temperatura, n√£o utilizado neste modelo.
      * 
-     * @return Quantidade de adsorÁ„o no equilÌbrio.
+     * @return Quantidade de adsor√ß√£o no equil√≠brio.
      * 
      * @exception std::invalid_argument Se `_c` for menor que zero.
      */
     [[nodiscard]] Real Qe(const Real& _c, const Real& _temp) const override;
 
     /**
-     * @brief Calcula a quantidade de adsorÁ„o no equilÌbrio com temperatura padr„o.
+     * @brief Calcula a quantidade de adsor√ß√£o no equil√≠brio com temperatura padr√£o.
      * 
-     * @param _c ConcentraÁ„o do soluto.
+     * @param _c Concentra√ß√£o do soluto.
      * 
-     * @return Quantidade de adsorÁ„o no equilÌbrio.
+     * @return Quantidade de adsor√ß√£o no equil√≠brio.
      */
     [[nodiscard]] inline Real Qe(const Real& _c) const override
     {
@@ -173,27 +172,26 @@ public:
     }
 
     /**
-     * @brief Cria uma cÛpia da implementaÁ„o da isoterma.
+     * @brief Cria uma c√≥pia da implementa√ß√£o da isoterma.
      * 
-     * @return Ponteiro para a cÛpia da implementaÁ„o da isoterma.
+     * @return Ponteiro para a c√≥pia da implementa√ß√£o da isoterma.
      */
     [[nodiscard]] std::unique_ptr<Isotherm> CloneImplementation() const override
     {
         return std::make_unique<Elovich>(*this);
     }
 
-
 private:
     /**
-     * @brief Calcula o valor da funÁ„o auxiliar `FQe`.
+     * @brief Calcula o valor da fun√ß√£o auxiliar `FQe`.
      * 
-     * @param _c ConcentraÁ„o do soluto.
+     * @param _c Concentra√ß√£o do soluto.
      * 
-     * @return Valor da funÁ„o auxiliar `FQe`.
+     * @return Valor da fun√ß√£o auxiliar `FQe`.
      */
     [[nodiscard]] Real FQe(const Real& _c) const;
 
-    Real auxiCe = 0; ///< Valor auxiliar para c·lculos internos.
+    Real auxiCe = 0; ///< Valor auxiliar para c√°lculos internos.
 };
 
 } // namespace ist

@@ -25,11 +25,11 @@
 //==============================================================================
 
 /*!
- * @mainpage Documentação da Biblioteca Isotherm++
+ * @mainpage Documentação da Biblioteca IsothermLib
  *
  * @section intro_sec Introdução
  *
- *  Esta é a documentação da biblioteca Isotherm++. Ela foi projetada para 
+ *  Esta é a documentação da biblioteca IsothermLib. Ela foi projetada para 
  *  aqueles que necessitam elaborar programas na área de transporte de
  *  massa envolvendo processos de adsorção/dessorção.
  *
@@ -38,7 +38,7 @@
  *  populares, poderão ser, a qualquer momento, adicionadas à biblioteca 
  *  de modo bastante simples.
  *
- *  A Isotherm++ foi inteiramente escrita em C++14 e não foi utilizado em sua
+ *  A IsothermLib foi inteiramente escrita em C++20 e não foi utilizado em sua
  * construção bibliotecas outras além do STL.
  *
  
@@ -46,6 +46,7 @@
  * @section authors Autores
  *
  *  O código foi desenvolvido por:
+ *  - Aline Zuliani Lunkes
  *  - Iasmim Barboza Storck
  *  - Lara Botelho Brum
  *  - Luan Rodrigues Soares de Souza
@@ -64,31 +65,24 @@
  * 
  */
 
-
-/** @defgroup IsothermMisc Miscelânea: Classes e Programas Acessórios
- *   Classes e programas com funções acessórias da classe Isotherm++.
+/** @defgroup IsothermException Gerenciamento das Exceções
+ *   Classes e programas com funções para gerenciamento das exceções.
  */
 
-/** @defgroup IsothermOne_Parameter Isotermas com um parametro
- *  Grupo de Isotermas que possuem um único parametro.
+
+/** @defgroup IsothermMisc Miscelânea: Classes e Programas Acessórios
+ *   Classes e programas com funções acessórias da classe IsothermLib.
+ */
+
+/** @defgroup IsothermOne_Parameter Isotermas com um parâmetro
+ *  Grupo de Isotermas que possuem um único parâmetro.
  */ 
 
-/** @defgroup IsothermTwo_Parameters Isotermas com dois parametros
- *  Grupo de Isotermas que possuem dois  parametros.
+/** @defgroup IsothermTwo_Parameters Isotermas com dois parâmetros
+ *  Grupo de Isotermas que possuem dois  parâmetros.
  */ 
 
-/** @defgroup IsothermThree_Parameters Isotermas com tres parametros
- *  Grupo de Isotermas que possuem tres parametros.
- */ 
 
-/** @defgroup IsothermFour_Parameters Isotermas com quatro parametros
- *  Grupo de Isotermas que possuem quatro parametros.
- */ 
-
-/** @defgroup IsothermFive_Parameters Isotermas com cinco parametros
- *  Grupo de Isotermas que possuem cinco parametros.
- */ 
-
-/** @defgroup IsothermBase Classes base das isotermas
- *  Grupo de Classes de onde sao derivadas as classes com os modelos de isotermas.
+/** @defgroup Isotherm_Base Classes base
+ *  Classes base das isotermas da biblioteca IsothermLib.
  */ 

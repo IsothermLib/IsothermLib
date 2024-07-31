@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['langmuir_0',['Langmuir',['../classist_1_1_langmuir.html',1,'ist::Langmuir'],['../classist_1_1_langmuir.html#a7900e6b66dee2d4295829e43cb7df3e9',1,'ist::Langmuir::Langmuir()=default'],['../classist_1_1_langmuir.html#a252facac19313987e00d512445eff4f3',1,'ist::Langmuir::Langmuir(const Langmuir &amp;_orig)=default'],['../classist_1_1_langmuir.html#a9b5774c38f4a327d584d7ed4f05083a5',1,'ist::Langmuir::Langmuir(const Real &amp;_qmax, const Real &amp;_k1)'],['../group___langmuir.html',1,'(<em>Namespace</em> global)']]],
-  ['lineposition_1',['LinePosition',['../classist_1_1_source_info.html#af49d074644e6a1ae12d1d4eaefbce78b',1,'ist::SourceInfo']]],
-  ['lista_20de_20bugs_2',['Lista de Bugs',['../bug.html',1,'']]],
-  ['lsize_3',['LSIZE',['../namespaceist.html#a8ff9fb9169ace12fcdab79e11750b40a',1,'ist']]]
+  ['jovanovic_0',['Jovanovic',['../classist_1_1_jovanovic.html',1,'ist::Jovanovic'],['../classist_1_1_jovanovic.html#ad3ee7030800465db9e198d00826ae55d',1,'ist::Jovanovic::Jovanovic()=default'],['../classist_1_1_jovanovic.html#ac2a62e13f206f6f9622328d057f0f095',1,'ist::Jovanovic::Jovanovic(const Jovanovic &amp;_orig)=default'],['../classist_1_1_jovanovic.html#a7f1a193e7277edaf840ceb7e2e6f4854',1,'ist::Jovanovic::Jovanovic(const Real &amp;_k1, const Real &amp;_qmax)'],['../group___jovanovic.html',1,'Jovanovic']]],
+  ['jovanovic_2eh_1',['Jovanovic.h',['../_jovanovic_8h.html',1,'']]],
+  ['jura_2',['Harkins-Jura',['../group___harkins_jura.html',1,'']]]
 ];

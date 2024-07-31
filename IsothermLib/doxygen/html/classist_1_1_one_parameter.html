@@ -1,14 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>IsothermLib: Referência da Classe ist::OneParameter</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -36,10 +38,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.9.4 -->
+<!-- Gerado por Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -48,7 +50,7 @@ var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -62,9 +64,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -79,152 +88,190 @@ $(function() {
   <div class="headertitle"><div class="title">Referência da Classe ist::OneParameter</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe base para isotermas com um parâmetro.  
+ <a href="#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_one_parameter_8h_source.html">OneParameter.h</a>&gt;</code></p>
 <div class="dynheader">
-Diagrama de hierarquia para ist::OneParameter:</div>
+Diagrama de hierarquia da classe ist::OneParameter:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classist_1_1_one_parameter.png" usemap="#ist::OneParameter_map" alt=""/>
   <map id="ist::OneParameter_map" name="ist::OneParameter_map">
-<area href="classist_1_1_isotherm.html" alt="ist::Isotherm" shape="rect" coords="0,0,112,24"/>
-<area href="classist_1_1_henry.html" alt="ist::Henry" shape="rect" coords="0,112,112,136"/>
+<area href="classist_1_1_isotherm.html" title="Classe base para todas as isotermas." alt="ist::Isotherm" shape="rect" coords="0,0,112,24"/>
+<area href="classist_1_1_henry.html" title="Classe com as equações da isoterma de Henry." alt="ist::Henry" shape="rect" coords="0,112,112,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:a88ff69963178c0bd38b205d81f0a88cd"><td class="memItemLeft" align="right" valign="top"><a id="a88ff69963178c0bd38b205d81f0a88cd" name="a88ff69963178c0bd38b205d81f0a88cd"></a>
+<tr class="memitem:a88ff69963178c0bd38b205d81f0a88cd" id="r_a88ff69963178c0bd38b205d81f0a88cd"><td class="memItemLeft" align="right" valign="top"><a id="a88ff69963178c0bd38b205d81f0a88cd" name="a88ff69963178c0bd38b205d81f0a88cd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DefineIdentity</b> (&quot;OneParameter&quot;, ID::OneParameter)</td></tr>
-<tr class="memdesc:a88ff69963178c0bd38b205d81f0a88cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicao de <a class="el" href="classist_1_1_i_d.html">ID</a> para esta classe para fins de identificacao de erros. <br /></td></tr>
+<tr class="memdesc:a88ff69963178c0bd38b205d81f0a88cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definição de <a class="el" href="classist_1_1_i_d.html" title="Classe ID identifica cada uma das classes da biblioteca.">ID</a> para esta classe para fins de identificação de erros. <br /></td></tr>
 <tr class="separator:a88ff69963178c0bd38b205d81f0a88cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeea4c7f488c8b4195f08d24a65e9204"><td class="memItemLeft" align="right" valign="top"><a id="aeeea4c7f488c8b4195f08d24a65e9204" name="aeeea4c7f488c8b4195f08d24a65e9204"></a>
+<tr class="memitem:aeeea4c7f488c8b4195f08d24a65e9204" id="r_aeeea4c7f488c8b4195f08d24a65e9204"><td class="memItemLeft" align="right" valign="top"><a id="aeeea4c7f488c8b4195f08d24a65e9204" name="aeeea4c7f488c8b4195f08d24a65e9204"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>OneParameter</b> (const <a class="el" href="classist_1_1_one_parameter.html">OneParameter</a> &amp;)=default</td></tr>
-<tr class="memdesc:aeeea4c7f488c8b4195f08d24a65e9204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora de copia que sera utilizada nas classes derivadas. <br /></td></tr>
+<tr class="memdesc:aeeea4c7f488c8b4195f08d24a65e9204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora de cópia que será utilizada nas classes derivadas. <br /></td></tr>
 <tr class="separator:aeeea4c7f488c8b4195f08d24a65e9204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85e132d7e835766c6b83337f9d1c7770"><td class="memItemLeft" align="right" valign="top"><a id="a85e132d7e835766c6b83337f9d1c7770" name="a85e132d7e835766c6b83337f9d1c7770"></a>
+<tr class="memitem:a85e132d7e835766c6b83337f9d1c7770" id="r_a85e132d7e835766c6b83337f9d1c7770"><td class="memItemLeft" align="right" valign="top"><a id="a85e132d7e835766c6b83337f9d1c7770" name="a85e132d7e835766c6b83337f9d1c7770"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~OneParameter</b> ()=default</td></tr>
 <tr class="memdesc:a85e132d7e835766c6b83337f9d1c7770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutora. <br /></td></tr>
 <tr class="separator:a85e132d7e835766c6b83337f9d1c7770"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a409cad5d266287e1d30d6db2d6b8f9"><td class="memItemLeft" align="right" valign="top"><a id="a2a409cad5d266287e1d30d6db2d6b8f9" name="a2a409cad5d266287e1d30d6db2d6b8f9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>OneParameter</b> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;=0.0)</td></tr>
-<tr class="memdesc:a2a409cad5d266287e1d30d6db2d6b8f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora de um parametro utilizada nas classes derivadas. <br /></td></tr>
-<tr class="separator:a2a409cad5d266287e1d30d6db2d6b8f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classist_1_1_isotherm"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Membros Públicos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
-<tr class="memitem:ga607e7ad7fe2211199e4c37c3a032fcba inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
+<tr class="memitem:ac434a5756792b87f3ba9cedc5f1c1869" id="r_ac434a5756792b87f3ba9cedc5f1c1869"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac434a5756792b87f3ba9cedc5f1c1869">OneParameter</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;value=0.0)</td></tr>
+<tr class="memdesc:ac434a5756792b87f3ba9cedc5f1c1869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora com um parâmetro utilizada nas classes derivadas.  <br /></td></tr>
+<tr class="separator:ac434a5756792b87f3ba9cedc5f1c1869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classist_1_1_isotherm"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Membros Públicos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
+<tr class="memitem:ga607e7ad7fe2211199e4c37c3a032fcba inherit pub_methods_classist_1_1_isotherm" id="r_ga607e7ad7fe2211199e4c37c3a032fcba"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>DefineIdentityBase</b> (&quot;Isotherm&quot;, ID::Isotherm)</td></tr>
 <tr class="separator:ga607e7ad7fe2211199e4c37c3a032fcba inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f077ccfab680fa42e0a96a9c8556829 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
+<tr class="memitem:ga72c101559480605e9e7d47be3ccbc058 inherit pub_methods_classist_1_1_isotherm" id="r_ga72c101559480605e9e7d47be3ccbc058"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>Isotherm</b> ()=default</td></tr>
+<tr class="memdesc:ga72c101559480605e9e7d47be3ccbc058 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora padrão. <br /></td></tr>
+<tr class="separator:ga72c101559480605e9e7d47be3ccbc058 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f077ccfab680fa42e0a96a9c8556829 inherit pub_methods_classist_1_1_isotherm" id="r_ga8f077ccfab680fa42e0a96a9c8556829"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>Isotherm</b> (const <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &amp;)=default</td></tr>
+<tr class="memdesc:ga8f077ccfab680fa42e0a96a9c8556829 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora de cópia. <br /></td></tr>
 <tr class="separator:ga8f077ccfab680fa42e0a96a9c8556829 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac82cecec6b6092b740157c349aff0c31 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DQDC</b> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_ce, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_temperature=0) const</td></tr>
+<tr class="memitem:ga95a9cbb9c2db57c5eb18d2783f8700dc inherit pub_methods_classist_1_1_isotherm" id="r_ga95a9cbb9c2db57c5eb18d2783f8700dc"><td class="memItemLeft" align="right" valign="top">
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Isotherm</b> ()=default</td></tr>
+<tr class="memdesc:ga95a9cbb9c2db57c5eb18d2783f8700dc inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutora. <br /></td></tr>
+<tr class="separator:ga95a9cbb9c2db57c5eb18d2783f8700dc inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac82cecec6b6092b740157c349aff0c31 inherit pub_methods_classist_1_1_isotherm" id="r_gac82cecec6b6092b740157c349aff0c31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gac82cecec6b6092b740157c349aff0c31">DQDC</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_ce, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_temperature=0) const</td></tr>
+<tr class="memdesc:gac82cecec6b6092b740157c349aff0c31 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a derivada da quantidade adsorvida em relação à concentração.  <br /></td></tr>
 <tr class="separator:gac82cecec6b6092b740157c349aff0c31 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2f4fe9b190af49801e70d54840ae9959 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>PlotGraph</b> (const std::string &amp;, const FunctionEscala &amp;, const FunctionEscala &amp;, const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;=0) const</td></tr>
-<tr class="separator:ga2f4fe9b190af49801e70d54840ae9959 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafb6e942f18c27d0e42fd21f8b4d00b39 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gafb6e942f18c27d0e42fd21f8b4d00b39">Qe</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;) const =0</td></tr>
-<tr class="separator:gafb6e942f18c27d0e42fd21f8b4d00b39 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2495784a5db96c7ce14baf6fe8250cf5 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>CodeString</b> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;) const</td></tr>
-<tr class="separator:ga2495784a5db96c7ce14baf6fe8250cf5 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4795b74e7d51938a7284fd2e2e6ab372 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>NameString</b> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;) const</td></tr>
-<tr class="separator:ga4795b74e7d51938a7284fd2e2e6ab372 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4833e5592c73cbb12fd19bc39dbef7e7 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga4833e5592c73cbb12fd19bc39dbef7e7">Qe</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_x) const</td></tr>
+<tr class="memitem:ga6d6aee5ee64bbb62c892c052435758d2 inherit pub_methods_classist_1_1_isotherm" id="r_ga6d6aee5ee64bbb62c892c052435758d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga6d6aee5ee64bbb62c892c052435758d2">PlotGraph</a> (const std::string &amp;filename, const FunctionEscala &amp;xscale, const FunctionEscala &amp;yscale, const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;numPoints, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;startValue, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;endValue, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;temperature=0) const</td></tr>
+<tr class="memdesc:ga6d6aee5ee64bbb62c892c052435758d2 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plota um gráfico da isoterma.  <br /></td></tr>
+<tr class="separator:ga6d6aee5ee64bbb62c892c052435758d2 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga108e04350460ac4a6117d19c19d8bb52 inherit pub_methods_classist_1_1_isotherm" id="r_ga108e04350460ac4a6117d19c19d8bb52"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga108e04350460ac4a6117d19c19d8bb52">Qe</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_ce, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_temperature) const =0</td></tr>
+<tr class="memdesc:ga108e04350460ac4a6117d19c19d8bb52 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a quantidade adsorvida em equilíbrio.  <br /></td></tr>
+<tr class="separator:ga108e04350460ac4a6117d19c19d8bb52 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8bf1221ada4f9e5b47ab495950c624a inherit pub_methods_classist_1_1_isotherm" id="r_gab8bf1221ada4f9e5b47ab495950c624a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gab8bf1221ada4f9e5b47ab495950c624a">CodeString</a> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_index) const</td></tr>
+<tr class="memdesc:gab8bf1221ada4f9e5b47ab495950c624a inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma string com o código da isoterma.  <br /></td></tr>
+<tr class="separator:gab8bf1221ada4f9e5b47ab495950c624a inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf813a1ede8e006614d28bcd2d4edb4ea inherit pub_methods_classist_1_1_isotherm" id="r_gaf813a1ede8e006614d28bcd2d4edb4ea"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gaf813a1ede8e006614d28bcd2d4edb4ea">NameString</a> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_index) const</td></tr>
+<tr class="memdesc:gaf813a1ede8e006614d28bcd2d4edb4ea inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma string com o nome da isoterma.  <br /></td></tr>
+<tr class="separator:gaf813a1ede8e006614d28bcd2d4edb4ea inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4833e5592c73cbb12fd19bc39dbef7e7 inherit pub_methods_classist_1_1_isotherm" id="r_ga4833e5592c73cbb12fd19bc39dbef7e7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga4833e5592c73cbb12fd19bc39dbef7e7">Qe</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_x) const</td></tr>
+<tr class="memdesc:ga4833e5592c73cbb12fd19bc39dbef7e7 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a quantidade adsorvida em equilíbrio para uma determinada concentração.  <br /></td></tr>
 <tr class="separator:ga4833e5592c73cbb12fd19bc39dbef7e7 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga35f4321dc35366d40eb74f231fc0d8e6 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-virtual std::unique_ptr&lt; <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Clone</b> () const</td></tr>
+<tr class="memitem:ga35f4321dc35366d40eb74f231fc0d8e6 inherit pub_methods_classist_1_1_isotherm" id="r_ga35f4321dc35366d40eb74f231fc0d8e6"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga35f4321dc35366d40eb74f231fc0d8e6">Clone</a> () const</td></tr>
+<tr class="memdesc:ga35f4321dc35366d40eb74f231fc0d8e6 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clona a instância atual da isoterma.  <br /></td></tr>
 <tr class="separator:ga35f4321dc35366d40eb74f231fc0d8e6 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaad48de8f9a81b8f9d40be10a0bb05bc3 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gaad48de8f9a81b8f9d40be10a0bb05bc3">CloneImplementation</a> () const =0</td></tr>
+<tr class="memitem:gaad48de8f9a81b8f9d40be10a0bb05bc3 inherit pub_methods_classist_1_1_isotherm" id="r_gaad48de8f9a81b8f9d40be10a0bb05bc3"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gaad48de8f9a81b8f9d40be10a0bb05bc3">CloneImplementation</a> () const =0</td></tr>
+<tr class="memdesc:gaad48de8f9a81b8f9d40be10a0bb05bc3 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementação da função de clonagem.  <br /></td></tr>
 <tr class="separator:gaad48de8f9a81b8f9d40be10a0bb05bc3 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga42e1a76c60ee3db32d63feaeba5b60fc inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const</td></tr>
-<tr class="memdesc:ga42e1a76c60ee3db32d63feaeba5b60fc inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador begin(). <br /></td></tr>
+<tr class="memitem:ga42e1a76c60ee3db32d63feaeba5b60fc inherit pub_methods_classist_1_1_isotherm" id="r_ga42e1a76c60ee3db32d63feaeba5b60fc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga42e1a76c60ee3db32d63feaeba5b60fc">begin</a> () const</td></tr>
+<tr class="memdesc:ga42e1a76c60ee3db32d63feaeba5b60fc inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gaa7d94515249140aad6d6355d56c7d10a" title="Sobrecarga do operador begin() para acesso não-constante.">begin()</a>.  <br /></td></tr>
 <tr class="separator:ga42e1a76c60ee3db32d63feaeba5b60fc inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga43421457c5008b10214d1657dde6b4f4 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const</td></tr>
-<tr class="memdesc:ga43421457c5008b10214d1657dde6b4f4 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab8730321b5dba394e186577ba6b05da5" title="Sobrecarga do operador end().">end()</a>. <br /></td></tr>
+<tr class="memitem:ga43421457c5008b10214d1657dde6b4f4 inherit pub_methods_classist_1_1_isotherm" id="r_ga43421457c5008b10214d1657dde6b4f4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga43421457c5008b10214d1657dde6b4f4">end</a> () const</td></tr>
+<tr class="memdesc:ga43421457c5008b10214d1657dde6b4f4 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab8730321b5dba394e186577ba6b05da5" title="Sobrecarga do operador end() para acesso não-constante.">end()</a>.  <br /></td></tr>
 <tr class="separator:ga43421457c5008b10214d1657dde6b4f4 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga09e9c6d9ef4bf5da8a216cb490440bc6 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>cbegin</b> () const</td></tr>
+<tr class="memitem:ga09e9c6d9ef4bf5da8a216cb490440bc6 inherit pub_methods_classist_1_1_isotherm" id="r_ga09e9c6d9ef4bf5da8a216cb490440bc6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga09e9c6d9ef4bf5da8a216cb490440bc6">cbegin</a> () const</td></tr>
+<tr class="memdesc:ga09e9c6d9ef4bf5da8a216cb490440bc6 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga09e9c6d9ef4bf5da8a216cb490440bc6" title="Sobrecarga do operador cbegin().">cbegin()</a>.  <br /></td></tr>
 <tr class="separator:ga09e9c6d9ef4bf5da8a216cb490440bc6 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab6a510047bc5e560f5a4301974206fe4 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>cend</b> () const</td></tr>
-<tr class="memdesc:gab6a510047bc5e560f5a4301974206fe4 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab6a510047bc5e560f5a4301974206fe4" title="Sobrecarga do operador cend().">cend()</a>. <br /></td></tr>
+<tr class="memitem:gab6a510047bc5e560f5a4301974206fe4 inherit pub_methods_classist_1_1_isotherm" id="r_gab6a510047bc5e560f5a4301974206fe4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gab6a510047bc5e560f5a4301974206fe4">cend</a> () const</td></tr>
+<tr class="memdesc:gab6a510047bc5e560f5a4301974206fe4 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab6a510047bc5e560f5a4301974206fe4" title="Sobrecarga do operador cend().">cend()</a>.  <br /></td></tr>
 <tr class="separator:gab6a510047bc5e560f5a4301974206fe4 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa75bc17a16adf38d5ad2f5392a215c07 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>rbegin</b> () const</td></tr>
+<tr class="memitem:gaa75bc17a16adf38d5ad2f5392a215c07 inherit pub_methods_classist_1_1_isotherm" id="r_gaa75bc17a16adf38d5ad2f5392a215c07"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gaa75bc17a16adf38d5ad2f5392a215c07">rbegin</a> () const</td></tr>
+<tr class="memdesc:gaa75bc17a16adf38d5ad2f5392a215c07 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gabe88c04cd3c893a17901715ea2cd3ce9" title="Sobrecarga do operador rbegin() para acesso não-constante.">rbegin()</a>.  <br /></td></tr>
 <tr class="separator:gaa75bc17a16adf38d5ad2f5392a215c07 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga807bf7d3d8764b174f4e6171c5e00422 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>rend</b> () const</td></tr>
-<tr class="memdesc:ga807bf7d3d8764b174f4e6171c5e00422 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga3e91172c45d0f3f5635383bc51ef2dac" title="Sobrecarga do operador rend().">rend()</a>. <br /></td></tr>
+<tr class="memitem:ga807bf7d3d8764b174f4e6171c5e00422 inherit pub_methods_classist_1_1_isotherm" id="r_ga807bf7d3d8764b174f4e6171c5e00422"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga807bf7d3d8764b174f4e6171c5e00422">rend</a> () const</td></tr>
+<tr class="memdesc:ga807bf7d3d8764b174f4e6171c5e00422 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga3e91172c45d0f3f5635383bc51ef2dac" title="Sobrecarga do operador rend() para acesso não-constante.">rend()</a>.  <br /></td></tr>
 <tr class="separator:ga807bf7d3d8764b174f4e6171c5e00422 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabc67ca1626cb1eae58bd85a7711c25e6 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>crbegin</b> () const</td></tr>
+<tr class="memitem:gabc67ca1626cb1eae58bd85a7711c25e6 inherit pub_methods_classist_1_1_isotherm" id="r_gabc67ca1626cb1eae58bd85a7711c25e6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gabc67ca1626cb1eae58bd85a7711c25e6">crbegin</a> () const</td></tr>
+<tr class="memdesc:gabc67ca1626cb1eae58bd85a7711c25e6 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gabc67ca1626cb1eae58bd85a7711c25e6" title="Sobrecarga do operador crbegin().">crbegin()</a>.  <br /></td></tr>
 <tr class="separator:gabc67ca1626cb1eae58bd85a7711c25e6 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0b08818b32dda60b7b675279cad01786 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>crend</b> () const</td></tr>
-<tr class="memdesc:ga0b08818b32dda60b7b675279cad01786 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga0b08818b32dda60b7b675279cad01786" title="Sobrecarga do operador crend().">crend()</a>. <br /></td></tr>
+<tr class="memitem:ga0b08818b32dda60b7b675279cad01786 inherit pub_methods_classist_1_1_isotherm" id="r_ga0b08818b32dda60b7b675279cad01786"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga0b08818b32dda60b7b675279cad01786">crend</a> () const</td></tr>
+<tr class="memdesc:ga0b08818b32dda60b7b675279cad01786 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga0b08818b32dda60b7b675279cad01786" title="Sobrecarga do operador crend().">crend()</a>.  <br /></td></tr>
 <tr class="separator:ga0b08818b32dda60b7b675279cad01786 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4fc7cb4a19d0481a3d4b878f8a049c48 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>NumberConst</b> () const</td></tr>
-<tr class="memdesc:ga4fc7cb4a19d0481a3d4b878f8a049c48 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funçao que retorna o número de constantes de uma isoterma. <br /></td></tr>
+<tr class="memitem:ga4fc7cb4a19d0481a3d4b878f8a049c48 inherit pub_methods_classist_1_1_isotherm" id="r_ga4fc7cb4a19d0481a3d4b878f8a049c48"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga4fc7cb4a19d0481a3d4b878f8a049c48">NumberConst</a> () const</td></tr>
+<tr class="memdesc:ga4fc7cb4a19d0481a3d4b878f8a049c48 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o número de constantes de uma isoterma.  <br /></td></tr>
 <tr class="separator:ga4fc7cb4a19d0481a3d4b878f8a049c48 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Outros membros herdados</h2></td></tr>
-<tr class="inherit_header pro_methods_classist_1_1_isotherm"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Membros Protegidos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
-<tr class="memitem:ga4188dfd4c3cd4baf548189caafd9b62b inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &amp;)=default</td></tr>
-<tr class="separator:ga4188dfd4c3cd4baf548189caafd9b62b inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga452cd465c4990a968005220abd3f0edf inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-virtual const VecPairString &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>InfoIsotherm</b> () const =0</td></tr>
+<tr class="inherit_header pro_methods_classist_1_1_isotherm"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Membros protegidos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
+<tr class="memitem:ga3bd8d945dc007f938466e5827ab3c6cb inherit pro_methods_classist_1_1_isotherm" id="r_ga3bd8d945dc007f938466e5827ab3c6cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga3bd8d945dc007f938466e5827ab3c6cb">operator=</a> (const <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &amp;other)=default</td></tr>
+<tr class="memdesc:ga3bd8d945dc007f938466e5827ab3c6cb inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de atribuição.  <br /></td></tr>
+<tr class="separator:ga3bd8d945dc007f938466e5827ab3c6cb inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga452cd465c4990a968005220abd3f0edf inherit pro_methods_classist_1_1_isotherm" id="r_ga452cd465c4990a968005220abd3f0edf"><td class="memItemLeft" align="right" valign="top">virtual const VecPairString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga452cd465c4990a968005220abd3f0edf">InfoIsotherm</a> () const =0</td></tr>
+<tr class="memdesc:ga452cd465c4990a968005220abd3f0edf inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna informações sobre a isoterma.  <br /></td></tr>
 <tr class="separator:ga452cd465c4990a968005220abd3f0edf inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa7d94515249140aad6d6355d56c7d10a inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
+<tr class="memitem:gaa7d94515249140aad6d6355d56c7d10a inherit pro_methods_classist_1_1_isotherm" id="r_gaa7d94515249140aad6d6355d56c7d10a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gaa7d94515249140aad6d6355d56c7d10a">begin</a> ()</td></tr>
+<tr class="memdesc:gaa7d94515249140aad6d6355d56c7d10a inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gaa7d94515249140aad6d6355d56c7d10a" title="Sobrecarga do operador begin() para acesso não-constante.">begin()</a> para acesso não-constante.  <br /></td></tr>
 <tr class="separator:gaa7d94515249140aad6d6355d56c7d10a inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab8730321b5dba394e186577ba6b05da5 inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
-<tr class="memdesc:gab8730321b5dba394e186577ba6b05da5 inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab8730321b5dba394e186577ba6b05da5" title="Sobrecarga do operador end().">end()</a>. <br /></td></tr>
+<tr class="memitem:gab8730321b5dba394e186577ba6b05da5 inherit pro_methods_classist_1_1_isotherm" id="r_gab8730321b5dba394e186577ba6b05da5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gab8730321b5dba394e186577ba6b05da5">end</a> ()</td></tr>
+<tr class="memdesc:gab8730321b5dba394e186577ba6b05da5 inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab8730321b5dba394e186577ba6b05da5" title="Sobrecarga do operador end() para acesso não-constante.">end()</a> para acesso não-constante.  <br /></td></tr>
 <tr class="separator:gab8730321b5dba394e186577ba6b05da5 inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabe88c04cd3c893a17901715ea2cd3ce9 inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>rbegin</b> ()</td></tr>
+<tr class="memitem:gabe88c04cd3c893a17901715ea2cd3ce9 inherit pro_methods_classist_1_1_isotherm" id="r_gabe88c04cd3c893a17901715ea2cd3ce9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gabe88c04cd3c893a17901715ea2cd3ce9">rbegin</a> ()</td></tr>
+<tr class="memdesc:gabe88c04cd3c893a17901715ea2cd3ce9 inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gabe88c04cd3c893a17901715ea2cd3ce9" title="Sobrecarga do operador rbegin() para acesso não-constante.">rbegin()</a> para acesso não-constante.  <br /></td></tr>
 <tr class="separator:gabe88c04cd3c893a17901715ea2cd3ce9 inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3e91172c45d0f3f5635383bc51ef2dac inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>rend</b> ()</td></tr>
-<tr class="memdesc:ga3e91172c45d0f3f5635383bc51ef2dac inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga3e91172c45d0f3f5635383bc51ef2dac" title="Sobrecarga do operador rend().">rend()</a>. <br /></td></tr>
+<tr class="memitem:ga3e91172c45d0f3f5635383bc51ef2dac inherit pro_methods_classist_1_1_isotherm" id="r_ga3e91172c45d0f3f5635383bc51ef2dac"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga3e91172c45d0f3f5635383bc51ef2dac">rend</a> ()</td></tr>
+<tr class="memdesc:ga3e91172c45d0f3f5635383bc51ef2dac inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga3e91172c45d0f3f5635383bc51ef2dac" title="Sobrecarga do operador rend() para acesso não-constante.">rend()</a> para acesso não-constante.  <br /></td></tr>
 <tr class="separator:ga3e91172c45d0f3f5635383bc51ef2dac inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6655cbd631d8109709473c7243eeadba inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-const VecReal&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b> () const</td></tr>
-<tr class="memdesc:ga6655cbd631d8109709473c7243eeadba inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vetor com os coeficientes de qualquer isoterma. <br /></td></tr>
+<tr class="memitem:ga6655cbd631d8109709473c7243eeadba inherit pro_methods_classist_1_1_isotherm" id="r_ga6655cbd631d8109709473c7243eeadba"><td class="memItemLeft" align="right" valign="top">const VecReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a> () const</td></tr>
+<tr class="memdesc:ga6655cbd631d8109709473c7243eeadba inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna os coeficientes das isotermas.  <br /></td></tr>
 <tr class="separator:ga6655cbd631d8109709473c7243eeadba inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9a66873266bf950b641befcf1fc79335 inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_i) const</td></tr>
+<tr class="memitem:ga9a66873266bf950b641befcf1fc79335 inherit pro_methods_classist_1_1_isotherm" id="r_ga9a66873266bf950b641befcf1fc79335"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga9a66873266bf950b641befcf1fc79335">Value</a> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_i) const</td></tr>
+<tr class="memdesc:ga9a66873266bf950b641befcf1fc79335 inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o coeficiente de uma isoterma em uma posição específica.  <br /></td></tr>
 <tr class="separator:ga9a66873266bf950b641befcf1fc79335 inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga86f93de81fe26589eb42aaa75dc6297c inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_i)</td></tr>
+<tr class="memitem:ga86f93de81fe26589eb42aaa75dc6297c inherit pro_methods_classist_1_1_isotherm" id="r_ga86f93de81fe26589eb42aaa75dc6297c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga86f93de81fe26589eb42aaa75dc6297c">Value</a> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_i)</td></tr>
+<tr class="memdesc:ga86f93de81fe26589eb42aaa75dc6297c inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o coeficiente de uma isoterma em uma posição específica.  <br /></td></tr>
 <tr class="separator:ga86f93de81fe26589eb42aaa75dc6297c inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga63149d14b56372b0e877244ffc47d298 inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_i, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_val)</td></tr>
+<tr class="memitem:ga63149d14b56372b0e877244ffc47d298 inherit pro_methods_classist_1_1_isotherm" id="r_ga63149d14b56372b0e877244ffc47d298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga63149d14b56372b0e877244ffc47d298">Value</a> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_i, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_val)</td></tr>
+<tr class="memdesc:ga63149d14b56372b0e877244ffc47d298 inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o coeficiente de uma isoterma em uma posição específica.  <br /></td></tr>
 <tr class="separator:ga63149d14b56372b0e877244ffc47d298 inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classist_1_1_isotherm"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Atributos Protegidos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
-<tr class="memitem:ga9f9cd71c8e24d951ea5acc91137316c1 inherit pro_attribs_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">VecReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga9f9cd71c8e24d951ea5acc91137316c1">coeffValue</a></td></tr>
+<tr class="inherit_header pro_attribs_classist_1_1_isotherm"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Atributos Protegidos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
+<tr class="memitem:ga9f9cd71c8e24d951ea5acc91137316c1 inherit pro_attribs_classist_1_1_isotherm" id="r_ga9f9cd71c8e24d951ea5acc91137316c1"><td class="memItemLeft" align="right" valign="top">
+VecReal&#160;</td><td class="memItemRight" valign="bottom"><b>coeffValue</b></td></tr>
+<tr class="memdesc:ga9f9cd71c8e24d951ea5acc91137316c1 inherit pro_attribs_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vetor que armazena todos os coeficientes das equações de isotermas. <br /></td></tr>
 <tr class="separator:ga9f9cd71c8e24d951ea5acc91137316c1 inherit pro_attribs_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac1962402525ae1c30f2102b20e7eef18 inherit pro_attribs_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
+<tr class="memitem:gac1962402525ae1c30f2102b20e7eef18 inherit pro_attribs_classist_1_1_isotherm" id="r_gac1962402525ae1c30f2102b20e7eef18"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> = false</td></tr>
 <tr class="separator:gac1962402525ae1c30f2102b20e7eef18 inherit pro_attribs_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_attribs_classist_1_1_isotherm"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Atributos Estáticos Protegidos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
-<tr class="memitem:ga415f3007d19b03e866c9c2d7b55a6dc8 inherit pro_static_attribs_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
+<tr class="inherit_header pro_static_attribs_classist_1_1_isotherm"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_static_attribs_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Atributos Protegidos Estáticos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
+<tr class="memitem:ga415f3007d19b03e866c9c2d7b55a6dc8 inherit pro_static_attribs_classist_1_1_isotherm" id="r_ga415f3007d19b03e866c9c2d7b55a6dc8"><td class="memItemLeft" align="right" valign="top">
 static const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RGASCONST</b> = 8.31446261815324L</td></tr>
 <tr class="separator:ga415f3007d19b03e866c9c2d7b55a6dc8 inherit pro_static_attribs_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe base para isotermas com um parâmetro. </p>
+<p>Esta classe serve como base para todas as isotermas que dependem de um único parâmetro. </p>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="ac434a5756792b87f3ba9cedc5f1c1869" name="ac434a5756792b87f3ba9cedc5f1c1869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac434a5756792b87f3ba9cedc5f1c1869">&#9670;&#160;</a></span>OneParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ist::OneParameter::OneParameter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtora com um parâmetro utilizada nas classes derivadas. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Valor inicial do parâmetro. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
-<li>D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/OneParameter/<a class="el" href="_one_parameter_8h_source.html">OneParameter.h</a></li>
-<li>D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/src/Isotherm/OneParameter/OneParameter.cpp</li>
+<li>D:/Desenvolvimento/IsothermLib - Github/IsothermLib/include/Isotherm/OneParameter/<a class="el" href="_one_parameter_8h_source.html">OneParameter.h</a></li>
+<li>D:/Desenvolvimento/IsothermLib - Github/IsothermLib/src/Isotherm/OneParameter/<b>OneParameter.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
 </small></address>
 </body>
 </html>

@@ -1,48 +1,38 @@
 //==============================================================================
 // Name        : OneParameter.h
-// Authors     : Iasmim Barboza Storck
+// Authors     : Aline Zuliani Lunkes
+//               Iasmim Barboza Storck
 //               Lara Botelho Brum
 //               Luan Rodrigues Soares de Souza
 //               Joao Flavio Vieira de Vasconcellos
 // Version     : 1.0
-// Description : Classe base para as isotermas com um PARAMETRO
+// Description : Classe base para as isotermas com um parâmetro
 //
-// Copyright   : Copyright (C) <2022>  Joao Flavio Vasconcellos 
+// Copyright   : Copyright (C) <2024>  Joao Flavio Vasconcellos 
 //                                      (jflavio at iprj.uerj.br)
 //
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License.
+// This program é software livre: você pode redistribuí-lo e/ou modificá-lo
+// sob os termos da Licença Pública Geral GNU conforme publicada pela
+// Free Software Foundation, na versão 3 da Licença.
 //
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
+// Este programa é distribuído na esperança de que seja útil,
+// mas SEM NENHUMA GARANTIA; sem mesmo a garantia implícita de
+// COMERCIABILIDADE ou ADEQUAÇÃO A UM DETERMINADO FIM. Veja a
+// Licença Pública Geral GNU para mais detalhes.
 //
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+// Você deve ter recebido uma cópia da Licença Pública Geral GNU
+// junto com este programa. Se não, veja <http://www.gnu.org/licenses/>.
 //
 //==============================================================================
 
-/** @defgroup OneParameter 
- *  @ingroup Base
- *  Classe base das isotermas com um unico parametro.
+/** @defgroup OneParameter OneParameter
+ *  @ingroup Isotherm_Base
+ *  @brief Classe base para isotermas com um parâmetro.
  *  @{
  */
 
-
-///  <summary>
-///  Classe base para todas as classes com um unico parametro.
-/// </summary>
-///  \authors   Lara Botelho Brum
-///  \authors   Luan Rodrigues Soares de Souza
-///  \authors   Joao Flavio Vieira de Vasconcellos
-///  \version   1.0
-///  \date      2022
-///  \bug       Nao ha bugs conhecidos.
-///  
-///  \copyright GNU Public License.
-
+/// @file OneParameter.h
+/// @brief Classe base para isotermas com um parâmetro
 
 #ifndef ONEPARAMETER_H
 #define ONEPARAMETER_H
@@ -52,9 +42,13 @@
 //==============================================================================
 #include <Isotherm.h>
 
-
 namespace ist {
 
+/**
+ * @brief Classe base para isotermas com um parâmetro.
+ * 
+ * Esta classe serve como base para todas as isotermas que dependem de um único parâmetro.
+ */
 class OneParameter : public virtual Isotherm {
 
 //==============================================================================
@@ -62,39 +56,28 @@ class OneParameter : public virtual Isotherm {
 //==============================================================================
 
 public:
+    /// @brief Definição de ID para esta classe para fins de identificação de erros.
+    DefineIdentity("OneParameter", ID::OneParameter);
 
-/// <summary>
-/// Definicao de ID para esta classe para fins de identificacao de erros.
-/// </summary>
-    DefineIdentity  (   "OneParameter"
-                    ,   ID::OneParameter
-                    );
-
+//==============================================================================
+// Funções Construtoras/Destrutora
+//==============================================================================
 
 public:
-
-/// <summary>
-/// Construtora de copia que sera  utilizada nas classes derivadas.
-/// </summary>
+    /// @brief Construtora de cópia que será utilizada nas classes derivadas.
     OneParameter(const OneParameter&) = default;
 
-/// <summary>
-/// Destrutora.
-/// </summary>
+    /// @brief Destrutora.
     virtual ~OneParameter() = default;
 
-/// <summary>
-/// Construtora de um parametro utilizada nas classes derivadas.
-/// </summary>
-    OneParameter (const Real& = 0.0);
+    /// @brief Construtora com um parâmetro utilizada nas classes derivadas.
+    /// @param value Valor inicial do parâmetro.
+    OneParameter(const Real& value = 0.0);
 
 };
 
 }
 
-        
 #endif /* ONEPARAMETER_H */
 
-/** @} */ 
-        
-       
+/** @} */

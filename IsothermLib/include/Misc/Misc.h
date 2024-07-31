@@ -3,10 +3,14 @@
 
 /**
  * @defgroup Misc Miscelânea
- * @ingroup Miscelânea
- * Programas com funções acessórias da classe.
+ * @ingroup IsothermMisc
+ * @brief Programas com funções acessórias da classe.
  * @{
  */
+
+/// @file Misc.h
+/// @brief Contém programas com funções acessórias da classe
+
 
 //============================================================================
 // Includes da biblioteca Isotherm

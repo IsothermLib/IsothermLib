@@ -1,26 +1,4 @@
 var searchData=
 [
-  ['id_0',['ID',['../classist_1_1_i_d.html',1,'ist']]],
-  ['identificacao_20da_20classe_1',['Identificacao da Classe',['../group___isotherm_i_d.html',1,'']]],
-  ['informações_20sobre_20as_20classes_2',['Informações sobre as classes',['../group___source_info.html',1,'']]],
-  ['isoexception_3',['IsoException',['../class_iso_exception.html',1,'IsoException'],['../classist_1_1_iso_exception.html',1,'ist::IsoException']]],
-  ['isoexception_2eh_4',['IsoException.h',['../_iso_exception_8h.html',1,'']]],
-  ['isoterma_20de_20helsey_5',['Isoterma de Helsey',['../group___halsey.html',1,'']]],
-  ['isotermas_20com_20cinco_20parametros_6',['Isotermas com cinco parametros',['../group___isotherm_five___parameters.html',1,'']]],
-  ['isotermas_20com_20dois_20parametros_7',['Isotermas com dois parametros',['../group___isotherm_two___parameters.html',1,'']]],
-  ['isotermas_20com_20quatro_20parametros_8',['Isotermas com quatro parametros',['../group___isotherm_four___parameters.html',1,'']]],
-  ['isotermas_20com_20tres_20parametros_9',['Isotermas com tres parametros',['../group___isotherm_three___parameters.html',1,'']]],
-  ['isotermas_20com_20um_20parametro_10',['Isotermas com um parametro',['../group___isotherm_one___parameter.html',1,'']]],
-  ['isotherm_11',['Isotherm',['../classist_1_1_isotherm.html',1,'ist::Isotherm'],['../md__d___documents__desennvolvimento__isotherm_lib__r_e_a_d_m_e.html',1,'(<em>Namespace</em> global)']]],
-  ['isothermtemplate_12',['IsothermTemplate',['../group___isotherm_template.html',1,'(<em>Namespace</em> global)'],['../classist_1_1_isotherm_template.html',1,'ist::IsothermTemplate&lt; T &gt;']]],
-  ['isothermtemplate_3c_20dubininradushkevich_20_3e_13',['IsothermTemplate&lt; DubininRadushkevich &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
-  ['isothermtemplate_3c_20elovich_20_3e_14',['IsothermTemplate&lt; Elovich &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
-  ['isothermtemplate_3c_20freundlich_20_3e_15',['IsothermTemplate&lt; Freundlich &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
-  ['isothermtemplate_3c_20halsey_20_3e_16',['IsothermTemplate&lt; Halsey &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
-  ['isothermtemplate_3c_20harkinjura_20_3e_17',['IsothermTemplate&lt; HarkinJura &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
-  ['isothermtemplate_3c_20henry_20_3e_18',['IsothermTemplate&lt; Henry &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
-  ['isothermtemplate_3c_20jovanovic_20_3e_19',['IsothermTemplate&lt; Jovanovic &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
-  ['isothermtemplate_3c_20langmuir_20_3e_20',['IsothermTemplate&lt; Langmuir &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
-  ['isothermtemplate_3c_20temkin_20_3e_21',['IsothermTemplate&lt; Temkin &gt;',['../classist_1_1_isotherm_template.html',1,'ist']]],
-  ['ist_22',['ist',['../namespaceist.html',1,'']]]
+  ['gerenciamento_20das_20exceções_0',['Gerenciamento das Exceções',['../group___isotherm_exception.html',1,'']]]
 ];

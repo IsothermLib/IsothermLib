@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['newtonraphson_0',['NewtonRaphson',['../group___newton_raphson.html#ga72a2c64028346f7e075ac137b4c69b5b',1,'NewtonRaphson(std::function&lt; Real(Real)&gt; func, const Real &amp;initial_guess):&#160;NewtonRaphson.cpp'],['../group___newton_raphson.html#ga72a2c64028346f7e075ac137b4c69b5b',1,'NewtonRaphson(std::function&lt; Real(Real)&gt; _func, const Real &amp;_ce):&#160;NewtonRaphson.cpp']]],
-  ['numberconst_1',['NumberConst',['../group___isotherm_template.html#ga4fc7cb4a19d0481a3d4b878f8a049c48',1,'ist::Isotherm']]]
+  ['langmuir_0',['Langmuir',['../classist_1_1_langmuir.html',1,'ist::Langmuir'],['../classist_1_1_langmuir.html#a7900e6b66dee2d4295829e43cb7df3e9',1,'ist::Langmuir::Langmuir()=default'],['../classist_1_1_langmuir.html#a252facac19313987e00d512445eff4f3',1,'ist::Langmuir::Langmuir(const Langmuir &amp;_orig)=default'],['../classist_1_1_langmuir.html#a9b5774c38f4a327d584d7ed4f05083a5',1,'ist::Langmuir::Langmuir(const Real &amp;_qmax, const Real &amp;_k1)'],['../group___langmuir.html',1,'Langmuir']]],
+  ['langmuir_2eh_1',['Langmuir.h',['../_langmuir_8h.html',1,'']]],
+  ['licença_2',['Licença',['../index.html#license',1,'']]],
+  ['lineposition_3',['LinePosition',['../classist_1_1_source_info.html#af49d074644e6a1ae12d1d4eaefbce78b',1,'ist::SourceInfo']]],
+  ['lsize_4',['LSIZE',['../namespaceist.html#a8ff9fb9169ace12fcdab79e11750b40a',1,'ist']]]
 ];

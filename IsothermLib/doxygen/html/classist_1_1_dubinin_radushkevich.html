@@ -1,14 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>IsothermLib: Referência da Classe ist::DubininRadushkevich</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -36,10 +38,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.9.4 -->
+<!-- Gerado por Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -48,7 +50,7 @@ var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -62,9 +64,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -81,289 +90,293 @@ $(function() {
 <div class="contents">
 
 <p>Classe com as equações da isoterma de Dubinin-Radushkevich.  
- <a href="classist_1_1_dubinin_radushkevich.html#details">Mais...</a></p>
+ <a href="#details">Mais...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_dubinin_radushkevich_8h_source.html">DubininRadushkevich.h</a>&gt;</code></p>
 <div class="dynheader">
-Diagrama de hierarquia para ist::DubininRadushkevich:</div>
+Diagrama de hierarquia da classe ist::DubininRadushkevich:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classist_1_1_dubinin_radushkevich.png" usemap="#ist::DubininRadushkevich_map" alt=""/>
   <map id="ist::DubininRadushkevich_map" name="ist::DubininRadushkevich_map">
-<area href="classist_1_1_two_parameters.html" alt="ist::TwoParameters" shape="rect" coords="0,56,273,80"/>
+<area href="classist_1_1_two_parameters.html" title="Classe base para isotermas com dois parâmetros." alt="ist::TwoParameters" shape="rect" coords="0,56,273,80"/>
 <area href="classist_1_1_isotherm_template.html" alt="ist::IsothermTemplate&lt; DubininRadushkevich &gt;" shape="rect" coords="283,56,556,80"/>
-<area href="classist_1_1_isotherm.html" alt="ist::Isotherm" shape="rect" coords="0,0,273,24"/>
-<area href="classist_1_1_isotherm.html" alt="ist::Isotherm" shape="rect" coords="283,0,556,24"/>
+<area href="classist_1_1_isotherm.html" title="Classe base para todas as isotermas." alt="ist::Isotherm" shape="rect" coords="0,0,273,24"/>
+<area href="classist_1_1_isotherm.html" title="Classe base para todas as isotermas." alt="ist::Isotherm" shape="rect" coords="283,0,556,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:a7542ccd20e32a3dad156a16df5fef6e0"><td class="memItemLeft" align="right" valign="top"><a id="a7542ccd20e32a3dad156a16df5fef6e0" name="a7542ccd20e32a3dad156a16df5fef6e0"></a>
+<tr class="memitem:a7542ccd20e32a3dad156a16df5fef6e0" id="r_a7542ccd20e32a3dad156a16df5fef6e0"><td class="memItemLeft" align="right" valign="top"><a id="a7542ccd20e32a3dad156a16df5fef6e0" name="a7542ccd20e32a3dad156a16df5fef6e0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DefineIdentity</b> (&quot;DubininRadushkevich&quot;, ID::DubininRadushkevich)</td></tr>
-<tr class="memdesc:a7542ccd20e32a3dad156a16df5fef6e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definição de <a class="el" href="classist_1_1_i_d.html">ID</a> para esta classe para fins de identificação de erros. <br /></td></tr>
+<tr class="memdesc:a7542ccd20e32a3dad156a16df5fef6e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definição de <a class="el" href="classist_1_1_i_d.html" title="Classe ID identifica cada uma das classes da biblioteca.">ID</a> para esta classe para fins de identificação de erros. <br /></td></tr>
 <tr class="separator:a7542ccd20e32a3dad156a16df5fef6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5bbaa9dc4f1a322d4dea66843d2cd17"><td class="memItemLeft" align="right" valign="top"><a id="af5bbaa9dc4f1a322d4dea66843d2cd17" name="af5bbaa9dc4f1a322d4dea66843d2cd17"></a>
+<tr class="memitem:af5bbaa9dc4f1a322d4dea66843d2cd17" id="r_af5bbaa9dc4f1a322d4dea66843d2cd17"><td class="memItemLeft" align="right" valign="top"><a id="af5bbaa9dc4f1a322d4dea66843d2cd17" name="af5bbaa9dc4f1a322d4dea66843d2cd17"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DubininRadushkevich</b> ()=default</td></tr>
 <tr class="memdesc:af5bbaa9dc4f1a322d4dea66843d2cd17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora default. <br /></td></tr>
 <tr class="separator:af5bbaa9dc4f1a322d4dea66843d2cd17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8e0ad40c643da1f68f6767b0bb54f83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_dubinin_radushkevich.html#aa8e0ad40c643da1f68f6767b0bb54f83">DubininRadushkevich</a> (const <a class="el" href="classist_1_1_dubinin_radushkevich.html">DubininRadushkevich</a> &amp;_orig)=default</td></tr>
-<tr class="memdesc:aa8e0ad40c643da1f68f6767b0bb54f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora de cópia.  <a href="classist_1_1_dubinin_radushkevich.html#aa8e0ad40c643da1f68f6767b0bb54f83">Mais...</a><br /></td></tr>
+<tr class="memitem:aa8e0ad40c643da1f68f6767b0bb54f83" id="r_aa8e0ad40c643da1f68f6767b0bb54f83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8e0ad40c643da1f68f6767b0bb54f83">DubininRadushkevich</a> (const <a class="el" href="classist_1_1_dubinin_radushkevich.html">DubininRadushkevich</a> &amp;_orig)=default</td></tr>
+<tr class="memdesc:aa8e0ad40c643da1f68f6767b0bb54f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora de cópia.  <br /></td></tr>
 <tr class="separator:aa8e0ad40c643da1f68f6767b0bb54f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb1ca07d1765b95a10d8580cead9f34a"><td class="memItemLeft" align="right" valign="top"><a id="acb1ca07d1765b95a10d8580cead9f34a" name="acb1ca07d1765b95a10d8580cead9f34a"></a>
+<tr class="memitem:acb1ca07d1765b95a10d8580cead9f34a" id="r_acb1ca07d1765b95a10d8580cead9f34a"><td class="memItemLeft" align="right" valign="top"><a id="acb1ca07d1765b95a10d8580cead9f34a" name="acb1ca07d1765b95a10d8580cead9f34a"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~DubininRadushkevich</b> ()=default</td></tr>
 <tr class="memdesc:acb1ca07d1765b95a10d8580cead9f34a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutora. <br /></td></tr>
 <tr class="separator:acb1ca07d1765b95a10d8580cead9f34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9789b9f41dfdd3e81bc727fe992a292"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_dubinin_radushkevich.html#ad9789b9f41dfdd3e81bc727fe992a292">DubininRadushkevich</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_qmax, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_k1, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_rgas=Isotherm::RGASCONST)</td></tr>
-<tr class="memdesc:ad9789b9f41dfdd3e81bc727fe992a292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora com os parâmetros que definem a isoterma de Dubinin-Radushkevich.  <a href="classist_1_1_dubinin_radushkevich.html#ad9789b9f41dfdd3e81bc727fe992a292">Mais...</a><br /></td></tr>
+<tr class="memitem:ad9789b9f41dfdd3e81bc727fe992a292" id="r_ad9789b9f41dfdd3e81bc727fe992a292"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9789b9f41dfdd3e81bc727fe992a292">DubininRadushkevich</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_qmax, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_k1, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_rgas=Isotherm::RGASCONST)</td></tr>
+<tr class="memdesc:ad9789b9f41dfdd3e81bc727fe992a292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora com os parâmetros que definem a isoterma de Dubinin-Radushkevich.  <br /></td></tr>
 <tr class="separator:ad9789b9f41dfdd3e81bc727fe992a292"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5face82ede7ff28ce0a7de07b5818df8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classist_1_1_dubinin_radushkevich.html">DubininRadushkevich</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_dubinin_radushkevich.html#a5face82ede7ff28ce0a7de07b5818df8">operator=</a> (const <a class="el" href="classist_1_1_dubinin_radushkevich.html">DubininRadushkevich</a> &amp;_orig)=default</td></tr>
-<tr class="memdesc:a5face82ede7ff28ce0a7de07b5818df8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador =.  <a href="classist_1_1_dubinin_radushkevich.html#a5face82ede7ff28ce0a7de07b5818df8">Mais...</a><br /></td></tr>
+<tr class="memitem:a5face82ede7ff28ce0a7de07b5818df8" id="r_a5face82ede7ff28ce0a7de07b5818df8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classist_1_1_dubinin_radushkevich.html">DubininRadushkevich</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5face82ede7ff28ce0a7de07b5818df8">operator=</a> (const <a class="el" href="classist_1_1_dubinin_radushkevich.html">DubininRadushkevich</a> &amp;_orig)=default</td></tr>
+<tr class="memdesc:a5face82ede7ff28ce0a7de07b5818df8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador =.  <br /></td></tr>
 <tr class="separator:a5face82ede7ff28ce0a7de07b5818df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09fdd45f0c998222220c26e31735d24b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_dubinin_radushkevich.html#a09fdd45f0c998222220c26e31735d24b">Qmax</a> () const</td></tr>
-<tr class="memdesc:a09fdd45f0c998222220c26e31735d24b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o valor da constante de equilíbrio de Dubinin-Radushkevich.  <a href="classist_1_1_dubinin_radushkevich.html#a09fdd45f0c998222220c26e31735d24b">Mais...</a><br /></td></tr>
+<tr class="memitem:a09fdd45f0c998222220c26e31735d24b" id="r_a09fdd45f0c998222220c26e31735d24b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09fdd45f0c998222220c26e31735d24b">Qmax</a> () const</td></tr>
+<tr class="memdesc:a09fdd45f0c998222220c26e31735d24b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o valor da constante de equilíbrio de Dubinin-Radushkevich.  <br /></td></tr>
 <tr class="separator:a09fdd45f0c998222220c26e31735d24b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b095fa505a32165d81da276fa1b2095"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_dubinin_radushkevich.html#a8b095fa505a32165d81da276fa1b2095">K1</a> () const</td></tr>
-<tr class="memdesc:a8b095fa505a32165d81da276fa1b2095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o coeficiente associado à energia de adsorção.  <a href="classist_1_1_dubinin_radushkevich.html#a8b095fa505a32165d81da276fa1b2095">Mais...</a><br /></td></tr>
+<tr class="memitem:a8b095fa505a32165d81da276fa1b2095" id="r_a8b095fa505a32165d81da276fa1b2095"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b095fa505a32165d81da276fa1b2095">K1</a> () const</td></tr>
+<tr class="memdesc:a8b095fa505a32165d81da276fa1b2095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o coeficiente associado à energia de adsorção.  <br /></td></tr>
 <tr class="separator:a8b095fa505a32165d81da276fa1b2095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab186b667d2391f34f0541a05352bd640"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_dubinin_radushkevich.html#ab186b667d2391f34f0541a05352bd640">Rgas</a> () const</td></tr>
-<tr class="memdesc:ab186b667d2391f34f0541a05352bd640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o valor da constante universal dos gases.  <a href="classist_1_1_dubinin_radushkevich.html#ab186b667d2391f34f0541a05352bd640">Mais...</a><br /></td></tr>
+<tr class="memitem:ab186b667d2391f34f0541a05352bd640" id="r_ab186b667d2391f34f0541a05352bd640"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab186b667d2391f34f0541a05352bd640">Rgas</a> () const</td></tr>
+<tr class="memdesc:ab186b667d2391f34f0541a05352bd640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o valor da constante universal dos gases.  <br /></td></tr>
 <tr class="separator:ab186b667d2391f34f0541a05352bd640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8660f7413ec26647111028432e6a3af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_dubinin_radushkevich.html#ab8660f7413ec26647111028432e6a3af">Qmax</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_qmax)</td></tr>
-<tr class="memdesc:ab8660f7413ec26647111028432e6a3af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altera a constante de equilíbrio de Dubinin-Radushkevich.  <a href="classist_1_1_dubinin_radushkevich.html#ab8660f7413ec26647111028432e6a3af">Mais...</a><br /></td></tr>
+<tr class="memitem:ab8660f7413ec26647111028432e6a3af" id="r_ab8660f7413ec26647111028432e6a3af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8660f7413ec26647111028432e6a3af">Qmax</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_qmax)</td></tr>
+<tr class="memdesc:ab8660f7413ec26647111028432e6a3af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altera a constante de equilíbrio de Dubinin-Radushkevich.  <br /></td></tr>
 <tr class="separator:ab8660f7413ec26647111028432e6a3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0408c85633466dc2570f5adf7bd25e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_dubinin_radushkevich.html#aa0408c85633466dc2570f5adf7bd25e1">K1</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_k1)</td></tr>
-<tr class="memdesc:aa0408c85633466dc2570f5adf7bd25e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altera o coeficiente associado à energia de adsorção.  <a href="classist_1_1_dubinin_radushkevich.html#aa0408c85633466dc2570f5adf7bd25e1">Mais...</a><br /></td></tr>
+<tr class="memitem:aa0408c85633466dc2570f5adf7bd25e1" id="r_aa0408c85633466dc2570f5adf7bd25e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0408c85633466dc2570f5adf7bd25e1">K1</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_k1)</td></tr>
+<tr class="memdesc:aa0408c85633466dc2570f5adf7bd25e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altera o coeficiente associado à energia de adsorção.  <br /></td></tr>
 <tr class="separator:aa0408c85633466dc2570f5adf7bd25e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44ce82b95b13d1bfb549948d0cba4629"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_dubinin_radushkevich.html#a44ce82b95b13d1bfb549948d0cba4629">Rgas</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_rgas)</td></tr>
-<tr class="memdesc:a44ce82b95b13d1bfb549948d0cba4629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altera o valor da constante universal dos gases.  <a href="classist_1_1_dubinin_radushkevich.html#a44ce82b95b13d1bfb549948d0cba4629">Mais...</a><br /></td></tr>
+<tr class="memitem:a44ce82b95b13d1bfb549948d0cba4629" id="r_a44ce82b95b13d1bfb549948d0cba4629"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44ce82b95b13d1bfb549948d0cba4629">Rgas</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_rgas)</td></tr>
+<tr class="memdesc:a44ce82b95b13d1bfb549948d0cba4629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altera o valor da constante universal dos gases.  <br /></td></tr>
 <tr class="separator:a44ce82b95b13d1bfb549948d0cba4629"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae25d5c8ab65edb12214d817dbff1673a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_dubinin_radushkevich.html#ae25d5c8ab65edb12214d817dbff1673a">Qe</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_c, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_temp) const</td></tr>
-<tr class="memdesc:ae25d5c8ab65edb12214d817dbff1673a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a quantidade de sorção no equilíbrio.  <a href="classist_1_1_dubinin_radushkevich.html#ae25d5c8ab65edb12214d817dbff1673a">Mais...</a><br /></td></tr>
+<tr class="memitem:ae25d5c8ab65edb12214d817dbff1673a" id="r_ae25d5c8ab65edb12214d817dbff1673a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae25d5c8ab65edb12214d817dbff1673a">Qe</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_c, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_temp) const</td></tr>
+<tr class="memdesc:ae25d5c8ab65edb12214d817dbff1673a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a quantidade de sorção no equilíbrio.  <br /></td></tr>
 <tr class="separator:ae25d5c8ab65edb12214d817dbff1673a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a28604a11d035b30f88df5c1d5d315d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_dubinin_radushkevich.html#a4a28604a11d035b30f88df5c1d5d315d">Qe</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_c) const override</td></tr>
-<tr class="memdesc:a4a28604a11d035b30f88df5c1d5d315d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a quantidade de sorção no equilíbrio.  <a href="classist_1_1_dubinin_radushkevich.html#a4a28604a11d035b30f88df5c1d5d315d">Mais...</a><br /></td></tr>
+<tr class="memitem:a4a28604a11d035b30f88df5c1d5d315d" id="r_a4a28604a11d035b30f88df5c1d5d315d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a28604a11d035b30f88df5c1d5d315d">Qe</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_c) const override</td></tr>
+<tr class="memdesc:a4a28604a11d035b30f88df5c1d5d315d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a quantidade de sorção no equilíbrio.  <br /></td></tr>
 <tr class="separator:a4a28604a11d035b30f88df5c1d5d315d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae46a7375ad657b611d9e5d468fe798bb"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_dubinin_radushkevich.html#ae46a7375ad657b611d9e5d468fe798bb">CloneImplementation</a> () const override</td></tr>
-<tr class="memdesc:ae46a7375ad657b611d9e5d468fe798bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Faz o clone da classe virtual.  <a href="classist_1_1_dubinin_radushkevich.html#ae46a7375ad657b611d9e5d468fe798bb">Mais...</a><br /></td></tr>
+<tr class="memitem:ae46a7375ad657b611d9e5d468fe798bb" id="r_ae46a7375ad657b611d9e5d468fe798bb"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae46a7375ad657b611d9e5d468fe798bb">CloneImplementation</a> () const override</td></tr>
+<tr class="memdesc:ae46a7375ad657b611d9e5d468fe798bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Faz o clone da classe virtual.  <br /></td></tr>
 <tr class="separator:ae46a7375ad657b611d9e5d468fe798bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classist_1_1_two_parameters"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classist_1_1_two_parameters')"><img src="closed.png" alt="-"/>&#160;Membros Públicos herdados de <a class="el" href="classist_1_1_two_parameters.html">ist::TwoParameters</a></td></tr>
-<tr class="memitem:acc808c98e589762f6da7c1ed8fd7ffcf inherit pub_methods_classist_1_1_two_parameters"><td class="memItemLeft" align="right" valign="top"><a id="acc808c98e589762f6da7c1ed8fd7ffcf" name="acc808c98e589762f6da7c1ed8fd7ffcf"></a>
+<tr class="inherit_header pub_methods_classist_1_1_two_parameters"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classist_1_1_two_parameters')"><img src="closed.png" alt="-"/>&#160;Membros Públicos herdados de <a class="el" href="classist_1_1_two_parameters.html">ist::TwoParameters</a></td></tr>
+<tr class="memitem:acc808c98e589762f6da7c1ed8fd7ffcf inherit pub_methods_classist_1_1_two_parameters" id="r_acc808c98e589762f6da7c1ed8fd7ffcf"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>DefineIdentity</b> (&quot;TwoParameters&quot;, ID::TwoParameters)</td></tr>
+<tr class="memdesc:acc808c98e589762f6da7c1ed8fd7ffcf inherit pub_methods_classist_1_1_two_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definição de <a class="el" href="classist_1_1_i_d.html" title="Classe ID identifica cada uma das classes da biblioteca.">ID</a> para esta classe para fins de identificação de erros. <br /></td></tr>
 <tr class="separator:acc808c98e589762f6da7c1ed8fd7ffcf inherit pub_methods_classist_1_1_two_parameters"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classist_1_1_isotherm"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Membros Públicos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
-<tr class="memitem:ga607e7ad7fe2211199e4c37c3a032fcba inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
+<tr class="inherit_header pub_methods_classist_1_1_isotherm"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Membros Públicos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
+<tr class="memitem:ga607e7ad7fe2211199e4c37c3a032fcba inherit pub_methods_classist_1_1_isotherm" id="r_ga607e7ad7fe2211199e4c37c3a032fcba"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>DefineIdentityBase</b> (&quot;Isotherm&quot;, ID::Isotherm)</td></tr>
 <tr class="separator:ga607e7ad7fe2211199e4c37c3a032fcba inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f077ccfab680fa42e0a96a9c8556829 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
+<tr class="memitem:ga72c101559480605e9e7d47be3ccbc058 inherit pub_methods_classist_1_1_isotherm" id="r_ga72c101559480605e9e7d47be3ccbc058"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>Isotherm</b> ()=default</td></tr>
+<tr class="memdesc:ga72c101559480605e9e7d47be3ccbc058 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora padrão. <br /></td></tr>
+<tr class="separator:ga72c101559480605e9e7d47be3ccbc058 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f077ccfab680fa42e0a96a9c8556829 inherit pub_methods_classist_1_1_isotherm" id="r_ga8f077ccfab680fa42e0a96a9c8556829"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>Isotherm</b> (const <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &amp;)=default</td></tr>
+<tr class="memdesc:ga8f077ccfab680fa42e0a96a9c8556829 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora de cópia. <br /></td></tr>
 <tr class="separator:ga8f077ccfab680fa42e0a96a9c8556829 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac82cecec6b6092b740157c349aff0c31 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DQDC</b> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_ce, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_temperature=0) const</td></tr>
+<tr class="memitem:ga95a9cbb9c2db57c5eb18d2783f8700dc inherit pub_methods_classist_1_1_isotherm" id="r_ga95a9cbb9c2db57c5eb18d2783f8700dc"><td class="memItemLeft" align="right" valign="top">
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Isotherm</b> ()=default</td></tr>
+<tr class="memdesc:ga95a9cbb9c2db57c5eb18d2783f8700dc inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutora. <br /></td></tr>
+<tr class="separator:ga95a9cbb9c2db57c5eb18d2783f8700dc inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac82cecec6b6092b740157c349aff0c31 inherit pub_methods_classist_1_1_isotherm" id="r_gac82cecec6b6092b740157c349aff0c31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gac82cecec6b6092b740157c349aff0c31">DQDC</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_ce, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_temperature=0) const</td></tr>
+<tr class="memdesc:gac82cecec6b6092b740157c349aff0c31 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a derivada da quantidade adsorvida em relação à concentração.  <br /></td></tr>
 <tr class="separator:gac82cecec6b6092b740157c349aff0c31 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2f4fe9b190af49801e70d54840ae9959 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>PlotGraph</b> (const std::string &amp;, const FunctionEscala &amp;, const FunctionEscala &amp;, const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;=0) const</td></tr>
-<tr class="separator:ga2f4fe9b190af49801e70d54840ae9959 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafb6e942f18c27d0e42fd21f8b4d00b39 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gafb6e942f18c27d0e42fd21f8b4d00b39">Qe</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;) const =0</td></tr>
-<tr class="separator:gafb6e942f18c27d0e42fd21f8b4d00b39 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2495784a5db96c7ce14baf6fe8250cf5 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>CodeString</b> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;) const</td></tr>
-<tr class="separator:ga2495784a5db96c7ce14baf6fe8250cf5 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4795b74e7d51938a7284fd2e2e6ab372 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>NameString</b> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;) const</td></tr>
-<tr class="separator:ga4795b74e7d51938a7284fd2e2e6ab372 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4833e5592c73cbb12fd19bc39dbef7e7 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga4833e5592c73cbb12fd19bc39dbef7e7">Qe</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_x) const</td></tr>
-<tr class="separator:ga4833e5592c73cbb12fd19bc39dbef7e7 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga35f4321dc35366d40eb74f231fc0d8e6 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-virtual std::unique_ptr&lt; <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Clone</b> () const</td></tr>
+<tr class="memitem:ga6d6aee5ee64bbb62c892c052435758d2 inherit pub_methods_classist_1_1_isotherm" id="r_ga6d6aee5ee64bbb62c892c052435758d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga6d6aee5ee64bbb62c892c052435758d2">PlotGraph</a> (const std::string &amp;filename, const FunctionEscala &amp;xscale, const FunctionEscala &amp;yscale, const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;numPoints, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;startValue, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;endValue, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;temperature=0) const</td></tr>
+<tr class="memdesc:ga6d6aee5ee64bbb62c892c052435758d2 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plota um gráfico da isoterma.  <br /></td></tr>
+<tr class="separator:ga6d6aee5ee64bbb62c892c052435758d2 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8bf1221ada4f9e5b47ab495950c624a inherit pub_methods_classist_1_1_isotherm" id="r_gab8bf1221ada4f9e5b47ab495950c624a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gab8bf1221ada4f9e5b47ab495950c624a">CodeString</a> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_index) const</td></tr>
+<tr class="memdesc:gab8bf1221ada4f9e5b47ab495950c624a inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma string com o código da isoterma.  <br /></td></tr>
+<tr class="separator:gab8bf1221ada4f9e5b47ab495950c624a inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf813a1ede8e006614d28bcd2d4edb4ea inherit pub_methods_classist_1_1_isotherm" id="r_gaf813a1ede8e006614d28bcd2d4edb4ea"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gaf813a1ede8e006614d28bcd2d4edb4ea">NameString</a> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_index) const</td></tr>
+<tr class="memdesc:gaf813a1ede8e006614d28bcd2d4edb4ea inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma string com o nome da isoterma.  <br /></td></tr>
+<tr class="separator:gaf813a1ede8e006614d28bcd2d4edb4ea inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga35f4321dc35366d40eb74f231fc0d8e6 inherit pub_methods_classist_1_1_isotherm" id="r_ga35f4321dc35366d40eb74f231fc0d8e6"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga35f4321dc35366d40eb74f231fc0d8e6">Clone</a> () const</td></tr>
+<tr class="memdesc:ga35f4321dc35366d40eb74f231fc0d8e6 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clona a instância atual da isoterma.  <br /></td></tr>
 <tr class="separator:ga35f4321dc35366d40eb74f231fc0d8e6 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaad48de8f9a81b8f9d40be10a0bb05bc3 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gaad48de8f9a81b8f9d40be10a0bb05bc3">CloneImplementation</a> () const =0</td></tr>
-<tr class="separator:gaad48de8f9a81b8f9d40be10a0bb05bc3 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga42e1a76c60ee3db32d63feaeba5b60fc inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const</td></tr>
-<tr class="memdesc:ga42e1a76c60ee3db32d63feaeba5b60fc inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador begin(). <br /></td></tr>
+<tr class="memitem:ga42e1a76c60ee3db32d63feaeba5b60fc inherit pub_methods_classist_1_1_isotherm" id="r_ga42e1a76c60ee3db32d63feaeba5b60fc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga42e1a76c60ee3db32d63feaeba5b60fc">begin</a> () const</td></tr>
+<tr class="memdesc:ga42e1a76c60ee3db32d63feaeba5b60fc inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gaa7d94515249140aad6d6355d56c7d10a" title="Sobrecarga do operador begin() para acesso não-constante.">begin()</a>.  <br /></td></tr>
 <tr class="separator:ga42e1a76c60ee3db32d63feaeba5b60fc inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga43421457c5008b10214d1657dde6b4f4 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const</td></tr>
-<tr class="memdesc:ga43421457c5008b10214d1657dde6b4f4 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab8730321b5dba394e186577ba6b05da5" title="Sobrecarga do operador end().">end()</a>. <br /></td></tr>
+<tr class="memitem:ga43421457c5008b10214d1657dde6b4f4 inherit pub_methods_classist_1_1_isotherm" id="r_ga43421457c5008b10214d1657dde6b4f4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga43421457c5008b10214d1657dde6b4f4">end</a> () const</td></tr>
+<tr class="memdesc:ga43421457c5008b10214d1657dde6b4f4 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab8730321b5dba394e186577ba6b05da5" title="Sobrecarga do operador end() para acesso não-constante.">end()</a>.  <br /></td></tr>
 <tr class="separator:ga43421457c5008b10214d1657dde6b4f4 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga09e9c6d9ef4bf5da8a216cb490440bc6 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>cbegin</b> () const</td></tr>
+<tr class="memitem:ga09e9c6d9ef4bf5da8a216cb490440bc6 inherit pub_methods_classist_1_1_isotherm" id="r_ga09e9c6d9ef4bf5da8a216cb490440bc6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga09e9c6d9ef4bf5da8a216cb490440bc6">cbegin</a> () const</td></tr>
+<tr class="memdesc:ga09e9c6d9ef4bf5da8a216cb490440bc6 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga09e9c6d9ef4bf5da8a216cb490440bc6" title="Sobrecarga do operador cbegin().">cbegin()</a>.  <br /></td></tr>
 <tr class="separator:ga09e9c6d9ef4bf5da8a216cb490440bc6 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab6a510047bc5e560f5a4301974206fe4 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>cend</b> () const</td></tr>
-<tr class="memdesc:gab6a510047bc5e560f5a4301974206fe4 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab6a510047bc5e560f5a4301974206fe4" title="Sobrecarga do operador cend().">cend()</a>. <br /></td></tr>
+<tr class="memitem:gab6a510047bc5e560f5a4301974206fe4 inherit pub_methods_classist_1_1_isotherm" id="r_gab6a510047bc5e560f5a4301974206fe4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gab6a510047bc5e560f5a4301974206fe4">cend</a> () const</td></tr>
+<tr class="memdesc:gab6a510047bc5e560f5a4301974206fe4 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab6a510047bc5e560f5a4301974206fe4" title="Sobrecarga do operador cend().">cend()</a>.  <br /></td></tr>
 <tr class="separator:gab6a510047bc5e560f5a4301974206fe4 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa75bc17a16adf38d5ad2f5392a215c07 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>rbegin</b> () const</td></tr>
+<tr class="memitem:gaa75bc17a16adf38d5ad2f5392a215c07 inherit pub_methods_classist_1_1_isotherm" id="r_gaa75bc17a16adf38d5ad2f5392a215c07"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gaa75bc17a16adf38d5ad2f5392a215c07">rbegin</a> () const</td></tr>
+<tr class="memdesc:gaa75bc17a16adf38d5ad2f5392a215c07 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gabe88c04cd3c893a17901715ea2cd3ce9" title="Sobrecarga do operador rbegin() para acesso não-constante.">rbegin()</a>.  <br /></td></tr>
 <tr class="separator:gaa75bc17a16adf38d5ad2f5392a215c07 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga807bf7d3d8764b174f4e6171c5e00422 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>rend</b> () const</td></tr>
-<tr class="memdesc:ga807bf7d3d8764b174f4e6171c5e00422 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga3e91172c45d0f3f5635383bc51ef2dac" title="Sobrecarga do operador rend().">rend()</a>. <br /></td></tr>
+<tr class="memitem:ga807bf7d3d8764b174f4e6171c5e00422 inherit pub_methods_classist_1_1_isotherm" id="r_ga807bf7d3d8764b174f4e6171c5e00422"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga807bf7d3d8764b174f4e6171c5e00422">rend</a> () const</td></tr>
+<tr class="memdesc:ga807bf7d3d8764b174f4e6171c5e00422 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga3e91172c45d0f3f5635383bc51ef2dac" title="Sobrecarga do operador rend() para acesso não-constante.">rend()</a>.  <br /></td></tr>
 <tr class="separator:ga807bf7d3d8764b174f4e6171c5e00422 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabc67ca1626cb1eae58bd85a7711c25e6 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>crbegin</b> () const</td></tr>
+<tr class="memitem:gabc67ca1626cb1eae58bd85a7711c25e6 inherit pub_methods_classist_1_1_isotherm" id="r_gabc67ca1626cb1eae58bd85a7711c25e6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gabc67ca1626cb1eae58bd85a7711c25e6">crbegin</a> () const</td></tr>
+<tr class="memdesc:gabc67ca1626cb1eae58bd85a7711c25e6 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gabc67ca1626cb1eae58bd85a7711c25e6" title="Sobrecarga do operador crbegin().">crbegin()</a>.  <br /></td></tr>
 <tr class="separator:gabc67ca1626cb1eae58bd85a7711c25e6 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0b08818b32dda60b7b675279cad01786 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>crend</b> () const</td></tr>
-<tr class="memdesc:ga0b08818b32dda60b7b675279cad01786 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga0b08818b32dda60b7b675279cad01786" title="Sobrecarga do operador crend().">crend()</a>. <br /></td></tr>
+<tr class="memitem:ga0b08818b32dda60b7b675279cad01786 inherit pub_methods_classist_1_1_isotherm" id="r_ga0b08818b32dda60b7b675279cad01786"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga0b08818b32dda60b7b675279cad01786">crend</a> () const</td></tr>
+<tr class="memdesc:ga0b08818b32dda60b7b675279cad01786 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga0b08818b32dda60b7b675279cad01786" title="Sobrecarga do operador crend().">crend()</a>.  <br /></td></tr>
 <tr class="separator:ga0b08818b32dda60b7b675279cad01786 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4fc7cb4a19d0481a3d4b878f8a049c48 inherit pub_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>NumberConst</b> () const</td></tr>
-<tr class="memdesc:ga4fc7cb4a19d0481a3d4b878f8a049c48 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funçao que retorna o número de constantes de uma isoterma. <br /></td></tr>
+<tr class="memitem:ga4fc7cb4a19d0481a3d4b878f8a049c48 inherit pub_methods_classist_1_1_isotherm" id="r_ga4fc7cb4a19d0481a3d4b878f8a049c48"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga4fc7cb4a19d0481a3d4b878f8a049c48">NumberConst</a> () const</td></tr>
+<tr class="memdesc:ga4fc7cb4a19d0481a3d4b878f8a049c48 inherit pub_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o número de constantes de uma isoterma.  <br /></td></tr>
 <tr class="separator:ga4fc7cb4a19d0481a3d4b878f8a049c48 inherit pub_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classist_1_1_isotherm_template"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classist_1_1_isotherm_template')"><img src="closed.png" alt="-"/>&#160;Membros Públicos herdados de <a class="el" href="classist_1_1_isotherm_template.html">ist::IsothermTemplate&lt; DubininRadushkevich &gt;</a></td></tr>
-<tr class="memitem:ga84cc89bcad2074dbb82911e9a736c0bf inherit pub_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="ga84cc89bcad2074dbb82911e9a736c0bf" name="ga84cc89bcad2074dbb82911e9a736c0bf"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const</td></tr>
+<tr class="inherit_header pub_methods_classist_1_1_isotherm_template"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classist_1_1_isotherm_template')"><img src="closed.png" alt="-"/>&#160;Membros Públicos herdados de <a class="el" href="classist_1_1_isotherm_template.html">ist::IsothermTemplate&lt; DubininRadushkevich &gt;</a></td></tr>
+<tr class="memitem:ga84cc89bcad2074dbb82911e9a736c0bf inherit pub_methods_classist_1_1_isotherm_template" id="r_ga84cc89bcad2074dbb82911e9a736c0bf"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga84cc89bcad2074dbb82911e9a736c0bf">begin</a> () const</td></tr>
+<tr class="memdesc:ga84cc89bcad2074dbb82911e9a736c0bf inherit pub_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga13182cbd59cb25ecad83c7d35bbc9b9c" title="Sobrecarga do operador begin() para acesso não-constante.">begin()</a>.  <br /></td></tr>
 <tr class="separator:ga84cc89bcad2074dbb82911e9a736c0bf inherit pub_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga13182cbd59cb25ecad83c7d35bbc9b9c inherit pub_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="ga13182cbd59cb25ecad83c7d35bbc9b9c" name="ga13182cbd59cb25ecad83c7d35bbc9b9c"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
+<tr class="memitem:ga13182cbd59cb25ecad83c7d35bbc9b9c inherit pub_methods_classist_1_1_isotherm_template" id="r_ga13182cbd59cb25ecad83c7d35bbc9b9c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga13182cbd59cb25ecad83c7d35bbc9b9c">begin</a> ()</td></tr>
+<tr class="memdesc:ga13182cbd59cb25ecad83c7d35bbc9b9c inherit pub_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga13182cbd59cb25ecad83c7d35bbc9b9c" title="Sobrecarga do operador begin() para acesso não-constante.">begin()</a> para acesso não-constante.  <br /></td></tr>
 <tr class="separator:ga13182cbd59cb25ecad83c7d35bbc9b9c inherit pub_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa773928dd53235e3c9d37c553d7049d5 inherit pub_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="gaa773928dd53235e3c9d37c553d7049d5" name="gaa773928dd53235e3c9d37c553d7049d5"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const</td></tr>
+<tr class="memitem:gaa773928dd53235e3c9d37c553d7049d5 inherit pub_methods_classist_1_1_isotherm_template" id="r_gaa773928dd53235e3c9d37c553d7049d5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gaa773928dd53235e3c9d37c553d7049d5">end</a> () const</td></tr>
+<tr class="memdesc:gaa773928dd53235e3c9d37c553d7049d5 inherit pub_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga6ffb577450dbafded8ff657b5226f43c" title="Sobrecarga do operador end() para acesso não-constante.">end()</a>.  <br /></td></tr>
 <tr class="separator:gaa773928dd53235e3c9d37c553d7049d5 inherit pub_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6ffb577450dbafded8ff657b5226f43c inherit pub_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="ga6ffb577450dbafded8ff657b5226f43c" name="ga6ffb577450dbafded8ff657b5226f43c"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
+<tr class="memitem:ga6ffb577450dbafded8ff657b5226f43c inherit pub_methods_classist_1_1_isotherm_template" id="r_ga6ffb577450dbafded8ff657b5226f43c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga6ffb577450dbafded8ff657b5226f43c">end</a> ()</td></tr>
+<tr class="memdesc:ga6ffb577450dbafded8ff657b5226f43c inherit pub_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga6ffb577450dbafded8ff657b5226f43c" title="Sobrecarga do operador end() para acesso não-constante.">end()</a> para acesso não-constante.  <br /></td></tr>
 <tr class="separator:ga6ffb577450dbafded8ff657b5226f43c inherit pub_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga369cc4d079692593509e4e51acfee921 inherit pub_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="ga369cc4d079692593509e4e51acfee921" name="ga369cc4d079692593509e4e51acfee921"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>cbegin</b> () const</td></tr>
+<tr class="memitem:ga369cc4d079692593509e4e51acfee921 inherit pub_methods_classist_1_1_isotherm_template" id="r_ga369cc4d079692593509e4e51acfee921"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga369cc4d079692593509e4e51acfee921">cbegin</a> () const</td></tr>
+<tr class="memdesc:ga369cc4d079692593509e4e51acfee921 inherit pub_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga369cc4d079692593509e4e51acfee921" title="Sobrecarga do operador cbegin().">cbegin()</a>.  <br /></td></tr>
 <tr class="separator:ga369cc4d079692593509e4e51acfee921 inherit pub_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab3e50ae6234359f1851344eca0bbd92c inherit pub_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="gab3e50ae6234359f1851344eca0bbd92c" name="gab3e50ae6234359f1851344eca0bbd92c"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>cend</b> () const</td></tr>
+<tr class="memitem:gab3e50ae6234359f1851344eca0bbd92c inherit pub_methods_classist_1_1_isotherm_template" id="r_gab3e50ae6234359f1851344eca0bbd92c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gab3e50ae6234359f1851344eca0bbd92c">cend</a> () const</td></tr>
+<tr class="memdesc:gab3e50ae6234359f1851344eca0bbd92c inherit pub_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab3e50ae6234359f1851344eca0bbd92c" title="Sobrecarga do operador cend().">cend()</a>.  <br /></td></tr>
 <tr class="separator:gab3e50ae6234359f1851344eca0bbd92c inherit pub_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga12f1c0c30be00132c5ca05a40557c21f inherit pub_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="ga12f1c0c30be00132c5ca05a40557c21f" name="ga12f1c0c30be00132c5ca05a40557c21f"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>rbegin</b> () const</td></tr>
+<tr class="memitem:ga12f1c0c30be00132c5ca05a40557c21f inherit pub_methods_classist_1_1_isotherm_template" id="r_ga12f1c0c30be00132c5ca05a40557c21f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga12f1c0c30be00132c5ca05a40557c21f">rbegin</a> () const</td></tr>
+<tr class="memdesc:ga12f1c0c30be00132c5ca05a40557c21f inherit pub_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga7200423aefb6a9663f301142750117e7" title="Sobrecarga do operador rbegin() para acesso não-constante.">rbegin()</a>.  <br /></td></tr>
 <tr class="separator:ga12f1c0c30be00132c5ca05a40557c21f inherit pub_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7200423aefb6a9663f301142750117e7 inherit pub_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="ga7200423aefb6a9663f301142750117e7" name="ga7200423aefb6a9663f301142750117e7"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>rbegin</b> ()</td></tr>
+<tr class="memitem:ga7200423aefb6a9663f301142750117e7 inherit pub_methods_classist_1_1_isotherm_template" id="r_ga7200423aefb6a9663f301142750117e7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga7200423aefb6a9663f301142750117e7">rbegin</a> ()</td></tr>
+<tr class="memdesc:ga7200423aefb6a9663f301142750117e7 inherit pub_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga7200423aefb6a9663f301142750117e7" title="Sobrecarga do operador rbegin() para acesso não-constante.">rbegin()</a> para acesso não-constante.  <br /></td></tr>
 <tr class="separator:ga7200423aefb6a9663f301142750117e7 inherit pub_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6c51b25f2059f8351fdfe96ddb3f3e84 inherit pub_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="ga6c51b25f2059f8351fdfe96ddb3f3e84" name="ga6c51b25f2059f8351fdfe96ddb3f3e84"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>rend</b> () const</td></tr>
+<tr class="memitem:ga6c51b25f2059f8351fdfe96ddb3f3e84 inherit pub_methods_classist_1_1_isotherm_template" id="r_ga6c51b25f2059f8351fdfe96ddb3f3e84"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga6c51b25f2059f8351fdfe96ddb3f3e84">rend</a> () const</td></tr>
+<tr class="memdesc:ga6c51b25f2059f8351fdfe96ddb3f3e84 inherit pub_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga52bc09ffc67f8e7fa08ce8cba3d1ac95" title="Sobrecarga do operador rend() para acesso não-constante.">rend()</a>.  <br /></td></tr>
 <tr class="separator:ga6c51b25f2059f8351fdfe96ddb3f3e84 inherit pub_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga52bc09ffc67f8e7fa08ce8cba3d1ac95 inherit pub_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="ga52bc09ffc67f8e7fa08ce8cba3d1ac95" name="ga52bc09ffc67f8e7fa08ce8cba3d1ac95"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>rend</b> ()</td></tr>
+<tr class="memitem:ga52bc09ffc67f8e7fa08ce8cba3d1ac95 inherit pub_methods_classist_1_1_isotherm_template" id="r_ga52bc09ffc67f8e7fa08ce8cba3d1ac95"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga52bc09ffc67f8e7fa08ce8cba3d1ac95">rend</a> ()</td></tr>
+<tr class="memdesc:ga52bc09ffc67f8e7fa08ce8cba3d1ac95 inherit pub_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga52bc09ffc67f8e7fa08ce8cba3d1ac95" title="Sobrecarga do operador rend() para acesso não-constante.">rend()</a> para acesso não-constante.  <br /></td></tr>
 <tr class="separator:ga52bc09ffc67f8e7fa08ce8cba3d1ac95 inherit pub_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga20993dc3b4d802863f3d76984cad783a inherit pub_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="ga20993dc3b4d802863f3d76984cad783a" name="ga20993dc3b4d802863f3d76984cad783a"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>crbegin</b> () const</td></tr>
+<tr class="memitem:ga20993dc3b4d802863f3d76984cad783a inherit pub_methods_classist_1_1_isotherm_template" id="r_ga20993dc3b4d802863f3d76984cad783a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga20993dc3b4d802863f3d76984cad783a">crbegin</a> () const</td></tr>
+<tr class="memdesc:ga20993dc3b4d802863f3d76984cad783a inherit pub_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga20993dc3b4d802863f3d76984cad783a" title="Sobrecarga do operador crbegin().">crbegin()</a>.  <br /></td></tr>
 <tr class="separator:ga20993dc3b4d802863f3d76984cad783a inherit pub_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab6aae7fe62c7fa0d1f9fa5e0d6a919a3 inherit pub_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="gab6aae7fe62c7fa0d1f9fa5e0d6a919a3" name="gab6aae7fe62c7fa0d1f9fa5e0d6a919a3"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>crend</b> () const</td></tr>
+<tr class="memitem:gab6aae7fe62c7fa0d1f9fa5e0d6a919a3 inherit pub_methods_classist_1_1_isotherm_template" id="r_gab6aae7fe62c7fa0d1f9fa5e0d6a919a3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gab6aae7fe62c7fa0d1f9fa5e0d6a919a3">crend</a> () const</td></tr>
+<tr class="memdesc:gab6aae7fe62c7fa0d1f9fa5e0d6a919a3 inherit pub_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab6aae7fe62c7fa0d1f9fa5e0d6a919a3" title="Sobrecarga do operador crend().">crend()</a>.  <br /></td></tr>
 <tr class="separator:gab6aae7fe62c7fa0d1f9fa5e0d6a919a3 inherit pub_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Outros membros herdados</h2></td></tr>
-<tr class="inherit_header pro_methods_classist_1_1_two_parameters"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classist_1_1_two_parameters')"><img src="closed.png" alt="-"/>&#160;Membros Protegidos herdados de <a class="el" href="classist_1_1_two_parameters.html">ist::TwoParameters</a></td></tr>
-<tr class="memitem:a8083761b151ceb3d3bb592ca3201b265 inherit pro_methods_classist_1_1_two_parameters"><td class="memItemLeft" align="right" valign="top"><a id="a8083761b151ceb3d3bb592ca3201b265" name="a8083761b151ceb3d3bb592ca3201b265"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TwoParameters</b> (const <a class="el" href="classist_1_1_two_parameters.html">TwoParameters</a> &amp;)=default</td></tr>
+<tr class="inherit_header pro_methods_classist_1_1_two_parameters"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classist_1_1_two_parameters')"><img src="closed.png" alt="-"/>&#160;Membros protegidos herdados de <a class="el" href="classist_1_1_two_parameters.html">ist::TwoParameters</a></td></tr>
+<tr class="memitem:abbb4310590f885121548c751a37ae8a2 inherit pro_methods_classist_1_1_two_parameters" id="r_abbb4310590f885121548c751a37ae8a2"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>TwoParameters</b> ()</td></tr>
+<tr class="memdesc:abbb4310590f885121548c751a37ae8a2 inherit pro_methods_classist_1_1_two_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora default. Inicializa os parâmetros com 0.0. <br /></td></tr>
+<tr class="separator:abbb4310590f885121548c751a37ae8a2 inherit pro_methods_classist_1_1_two_parameters"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8083761b151ceb3d3bb592ca3201b265 inherit pro_methods_classist_1_1_two_parameters" id="r_a8083761b151ceb3d3bb592ca3201b265"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_two_parameters.html#a8083761b151ceb3d3bb592ca3201b265">TwoParameters</a> (const <a class="el" href="classist_1_1_two_parameters.html">TwoParameters</a> &amp;)=default</td></tr>
+<tr class="memdesc:a8083761b151ceb3d3bb592ca3201b265 inherit pro_methods_classist_1_1_two_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora de cópia.  <br /></td></tr>
 <tr class="separator:a8083761b151ceb3d3bb592ca3201b265 inherit pro_methods_classist_1_1_two_parameters"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af27b7e77f3a75ac3e935c6c49caf5e7d inherit pro_methods_classist_1_1_two_parameters"><td class="memItemLeft" align="right" valign="top"><a id="af27b7e77f3a75ac3e935c6c49caf5e7d" name="af27b7e77f3a75ac3e935c6c49caf5e7d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TwoParameters</b> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_par_0, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_par_1)</td></tr>
+<tr class="memitem:a64b3c9de288df2b3ecb0d1124ef51005 inherit pro_methods_classist_1_1_two_parameters" id="r_a64b3c9de288df2b3ecb0d1124ef51005"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>~TwoParameters</b> () override=default</td></tr>
+<tr class="memdesc:a64b3c9de288df2b3ecb0d1124ef51005 inherit pro_methods_classist_1_1_two_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutora. <br /></td></tr>
+<tr class="separator:a64b3c9de288df2b3ecb0d1124ef51005 inherit pro_methods_classist_1_1_two_parameters"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af27b7e77f3a75ac3e935c6c49caf5e7d inherit pro_methods_classist_1_1_two_parameters" id="r_af27b7e77f3a75ac3e935c6c49caf5e7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_two_parameters.html#af27b7e77f3a75ac3e935c6c49caf5e7d">TwoParameters</a> (const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_par_0, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_par_1)</td></tr>
+<tr class="memdesc:af27b7e77f3a75ac3e935c6c49caf5e7d inherit pro_methods_classist_1_1_two_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtora com parâmetros definidos.  <br /></td></tr>
 <tr class="separator:af27b7e77f3a75ac3e935c6c49caf5e7d inherit pro_methods_classist_1_1_two_parameters"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a965dbd74f308769d9efd49a4aabac41c inherit pro_methods_classist_1_1_two_parameters"><td class="memItemLeft" align="right" valign="top"><a id="a965dbd74f308769d9efd49a4aabac41c" name="a965dbd74f308769d9efd49a4aabac41c"></a>
-<a class="el" href="classist_1_1_two_parameters.html">TwoParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classist_1_1_two_parameters.html">TwoParameters</a> &amp;)=default</td></tr>
+<tr class="memitem:a965dbd74f308769d9efd49a4aabac41c inherit pro_methods_classist_1_1_two_parameters" id="r_a965dbd74f308769d9efd49a4aabac41c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classist_1_1_two_parameters.html">TwoParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classist_1_1_two_parameters.html#a965dbd74f308769d9efd49a4aabac41c">operator=</a> (const <a class="el" href="classist_1_1_two_parameters.html">TwoParameters</a> &amp;)=default</td></tr>
+<tr class="memdesc:a965dbd74f308769d9efd49a4aabac41c inherit pro_methods_classist_1_1_two_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de atribuição.  <br /></td></tr>
 <tr class="separator:a965dbd74f308769d9efd49a4aabac41c inherit pro_methods_classist_1_1_two_parameters"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classist_1_1_isotherm"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Membros Protegidos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
-<tr class="memitem:ga4188dfd4c3cd4baf548189caafd9b62b inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &amp;)=default</td></tr>
-<tr class="separator:ga4188dfd4c3cd4baf548189caafd9b62b inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga452cd465c4990a968005220abd3f0edf inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-virtual const VecPairString &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>InfoIsotherm</b> () const =0</td></tr>
-<tr class="separator:ga452cd465c4990a968005220abd3f0edf inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa7d94515249140aad6d6355d56c7d10a inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
+<tr class="inherit_header pro_methods_classist_1_1_isotherm"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Membros protegidos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
+<tr class="memitem:ga3bd8d945dc007f938466e5827ab3c6cb inherit pro_methods_classist_1_1_isotherm" id="r_ga3bd8d945dc007f938466e5827ab3c6cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga3bd8d945dc007f938466e5827ab3c6cb">operator=</a> (const <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &amp;other)=default</td></tr>
+<tr class="memdesc:ga3bd8d945dc007f938466e5827ab3c6cb inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de atribuição.  <br /></td></tr>
+<tr class="separator:ga3bd8d945dc007f938466e5827ab3c6cb inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7d94515249140aad6d6355d56c7d10a inherit pro_methods_classist_1_1_isotherm" id="r_gaa7d94515249140aad6d6355d56c7d10a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gaa7d94515249140aad6d6355d56c7d10a">begin</a> ()</td></tr>
+<tr class="memdesc:gaa7d94515249140aad6d6355d56c7d10a inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gaa7d94515249140aad6d6355d56c7d10a" title="Sobrecarga do operador begin() para acesso não-constante.">begin()</a> para acesso não-constante.  <br /></td></tr>
 <tr class="separator:gaa7d94515249140aad6d6355d56c7d10a inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab8730321b5dba394e186577ba6b05da5 inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
-<tr class="memdesc:gab8730321b5dba394e186577ba6b05da5 inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab8730321b5dba394e186577ba6b05da5" title="Sobrecarga do operador end().">end()</a>. <br /></td></tr>
+<tr class="memitem:gab8730321b5dba394e186577ba6b05da5 inherit pro_methods_classist_1_1_isotherm" id="r_gab8730321b5dba394e186577ba6b05da5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gab8730321b5dba394e186577ba6b05da5">end</a> ()</td></tr>
+<tr class="memdesc:gab8730321b5dba394e186577ba6b05da5 inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gab8730321b5dba394e186577ba6b05da5" title="Sobrecarga do operador end() para acesso não-constante.">end()</a> para acesso não-constante.  <br /></td></tr>
 <tr class="separator:gab8730321b5dba394e186577ba6b05da5 inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabe88c04cd3c893a17901715ea2cd3ce9 inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>rbegin</b> ()</td></tr>
+<tr class="memitem:gabe88c04cd3c893a17901715ea2cd3ce9 inherit pro_methods_classist_1_1_isotherm" id="r_gabe88c04cd3c893a17901715ea2cd3ce9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#gabe88c04cd3c893a17901715ea2cd3ce9">rbegin</a> ()</td></tr>
+<tr class="memdesc:gabe88c04cd3c893a17901715ea2cd3ce9 inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#gabe88c04cd3c893a17901715ea2cd3ce9" title="Sobrecarga do operador rbegin() para acesso não-constante.">rbegin()</a> para acesso não-constante.  <br /></td></tr>
 <tr class="separator:gabe88c04cd3c893a17901715ea2cd3ce9 inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3e91172c45d0f3f5635383bc51ef2dac inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>rend</b> ()</td></tr>
-<tr class="memdesc:ga3e91172c45d0f3f5635383bc51ef2dac inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga3e91172c45d0f3f5635383bc51ef2dac" title="Sobrecarga do operador rend().">rend()</a>. <br /></td></tr>
+<tr class="memitem:ga3e91172c45d0f3f5635383bc51ef2dac inherit pro_methods_classist_1_1_isotherm" id="r_ga3e91172c45d0f3f5635383bc51ef2dac"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga3e91172c45d0f3f5635383bc51ef2dac">rend</a> ()</td></tr>
+<tr class="memdesc:ga3e91172c45d0f3f5635383bc51ef2dac inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador <a class="el" href="group___isotherm_template.html#ga3e91172c45d0f3f5635383bc51ef2dac" title="Sobrecarga do operador rend() para acesso não-constante.">rend()</a> para acesso não-constante.  <br /></td></tr>
 <tr class="separator:ga3e91172c45d0f3f5635383bc51ef2dac inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6655cbd631d8109709473c7243eeadba inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-const VecReal&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b> () const</td></tr>
-<tr class="memdesc:ga6655cbd631d8109709473c7243eeadba inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vetor com os coeficientes de qualquer isoterma. <br /></td></tr>
+<tr class="memitem:ga6655cbd631d8109709473c7243eeadba inherit pro_methods_classist_1_1_isotherm" id="r_ga6655cbd631d8109709473c7243eeadba"><td class="memItemLeft" align="right" valign="top">const VecReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga6655cbd631d8109709473c7243eeadba">Value</a> () const</td></tr>
+<tr class="memdesc:ga6655cbd631d8109709473c7243eeadba inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna os coeficientes das isotermas.  <br /></td></tr>
 <tr class="separator:ga6655cbd631d8109709473c7243eeadba inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9a66873266bf950b641befcf1fc79335 inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_i) const</td></tr>
+<tr class="memitem:ga9a66873266bf950b641befcf1fc79335 inherit pro_methods_classist_1_1_isotherm" id="r_ga9a66873266bf950b641befcf1fc79335"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga9a66873266bf950b641befcf1fc79335">Value</a> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_i) const</td></tr>
+<tr class="memdesc:ga9a66873266bf950b641befcf1fc79335 inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o coeficiente de uma isoterma em uma posição específica.  <br /></td></tr>
 <tr class="separator:ga9a66873266bf950b641befcf1fc79335 inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga86f93de81fe26589eb42aaa75dc6297c inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_i)</td></tr>
+<tr class="memitem:ga86f93de81fe26589eb42aaa75dc6297c inherit pro_methods_classist_1_1_isotherm" id="r_ga86f93de81fe26589eb42aaa75dc6297c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga86f93de81fe26589eb42aaa75dc6297c">Value</a> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_i)</td></tr>
+<tr class="memdesc:ga86f93de81fe26589eb42aaa75dc6297c inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o coeficiente de uma isoterma em uma posição específica.  <br /></td></tr>
 <tr class="separator:ga86f93de81fe26589eb42aaa75dc6297c inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga63149d14b56372b0e877244ffc47d298 inherit pro_methods_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_i, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_val)</td></tr>
+<tr class="memitem:ga63149d14b56372b0e877244ffc47d298 inherit pro_methods_classist_1_1_isotherm" id="r_ga63149d14b56372b0e877244ffc47d298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga63149d14b56372b0e877244ffc47d298">Value</a> (const <a class="el" href="group___type.html#gaba0996d26f7be2572973245b51852757">UInt</a> &amp;_i, const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;_val)</td></tr>
+<tr class="memdesc:ga63149d14b56372b0e877244ffc47d298 inherit pro_methods_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o coeficiente de uma isoterma em uma posição específica.  <br /></td></tr>
 <tr class="separator:ga63149d14b56372b0e877244ffc47d298 inherit pro_methods_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classist_1_1_isotherm_template"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classist_1_1_isotherm_template')"><img src="closed.png" alt="-"/>&#160;Membros Protegidos herdados de <a class="el" href="classist_1_1_isotherm_template.html">ist::IsothermTemplate&lt; DubininRadushkevich &gt;</a></td></tr>
-<tr class="memitem:a304f6ae8b1683159f1ccfe59b1f5863a inherit pro_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="a304f6ae8b1683159f1ccfe59b1f5863a" name="a304f6ae8b1683159f1ccfe59b1f5863a"></a>
+<tr class="inherit_header pro_methods_classist_1_1_isotherm_template"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classist_1_1_isotherm_template')"><img src="closed.png" alt="-"/>&#160;Membros protegidos herdados de <a class="el" href="classist_1_1_isotherm_template.html">ist::IsothermTemplate&lt; DubininRadushkevich &gt;</a></td></tr>
+<tr class="memitem:a304f6ae8b1683159f1ccfe59b1f5863a inherit pro_methods_classist_1_1_isotherm_template" id="r_a304f6ae8b1683159f1ccfe59b1f5863a"><td class="memItemLeft" align="right" valign="top">
 VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoIsotherm</b></td></tr>
 <tr class="separator:a304f6ae8b1683159f1ccfe59b1f5863a inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65b535c8de5cc11435a798242bd24b7c inherit pro_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="a65b535c8de5cc11435a798242bd24b7c" name="a65b535c8de5cc11435a798242bd24b7c"></a>
+<tr class="memitem:a65b535c8de5cc11435a798242bd24b7c inherit pro_methods_classist_1_1_isotherm_template" id="r_a65b535c8de5cc11435a798242bd24b7c"><td class="memItemLeft" align="right" valign="top">
 VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoIsotherm</b></td></tr>
 <tr class="separator:a65b535c8de5cc11435a798242bd24b7c inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8d17815f88e902f77a7b2ba18f4bdc3 inherit pro_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="aa8d17815f88e902f77a7b2ba18f4bdc3" name="aa8d17815f88e902f77a7b2ba18f4bdc3"></a>
+<tr class="memitem:aa8d17815f88e902f77a7b2ba18f4bdc3 inherit pro_methods_classist_1_1_isotherm_template" id="r_aa8d17815f88e902f77a7b2ba18f4bdc3"><td class="memItemLeft" align="right" valign="top">
 VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoIsotherm</b></td></tr>
 <tr class="separator:aa8d17815f88e902f77a7b2ba18f4bdc3 inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade21c6ae24c640b836215393c6c0223c inherit pro_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="ade21c6ae24c640b836215393c6c0223c" name="ade21c6ae24c640b836215393c6c0223c"></a>
+<tr class="memitem:ade21c6ae24c640b836215393c6c0223c inherit pro_methods_classist_1_1_isotherm_template" id="r_ade21c6ae24c640b836215393c6c0223c"><td class="memItemLeft" align="right" valign="top">
 VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoIsotherm</b></td></tr>
 <tr class="separator:ade21c6ae24c640b836215393c6c0223c inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd40c338c9b8d322928d4761f5d2ca76 inherit pro_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="abd40c338c9b8d322928d4761f5d2ca76" name="abd40c338c9b8d322928d4761f5d2ca76"></a>
+<tr class="memitem:abd40c338c9b8d322928d4761f5d2ca76 inherit pro_methods_classist_1_1_isotherm_template" id="r_abd40c338c9b8d322928d4761f5d2ca76"><td class="memItemLeft" align="right" valign="top">
 VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoIsotherm</b></td></tr>
 <tr class="separator:abd40c338c9b8d322928d4761f5d2ca76 inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e4165fe5a6cd09593c20ca9bd1785c5 inherit pro_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="a3e4165fe5a6cd09593c20ca9bd1785c5" name="a3e4165fe5a6cd09593c20ca9bd1785c5"></a>
+<tr class="memitem:a3e4165fe5a6cd09593c20ca9bd1785c5 inherit pro_methods_classist_1_1_isotherm_template" id="r_a3e4165fe5a6cd09593c20ca9bd1785c5"><td class="memItemLeft" align="right" valign="top">
 VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoIsotherm</b></td></tr>
 <tr class="separator:a3e4165fe5a6cd09593c20ca9bd1785c5 inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d96d4e9d0aeb0fcd8f4590be7cdc351 inherit pro_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="a3d96d4e9d0aeb0fcd8f4590be7cdc351" name="a3d96d4e9d0aeb0fcd8f4590be7cdc351"></a>
+<tr class="memitem:a2f94de27f3dd79e06d85f901faa5d8c8 inherit pro_methods_classist_1_1_isotherm_template" id="r_a2f94de27f3dd79e06d85f901faa5d8c8"><td class="memItemLeft" align="right" valign="top">
 VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoIsotherm</b></td></tr>
-<tr class="separator:a3d96d4e9d0aeb0fcd8f4590be7cdc351 inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85564b24bf6fd864a7c468c1190e5e10 inherit pro_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="a85564b24bf6fd864a7c468c1190e5e10" name="a85564b24bf6fd864a7c468c1190e5e10"></a>
+<tr class="separator:a2f94de27f3dd79e06d85f901faa5d8c8 inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85564b24bf6fd864a7c468c1190e5e10 inherit pro_methods_classist_1_1_isotherm_template" id="r_a85564b24bf6fd864a7c468c1190e5e10"><td class="memItemLeft" align="right" valign="top">
 VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoIsotherm</b></td></tr>
 <tr class="separator:a85564b24bf6fd864a7c468c1190e5e10 inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb56855701f44412699c246af96b995f inherit pro_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="aeb56855701f44412699c246af96b995f" name="aeb56855701f44412699c246af96b995f"></a>
+<tr class="memitem:aeb56855701f44412699c246af96b995f inherit pro_methods_classist_1_1_isotherm_template" id="r_aeb56855701f44412699c246af96b995f"><td class="memItemLeft" align="right" valign="top">
 VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoIsotherm</b></td></tr>
 <tr class="separator:aeb56855701f44412699c246af96b995f inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13d7991901b9594323a9d0d486022f27 inherit pro_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="a13d7991901b9594323a9d0d486022f27" name="a13d7991901b9594323a9d0d486022f27"></a>
+<tr class="memitem:a13d7991901b9594323a9d0d486022f27 inherit pro_methods_classist_1_1_isotherm_template" id="r_a13d7991901b9594323a9d0d486022f27"><td class="memItemLeft" align="right" valign="top">
 VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoIsotherm</b></td></tr>
 <tr class="separator:a13d7991901b9594323a9d0d486022f27 inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af385344a4d99be17c3af2b3eb9bb87ac inherit pro_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="af385344a4d99be17c3af2b3eb9bb87ac" name="af385344a4d99be17c3af2b3eb9bb87ac"></a>
+<tr class="memitem:af385344a4d99be17c3af2b3eb9bb87ac inherit pro_methods_classist_1_1_isotherm_template" id="r_af385344a4d99be17c3af2b3eb9bb87ac"><td class="memItemLeft" align="right" valign="top">
 VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoIsotherm</b></td></tr>
 <tr class="separator:af385344a4d99be17c3af2b3eb9bb87ac inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga32e5fb378752ddd73febd33c0b29e9fe inherit pro_methods_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top">const VecPairString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga32e5fb378752ddd73febd33c0b29e9fe">InfoIsotherm</a> () const override</td></tr>
+<tr class="memitem:ga32e5fb378752ddd73febd33c0b29e9fe inherit pro_methods_classist_1_1_isotherm_template" id="r_ga32e5fb378752ddd73febd33c0b29e9fe"><td class="memItemLeft" align="right" valign="top">const VecPairString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga32e5fb378752ddd73febd33c0b29e9fe">InfoIsotherm</a> () const override</td></tr>
+<tr class="memdesc:ga32e5fb378752ddd73febd33c0b29e9fe inherit pro_methods_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna as informações da isoterma.  <br /></td></tr>
 <tr class="separator:ga32e5fb378752ddd73febd33c0b29e9fe inherit pro_methods_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classist_1_1_isotherm"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Atributos Protegidos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
-<tr class="memitem:ga9f9cd71c8e24d951ea5acc91137316c1 inherit pro_attribs_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">VecReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___isotherm_template.html#ga9f9cd71c8e24d951ea5acc91137316c1">coeffValue</a></td></tr>
+<tr class="inherit_header pro_attribs_classist_1_1_isotherm"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Atributos Protegidos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
+<tr class="memitem:ga9f9cd71c8e24d951ea5acc91137316c1 inherit pro_attribs_classist_1_1_isotherm" id="r_ga9f9cd71c8e24d951ea5acc91137316c1"><td class="memItemLeft" align="right" valign="top">
+VecReal&#160;</td><td class="memItemRight" valign="bottom"><b>coeffValue</b></td></tr>
+<tr class="memdesc:ga9f9cd71c8e24d951ea5acc91137316c1 inherit pro_attribs_classist_1_1_isotherm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vetor que armazena todos os coeficientes das equações de isotermas. <br /></td></tr>
 <tr class="separator:ga9f9cd71c8e24d951ea5acc91137316c1 inherit pro_attribs_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac1962402525ae1c30f2102b20e7eef18 inherit pro_attribs_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
+<tr class="memitem:gac1962402525ae1c30f2102b20e7eef18 inherit pro_attribs_classist_1_1_isotherm" id="r_gac1962402525ae1c30f2102b20e7eef18"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> = false</td></tr>
 <tr class="separator:gac1962402525ae1c30f2102b20e7eef18 inherit pro_attribs_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_attribs_classist_1_1_isotherm"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Atributos Estáticos Protegidos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
-<tr class="memitem:ga415f3007d19b03e866c9c2d7b55a6dc8 inherit pro_static_attribs_classist_1_1_isotherm"><td class="memItemLeft" align="right" valign="top">
+<tr class="inherit_header pro_static_attribs_classist_1_1_isotherm"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_static_attribs_classist_1_1_isotherm')"><img src="closed.png" alt="-"/>&#160;Atributos Protegidos Estáticos herdados de <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a></td></tr>
+<tr class="memitem:ga415f3007d19b03e866c9c2d7b55a6dc8 inherit pro_static_attribs_classist_1_1_isotherm" id="r_ga415f3007d19b03e866c9c2d7b55a6dc8"><td class="memItemLeft" align="right" valign="top">
 static const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RGASCONST</b> = 8.31446261815324L</td></tr>
 <tr class="separator:ga415f3007d19b03e866c9c2d7b55a6dc8 inherit pro_static_attribs_classist_1_1_isotherm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_attribs_classist_1_1_isotherm_template"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classist_1_1_isotherm_template')"><img src="closed.png" alt="-"/>&#160;Atributos Estáticos Protegidos herdados de <a class="el" href="classist_1_1_isotherm_template.html">ist::IsothermTemplate&lt; DubininRadushkevich &gt;</a></td></tr>
-<tr class="memitem:ga8cd6d9d123b45664fc295fc28b72dd23 inherit pro_static_attribs_classist_1_1_isotherm_template"><td class="memItemLeft" align="right" valign="top"><a id="ga8cd6d9d123b45664fc295fc28b72dd23" name="ga8cd6d9d123b45664fc295fc28b72dd23"></a>
+<tr class="inherit_header pro_static_attribs_classist_1_1_isotherm_template"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_static_attribs_classist_1_1_isotherm_template')"><img src="closed.png" alt="-"/>&#160;Atributos Protegidos Estáticos herdados de <a class="el" href="classist_1_1_isotherm_template.html">ist::IsothermTemplate&lt; DubininRadushkevich &gt;</a></td></tr>
+<tr class="memitem:ga8cd6d9d123b45664fc295fc28b72dd23 inherit pro_static_attribs_classist_1_1_isotherm_template" id="r_ga8cd6d9d123b45664fc295fc28b72dd23"><td class="memItemLeft" align="right" valign="top">
 static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoIsotherm</b></td></tr>
+<tr class="memdesc:ga8cd6d9d123b45664fc295fc28b72dd23 inherit pro_static_attribs_classist_1_1_isotherm_template"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vetor com nome e sigla das constantes de uma isoterma. <br /></td></tr>
 <tr class="separator:ga8cd6d9d123b45664fc295fc28b72dd23 inherit pro_static_attribs_classist_1_1_isotherm_template"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><p >Classe com as equações da isoterma de Dubinin-Radushkevich. </p>
-<p >Isoterma com dois parâmetros, \( q_{max} \) e \( K_1 \), cujas fórmulas são as seguintes:</p>
+<div class="textblock"><p>Classe com as equações da isoterma de Dubinin-Radushkevich. </p>
+<p>Isoterma com dois parâmetros, \( q_{max} \) e \( K_1 \), cujas fórmulas são as seguintes:</p>
 <p class="formulaDsp">
 \[
     Q_e (C_e, T) = q_{max} \exp( -K_1 \epsilon^2 )
 \]
 </p>
- <p class="formulaDsp">
+  <p class="formulaDsp">
 \[
     \epsilon = R T \ln \left(1 + \frac{1}{C_e} \right)
 \]
 </p>
-<p> Um artigo de referência pode ser encontrado <a href="https://doi.org/10.1021/cr60204a006">aqui</a>. </p>
+<p>Um artigo de referência pode ser encontrado <a href="https://doi.org/10.1021/cr60204a006">aqui</a>. </p>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
 <a id="aa8e0ad40c643da1f68f6767b0bb54f83" name="aa8e0ad40c643da1f68f6767b0bb54f83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8e0ad40c643da1f68f6767b0bb54f83">&#9670;&nbsp;</a></span>DubininRadushkevich() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8e0ad40c643da1f68f6767b0bb54f83">&#9670;&#160;</a></span>DubininRadushkevich() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,8 +387,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
         <tr>
           <td class="memname">ist::DubininRadushkevich::DubininRadushkevich </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classist_1_1_dubinin_radushkevich.html">DubininRadushkevich</a> &amp;&#160;</td>
-          <td class="paramname"><em>_orig</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classist_1_1_dubinin_radushkevich.html">DubininRadushkevich</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>_orig</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -397,7 +409,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
 </div>
 </div>
 <a id="ad9789b9f41dfdd3e81bc727fe992a292" name="ad9789b9f41dfdd3e81bc727fe992a292"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9789b9f41dfdd3e81bc727fe992a292">&#9670;&nbsp;</a></span>DubininRadushkevich() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9789b9f41dfdd3e81bc727fe992a292">&#9670;&#160;</a></span>DubininRadushkevich() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,25 +417,17 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
         <tr>
           <td class="memname">ist::DubininRadushkevich::DubininRadushkevich </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;&#160;</td>
-          <td class="paramname"><em>_qmax</em>, </td>
+          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>_qmax</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;&#160;</td>
-          <td class="paramname"><em>_k1</em>, </td>
+          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>_k1</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;&#160;</td>
-          <td class="paramname"><em>_rgas</em> = <code>Isotherm::RGASCONST</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>_rgas</em><span class="paramdefsep"> = </span><span class="paramdefval">Isotherm::RGASCONST</span></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -446,9 +450,9 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
 
 </div>
 </div>
-<h2 class="groupheader">Funções membros</h2>
+<h2 class="groupheader">Documentação das funções</h2>
 <a id="ae46a7375ad657b611d9e5d468fe798bb" name="ae46a7375ad657b611d9e5d468fe798bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae46a7375ad657b611d9e5d468fe798bb">&#9670;&nbsp;</a></span>CloneImplementation()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46a7375ad657b611d9e5d468fe798bb">&#9670;&#160;</a></span>CloneImplementation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -459,7 +463,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
         <tr>
           <td class="memname">std::unique_ptr&lt; <a class="el" href="classist_1_1_isotherm.html">Isotherm</a> &gt; ist::DubininRadushkevich::CloneImplementation </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -473,12 +477,12 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
 <p>Faz o clone da classe virtual. </p>
 <dl class="section return"><dt>Retorna</dt><dd>Uma cópia da instância corrente. </dd></dl>
 
-<p>Implementa <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a>.</p>
+<p>Implementa <a class="el" href="group___isotherm_template.html#gaad48de8f9a81b8f9d40be10a0bb05bc3">ist::Isotherm</a>.</p>
 
 </div>
 </div>
 <a id="a8b095fa505a32165d81da276fa1b2095" name="a8b095fa505a32165d81da276fa1b2095"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b095fa505a32165d81da276fa1b2095">&#9670;&nbsp;</a></span>K1() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b095fa505a32165d81da276fa1b2095">&#9670;&#160;</a></span>K1() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -489,7 +493,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
         <tr>
           <td class="memname"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> ist::DubininRadushkevich::K1 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -506,7 +510,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
 </div>
 </div>
 <a id="aa0408c85633466dc2570f5adf7bd25e1" name="aa0408c85633466dc2570f5adf7bd25e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0408c85633466dc2570f5adf7bd25e1">&#9670;&nbsp;</a></span>K1() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0408c85633466dc2570f5adf7bd25e1">&#9670;&#160;</a></span>K1() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -517,8 +521,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
         <tr>
           <td class="memname">void ist::DubininRadushkevich::K1 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;&#160;</td>
-          <td class="paramname"><em>_k1</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>_k1</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -546,7 +549,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
 </div>
 </div>
 <a id="a5face82ede7ff28ce0a7de07b5818df8" name="a5face82ede7ff28ce0a7de07b5818df8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5face82ede7ff28ce0a7de07b5818df8">&#9670;&nbsp;</a></span>operator=()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5face82ede7ff28ce0a7de07b5818df8">&#9670;&#160;</a></span>operator=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -557,8 +560,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
         <tr>
           <td class="memname"><a class="el" href="classist_1_1_dubinin_radushkevich.html">DubininRadushkevich</a> &amp; ist::DubininRadushkevich::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classist_1_1_dubinin_radushkevich.html">DubininRadushkevich</a> &amp;&#160;</td>
-          <td class="paramname"><em>_orig</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classist_1_1_dubinin_radushkevich.html">DubininRadushkevich</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>_orig</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -581,7 +583,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
 </div>
 </div>
 <a id="a4a28604a11d035b30f88df5c1d5d315d" name="a4a28604a11d035b30f88df5c1d5d315d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a28604a11d035b30f88df5c1d5d315d">&#9670;&nbsp;</a></span>Qe() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a28604a11d035b30f88df5c1d5d315d">&#9670;&#160;</a></span>Qe() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -592,8 +594,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
         <tr>
           <td class="memname"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> ist::DubininRadushkevich::Qe </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;&#160;</td>
-          <td class="paramname"><em>_c</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>_c</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -619,12 +620,12 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
   </dd>
 </dl>
 
-<p>Reimplementa <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a>.</p>
+<p>Reimplementa <a class="el" href="group___isotherm_template.html#ga4833e5592c73cbb12fd19bc39dbef7e7">ist::Isotherm</a>.</p>
 
 </div>
 </div>
 <a id="ae25d5c8ab65edb12214d817dbff1673a" name="ae25d5c8ab65edb12214d817dbff1673a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae25d5c8ab65edb12214d817dbff1673a">&#9670;&nbsp;</a></span>Qe() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25d5c8ab65edb12214d817dbff1673a">&#9670;&#160;</a></span>Qe() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -635,19 +636,12 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
         <tr>
           <td class="memname"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> ist::DubininRadushkevich::Qe </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;&#160;</td>
-          <td class="paramname"><em>_c</em>, </td>
+          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>_c</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;&#160;</td>
-          <td class="paramname"><em>_temp</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>_temp</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -673,12 +667,12 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
   </dd>
 </dl>
 
-<p>Implementa <a class="el" href="classist_1_1_isotherm.html">ist::Isotherm</a>.</p>
+<p>Implementa <a class="el" href="group___isotherm_template.html#ga108e04350460ac4a6117d19c19d8bb52">ist::Isotherm</a>.</p>
 
 </div>
 </div>
 <a id="a09fdd45f0c998222220c26e31735d24b" name="a09fdd45f0c998222220c26e31735d24b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09fdd45f0c998222220c26e31735d24b">&#9670;&nbsp;</a></span>Qmax() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a09fdd45f0c998222220c26e31735d24b">&#9670;&#160;</a></span>Qmax() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -689,7 +683,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
         <tr>
           <td class="memname"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> ist::DubininRadushkevich::Qmax </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -706,7 +700,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
 </div>
 </div>
 <a id="ab8660f7413ec26647111028432e6a3af" name="ab8660f7413ec26647111028432e6a3af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8660f7413ec26647111028432e6a3af">&#9670;&nbsp;</a></span>Qmax() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8660f7413ec26647111028432e6a3af">&#9670;&#160;</a></span>Qmax() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -717,8 +711,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
         <tr>
           <td class="memname">void ist::DubininRadushkevich::Qmax </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;&#160;</td>
-          <td class="paramname"><em>_qmax</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>_qmax</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -746,7 +739,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
 </div>
 </div>
 <a id="ab186b667d2391f34f0541a05352bd640" name="ab186b667d2391f34f0541a05352bd640"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab186b667d2391f34f0541a05352bd640">&#9670;&nbsp;</a></span>Rgas() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab186b667d2391f34f0541a05352bd640">&#9670;&#160;</a></span>Rgas() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -757,7 +750,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
         <tr>
           <td class="memname"><a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> ist::DubininRadushkevich::Rgas </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -774,7 +767,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
 </div>
 </div>
 <a id="a44ce82b95b13d1bfb549948d0cba4629" name="a44ce82b95b13d1bfb549948d0cba4629"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44ce82b95b13d1bfb549948d0cba4629">&#9670;&nbsp;</a></span>Rgas() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ce82b95b13d1bfb549948d0cba4629">&#9670;&#160;</a></span>Rgas() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -785,8 +778,7 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
         <tr>
           <td class="memname">void ist::DubininRadushkevich::Rgas </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;&#160;</td>
-          <td class="paramname"><em>_rgas</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group___type.html#ga445a5f0e2a34c9d97d69a3c2d1957907">Real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>_rgas</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -814,13 +806,13 @@ static VecPairString&#160;</td><td class="memItemRight" valign="bottom"><b>infoI
 </div>
 </div>
 <hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
-<li>D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/include/Isotherm/TwoParameters/<a class="el" href="_dubinin_radushkevich_8h_source.html">DubininRadushkevich.h</a></li>
-<li>D:/Documents/Desennvolvimento/IsothermLib/IsothermLib/src/Isotherm/TwoParameters/DubininRadushkevich.cpp</li>
+<li>D:/Desenvolvimento/IsothermLib - Github/IsothermLib/include/Isotherm/TwoParameters/<a class="el" href="_dubinin_radushkevich_8h_source.html">DubininRadushkevich.h</a></li>
+<li>D:/Desenvolvimento/IsothermLib - Github/IsothermLib/src/Isotherm/TwoParameters/<b>DubininRadushkevich.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
 </small></address>
 </body>
 </html>
